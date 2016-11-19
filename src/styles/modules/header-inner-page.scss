@@ -1,0 +1,65 @@
+.slide-menu .main-menu-item {
+  .header-inner-page {
+    height: 100vh;
+    color: #fff;
+    margin-bottom: 125px;
+
+    .hero {
+      height: 864px;
+      right: -370px;
+      left: initial;
+      transform: none;
+    }
+
+    .plan-description {
+      position: absolute;
+      top: 50%;
+      z-index: 1;
+      transform: translateY(-50%);
+
+      p {
+        color: #fff;
+      }
+
+      .btn {
+        position: static;
+        transform: none;
+        left: auto;
+      }
+    }
+
+    .fig-cross-1 {
+      right: -300px;
+      left: auto;
+    }
+
+    .fig-cross-2 {
+      bottom: 33.33%;
+      right: 43.75%;
+      left: auto;
+    }
+
+    .fig-square-1 {
+      top: 17.9%;
+      left: 31.25%;
+    }
+
+    .fig-square-2 {
+      left: 29.25%;
+      bottom: 13.35%;
+    }
+
+    .fig-circle-1 {
+      bottom: 23.35%;
+      right: 28.75%;
+      top: auto;
+      left: auto;
+      z-index: 1;
+    }
+
+    .fig-circle-2 {
+      top: 30%;
+      right: 27.78%;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+@font-face {
+    font-family: "UltimaPro-Bold";
+    src: url("UltimaPro-Bold.eot");
+    src: url("UltimaPro-Bold.eot?#iefix") format("embedded-opentype"),
+         url("UltimaPro-Bold.woff2") format("woff2"),
+         url("UltimaPro-Bold.woff") format("woff"),
+         url("UltimaPro-Bold.ttf") format("ttf"),
+         url("UltimaPro-Bold.svg#UltimaPro-Bold") format("svg");
+    font-style: normal;
+    font-weight: 700;
+}

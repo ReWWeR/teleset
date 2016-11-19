@@ -1,0 +1,11 @@
+@font-face {
+    font-family: "Gilroy-LightItalic";
+    src: url("Radomir Tinkov - Gilroy-LightItalic.eot");
+    src: url("Radomir Tinkov - Gilroy-LightItalic.eot?#iefix") format("embedded-opentype"),
+         url("Radomir Tinkov - Gilroy-LightItalic.woff2") format("woff2"),
+         url("Radomir Tinkov - Gilroy-LightItalic.woff") format("woff"),
+         url("Radomir Tinkov - Gilroy-LightItalic.ttf") format("ttf"),
+         url("Radomir Tinkov - Gilroy-LightItalic.svg#Gilroy-LightItalic") format("svg");
+    font-style: italic;
+    font-weight: 300;
+}

@@ -1,0 +1,38 @@
+.btn {
+  padding: 12px 24px;
+  font: $font-body;
+  display: inline-block;
+
+  &.btn-primary {
+    border-radius: 18px;
+    font-size: 22px;
+    font-weight: 600;
+  }
+
+  &.btn-purple {
+    background: $purple;
+    color: $yellow;
+
+    &:hover {
+      background: $yellow;
+      color: #fff;
+    }
+
+    &.btn-purple-white {
+      &:hover {
+        background: #fff;
+        color: $purple;
+      }
+    }
+  }
+
+  &.btn-yellow {
+    background: $yellow;
+    color: #fff;
+
+    &:hover {
+      background: $purple;
+      color: $yellow;
+    }
+  }
+}

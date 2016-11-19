@@ -1,0 +1,30 @@
+.plan-grid {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+  margin: 0 -5px;
+
+  .plan-item {
+    background: $purple;
+    border-radius: 30px;
+    flex: 1 1 180px;
+    margin:  5px;
+    padding: 35px 25px;
+    font-size: 20px;
+    color: #fff;
+    line-height: 1.1;
+    text-align: center;
+
+    .plan-title-icon {
+      display: block;
+      margin: 0 auto 25px;
+    }
+
+    .plan-title {
+      display: block;
+      font: $font-ultima;
+      font-size: 20px;
+      line-height: 1.1;
+    }
+  }
+}

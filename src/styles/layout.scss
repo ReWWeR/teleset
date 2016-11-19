@@ -1,0 +1,9 @@
+.wrapper {
+  padding: 0 60px;
+
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}

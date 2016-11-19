@@ -1,0 +1,11 @@
+@font-face {
+    font-family: "UltimaPro";
+    src: url("UltimaPro.eot");
+    src: url("UltimaPro.eot?#iefix") format("embedded-opentype"),
+         url("UltimaPro.woff2") format("woff2"),
+         url("UltimaPro.woff") format("woff"),
+         url("UltimaPro.ttf") format("ttf"),
+         url("UltimaPro.svg#UltimaPro") format("svg");
+    font-style: normal;
+    font-weight: regular;
+}

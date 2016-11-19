@@ -1,0 +1,79 @@
+html {
+  font: $font-body;
+  color: $main-black;
+}
+
+a {
+  color: $main-black;
+  text-decoration: none;
+
+  &:hover {
+    &, .text {
+      color: $yellow;
+    }
+  }
+}
+
+h1, h2, h3, h4 {
+  font: $font-ultima;
+}
+
+h2 {
+  font-size: 48px;
+  padding-bottom: .93em;
+}
+
+h4 {
+  font-size: 32px;
+  padding-bottom: 1em;
+}
+
+p {
+  font-size: 22px;
+  line-height: 1.36;
+  color: $black-60;
+}
+
+p + p {
+  paddin-top: 1em;
+}
+
+
+sup {
+  vertical-align: super;
+}
+
+.clearfix:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.yellow-text {
+  color: $yellow;
+}
+
+.light-grey-text {
+  color: $light-grey;
+}
+
+.purple-text {
+  color: $purple;
+}
+
+.yellow-bg {
+  background: $yellow;
+}
+
+.plan-name {
+  font: $font-ultima;
+  font-size: 28px;
+  line-height: 1.28;
+  color: $main-black;
+  padding: 75px 0;
+
+  sup {
+    font-size: 18px;
+    font-weight: 700;
+  }
+}

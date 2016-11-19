@@ -1,0 +1,60 @@
+.footer-inner {
+  background: $dark-grey;
+  margin-top: 85px;
+  padding: 120px 0;
+  color: $white-20;
+  font-size: 18px;
+  line-height: 1.44;
+
+  .subfooter {
+    margin-bottom: 50px;
+
+    &:after {
+      content: '';
+      clear: both;
+      display: table;
+    }
+
+    .logo-about {
+      svg {
+        width: 138px;
+        float: left;
+        line, circle, rect {
+          stroke: #4f4f4f;
+        }
+      }
+
+      .text {
+        float: left;
+        color: #fff;
+        margin-left: 20px;
+        line-height: 1.1;
+
+        span {
+          color: $white-40;
+        }
+      }
+    }
+
+    .author-logo {
+      float: right;
+
+      svg {
+        width: 52px;
+        polygon {
+          stroke: $yellow;
+        }
+      }
+
+      .text {
+        float: right;
+        color: $white-40;
+        line-height: 1.1;
+        margin-left: 18px;
+        span {
+          color: #fff;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+@font-face {
+    font-family: "UltimaPro-BoldItalic";
+    src: url("UltimaPro-BoldItalic.eot");
+    src: url("UltimaPro-BoldItalic.eot?#iefix") format("embedded-opentype"),
+         url("UltimaPro-BoldItalic.woff2") format("woff2"),
+         url("UltimaPro-BoldItalic.woff") format("woff"),
+         url("UltimaPro-BoldItalic.ttf") format("ttf"),
+         url("UltimaPro-BoldItalic.svg#UltimaPro-BoldItalic") format("svg");
+    font-style: normal;
+    font-weight: 700;
+}

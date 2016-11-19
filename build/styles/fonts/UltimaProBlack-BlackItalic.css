@@ -1,0 +1,11 @@
+@font-face {
+    font-family: "UltimaProBlack-BlackItalic";
+    src: url("UltimaProBlack-BlackItalic.eot");
+    src: url("UltimaProBlack-BlackItalic.eot?#iefix") format("embedded-opentype"),
+         url("UltimaProBlack-BlackItalic.woff2") format("woff2"),
+         url("UltimaProBlack-BlackItalic.woff") format("woff"),
+         url("UltimaProBlack-BlackItalic.ttf") format("ttf"),
+         url("UltimaProBlack-BlackItalic.svg#UltimaProBlack-BlackItalic") format("svg");
+    font-style: normal;
+    font-weight: 900;
+}

@@ -1,0 +1,23 @@
+{
+  "name": "Teleset",
+  "description": "Teleset prohect",
+  "main": "index.js",
+  "authors": [
+    "Andrei Malinkovich <rewwerse@gmail.com>"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "./src/libs/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1"
+  }
+}

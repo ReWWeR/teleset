@@ -1,0 +1,40 @@
+.main-article {
+  h1 {
+    padding-top: 30vh;
+    padding-bottom: 1.26em;
+  }
+
+  a {
+    color: $purple;
+
+    &:hover {
+      color: $yellow;
+    }
+  }
+
+  .about-blockquote {
+    line-height: 1.2;
+    max-width: 400px;
+  }
+
+  .contacts-table {
+    padding-top: 75px;
+    font-size: 18px;
+    line-height: 1.55;
+
+    .contacts-col {
+      float: left;
+      width: 49%;
+
+      &.contacts-second-col {
+        float: right;
+      }
+    }
+
+    .link-map {
+      display: block;
+      float: left;
+      clear: both;
+    }
+  }
+}

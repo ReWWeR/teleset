@@ -1,0 +1,54 @@
+.fig {
+
+  &.fig-purple {
+    line, circle, rect {
+      fill: $purple;
+      stroke: $purple;
+    }
+  }
+
+  &.fig-yellow {
+    line, circle, rect {
+      fill: $yellow;
+      stroke: $yellow;
+    }
+
+    circle {
+      fill: none;
+    }
+  }
+
+  &.fig-blue {
+    line, circle, rect {
+      fill: $blue;
+      stroke: $blue;
+    }
+
+    circle, rect {
+      fill: none;
+    }
+  }
+
+  &.fig-green {
+    line, circle, rect {
+      fill: $green;
+      stroke: $green;
+    }
+
+    circle, rect {
+      fill: none;
+    }
+  }
+
+  &.fig-white {
+    line, circle, rect {
+      fill: #fff;
+      stroke: #fff;
+    }
+
+    circle, rect {
+      fill: none;
+    }
+  }
+
+}
