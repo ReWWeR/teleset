@@ -2,6 +2,7 @@
   padding: 12px 24px;
   font: $font-body;
   display: inline-block;
+  transition: background $transition-time, color $transition-time;
 
   &.btn-primary {
     border-radius: 18px;

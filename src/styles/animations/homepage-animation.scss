@@ -1,0 +1,180 @@
+$delay-11: .11s;
+$delay-33: .33s;
+$delay-50: .5s;
+$delay-80: .8s;
+$delay-133: 1.33s;
+$delay-200: 2s;
+
+%figures-scale {
+  animation-name: figures-scale;
+  animation-duration: .33s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes figures-scale {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+%translate-animation {
+  animation-name: translate-animation;
+  animation-duration: .5s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes translate-animation {
+  from {
+    transform: translateY(-100%)
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+%hero-animation {
+  animation-name: hero-animation;
+  animation-duration: .5s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes hero-animation {
+  0% {
+     opacity: 0;
+     transform: translateY(20%);
+  }
+
+  25% {
+    transform: translateY(20%);
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+%plan-animation {
+  animation-name: plan-animation;
+  animation-duration: .5s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes plan-animation {
+  0% {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+
+  33% {
+    transform: translateY(50%);
+  }
+
+  66% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+%opacity-fade {
+  animation-name: opacity-fade;
+  animation-duration: .33s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes opacity-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+.header {
+  transform: translateY(-100%);
+}
+
+.footer-landing {
+  opacity: 0;
+}
+
+.homepage {
+  .fig {
+    transform: scale(0);
+  }
+
+  .hero {
+    opacity: 0;
+  }
+
+  .plan-description {
+    h1, p, a {
+      opacity: 0;
+      transform: translateY(50%);
+    }
+  }
+}
+
+body.loaded {
+  .header {
+    @extend %translate-animation;
+    animation-delay: .5s;
+  }
+
+  .footer-landing {
+    @extend %opacity-fade;
+    animation-delay: $delay-200;
+  }
+}
+
+body.loaded .homepage {
+
+  .fig-cross-1, .fig-cross-4, .fig-circle-3 {
+    @extend %figures-scale;
+  }
+
+  .fig-cross-2, .fig-cross-3, .fig-circle-1, .fig-circle-2, .fig-square-1, .fig-square-2 {
+    @extend %figures-scale;
+    animation-delay: $delay-33;
+  }
+
+  .hero {
+    @extend %hero-animation;
+    animation-delay: $delay-80;
+  }
+
+  .plan-description {
+    h1 {
+      @extend %plan-animation;
+      animation-delay: $delay-133;
+    }
+
+    p {
+      @extend %plan-animation;
+      animation-delay: $delay-133 + $delay-11;
+    }
+
+    a {
+      @extend %plan-animation;
+      animation-delay: $delay-133 + ($delay-11 * 2);
+    }
+  }
+}

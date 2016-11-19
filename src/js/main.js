@@ -6,9 +6,13 @@ $(document).ready(function () {
     $showMenuButton
         .on('click', function () {
             $body.addClass('show-menu');
-        })
+        });
 
     $hideMenuButton.on('click', function() {
         $body.removeClass('show-menu');
     })
 });
+
+window.onload = function() {
+    $('body').addClass('loaded');
+};

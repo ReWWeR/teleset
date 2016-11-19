@@ -8,9 +8,9 @@
 
   .plan-description {
     margin-left: 53%;
-    margin-top: 321px;
     z-index: 1;
-    position: relative;
+    position: absolute;
+    bottom: 30%;
   }
 
   .fig {
@@ -19,7 +19,7 @@
     &.fig-cross-1 {
       width: 600px;
       bottom: 150px;
-      left: 8.75%
+      left: 8.75%;
     }
 
     &.fig-cross-2 {
@@ -89,6 +89,5 @@
     &.fig-90 {
       width: 90px;
     }
-
   }
 }

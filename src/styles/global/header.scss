@@ -1,6 +1,7 @@
 .header {
   padding: 50px 0 0;
   position: relative;
+  z-index: 2;
 
   &:after {
     content: '';
@@ -36,6 +37,7 @@
           font-size: 18px;
           border: 3px solid transparent;
           border-radius: 14px;
+          transition: border $transition-time;
 
           &:hover, &.active {
             border-color: $yellow;

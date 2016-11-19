@@ -5,7 +5,7 @@
   height: 100vh;
   z-index: 2;
   transition: transform .5s ease, opacity 1s ease;
-  transform: translateY(100%);
+  transform: translateX(100%);
   opacity: 0;
 
   .menu-container {
@@ -33,7 +33,7 @@
             color: #fff;
             font: $font-body;
             font-weight: 300;
-            font-size: 42px;
+            font-size: 2.625vw; //42px;
 
             &:hover, &.active {
               color: $yellow;
@@ -60,6 +60,7 @@
           height: 22px;
 
           line, path {
+            transition: fill $transition-time, stroke $transition-time;
             fill: $yellow;
             stroke: $yellow;
           }
@@ -206,12 +207,12 @@
   }
 
   .show-menu & {
-    transform: translateY(0);
+    transform: translateX(0);
     opacity: 1;
   }
 
   .inner-page & {
-    transform: translateY(0);
+    transform: translateX(0);
     opacity: 1;
   }
 }
