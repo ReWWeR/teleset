@@ -8,6 +8,12 @@
   transform: translateX(100%);
   opacity: 0;
 
+  .logo {
+    width: 138px;
+    display: block;
+    padding-top: 50px;
+  }
+
   .menu-container {
     width: 50%;
     background: $purple-dark;
