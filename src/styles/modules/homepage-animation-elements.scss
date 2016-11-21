@@ -4,6 +4,8 @@
     left: 16%;
     bottom: 0;
     z-index: 1;
+    height: 97vh;
+    max-height: 868px;
   }
 
   .plan-description {
@@ -17,77 +19,58 @@
     position: fixed;
 
     &.fig-cross-1 {
-      width: 600px;
-      bottom: 150px;
+      height: 600px/$desktop-height-ratio*100vh;
+      bottom: 150px/$desktop-height-ratio*100%;
       left: 8.75%;
+
     }
 
     &.fig-cross-2 {
-      width: 30px;
+      height: 30px/$desktop-height-ratio*100vh;
       left: 14.75%;
-      bottom: 465px;
+      bottom: 465px/900px*100%;
     }
 
     &.fig-cross-3 {
-      width: 30px;
+      height: 30px/$desktop-height-ratio*100vh;
       left: 81.25%;
-      bottom: 690px;
+      bottom: 690px/$desktop-height-ratio*100%;
     }
 
     &.fig-cross-4 {
-      width: 390px;
+      height: 390px/$desktop-height-ratio*100vh;
       left: 87.80%;
-      bottom: 255px;
+      bottom: 255px/$desktop-height-ratio*100%;
     }
 
     &.fig-circle-1 {
-      width: 90px;
-      bottom: 220px;
+      height: 90px/$desktop-height-ratio*100vh;
+      bottom: 220px/$desktop-height-ratio*100%;
       left: 10%;
     }
 
     &.fig-circle-2 {
-      width: 30px;
-      bottom: 514px;
+      height: 30px/$desktop-height-ratio*100vh;
+      bottom: 514px/$desktop-height-ratio*100%;
       left: 46.56%;
     }
 
     &.fig-circle-3 {
-      width: 420px;
-      bottom: -240px;
+      height: 420px/$desktop-height-ratio*100vh;
+      bottom: -240px/$desktop-height-ratio*100%;
       left: 57.50%;
     }
 
     &.fig-square-1 {
-      width: 24px;
-      bottom: 220px;
+      height: 24px/$desktop-height-ratio*100vh;
+      bottom: 220px/$desktop-height-ratio*100%;
       left: 2.50%;
     }
 
     &.fig-square-2 {
-      width: 54px;
-      bottom: 400px;
+      height: 54px/$desktop-height-ratio*100vh;
+      bottom: 400px/$desktop-height-ratio*100%;
       left: 37.50%;
-    }
-
-    &.fig-390 {
-      width: 390px;
-    }
-
-    &.fig-30 {
-      width: 30px;
-    }
-
-    &.fig-420 {
-      width: 420px;
-    }
-
-    &.fig-54 {
-      width: 54px;
-    }
-
-    &.fig-90 {
-      width: 90px;
     }
   }
 }

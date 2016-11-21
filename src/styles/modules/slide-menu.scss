@@ -138,6 +138,8 @@
       left: 50%;
       transform: translateX(-27%);
       z-index: 1;
+      height: 97vh;
+      max-height: 868px;
     }
 
     .btn {
@@ -149,53 +151,46 @@
     }
 
     .fig-cross-1 {
-      width: 600px;
       position: absolute;
-      top: 50%;
+      bottom: 150px/$desktop-height-ratio*100%;
       left: 50%;
       margin: -300px 0 0 -300px;
     }
 
     .fig-cross-2 {
-      width: 30px;
       position: absolute;
-      bottom: 51.5%;
+      bottom: 464px/$desktop-height-ratio*100%;
       left: 29.5%;
     }
 
     .fig-cross-3 {
-      width: 30px;
       position: absolute;
-      top: 14.45%;
+      top: 130px/$desktop-height-ratio*100%;
       right: 27.5%;
     }
 
     .fig-circle-1 {
-      width: 90px;
       position: absolute;
-      top: 65.55%;
+      top: 590px/$desktop-height-ratio*100%;
       left: 13.35%;
     }
 
     .fig-circle-2 {
-      width: 30px;
       position: absolute;
-      top: 39.5%;
+      top: 356px/$desktop-height-ratio*100%;
       right: 3%;
     }
 
     .fig-square-1 {
       position: absolute;
-      width: 54px;
-      top: 49.5%;
-      right: 18.25%;
+      left: 5%;
+      bottom: 220px/$desktop-height-ratio*100%;
     }
 
     .fig-square-2 {
       position: absolute;
-      width: 24px;
-      left: 5%;
-      bottom: 24.5%;
+      top: 446px/$desktop-height-ratio*100%;
+      right: 18.25%;
     }
 
     .inner-page & {

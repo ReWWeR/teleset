@@ -1,4 +1,5 @@
 .fig {
+  width: auto;
 
   &.fig-purple {
     line, circle, rect {
@@ -51,4 +52,49 @@
     }
   }
 
+  &.fig-cross-1 {
+    height: 600px/$desktop-height-ratio*100vh;
+    max-width: 600px;
+
+  }
+
+  &.fig-cross-2 {
+    height: 30px/$desktop-height-ratio*100vh;
+    max-width: 30px;
+  }
+
+  &.fig-cross-3 {
+    height: 30px/$desktop-height-ratio*100vh;
+    max-width: 30px;
+  }
+
+  &.fig-cross-4 {
+    height: 390px/$desktop-height-ratio*100vh;
+    max-width: 390px;
+  }
+
+  &.fig-circle-1 {
+    height: 90px/$desktop-height-ratio*100vh;
+    max-width: 90px;
+  }
+
+  &.fig-circle-2 {
+    height: 30px/$desktop-height-ratio*100vh;
+    max-width: 30px;
+  }
+
+  &.fig-circle-3 {
+    height: 420px/$desktop-height-ratio*100vh;
+    max-width: 420px;
+  }
+
+  &.fig-square-1 {
+    height: 24px/$desktop-height-ratio*100vh;
+    max-width: 24px;
+  }
+
+  &.fig-square-2 {
+    height: 54px/$desktop-height-ratio*100vh;
+    max-width: 54px;
+  }
 }

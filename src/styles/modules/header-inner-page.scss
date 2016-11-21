@@ -5,8 +5,9 @@
     margin-bottom: 125px;
 
     .hero {
-      height: 864px;
-      right: -370px;
+      height: 97vh;
+      max-height: 868px;
+      right: -370px/$desktop-height-ratio/2*100vh;
       left: initial;
       transform: none;
     }
@@ -29,29 +30,29 @@
     }
 
     .fig-cross-1 {
-      right: -300px;
+      right: -300px/$desktop-height-ratio/2*100vh;
       left: auto;
     }
 
     .fig-cross-2 {
       bottom: 33.33%;
-      right: 43.75%;
+      right: 350px/$desktop-height-ratio/2*100vh;
       left: auto;
     }
 
     .fig-square-1 {
       top: 17.9%;
-      left: 31.25%;
+      left: 250px/$desktop-height-ratio/2*100vh;
     }
 
     .fig-square-2 {
-      left: 29.25%;
+      left: 234px/$desktop-height-ratio/2*100vh;
       bottom: 13.35%;
     }
 
     .fig-circle-1 {
       bottom: 23.35%;
-      right: 28.75%;
+      right: 230px/$desktop-height-ratio/2*100vh;
       top: auto;
       left: auto;
       z-index: 1;
@@ -59,7 +60,7 @@
 
     .fig-circle-2 {
       top: 30%;
-      right: 27.78%;
+      right: 250px/$desktop-height-ratio/2*100vh;
     }
   }
 }

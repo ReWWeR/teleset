@@ -7,6 +7,8 @@ import fileinclude from 'gulp-file-include';
 import fontgen from 'gulp-fontgen';
 import imagemin from 'gulp-imagemin';
 import concat from 'gulp-concat';
+import autoprefixer from 'gulp-autoprefixer';
+import zip from 'gulp-zip';
 
 const dirs = {
     src: './src',
@@ -31,6 +33,9 @@ const paths = {
 gulp.task('style', () => {
     return gulp.src(paths.sassSrc)
         .pipe(sourcemaps.init())
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions']
+        }))
         .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(paths.sassDest))
@@ -73,5 +78,11 @@ gulp.task('watch', () => {
     gulp.watch(`${dirs.src}/js/**/*.js`, ['js'])
 });
 
-gulp.task('default',['style','html', 'js', 'image-min', 'watch'], () => {});
+gulp.task('zip', () => {
+    return gulp.src('./build/**/*')
+        .pipe(zip('teleset.zip'))
+        .pipe(gulp.dest('./'))
+});
+
+gulp.task('default',['style','html', 'js', 'image-min', 'watch', 'zip'], () => {});
 
