@@ -33,9 +33,9 @@ const paths = {
 gulp.task('style', () => {
     return gulp.src(paths.sassSrc)
         .pipe(sourcemaps.init())
-        .pipe(autoprefixer({
+/*        .pipe(autoprefixer({
             browsers: ['last 2 versions']
-        }))
+        }))*/
         .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(paths.sassDest))

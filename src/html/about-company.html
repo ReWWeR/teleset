@@ -1,9 +1,8 @@
 @@include('./assets/head.html', {"title":"Телесеть - о компании"})
 <body>
-@@include('./global/header-landing.html')
 <main class="inner-page">
     <div class="slide-menu">
-        @@include('./global/menu-container.html')
+        @@include('./global/menu-container.html', {"page": "about-company", "isHome": "false"})
         @@include('./modules/main-menu-item-about.html')
     </div>
 </main>

@@ -36,20 +36,20 @@
         </a>
         <nav class="slide-menu-nav">
             <ul>
-                <li><a href="./" class="active">Главная</a></li>
-                <li><a href="./about-plan.html">Тариф</a></li>
-                <li><a href="./about-company.html">Компания</a></li>
-                <li><a href="#">Кабинет</a></li>
-                <li><a href="#">Подключение</a></li>
-                <li><a href="#">Оплата</a></li>
+                <li><a href="./" class="@@if(page === 'main'){active}">Главная</a></li>
+                <li><a href="./about-plan.html" class="@@if(page === 'about-plan'){active}">Тариф</a></li>
+                <li><a href="./about-company.html" class="@@if(page === 'about-company'){active}">Компания</a></li>
+                <li><a href="#" class="disabled">Кабинет</a></li>
+                <li><a href="#" class="disabled">Подключение</a></li>
+                <li><a href="#" class="disabled">Оплата</a></li>
             </ul>
             <ul>
-                <li><a href="#">Каналы</a></li>
-                <li><a href="#">Магазин</a></li>
-                <li><a href="#">Поддержка</a></li>
-                <li><a href="#">Новости</a></li>
-                <li><a href="#">Опросы</a></li>
-                <li><a href="#">Документы</a></li>
+                <li><a href="#" class="disabled">Каналы</a></li>
+                <li><a href="#" class="disabled">Магазин</a></li>
+                <li><a href="#" class="disabled">Поддержка</a></li>
+                <li><a href="#" class="disabled">Новости</a></li>
+                <li><a href="#" class="disabled">Опросы</a></li>
+                <li><a href="#" class="disabled">Документы</a></li>
             </ul>
         </nav>
 
@@ -110,9 +110,9 @@
             </a></li>
         </ul>
         <footer class="slider-menu-footer">
-            <a href="#" class="close-slider-menu"><span class="text">Закрыть</span></a>
+            @@if(isHome === 'true') {<a href="#" class="close-slider-menu"><span class="text">Закрыть</span></a>}
             <a href="#" class="phone-icon"></a>
-            <a href="#" class="personal-area"><img src="img/login-white.png" alt="login"></a>
+            <!--<a href="#" class="personal-area"><img src="img/login-white.png" alt="login"></a>-->
         </footer>
     </div>
 </section>

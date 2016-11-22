@@ -81,3 +81,8 @@ sup {
     font-weight: 700;
   }
 }
+
+.disabled, [disabled] {
+  pointer-events: none;
+  opacity: .3;
+}
