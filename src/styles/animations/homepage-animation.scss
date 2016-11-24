@@ -47,11 +47,11 @@ $delay-200: 2s;
 @keyframes hero-animation {
   0% {
      opacity: 0;
-     transform: translateY(20%);
+     transform: translateY(20%) scaleX(-1);
   }
 
   25% {
-    transform: translateY(20%);
+    transform: translateY(20%) scaleX(-1);
   }
 
   50% {
@@ -60,7 +60,7 @@ $delay-200: 2s;
 
   100% {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) scaleX(-1);
   }
 }
 

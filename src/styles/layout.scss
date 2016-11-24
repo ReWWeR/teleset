@@ -11,3 +11,27 @@
 .inner-main-content {
   padding-top: 125px;
 }
+
+.plan-connect-wrapper {
+  @extend %clearfix;
+  padding: 75px 0;
+
+  .plan-name {
+    font: $font-ultima;
+    font-size: 28px;
+    line-height: 1.28;
+    color: $main-black;
+    float: left;
+
+    sup {
+      font-size: 18px;
+      font-weight: 700;
+    }
+  }
+
+  .btn.btn-big {
+    float: right;
+    font-size: 30px;
+    padding: 25px 23px;
+  }
+}

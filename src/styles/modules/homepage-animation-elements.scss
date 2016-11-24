@@ -1,11 +1,14 @@
+$hero-width: 748px;
+$hero-height: 800px;
+
 .homepage {
   .hero {
     position: fixed;
-    left: 16%;
-    bottom: 0;
+    left: 72px/$desktop-home-ratio*100%;
+    bottom: 60px/$desktop-height-ratio*100%;
     z-index: 1;
-    height: 97vh;
-    max-height: 868px;
+    height: $hero-height/$desktop-height-ratio*100vh;
+    max-height: $hero-height;
   }
 
   .plan-description {

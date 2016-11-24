@@ -10,6 +10,13 @@
     font-weight: 600;
   }
 
+  &.btn-big {
+    font-size: 24px;
+    font-weight: 600;
+    border-radius: 26px;
+    padding: 27px 24px;
+  }
+
   &.btn-purple {
     background: $purple;
     color: $yellow;
@@ -29,6 +36,16 @@
 
   &.btn-yellow {
     background: $yellow;
+    color: #fff;
+
+    &:hover {
+      background: $purple;
+      color: $yellow;
+    }
+  }
+
+  &.btn-green {
+    background: $green;
     color: #fff;
 
     &:hover {

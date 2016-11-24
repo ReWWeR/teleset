@@ -141,20 +141,22 @@
 
     .hero {
       position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-27%);
-      z-index: 1;
-      height: 97vh;
-      max-height: 868px;
-    }
-
-    .btn {
-      position: absolute;
-      bottom: 423px;
+      bottom: 60px/$hero-height*100%;
       left: 50%;
       transform: translateX(-50%);
       z-index: 1;
+      height: $hero-height/$desktop-height-ratio*100vh;
+      max-height: $hero-height;
+    }
+
+    .btn {
+      &.btn-header {
+        position: absolute;
+        bottom: 423px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+      }
     }
 
     .fig-cross-1 {
@@ -204,7 +206,6 @@
       overflow-y: scroll;
       overflow-x: hidden;
     }
-
 
   }
 

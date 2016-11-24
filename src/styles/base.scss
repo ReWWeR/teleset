@@ -69,19 +69,6 @@ sup {
   background: $yellow;
 }
 
-.plan-name {
-  font: $font-ultima;
-  font-size: 28px;
-  line-height: 1.28;
-  color: $main-black;
-  padding: 75px 0;
-
-  sup {
-    font-size: 18px;
-    font-weight: 700;
-  }
-}
-
 .disabled, [disabled] {
   pointer-events: none;
   opacity: .3;
