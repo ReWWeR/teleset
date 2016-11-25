@@ -97,4 +97,8 @@
     height: 54px/$desktop-height-ratio*100vh;
     max-width: 54px;
   }
+  &.fig-square-big {
+    height: 600px/$desktop-height-ratio*100vh;
+    max-width: 600px;
+  }
 }

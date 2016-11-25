@@ -22,7 +22,7 @@ const paths = {
     jsSrc: `${dirs.src}/js/**/*.js`,
     jsDest: `${dirs.dest}/js/`,
     htmlSrc: `${dirs.src}/html/*.html`,
-    jsAdditional: `${dirs.src}/libs/jquery/dist/jquery.js`,
+    jsAdditional: [`${dirs.src}/libs/jquery/dist/jquery.js`, `${dirs.src}/libs/jquery-validation/dist/jquery.validate.js`, `${dirs.src}/js/**/*.js`],
     htmlDest: `${dirs.dest}`,
     fontsSrc: `${dirs.src}/fonts/`,
     fontDest: [`${dirs.src}/styles/fonts/`,`${dirs.dest}/styles/fonts/`],
@@ -67,7 +67,7 @@ gulp.task('image-min', () => {
 });
 
 gulp.task('js', () => {
-    gulp.src([paths.jsAdditional, paths.jsSrc])
+    gulp.src(paths.jsAdditional)
         .pipe(concat('main.js'))
         .pipe(gulp.dest(paths.jsDest))
 });

@@ -159,45 +159,42 @@
       }
     }
 
-    .fig-cross-1 {
+    .fig {
       position: absolute;
+    }
+
+    .fig-cross-1 {
       bottom: 150px/$desktop-height-ratio*100%;
       left: 50%;
       margin: -300px 0 0 -300px;
     }
 
     .fig-cross-2 {
-      position: absolute;
       bottom: 464px/$desktop-height-ratio*100%;
       left: 29.5%;
     }
 
     .fig-cross-3 {
-      position: absolute;
       top: 130px/$desktop-height-ratio*100%;
       right: 27.5%;
     }
 
     .fig-circle-1 {
-      position: absolute;
       top: 590px/$desktop-height-ratio*100%;
       left: 13.35%;
     }
 
     .fig-circle-2 {
-      position: absolute;
       top: 356px/$desktop-height-ratio*100%;
       right: 3%;
     }
 
     .fig-square-1 {
-      position: absolute;
       left: 5%;
       bottom: 220px/$desktop-height-ratio*100%;
     }
 
     .fig-square-2 {
-      position: absolute;
       top: 446px/$desktop-height-ratio*100%;
       right: 18.25%;
     }

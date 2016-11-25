@@ -60,4 +60,38 @@
       right: 250px/($desktop-home-ratio/2)*100%;
     }
   }
+
+  &.connect-page {
+    .fig-square-big {
+      top: 151px/$desktop-height-ratio*100%;
+      right: -300px/($desktop-home-ratio/2)*100%;
+    }
+
+    .fig-cross-1 {
+      height: 30px;
+      bottom: 420px/$desktop-height-ratio*100%;
+      right: 356px/($desktop-home-ratio/2)*100%;
+    }
+
+    .fig-cross-2 {
+      bottom: 159px/$desktop-height-ratio*100%;
+      right: 408px/($desktop-home-ratio/2)*100%;
+    }
+
+    .fig-circle-1 {
+      width: 30px;
+      right: 288px/($desktop-home-ratio/2)*100%;
+
+    }
+
+    .fig-square-1 {
+      bottom: 92px/$desktop-height-ratio*100%;
+    }
+
+    .fig-square-2 {
+      top: 131px/$desktop-height-ratio*100%;
+      right: 23px/($desktop-home-ratio/2)*100%;
+      left: auto;
+    }
+  }
 }

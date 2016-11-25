@@ -1,6 +1,19 @@
 .plan-description {
   width: 400px;
 
+  .connect-success-step {
+    display: none;
+    .show-connect-step-success & {
+      display: block;
+    }
+  }
+
+  h1, p, a {
+    .show-connect-step-success & {
+      display: none;
+    }
+  }
+
   h1 {
     padding-bottom: 24px;
   }

@@ -1,0 +1,39 @@
+input[type=text], input[type=number], input[type=email], input[type=tel] {
+  border: none;
+  background: $purple;
+  height: 54px;
+  border-radius: 10px;
+  font: $font-body;
+  font-size: 22px;
+  color: #fff;
+  padding: 0 40px 0 20px;
+
+  &::-webkit-input-placeholder  {
+    font-size: 16px;
+    font-weight: 600;
+    color: $white-60;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.input-wrap {
+  position: relative;
+
+  &.valid {
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      background: url("./../img/green-tick.svg");
+      background-size: 20px 14px;
+      width: 20px;
+      height: 14px;
+      top: 50%;
+      right: 15px;
+      margin-top: -7px;
+    }
+  }
+}

@@ -54,19 +54,27 @@ sup {
 }
 
 .yellow-text {
-  color: $yellow;
+  color: $yellow!important;
 }
 
 .light-grey-text {
-  color: $light-grey;
+  color: $light-grey!important;
 }
 
 .purple-text {
-  color: $purple;
+  color: $purple!important;
+}
+
+.blue-text {
+  color: $blue!important;
 }
 
 .yellow-bg {
-  background: $yellow;
+  background: $yellow!important;
+}
+
+.purple-bg {
+  background: $purple!important;
 }
 
 .disabled, [disabled] {

@@ -3,6 +3,20 @@
   font: $font-body;
   display: inline-block;
   transition: background $transition-time, color $transition-time;
+  border: none;
+  cursor: pointer;
+
+  &[disabled],&.disabled {
+    opacity: .1;
+    pointer-events: none;
+    background: #000!important;
+
+    svg {
+      path {
+        fill: #000;
+      }
+    }
+  }
 
   &.btn-primary {
     border-radius: 18px;
@@ -51,6 +65,49 @@
     &:hover {
       background: $purple;
       color: $yellow;
+    }
+  }
+
+  &.btn-with-arrow {
+    &:after {
+      content: '';
+      display: block;
+      float: right;
+      width: 14px;
+      height: 30px;
+      margin-left: 15px;
+      background-image: url('./../img/arrow-green.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 14px 24px;
+    }
+  }
+
+  &.btn-with-left-arrow {
+    color: $yellow;
+
+    &:hover {
+      color: #fff;
+    }
+
+    &:before {
+      content: '';
+      display: block;
+      float: left;
+      width: 54px;
+      height: 54px;
+      border-radius: 18px;
+      background: #fff;
+      background-image: url('./../img/arrow-green.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 14px 24px;
+    }
+
+    span {
+      display: block;
+      float: left;
+      padding: 12px 0 12px 15px;
     }
   }
 }
