@@ -2,7 +2,7 @@
   padding: 12px 24px;
   font: $font-body;
   display: inline-block;
-  transition: background $transition-time, color $transition-time;
+  transition: background $transition-time, color $transition-time, opacity $transition-time;
   border: none;
   cursor: pointer;
 

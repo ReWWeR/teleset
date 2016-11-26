@@ -8,6 +8,7 @@
 
   .subfooter {
     margin-bottom: 50px;
+    display: flex;
 
     &:after {
       content: '';
@@ -16,9 +17,11 @@
     }
 
     .logo-about {
+      flex: 1;
       svg {
         width: 138px;
         float: left;
+        margin: 0 20px 10px 0;
         line, circle, rect {
           stroke: #4f4f4f;
         }
@@ -27,7 +30,6 @@
       .text {
         float: left;
         color: #fff;
-        margin-left: 20px;
         line-height: 1.1;
 
         span {

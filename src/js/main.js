@@ -2,6 +2,7 @@ $(document).ready(function () {
     var $body = $('body');
     var $showMenuButton = $('.hamburger-menu');
     var $hideMenuButton = $('.close-slider-menu');
+    var coordinates = {};
 
     $showMenuButton
         .on('click', function () {
@@ -18,7 +19,6 @@ $(document).ready(function () {
                 var target = $(this.hash);
                 target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
                 if (target.length) {
-                    console.log(target.offset().top);
                     $('.main-menu-item').animate({
                         scrollTop: target.offset().top
                     }, 700);
@@ -64,19 +64,7 @@ $(document).ready(function () {
                     if (res.status === "success") {
                           $connectForm1.closest('.connect-form-step').addClass('success-response');
 
-                          var coordinates = {lat: +res.coordinates.lat, lng: +res.coordinates.lng};
-
-                          var map = new google.maps.Map(document.getElementById('map'), {
-                                center: coordinates,
-                                zoom: 18,
-                                disableDefaultUI: true
-                            });
-
-                        var marker = new google.maps.Marker({
-                            position: coordinates,
-                            map: map,
-                            icon: './img/step-tick.svg'
-                        });
+                          coordinates = {lat: +res.coordinates.lat, lng: +res.coordinates.lng};
                     } else if (res.status === "error") {
                         $connectForm1.closest('.connect-form-step').addClass('error-response');
                     }
@@ -94,6 +82,19 @@ $(document).ready(function () {
 
     $submitStep1.on('click', function (e) {
         e.preventDefault();
+        var map = new google.maps.Map(document.getElementById('map'), {
+            center: coordinates,
+            zoom: 18,
+            disableDefaultUI: true,
+            scrollwheel: false,
+            scaleControl: false
+        });
+
+        var marker = new google.maps.Marker({
+            position: coordinates,
+            map: map,
+            icon: './img/step-tick.svg'
+        });
         $body.addClass('show-connect-step-map');
     });
 
@@ -116,7 +117,6 @@ $(document).ready(function () {
     });
 
     $('input.info-check').on('keyup', function(){
-        console.log($submitInfoForm);
         if($submitInfoForm.valid()) {
             $submitStep3.attr('disabled', false)
         } else {

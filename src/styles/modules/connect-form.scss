@@ -23,17 +23,21 @@
 
     &.connect-form-step-view-map {
       transform: translateX(100%) translateY(-50%);
+      display: none;
 
       .show-connect-step-map & {
         transform: translateX(-50%) translateY(-50%);
+        display: block;
       }
     }
 
     &.connect-form-step-view-3 {
       transform: translateX(200%) translateY(-50%);
+      display: none;
 
       .show-connect-step-3 & {
         transform: translateX(-50%) translateY(-50%);
+        display: block;
       }
     }
   }
