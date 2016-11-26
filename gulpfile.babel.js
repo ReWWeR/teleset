@@ -22,10 +22,13 @@ const paths = {
     jsSrc: `${dirs.src}/js/**/*.js`,
     jsDest: `${dirs.dest}/js/`,
     htmlSrc: `${dirs.src}/html/*.html`,
-    jsAdditional: [`${dirs.src}/libs/jquery/dist/jquery.js`, `${dirs.src}/libs/jquery-validation/dist/jquery.validate.js`, `${dirs.src}/js/**/*.js`],
+    jsAdditional: [`${dirs.src}/libs/jquery/dist/jquery.js`,
+                   `${dirs.src}/libs/jquery-validation/dist/jquery.validate.js`,
+                   `${dirs.src}/libs/jquery-mask-plugin/dist/jquery.mask.js`,
+                   `${dirs.src}/js/**/*.js`],
     htmlDest: `${dirs.dest}`,
     fontsSrc: `${dirs.src}/fonts/`,
-    fontDest: [`${dirs.src}/styles/fonts/`,`${dirs.dest}/styles/fonts/`],
+    fontDest: [`${dirs.src}/styles/fonts/`, `${dirs.dest}/styles/fonts/`],
     imageSrc: `${dirs.src}/img/*`,
     imageDest: `${dirs.dest}/img/`
 };
@@ -33,9 +36,9 @@ const paths = {
 gulp.task('style', () => {
     return gulp.src(paths.sassSrc)
         .pipe(sourcemaps.init())
-/*        .pipe(autoprefixer({
-            browsers: ['last 2 versions']
-        }))*/
+        /*        .pipe(autoprefixer({
+         browsers: ['last 2 versions']
+         }))*/
         .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(paths.sassDest))
@@ -84,5 +87,6 @@ gulp.task('zip', () => {
         .pipe(gulp.dest('./'))
 });
 
-gulp.task('default',['style','html', 'js', 'image-min', 'watch', 'zip'], () => {});
+gulp.task('default', ['style', 'html', 'js', 'image-min', 'watch', 'zip'], () => {
+});
 

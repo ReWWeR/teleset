@@ -132,6 +132,8 @@ $(document).ready(function () {
             method: "POST"
         })
     });
+
+    $('#phone').mask('+7 000 000-00-00')
 });
 
 window.onload = function () {
