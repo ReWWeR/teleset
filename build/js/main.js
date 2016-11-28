@@ -12420,7 +12420,7 @@ $(document).ready(function () {
         $body.addClass('show-connect-step-3')
     });
 
-    $submitInfoForm = $('#connect-submit-info');
+    var $submitInfoForm = $('#connect-submit-info');
 
     $submitInfoForm.validate({
         errorPlacement: function (error, element) {
@@ -12451,7 +12451,22 @@ $(document).ready(function () {
         })
     });
 
-    $('#phone').mask('+7 000 000-00-00')
+    $('#phone').mask('+7 000 000-00-00');
+
+    $('.hamburger-menu-mobile').on('click', function () {
+        $body.toggleClass('show-hamburger');
+        $('.mobile-header').toggleClass('decolorify-items');
+    });
+
+    $headerInnerPageHeight = $('.header-inner-page').height();
+
+    $('.main-menu-item').on('scroll', function () {
+        if($headerInnerPageHeight <= $(this).scrollTop()) {
+            $body.addClass('hide-mobile-header');
+        } else {
+            $body.removeClass('hide-mobile-header');
+        }
+    })
 });
 
 window.onload = function () {

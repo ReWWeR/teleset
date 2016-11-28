@@ -12,6 +12,10 @@
     width: 138px;
     display: block;
     padding-top: 50px;
+
+    @media #{$media-sm} {
+      display: none;
+    }
   }
 
   .menu-container {
@@ -20,6 +24,19 @@
     height: 100vh;
     position: relative;
     z-index: 2;
+    transition: opacity .5s, transform .5s;
+
+    @media #{$media-sm} {
+      width: 100%;
+      overflow-y: scroll;
+      opacity: 0;
+      transform: translateX(-100%);
+
+      .show-hamburger & {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
 
     .slide-menu-nav {
       position: absolute;
@@ -27,9 +44,19 @@
       bottom: 32%;
       width: 100%;
 
+      @media #{$media-sm} {
+        position: relative;
+        margin-top: 30vh;
+        overflow: hidden;
+      }
+
       ul {
         float: left;
         margin-left: 13%;
+
+        @media #{$media-sm} {
+          margin-left: 0;
+        }
 
         &:first-child {
           margin-left: 0;
@@ -40,6 +67,10 @@
             font: $font-body;
             font-weight: 300;
             font-size: 2.625vw; //42px;
+
+            @media #{$media-sm} {
+              font-size: 63px/$mobile-ratio *100vw;
+            }
 
             &:hover, &.active {
               color: $yellow;
@@ -53,6 +84,14 @@
     .social-icons {
       position: absolute;
       top: 78.65%;
+
+      @media #{$media-sm} {
+        position: relative;
+        clear: both;
+        margin: 57px 0;
+        overflow: hidden;
+      }
+
       li {
         display: block;
         float: left;
@@ -139,22 +178,34 @@
     left: 50%;
     top: 0;
 
+    @media #{$media-sm} {
+      width: 100%;
+      left: 0;
+    }
+
     .hero {
       position: absolute;
-      bottom: 60px/$hero-height*100%;
+      top: 50%;
+      //bottom: 60px/$hero-height*100%;
       left: 50%;
-      transform: translateX(-50%);
+      transform: translateX(-50%) translateY(-50%);
       z-index: 1;
-      height: $hero-height/$desktop-height-ratio*100vh;
-      max-height: $hero-height;
+      //height: $hero-height/$desktop-height-ratio*100vh;
+      //max-height: $hero-height;
+      width: $hero-width/$desktop-home-ratio*100vw;
+
+      @media #{$media-sm} {
+        width: $hero-width/$mobile-ratio*100vw;
+        max-width: $hero-width;
+      }
     }
 
     .btn {
       &.btn-header {
         position: absolute;
-        bottom: 423px;
+        top: 50%;
         left: 50%;
-        transform: translateX(-50%);
+        transform: translateY(-50%) translateX(-50%);
         z-index: 1;
       }
     }
@@ -164,9 +215,11 @@
     }
 
     .fig-cross-1 {
-      bottom: 150px/$desktop-height-ratio*100%;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      //bottom: 150px/$desktop-height-ratio*100%;
       left: 50%;
-      margin: -300px 0 0 -300px;
+      //margin: -300px 0 0 -300px;
     }
 
     .fig-cross-2 {

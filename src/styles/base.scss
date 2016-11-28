@@ -25,6 +25,10 @@ h1, h2, h3, h4 {
 h2 {
   font-size: 48px;
   padding-bottom: .93em;
+
+  @media #{$media-sm} {
+    font-size: 42px/$mobile-ratio * 100vw;
+  }
 }
 
 h4 {
@@ -36,10 +40,14 @@ p {
   font-size: 22px;
   line-height: 1.36;
   color: $black-60;
+
+  @media #{$media-sm} {
+    font-size: 26px/$mobile-ratio * 100vw;
+  }
 }
 
 p + p {
-  paddin-top: 1em;
+  padding-top: 1em;
 }
 
 

@@ -1,6 +1,10 @@
 .wrapper {
   padding: 0 60px;
 
+  @media #{$media-sm} {
+    padding: 0 27px;
+  }
+
   &:after {
     content: '';
     display: table;
@@ -10,11 +14,20 @@
 
 .inner-main-content {
   padding-top: 125px;
+
+  @media #{$media-sm} {
+    padding-top: 55px;
+  }
 }
 
 .plan-connect-wrapper {
   @extend %clearfix;
   padding: 75px 0;
+
+  @media #{$media-sm} {
+    padding: 65px 0;
+    display: flex;
+  }
 
   .plan-name {
     font: $font-ultima;
@@ -23,9 +36,19 @@
     color: $main-black;
     float: left;
 
+    @media #{$media-sm} {
+      font-size: 28px/$mobile-ratio * 100vw;
+      float: none;
+      align-self: center;
+    }
+
     sup {
       font-size: 18px;
       font-weight: 700;
+
+      @media #{$media-sm} {
+        font-size: 18px/$mobile-ratio * 100vw;
+      }
     }
   }
 
@@ -33,5 +56,12 @@
     float: right;
     font-size: 30px;
     padding: 25px 23px;
+
+    @media #{$media-sm} {
+      font-size: 36px/$mobile-ratio * 100vw;
+      padding: 15px 20px;
+      margin-left: auto;
+      align-self: center;
+    }
   }
 }

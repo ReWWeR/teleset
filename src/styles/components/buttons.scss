@@ -29,6 +29,10 @@
     font-weight: 600;
     border-radius: 26px;
     padding: 27px 24px;
+
+    @media #{$media-sm} {
+      border-radius: 15px;
+    }
   }
 
   &.btn-purple {

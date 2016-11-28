@@ -53,52 +53,81 @@
   }
 
   &.fig-cross-1 {
-    height: 600px/$desktop-height-ratio*100vh;
-    max-width: 600px;
+    width: 600px/$desktop-home-ratio*100vw;
 
+    @media #{$media-sm} {
+      width: 600px/$mobile-ratio*100vw;
+    }
   }
 
   &.fig-cross-2 {
-    height: 30px/$desktop-height-ratio*100vh;
-    max-width: 30px;
+    width: 30px/$desktop-home-ratio*100vw;
+
+    @media #{$media-sm} {
+      width: 30px/$mobile-ratio*100vw;
+    }
   }
 
   &.fig-cross-3 {
-    height: 30px/$desktop-height-ratio*100vh;
-    max-width: 30px;
+    width: 30px/$desktop-home-ratio*100vw;
+
+    @media #{$media-sm} {
+      width: 30px/$mobile-ratio*100vw;
+    }
   }
 
   &.fig-cross-4 {
-    height: 390px/$desktop-height-ratio*100vh;
-    max-width: 390px;
+    width: 390px/$desktop-home-ratio*100vw;
+
+    @media #{$media-sm} {
+      width: 390px/$mobile-ratio*100vw;
+    }
   }
 
   &.fig-circle-1 {
-    height: 90px/$desktop-height-ratio*100vh;
-    max-width: 90px;
+    width: 90px/$desktop-home-ratio*100vw;
+
+    @media #{$media-sm} {
+      width: 90px/$mobile-ratio*100vw;
+    }
   }
 
   &.fig-circle-2 {
-    height: 30px/$desktop-height-ratio*100vh;
-    max-width: 30px;
+    width: 30px/$desktop-home-ratio*100vw;
+
+    @media #{$media-sm} {
+      width: 30px/$mobile-ratio*100vw;
+    }
   }
 
   &.fig-circle-3 {
-    height: 420px/$desktop-height-ratio*100vh;
-    max-width: 420px;
+    width: 420px/$desktop-home-ratio*100vw;
+
+    @media #{$media-sm} {
+      width: 420px/$mobile-ratio*100vw;
+    }
   }
 
   &.fig-square-1 {
-    height: 24px/$desktop-height-ratio*100vh;
-    max-width: 24px;
+    width: 24px/$desktop-home-ratio*100vw;
+
+    @media #{$media-sm} {
+      width: 24px/$mobile-ratio*100vw;
+    }
   }
 
   &.fig-square-2 {
-    height: 54px/$desktop-height-ratio*100vh;
-    max-width: 54px;
+    width: 54px/$desktop-home-ratio*100vw;
+
+    @media #{$media-sm} {
+      width: 54px/$mobile-ratio*100vw;
+    }
   }
   &.fig-square-big {
-    height: 600px/$desktop-height-ratio*100vh;
-    max-width: 600px;
+    width: 600px/$desktop-home-ratio*100vw;
+
+    @media #{$media-sm} {
+      width: 600px/$mobile-ratio*100vw;
+    }
   }
 }

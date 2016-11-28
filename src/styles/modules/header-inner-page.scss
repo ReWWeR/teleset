@@ -6,14 +6,13 @@
     .hero {
       right: -171px/($desktop-home-ratio/2)*100%;
       left: initial;
-      transform: none;
+      transform: translateY(-50%);
     }
 
     .plan-description {
       position: absolute;
-      top: 50%;
+      top: 30%;
       z-index: 1;
-      transform: translateY(-50%);
 
       p {
         color: #fff;
@@ -23,10 +22,16 @@
         position: static;
         transform: none;
         left: auto;
+        font-size: 22px/$desktop-home-ratio * 100vw;
+
+        @media #{$media-sm} {
+          font-size: 22px/$mobile-ratio * 100vw;
+        }
       }
     }
 
     .fig-cross-1 {
+      transform: translateY(-50%);
       right: -300px/($desktop-home-ratio/2)*100%;
       left: auto;
     }
@@ -92,6 +97,25 @@
       top: 131px/$desktop-height-ratio*100%;
       right: 23px/($desktop-home-ratio/2)*100%;
       left: auto;
+    }
+  }
+
+  .arrows-scroll-down {
+    position: absolute;
+    bottom: 30px;
+    left: 60px;
+
+    svg {
+      height: 24px;
+      margin-top: -6px;
+      @media #{$media-sm} {
+        margin-top: -3px;
+        height: 12px;
+      }
+    }
+
+    @media #{$media-sm} {
+      left: 30px;
     }
   }
 }

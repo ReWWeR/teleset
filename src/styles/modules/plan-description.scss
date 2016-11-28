@@ -1,5 +1,9 @@
 .plan-description {
-  width: 400px;
+  width: 400px/$desktop-home-ratio * 100vw;
+
+  @media #{$media-sm} {
+    width: 100%;
+  }
 
   .connect-success-step {
     display: none;
@@ -15,19 +19,33 @@
   }
 
   h1 {
-    padding-bottom: 24px;
+    padding-bottom: 24px/90px * 1em;
+    font-size: 90px/$desktop-home-ratio * 100vw;
+
+    @media #{$media-sm} {
+      font-size: 108px/$mobile-ratio * 100vw;
+    }
   }
 
   p {
-    font-size: 36px;
+    font-size: 36px/$desktop-home-ratio * 100vw;
     line-height: 1.1;
     color: #000;
-    padding-bottom: 40px;
+    padding-bottom: 36px/40px * 1em;
+
+    @media #{$media-sm} {
+      font-size: 36px/$mobile-ratio * 100vw;
+      width: 46vw;
+    }
   }
 
   sup {
     font-weight: 700;
-    font-size: 20px;
+    font-size: 20px/$desktop-home-ratio * 100vw;
     vertical-align: super;
+
+    @media #{$media-sm} {
+      font-size: 20px/$mobile-ratio * 100vw;
+    }
   }
 }

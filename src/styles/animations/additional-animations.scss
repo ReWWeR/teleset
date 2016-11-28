@@ -1,0 +1,42 @@
+.arrows-scroll-down {
+  display: flex;
+  flex-direction: column;
+  width: 12px;
+
+  svg {
+    transform: rotate(90deg);
+
+    &:nth-child(1) {
+      @extend %arrow-animation;
+    }
+
+    &:nth-child(2) {
+      @extend %arrow-animation;
+      animation-delay: .33s;
+    }
+
+    &:nth-child(3) {
+      @extend %arrow-animation;
+      animation-delay: .66s;
+    }
+  }
+}
+
+%arrow-animation {
+  animation-name: arrow-animation;
+  animation-duration: 1.5s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+}
+
+@keyframes arrow-animation {
+  0%{
+    opacity: 1;
+  }
+  50% {
+    opacity: .2;
+  }
+  100% {
+    opacity: 1;
+  }
+}

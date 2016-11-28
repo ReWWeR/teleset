@@ -6,9 +6,19 @@
   font-size: 18px;
   line-height: 1.44;
 
+  @media #{$media-sm} {
+    font-size: 18px/$mobile-ratio * 100vw;
+    padding: 60px 0;
+    margin-top: 57px;
+  }
+
   .subfooter {
     margin-bottom: 50px;
     display: flex;
+
+    @media #{$media-sm} {
+      margin-bottom: 25px;
+    }
 
     &:after {
       content: '';
@@ -22,6 +32,12 @@
         width: 138px;
         float: left;
         margin: 0 20px 10px 0;
+
+        @media #{$media-sm} {
+          width: 138px/$mobile-ratio * 100vw;
+          margin-right: 5px;
+        }
+
         line, circle, rect {
           stroke: #4f4f4f;
         }
@@ -43,8 +59,14 @@
 
       svg {
         width: 52px;
+
         polygon {
           stroke: $yellow;
+        }
+
+        @media #{$media-sm} {
+          width: 52px/$mobile-ratio * 100vw;
+          margin-right: 5px;
         }
       }
 
@@ -53,6 +75,11 @@
         color: $white-40;
         line-height: 1.1;
         margin-left: 18px;
+
+        @media #{$media-sm} {
+          margin-left: 0;
+        }
+
         span {
           color: #fff;
         }
