@@ -12424,7 +12424,7 @@ $(document).ready(function () {
 
     $.validator.methods.email = function( value, element ) {
         return this.optional( element ) || /[a-z]+@[a-z]+\.[a-z]+/.test( value );
-    }
+    };
 
     $submitInfoForm.validate({
         errorPlacement: function (error, element) {

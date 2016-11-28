@@ -1,12 +1,16 @@
 $font-body: 400 22px/1.36 'Gilroy';
 $font-ultima: 400 90px/0.93 'UltimaPro';
+$base-font-size: 22px;
 
 $desktop-height-ratio: 900px;
 $desktop-width-half: 800px;
 $desktop-home-ratio: 1600px;
 $mobile-ratio: 640px;
+$mobile-ratio-height: 920px;
 
+$desktop-bad-ratio: 'screen and (min-aspect-ratio: 2500/1400) and (min-width: 1000px)';
 $media-sm: 'screen and (max-width: 1023px)';
+$media-sm-with-ratio: 'screen and (max-width: 1023px) and (min-aspect-ratio: 940/1300)';
 
 $main-black: #2b2c34;
 $yellow: #ffb103;

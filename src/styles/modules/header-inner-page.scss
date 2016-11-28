@@ -7,6 +7,15 @@
       right: -171px/($desktop-home-ratio/2)*100%;
       left: initial;
       transform: translateY(-50%);
+
+      @media #{$desktop-bad-ratio} {
+        right: -171px/$desktop-height-ratio*100vh;
+      }
+
+      @media #{$media-sm-with-ratio} {
+        right: -171px/$mobile-ratio-height*100vh;
+      }
+
     }
 
     .plan-description {
@@ -24,8 +33,16 @@
         left: auto;
         font-size: 22px/$desktop-home-ratio * 100vw;
 
+        @media #{$desktop-bad-ratio} {
+          font-size: 22px/$desktop-height-ratio*100vh;
+        }
+
         @media #{$media-sm} {
           font-size: 22px/$mobile-ratio * 100vw;
+        }
+
+        @media #{$media-sm-with-ratio} {
+          font-size: 22px/$mobile-ratio-height * 100vh;
         }
       }
     }
@@ -34,6 +51,14 @@
       transform: translateY(-50%);
       right: -300px/($desktop-home-ratio/2)*100%;
       left: auto;
+
+      @media #{$desktop-bad-ratio} {
+        right: -300px/$desktop-height-ratio*100vh;
+      }
+
+      @media #{$media-sm-with-ratio} {
+        right: -300px/$mobile-ratio-height*100vh;
+      }
     }
 
     .fig-cross-2 {

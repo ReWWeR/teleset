@@ -13,28 +13,48 @@
 }
 
 .inner-main-content {
-  padding-top: 125px;
+  padding-top: 125px/$desktop-home-ratio*100vw;
+
+  @media #{$desktop-bad-ratio} {
+    padding-top: 125px/$desktop-height-ratio*100vh;
+  }
 
   @media #{$media-sm} {
-    padding-top: 55px;
+    padding-top: 125px/$mobile-ratio*100vw;
+  }
+
+  @media #{$media-sm-with-ratio} {
+    padding-top: 125px/$mobile-ratio-height*100vh;
   }
 }
 
 .plan-connect-wrapper {
   @extend %clearfix;
-  padding: 75px 0;
+  padding: (75px/$desktop-home-ratio*100vw) 0;
+
+  @media #{$desktop-bad-ratio} {
+    padding: (75px/$desktop-height-ratio*100vh) 0;
+  }
 
   @media #{$media-sm} {
-    padding: 65px 0;
+    padding: (65px/$mobile-ratio*100vw) 0;
     display: flex;
+  }
+
+  @media #{$media-sm-with-ratio} {
+    padding: (65px/$mobile-ratio-height*100vh) 0;
   }
 
   .plan-name {
     font: $font-ultima;
-    font-size: 28px;
+    font-size: 28px/$desktop-home-ratio*100vw;
     line-height: 1.28;
     color: $main-black;
     float: left;
+
+    @media #{$desktop-bad-ratio} {
+      font-size: 28px/$desktop-height-ratio * 100vh;
+    }
 
     @media #{$media-sm} {
       font-size: 28px/$mobile-ratio * 100vw;
@@ -42,26 +62,47 @@
       align-self: center;
     }
 
+    @media #{$media-sm-with-ratio} {
+      font-size: 28px/$mobile-ratio-height * 100vh;
+    }
+
     sup {
-      font-size: 18px;
+      font-size: 18px/$desktop-home-ratio*100vw;
       font-weight: 700;
+
+      @media #{$desktop-bad-ratio} {
+        font-size: 18px/$desktop-height-ratio * 100vh;
+      }
 
       @media #{$media-sm} {
         font-size: 18px/$mobile-ratio * 100vw;
+      }
+
+      @media #{$media-sm-with-ratio} {
+        font-size: 18px/$mobile-ratio-height * 100vh;
       }
     }
   }
 
   .btn.btn-big {
     float: right;
-    font-size: 30px;
-    padding: 25px 23px;
+    font-size: 30px/$desktop-home-ratio*100vw;
+    padding: (25px/$desktop-home-ratio*100vw) (23px/$desktop-home-ratio*100vw);
+
+    @media #{$desktop-bad-ratio} {
+      font-size: 36px/$desktop-height-ratio * 100vh;
+      padding: (25px/$desktop-height-ratio*100vh) (23px/$desktop-height-ratio*100vh);
+    }
 
     @media #{$media-sm} {
       font-size: 36px/$mobile-ratio * 100vw;
-      padding: 15px 20px;
+      padding: (15px/$mobile-ratio*100vw) (20px/$mobile-ratio*100vw);
       margin-left: auto;
       align-self: center;
+    }
+
+    @media #{$media-sm-with-ratio} {
+      font-size: 36px/$mobile-ratio-height * 100vh;
     }
   }
 }

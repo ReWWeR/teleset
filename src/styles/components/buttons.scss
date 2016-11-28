@@ -1,5 +1,5 @@
 .btn {
-  padding: 12px 24px;
+  padding: (12px/$desktop-home-ratio*100vw) (24px/$desktop-home-ratio*100vw);
   font: $font-body;
   display: inline-block;
   transition: background $transition-time, color $transition-time, opacity $transition-time;
@@ -19,7 +19,7 @@
   }
 
   &.btn-primary {
-    border-radius: 18px;
+    border-radius: 18px/$desktop-home-ratio*100vw;
     font-size: 22px;
     font-weight: 600;
   }
@@ -27,12 +27,8 @@
   &.btn-big {
     font-size: 24px;
     font-weight: 600;
-    border-radius: 26px;
-    padding: 27px 24px;
-
-    @media #{$media-sm} {
-      border-radius: 15px;
-    }
+    border-radius: 26px/$desktop-home-ratio*100vw;
+    padding: (27px/$desktop-home-ratio*100vw) (24px/$desktop-home-ratio*100vw);
   }
 
   &.btn-purple {
