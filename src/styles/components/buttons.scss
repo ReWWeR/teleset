@@ -6,6 +6,18 @@
   border: none;
   cursor: pointer;
 
+  @media #{$desktop-bad-ratio} {
+    padding: (12px/$desktop-height-ratio*100vh) (24px/$desktop-height-ratio*100vh);
+  }
+
+  @media #{$media-sm} {
+    padding: (22px/$mobile-ratio*100vw) (30px/$mobile-ratio*100vw);
+  }
+
+  @media #{$media-sm-with-ratio} {
+    padding: (22px/$mobile-ratio-height*100vh) (30px/$mobile-ratio-height*100vh);
+  }
+
   &[disabled],&.disabled {
     opacity: .1;
     pointer-events: none;
@@ -20,15 +32,58 @@
 
   &.btn-primary {
     border-radius: 18px/$desktop-home-ratio*100vw;
-    font-size: 22px;
+    font-size: 22px/$desktop-home-ratio*100vw;
     font-weight: 600;
+
+    @media #{$desktop-bad-ratio} {
+      border-radius: 18px/$desktop-height-ratio*100vh;
+      font-size: 22px/$desktop-height-ratio*100vh;
+    }
+
+    @media #{$media-sm} {
+      border-radius: 20px/$mobile-ratio*100vw;
+      font-size: 22px/$mobile-ratio*100vw;
+    }
+
+    @media #{$media-sm-with-ratio} {
+      border-radius: 20px/$mobile-ratio-height*100vh;
+      font-size: 22px/$mobile-ratio*100vh;
+    }
   }
 
   &.btn-big {
-    font-size: 24px;
+    font-size: 24px/$desktop-home-ratio*100vw;
     font-weight: 600;
     border-radius: 26px/$desktop-home-ratio*100vw;
     padding: (27px/$desktop-home-ratio*100vw) (24px/$desktop-home-ratio*100vw);
+
+    @media #{$desktop-bad-ratio} {
+      border-radius: 26px/$desktop-height-ratio*100vh;
+      font-size: 24px/$desktop-height-ratio*100vh;
+      padding: (27px/$desktop-height-ratio*100vh) (24px/$desktop-height-ratio*100vh);
+    }
+
+    @media #{$media-sm} {
+      border-radius: 30px/$mobile-ratio*100vw;
+      font-size: 36px/$mobile-ratio*100vw;
+      padding: (32px/$mobile-ratio*100vw) (38px/$mobile-ratio*100vw);
+    }
+
+    @media #{$media-sm-with-ratio} {
+      border-radius: 30px/$mobile-ratio-height*100vh;
+      font-size: 36px/$mobile-ratio*100vh;
+      padding: (32px/$mobile-ratio-height*100vh) (38px/$mobile-ratio-height*100vh);
+    }
+  }
+
+  &.btn-white {
+    background: #fff;
+    color: $yellow;
+
+    &:hover {
+      background: $yellow;
+      color: #fff;
+    }
   }
 
   &.btn-purple {
@@ -73,13 +128,34 @@
       content: '';
       display: block;
       float: right;
-      width: 14px;
-      height: 30px;
-      margin-left: 15px;
-      background-image: url('./../img/arrow-green.svg');
+      width: 14px/$desktop-home-ratio*100vw;
+      height: 30px/$desktop-home-ratio*100vw;
+      margin-left: 15px/$desktop-home-ratio*100vw;
+      background-image: url('./../img/arrow-purple.svg');
       background-repeat: no-repeat;
       background-position: center;
-      background-size: 14px 24px;
+      background-size: (14px/$desktop-home-ratio*100vw) (24px/$desktop-home-ratio*100vw);
+
+      @media #{$desktop-bad-ratio} {
+        width: 14px/$desktop-height-ratio*100vh;
+        height: 30px/$desktop-height-ratio*100vh;
+        margin-left: 15px/$desktop-height-ratio*100vh;
+        background-size: (14px/$desktop-height-ratio*100vh) (24px/$desktop-height-ratio*100vh);
+      }
+
+      @media #{$media-sm} {
+        width: 14px/$mobile-ratio*100vw;
+        height: 30px/$mobile-ratio*100vw;
+        margin-left: 15px/$mobile-ratio*100vw;
+        background-size: (14px/$mobile-ratio*100vw) (24px/$mobile-ratio*100vw);
+      }
+
+      @media #{$media-sm-with-ratio} {
+        width: 14px/$mobile-ratio-height*100vh;
+        height: 30px/$mobile-ratio-height*100vh;
+        margin-left: 15px/$mobile-ratio-height*100vh;
+        background-size: (14px/$mobile-ratio-height*100vh) (24px/$mobile-ratio-height*100vh);
+      }
     }
   }
 

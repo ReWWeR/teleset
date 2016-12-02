@@ -5,3 +5,19 @@
     display: table;
   }
 }
+
+.clearfix {
+  @extend %clearfix;
+}
+
+.show-mobile {
+  display: none!important;
+
+  @media #{$media-sm} {
+    display: block!important;
+  }
+}
+
+.opacity-60 {
+  opacity: .6;
+}

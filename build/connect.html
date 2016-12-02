@@ -9,6 +9,46 @@
 </head>
 <body>
 <main class="inner-page">
+    <header class="mobile-header decolorify-items">
+    <div class="wrapper">
+        <a href="./" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138 30">
+                <defs>
+                    <style>.a, .b, .c-l, .d {
+                        fill: none;
+                        stroke-linecap: round;
+                        stroke-linejoin: round;
+                        stroke-width: 10px;
+                    }
+
+                    .a {
+                        stroke: #ffb103;
+                    }
+
+                    .b {
+                        stroke: #8f00ff;
+                    }
+
+                    .c-l {
+                        stroke: #4fed00;
+                    }
+
+                    .d {
+                        stroke: #11f5ff;
+                    }</style>
+                </defs>
+                <line class="a" x1="15" y1="5" x2="15" y2="25"/>
+                <line class="a" x1="25" y1="15" x2="5" y2="15"/>
+                <circle class="b" cx="51" cy="15" r="10"/>
+                <line class="c-l" x1="87" y1="5" x2="87" y2="25"/>
+                <line class="c-l" x1="97" y1="15" x2="77" y2="15"/>
+                <rect class="d" x="113" y="5" width="20" height="20"/>
+            </svg>
+        </a>
+        <span class="hamburger-menu-mobile"><span></span></span>
+
+    </div>
+</header>
     <div class="slide-menu">
         <section class="menu-container">
     <div class="wrapper">
@@ -132,7 +172,13 @@
         <section class="main-menu-item connect-page">
     <header class="header-inner-page purple-bg">
         <div class="wrapper">
-            <img src="./img/hero.png" class="hero" alt="">
+            <div class="breadcrumbs">
+    <ul>
+        <li><a href="./">Главная</a></li>
+        <li>Подключение</li>
+    </ul>
+</div>
+            <img src="./img/hero-2.png" class="hero hero-2" alt="">
             <section class="plan-description">
                 <h1>Подать заявку</h1>
                 <h1 class="connect-success-step">Все готово</h1>
@@ -142,8 +188,8 @@
                 <p class="blue-text connect-success-step">
                     Наши операторы свяжутся с вами.
                 </p>
-                <a href="#" id="show-connect-form" class="btn btn-primary btn-with-left-arrow btn-purple-white"><span>Далее</span></a>
-                <a href="./" class="btn btn-primary btn-with-left-arrow btn-purple-white connect-success-step"><span>Спасибо</span></a>
+                <a href="#" id="show-connect-form" class="btn btn-primary btn-with-arrow btn-white"><span>Далее</span></a>
+                <a href="./" class="btn btn-primary btn-with-arrow btn-white connect-success-step"><span>Спасибо</span></a>
             </section>
 
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" class="fig fig-yellow fig-square-big">
@@ -227,30 +273,103 @@
                       transform="translate(-349.27 280.32) rotate(-45)"/>
             </svg>
         </div>
+        <div class="arrows-scroll-down to-right">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 14 24">
+                <defs>
+                    <style>.a-arrow, .c-arrow {
+                        fill: none;
+                    }
+
+                    .c-arrow {
+                        stroke: #fff;
+                        stroke-linecap: round;
+                        stroke-miterlimit: 22.93;
+                        stroke-width: 4px;
+                    }</style>
+                    <clipPath id="a" transform="translate(0 0)">
+                        <rect class="a-arrow" width="14" height="24"/>
+                    </clipPath>
+                </defs>
+                <g class="b">
+                    <line class="c-arrow" x1="12" y1="12" x2="2" y2="2"/>
+                    <line class="c-arrow" x1="12" y1="12" x2="2" y2="22"/>
+                </g>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 14 24">
+                <defs>
+                    <style>.a-arrow, .c-arrow {
+                        fill: none;
+                    }
+
+                    .c-arrow {
+                        stroke: #fff;
+                        stroke-linecap: round;
+                        stroke-miterlimit: 22.93;
+                        stroke-width: 4px;
+                    }</style>
+                    <clipPath id="a" transform="translate(0 0)">
+                        <rect class="a-arrow" width="14" height="24"/>
+                    </clipPath>
+                </defs>
+                <g class="b">
+                    <line class="c-arrow" x1="12" y1="12" x2="2" y2="2"/>
+                    <line class="c-arrow" x1="12" y1="12" x2="2" y2="22"/>
+                </g>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 14 24">
+                <defs>
+                    <style>.a-arrow, .c-arrow {
+                        fill: none;
+                    }
+
+                    .c-arrow {
+                        stroke: #fff;
+                        stroke-linecap: round;
+                        stroke-miterlimit: 22.93;
+                        stroke-width: 4px;
+                    }</style>
+                    <clipPath id="a" transform="translate(0 0)">
+                        <rect class="a-arrow" width="14" height="24"/>
+                    </clipPath>
+                </defs>
+                <g class="b">
+                    <line class="c-arrow" x1="12" y1="12" x2="2" y2="2"/>
+                    <line class="c-arrow" x1="12" y1="12" x2="2" y2="22"/>
+                </g>
+            </svg>
+        </div>
     </header>
     <main class="connect-form">
     <div class="connect-form-step connect-form-step-view">
         <div class="connect-form-wrapper">
             <h1>Заявка</h1>
-            <div class="robot-notification neutral-robot">
-                Пожалуйста, заполните все важные поля, чтобы мы смогли продолжить ваше подключение.
-            </div>
-            <div class="robot-notification success-robot">
-                Все хорошо. Мы нашли ваш адрес в базе данных и теперь вы можете продолжить подключение.
-            </div>
-            <div class="robot-notification error-robot">
-                Извините, но мы не можем найти ваш адрес в базе данных. Возможно ваш дом еще не подключен.
-            </div>
+
             <form action="http://www.mocky.io/v2/5838b4f211000097158fd3c7" id="connect1" method="post">
-                <div class="form-line-wrap">
-                    <div class="input-wrap"><input class="access-check" type="text" name="street" id="street" placeholder="Улица" minlength="3" required></div>
+                <div class="flex-form-wrap">
+                    <div class="form-line-wrap">
+                        <div class="input-wrap"><input class="access-check" type="text" name="street" id="street"
+                                                       placeholder="Улица" minlength="3" required></div>
+                    </div>
+                    <div class="form-line-wrap">
+                        <div class="input-wrap"><input class="access-check" type="text" name="building" id="building"
+                                                       placeholder="Дом" required></div>
+                        <div class="input-wrap"><input type="text" name="pod" id="pod" placeholder="Под."></div>
+                        <div class="input-wrap"><input type="text" name="floor" id="floor" placeholder="Эт."></div>
+                        <div class="input-wrap"><input type="text" name="apartment" id="apartment" placeholder="Кв.">
+                        </div>
+                    </div>
+
+                    <div class="robot-notification neutral-robot">
+                        Пожалуйста, заполните все важные поля, чтобы мы смогли продолжить ваше подключение.
+                    </div>
+                    <div class="robot-notification success-robot">
+                        Все хорошо. Мы нашли ваш адрес в базе данных и теперь вы можете продолжить подключение.
+                    </div>
+                    <div class="robot-notification error-robot">
+                        Извините, но мы не можем найти ваш адрес в базе данных. Возможно ваш дом еще не подключен.
+                    </div>
                 </div>
-                <div class="form-line-wrap">
-                    <div class="input-wrap"><input class="access-check" type="text" name="building" id="building" placeholder="Дом" required></div>
-                    <div class="input-wrap"><input type="text" name="pod" id="pod" placeholder="Под."></div>
-                    <div class="input-wrap"><input type="text" name="floor" id="floor" placeholder="Эт."></div>
-                    <div class="input-wrap"><input type="text" name="apartment" id="apartment" placeholder="Кв."></div>
-                </div>
+
                 <div class="form-bottom-group">
                     <div class="step-info">
                         <svg xmlns="http://www.w3.org/2000/svg" class="step-tick" width="24" height="30"
@@ -273,7 +392,8 @@
                         </svg>
                         Шаг 1. Адрес
                     </div>
-                    <button type="submit" id="submit-step-1" class="btn-confirm btn btn-primary btn-yellow btn-with-arrow" disabled>Далее
+                    <button type="submit" id="submit-step-1"
+                            class="btn-confirm btn btn-primary btn-yellow btn-with-arrow" disabled>Далее
                     </button>
                 </div>
             </form>
@@ -281,6 +401,8 @@
     </div>
     <div class="connect-form-step connect-form-step-view-map">
         <div class="connect-form-wrapper">
+            <h1>Заявка</h1>
+
             <h2 class="header-map-notification">Мы готовы к подключению</h2>
             <div id="map"></div>
             <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAzG6MeAyYy7KmHFp-2ovHDjgKHDiOgST4"></script>
@@ -314,16 +436,27 @@
     <div class="connect-form-step connect-form-step-view-3">
         <div class="connect-form-wrapper">
             <h1>Заявка</h1>
-            <div class="robot-notification">
-                Пожалуйста, заполните все важные поля, чтобы мы смогли продолжить ваше подключение.
-            </div>
             <form action="" id="connect-submit-info">
-                <div class="form-line-wrap">
-                    <div class="input-wrap"><input type="text" class="info-check" name="name" id="name" placeholder="Name" required></div>
-                </div>
-                <div class="form-line-wrap">
-                    <div class="input-wrap"><input type="email" class="info-check" name="email" id="email" placeholder="E-mail" required></div>
-                    <div class="input-wrap"><input type="tel" class="info-check" name="phone" id="phone" placeholder="Phone" minlength="16" required></div>
+                <div class="flex-form-wrap">
+                    <div class="form-line-wrap">
+                        <div class="input-wrap"><input type="text" class="info-check" name="name" id="name"
+                                                       placeholder="Name" required></div>
+                    </div>
+                    <div class="form-line-wrap">
+                        <div class="input-wrap"><input type="email" class="info-check" name="email" id="email"
+                                                       placeholder="E-mail" required></div>
+                        <div class="input-wrap"><input type="tel" class="info-check" name="phone" id="phone"
+                                                       placeholder="Phone" minlength="16" required></div>
+                    </div>
+                    <div class="robot-notification neutral-robot">
+                        Пожалуйста, заполните все важные поля, чтобы мы смогли продолжить ваше подключение.
+                    </div>
+                    <div class="robot-notification success-robot">
+                        Все хорошо. Мы нашли ваш адрес в базе данных и теперь вы можете продолжить подключение.
+                    </div>
+                    <div class="robot-notification error-robot">
+                        Извините, но мы не можем найти ваш адрес в базе данных. Возможно ваш дом еще не подключен.
+                    </div>
                 </div>
                 <div class="form-bottom-group">
                     <div class="step-info">
@@ -347,7 +480,8 @@
                         </svg>
                         Шаг 2. Личные данные
                     </div>
-                    <button type="submit" id="submit-step-3" class="btn-confirm btn btn-primary btn-yellow btn-with-arrow" disabled>Далее
+                    <button type="submit" id="submit-step-3"
+                            class="btn-confirm btn btn-primary btn-yellow btn-with-arrow btn-white" disabled>Далее
                     </button>
                 </div>
             </form>

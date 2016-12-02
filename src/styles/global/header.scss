@@ -1,12 +1,16 @@
 .header {
   padding: 50px 0 0;
   position: relative;
-  z-index: 2;
+  z-index: 3;
 
   &:after {
     content: '';
     display: table;
     clear: both;
+  }
+
+  @media #{$media-sm} {
+    display: none;
   }
 
   .logo {
@@ -15,6 +19,14 @@
     float: left;
     position: relative;
     z-index: 3;
+
+    .purple-bg & {
+      svg {
+        line, circle, rect {
+          stroke: $yellow;
+        }
+      }
+    }
   }
 
   .main-navigation {
@@ -43,6 +55,12 @@
             border-color: $yellow;
             color: #000;
           }
+
+          .purple-bg & {
+            &, &.active, &:hover {
+              color: $yellow;
+            }
+          }
         }
       }
     }
@@ -57,7 +75,7 @@ header.mobile-header {
   position: absolute;
   top: 0;
   width: 100%;
-  z-index: 3;
+  z-index: 4;
   padding-top: 25px;
   display: none;
 

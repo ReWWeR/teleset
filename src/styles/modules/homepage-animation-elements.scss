@@ -4,18 +4,35 @@ $hero-height: 800px;
 .homepage {
   .hero {
     position: fixed;
-    left: 72px/$desktop-home-ratio*100%;
-    bottom: 60px/$desktop-height-ratio*100%;
+    left: 72px/$desktop-home-ratio*100vw;
+    bottom: 60px/$desktop-height-ratio*100vh;
     z-index: 1;
-    height: $hero-height/$desktop-height-ratio*100vh;
-    max-height: $hero-height;
+    width: $hero-width/$desktop-home-ratio*100vw;
+    max-width: $hero-width;
+
+    @media #{$desktop-bad-ratio} {
+      max-height: $hero-height;
+      height: $hero-height/$desktop-height-ratio*100vh;
+      width: auto;
+    }
+
+    @media #{$media-sm} {
+      width: $hero-width/$mobile-ratio*100vw;
+      max-width: $hero-width;
+    }
+
+    @media #{$media-sm-with-ratio} {
+      max-height: $hero-height;
+      height: $hero-height/$mobile-ratio-height*100vh;
+      width: auto;
+    }
   }
 
   .plan-description {
-    margin-left: 53%;
+    margin-left: 855px/$desktop-home-ratio*100vw;
     z-index: 1;
     position: absolute;
-    bottom: 30%;
+    bottom: 269px/$desktop-height-ratio*100vh;
   }
 
   .fig {

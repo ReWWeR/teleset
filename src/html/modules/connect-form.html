@@ -2,25 +2,33 @@
     <div class="connect-form-step connect-form-step-view">
         <div class="connect-form-wrapper">
             <h1>Заявка</h1>
-            <div class="robot-notification neutral-robot">
-                Пожалуйста, заполните все важные поля, чтобы мы смогли продолжить ваше подключение.
-            </div>
-            <div class="robot-notification success-robot">
-                Все хорошо. Мы нашли ваш адрес в базе данных и теперь вы можете продолжить подключение.
-            </div>
-            <div class="robot-notification error-robot">
-                Извините, но мы не можем найти ваш адрес в базе данных. Возможно ваш дом еще не подключен.
-            </div>
+
             <form action="http://www.mocky.io/v2/5838b4f211000097158fd3c7" id="connect1" method="post">
-                <div class="form-line-wrap">
-                    <div class="input-wrap"><input class="access-check" type="text" name="street" id="street" placeholder="Улица" minlength="3" required></div>
+                <div class="flex-form-wrap">
+                    <div class="form-line-wrap">
+                        <div class="input-wrap"><input class="access-check" type="text" name="street" id="street"
+                                                       placeholder="Улица" minlength="3" required></div>
+                    </div>
+                    <div class="form-line-wrap">
+                        <div class="input-wrap"><input class="access-check" type="text" name="building" id="building"
+                                                       placeholder="Дом" required></div>
+                        <div class="input-wrap"><input type="text" name="pod" id="pod" placeholder="Под."></div>
+                        <div class="input-wrap"><input type="text" name="floor" id="floor" placeholder="Эт."></div>
+                        <div class="input-wrap"><input type="text" name="apartment" id="apartment" placeholder="Кв.">
+                        </div>
+                    </div>
+
+                    <div class="robot-notification neutral-robot">
+                        Пожалуйста, заполните все важные поля, чтобы мы смогли продолжить ваше подключение.
+                    </div>
+                    <div class="robot-notification success-robot">
+                        Все хорошо. Мы нашли ваш адрес в базе данных и теперь вы можете продолжить подключение.
+                    </div>
+                    <div class="robot-notification error-robot">
+                        Извините, но мы не можем найти ваш адрес в базе данных. Возможно ваш дом еще не подключен.
+                    </div>
                 </div>
-                <div class="form-line-wrap">
-                    <div class="input-wrap"><input class="access-check" type="text" name="building" id="building" placeholder="Дом" required></div>
-                    <div class="input-wrap"><input type="text" name="pod" id="pod" placeholder="Под."></div>
-                    <div class="input-wrap"><input type="text" name="floor" id="floor" placeholder="Эт."></div>
-                    <div class="input-wrap"><input type="text" name="apartment" id="apartment" placeholder="Кв."></div>
-                </div>
+
                 <div class="form-bottom-group">
                     <div class="step-info">
                         <svg xmlns="http://www.w3.org/2000/svg" class="step-tick" width="24" height="30"
@@ -43,7 +51,8 @@
                         </svg>
                         Шаг 1. Адрес
                     </div>
-                    <button type="submit" id="submit-step-1" class="btn-confirm btn btn-primary btn-yellow btn-with-arrow" disabled>Далее
+                    <button type="submit" id="submit-step-1"
+                            class="btn-confirm btn btn-primary btn-yellow btn-with-arrow" disabled>Далее
                     </button>
                 </div>
             </form>
@@ -51,6 +60,8 @@
     </div>
     <div class="connect-form-step connect-form-step-view-map">
         <div class="connect-form-wrapper">
+            <h1>Заявка</h1>
+
             <h2 class="header-map-notification">Мы готовы к подключению</h2>
             <div id="map"></div>
             <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAzG6MeAyYy7KmHFp-2ovHDjgKHDiOgST4"></script>
@@ -84,16 +95,27 @@
     <div class="connect-form-step connect-form-step-view-3">
         <div class="connect-form-wrapper">
             <h1>Заявка</h1>
-            <div class="robot-notification">
-                Пожалуйста, заполните все важные поля, чтобы мы смогли продолжить ваше подключение.
-            </div>
             <form action="" id="connect-submit-info">
-                <div class="form-line-wrap">
-                    <div class="input-wrap"><input type="text" class="info-check" name="name" id="name" placeholder="Name" required></div>
-                </div>
-                <div class="form-line-wrap">
-                    <div class="input-wrap"><input type="email" class="info-check" name="email" id="email" placeholder="E-mail" required></div>
-                    <div class="input-wrap"><input type="tel" class="info-check" name="phone" id="phone" placeholder="Phone" minlength="16" required></div>
+                <div class="flex-form-wrap">
+                    <div class="form-line-wrap">
+                        <div class="input-wrap"><input type="text" class="info-check" name="name" id="name"
+                                                       placeholder="Name" required></div>
+                    </div>
+                    <div class="form-line-wrap">
+                        <div class="input-wrap"><input type="email" class="info-check" name="email" id="email"
+                                                       placeholder="E-mail" required></div>
+                        <div class="input-wrap"><input type="tel" class="info-check" name="phone" id="phone"
+                                                       placeholder="Phone" minlength="16" required></div>
+                    </div>
+                    <div class="robot-notification neutral-robot">
+                        Пожалуйста, заполните все важные поля, чтобы мы смогли продолжить ваше подключение.
+                    </div>
+                    <div class="robot-notification success-robot">
+                        Все хорошо. Мы нашли ваш адрес в базе данных и теперь вы можете продолжить подключение.
+                    </div>
+                    <div class="robot-notification error-robot">
+                        Извините, но мы не можем найти ваш адрес в базе данных. Возможно ваш дом еще не подключен.
+                    </div>
                 </div>
                 <div class="form-bottom-group">
                     <div class="step-info">
@@ -117,7 +139,8 @@
                         </svg>
                         Шаг 2. Личные данные
                     </div>
-                    <button type="submit" id="submit-step-3" class="btn-confirm btn btn-primary btn-yellow btn-with-arrow" disabled>Далее
+                    <button type="submit" id="submit-step-3"
+                            class="btn-confirm btn btn-primary btn-yellow btn-with-arrow btn-white" disabled>Далее
                     </button>
                 </div>
             </form>

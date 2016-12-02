@@ -116,6 +116,22 @@
     }
   }
 
+  &.fig-cross-5 {
+    width: 45px/$desktop-home-ratio*100vw;
+
+    @media #{$desktop-bad-ratio} {
+      width: 45px/$desktop-height-ratio*100vh;
+    }
+
+    @media #{$media-sm} {
+      width: 45px/$mobile-ratio*100vw;
+    }
+
+    @media #{$media-sm-with-ratio} {
+      width: 45px/$mobile-ratio*100vh;
+    }
+  }
+
   &.fig-circle-1 {
     width: 90px/$desktop-home-ratio*100vw;
 

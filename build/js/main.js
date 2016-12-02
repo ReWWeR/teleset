@@ -12471,6 +12471,21 @@ $(document).ready(function () {
             $body.removeClass('hide-mobile-header');
         }
     })
+
+    $mobileBP = 1023;
+
+    function resizer () {
+            if($mobileBP >= $(window).width() && $('.connect-fullpage').length > 0) {
+                console.log(12);
+                $('.connect-fullpage').removeClass('fullpage-content')
+            } else {
+                console.log(2323)
+                $('.connect-fullpage').addClass('fullpage-content')
+            }
+    }
+
+    $(window).on('resize', resizer)
+    resizer();
 });
 
 window.onload = function () {

@@ -4,12 +4,15 @@
 @import "assets/variables";
 
 @import "helpers/helpers";
+@import "helpers/mixins";
 
 @import "base";
 @import "layout";
 @import "components/buttons";
 @import "components/figures";
 @import "components/forms";
+@import "components/breadcrumbs";
+@import "components/fullpage-connect";
 
 @import "global/header";
 @import "global/footer-landing";

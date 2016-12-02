@@ -5,6 +5,10 @@
     padding: 0 27px;
   }
 
+  .show-connect-form .connect-fullpage > & {
+    padding: 0;
+  }
+
   &:after {
     content: '';
     display: table;
@@ -86,23 +90,10 @@
 
   .btn.btn-big {
     float: right;
-    font-size: 30px/$desktop-home-ratio*100vw;
-    padding: (25px/$desktop-home-ratio*100vw) (23px/$desktop-home-ratio*100vw);
-
-    @media #{$desktop-bad-ratio} {
-      font-size: 36px/$desktop-height-ratio * 100vh;
-      padding: (25px/$desktop-height-ratio*100vh) (23px/$desktop-height-ratio*100vh);
-    }
 
     @media #{$media-sm} {
-      font-size: 36px/$mobile-ratio * 100vw;
-      padding: (15px/$mobile-ratio*100vw) (20px/$mobile-ratio*100vw);
       margin-left: auto;
       align-self: center;
-    }
-
-    @media #{$media-sm-with-ratio} {
-      font-size: 36px/$mobile-ratio-height * 100vh;
     }
   }
 }

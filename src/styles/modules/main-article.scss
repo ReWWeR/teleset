@@ -18,16 +18,40 @@
   }
 
   .contacts-table {
-    padding-top: 75px;
-    font-size: 18px;
+    padding-top: 75px/$desktop-home-ratio*100vw;
+    font-size: 18px/$desktop-home-ratio*100vw;
     line-height: 1.55;
+
+    @media #{$desktop-bad-ratio} {
+      padding-top: 75px/$desktop-height-ratio * 100vh;
+      font-size: 18px/$desktop-height-ratio * 100vh;
+    }
+
+    @media #{$media-sm} {
+      padding-top: 75px/$mobile-ratio * 100vw;
+      font-size: 22px/$mobile-ratio * 100vw;
+    }
+
+    @media #{$media-sm-with-ratio} {
+      padding-top: 75px/$mobile-ratio*100vh;
+      font-size: 22px/$mobile-ratio*100vh;
+    }
 
     .contacts-col {
       float: left;
       width: 49%;
 
+      @media #{$media-sm} {
+        float: none;
+        width: auto;
+      }
+
       &.contacts-second-col {
         float: right;
+        @media #{$media-sm} {
+          float: none;
+          width: auto;
+        }
       }
     }
 
@@ -35,7 +59,19 @@
       display: block;
       float: left;
       clear: both;
-      margin-top: 30px;
+      margin-top: 30px/$desktop-home-ratio*100vw;
+
+      @media #{$desktop-bad-ratio} {
+        margin-top: 30px/$desktop-height-ratio * 100vh;
+      }
+
+      @media #{$media-sm} {
+        margin-top: 30px/$mobile-ratio * 100vw;
+      }
+
+      @media #{$media-sm-with-ratio} {
+        margin-top: 30px/$mobile-ratio*100vh;
+      }
     }
   }
 }

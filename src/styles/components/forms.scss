@@ -8,10 +8,21 @@ input[type=text], input[type=number], input[type=email], input[type=tel] {
   color: #fff;
   padding: 0 40px 0 20px;
 
+  @media #{$media-sm} {
+    background: #fff;
+    color: #000;
+    height: 42px;
+    padding: 0 30px 0 15px;
+  }
+
   &::-webkit-input-placeholder  {
     font-size: 16px;
     font-weight: 600;
     color: $white-60;
+
+    @media #{$media-sm} {
+      color: $black-30;
+    }
   }
 
   &:focus {

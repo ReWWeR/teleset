@@ -5,6 +5,10 @@
   z-index: 1;
   padding-bottom: 43px;
 
+  @media #{$media-sm} {
+    display: none;
+  }
+
   .copyright {
     position: fixed;
     left: -100px;
@@ -15,6 +19,16 @@
 
     .grey-text {
       color: $black-30;
+    }
+
+    .purple-bg & {
+      & {
+        color: $white-50;
+      }
+
+      .grey-text {
+        color: $white-30;
+      }
     }
   }
 
@@ -27,6 +41,10 @@
     font-weight: 600;
     line-height: 1.22;
     font-size: 18px;
+
+    .purple-bg & {
+      color: $yellow;
+    }
 
     svg {
       width: 52px;
@@ -45,6 +63,10 @@
     float: left;
     font: $font-body;
     font-weight: 600;
+
+    .purple-bg & {
+      color: $yellow;
+    }
 
     .hamburger-button {
       display: block;

@@ -8,7 +8,9 @@
   .connect-success-step {
     display: none;
     .show-connect-step-success & {
-      display: block;
+      display: inline-block;
+      clear: both;
+      float: left;
     }
   }
 
