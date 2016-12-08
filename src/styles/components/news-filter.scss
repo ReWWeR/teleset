@@ -1,0 +1,135 @@
+.news-filter {
+  position: absolute;
+  top: 48px;
+  right: 60px;
+
+  @media #{$media-sm} {
+    display: none;
+  }
+
+  .show-filter-options &, .show-sub-options & {
+    z-index: 1;
+  }
+
+  li {
+    display: inline-block;
+
+    a {
+      display: block;
+      width: 42px;
+
+      svg {
+        .c-sub, .c-filter {
+          transition: fill .5s;
+        }
+      }
+
+      &:hover, &.active {
+        svg {
+          .c-sub, .c-filter {
+            fill: $grey;
+          }
+        }
+      }
+    }
+  }
+}
+
+.news-filter-popup-filter, .news-filter-popup-sub {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, .9);
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .5s;
+
+  .news-center-block {
+    margin-left: 60px/$desktop-home-ratio*100vw;
+
+    h4 {
+      color: #fff;
+      font-size: 30px/$desktop-home-ratio*100vw;
+    }
+
+    .news-switchers {
+      display: flex;
+
+      .news-switcher {
+        background: #fff;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        padding: (20px/$desktop-home-ratio*100vw) (30px/$desktop-home-ratio*100vw);
+        margin-right: 10px;
+
+        span {
+          font-size: (22px/$desktop-home-ratio*100vw);
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+
+  .modal-close {
+    position: absolute;
+    bottom: 50px;
+    left: 60px;
+    display: flex;
+    align-items: center;
+    font-size: 18px/$desktop-home-ratio*100vw;
+
+    svg {
+      width: 30px/$desktop-home-ratio*100vw;
+      margin-right: 20px;
+
+      line {
+        stroke: $green;
+      }
+    }
+  }
+
+  .input-wrapper {
+    width: 100%;
+    position: relative;
+
+    input {
+      width: 100%;
+    }
+
+    .input-button {
+      background: $green;
+      width: 46px;
+      height: 46px;
+      position: absolute;
+      right: 5px;
+      top: 3px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+
+      svg {
+        height: 20px;
+      }
+
+    }
+  }
+}
+
+.news-filter-popup-filter {
+  .show-filter-options & {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+.news-filter-popup-sub {
+  .show-sub-options & {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}

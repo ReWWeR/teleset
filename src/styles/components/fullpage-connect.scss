@@ -51,7 +51,11 @@
       bottom: 150px/$desktop-home-ratio*100vw;
       background: $yellow;
       border-radius: 90px;
-      transition: transform 1s, border-radius 1s;
+      transition: transform 1s, border-radius 1s, opacity .5s;
+
+      .loaded & {
+        opacity: 1;
+      }
 
       @media #{$desktop-bad-ratio} {
         bottom: 150px/$desktop-height-ratio*100vh;

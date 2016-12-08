@@ -6,6 +6,8 @@
     @@include('./global/mobile-header.html')
 
     <div class="wrapper">
+        @@include('./global/breadcrumbs.html', {"cur-page":"Подключение"})
+
         <img src="./img/hero-2.png" class="hero hero-2" alt="">
         <section class="plan-description">
             <h1>Подать заявку</h1>
@@ -86,20 +88,6 @@
             <circle class="b-a" cx="210" cy="210" r="140"/>
         </svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54.14 54.14" width="30px"
-             class="fig fig-blue fig-square-3">
-            <defs>
-                <style>.c-a {
-                    fill: none;
-                    stroke: #11f5ff;
-                    stroke-linecap: round;
-                    stroke-linejoin: round;
-                    stroke-width: 14.14px;
-                }</style>
-            </defs>
-            <rect class="c-a" x="431.04" y="72.9" width="28.28" height="28.28"
-                  transform="translate(-349.27 280.32) rotate(-45)"/>
-        </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54.14 54.14" width="30px"
              class="fig fig-square fig-white fig-square-1">
             <defs>
                 <style>.c-a {
@@ -121,5 +109,7 @@
     @@include('./global/menu-container.html', {"page": "main", "isHome": "true"})
     @@include('./modules/main-menu-item.html')
 </div>
+@@include('./modules/four-blocks.html')
+@@include('./modules/login-popup.html')
 </body>
 </html>

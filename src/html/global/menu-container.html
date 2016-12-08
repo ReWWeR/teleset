@@ -1,4 +1,4 @@
-<section class="menu-container">
+<section class="menu-container @@if(page === 'cabinet' || page === 'cabinet-block'){show-cabinet-menu}">
     <div class="wrapper">
         <a href="./" class="logo">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138 30">
@@ -38,19 +38,100 @@
             <ul>
                 <li><a href="./" class="@@if(page === 'main'){active}">Главная</a></li>
                 <li><a href="./about-plan.html" class="@@if(page === 'about-plan'){active}">Тариф</a></li>
-                <li><a href="./about-company.html" class="@@if(page === 'about-company'){active}">Компания</a></li>
-                <li><a href="./connect.html" class="@@if(page === 'connect'){active}">Подключение</a></li>
-                <li><a href="#" class="disabled">Кабинет</a></li>
-                <li><a href="#" class="disabled">Оплата</a></li>
+                <li><a href="./connect.html" class="@@if(page === 'connect'){active}">Заявка</a></li>
+                <li><a href="./support.html" class="@@if(page === 'support'){active}">Поддержка</a></li>
+                <li><a href="./payment.html" class="@@if(page === 'payment'){active}">Оплата</a></li>
+                <li><a href="./channels.html" class="@@if(page === 'channels'){active}">Каналы</a></li>
             </ul>
             <ul>
-                <li><a href="#" class="disabled">Каналы</a></li>
-                <li><a href="#" class="disabled">Магазин</a></li>
-                <li><a href="#" class="disabled">Поддержка</a></li>
-                <li><a href="#" class="disabled">Новости</a></li>
-                <li><a href="#" class="disabled">Опросы</a></li>
-                <li><a href="#" class="disabled">Документы</a></li>
+                <li><a href="./cabinet.html" class="@@if(page === 'cabinet'){active}">Кабинет</a></li>
+                <li><a href="./shop.html" class="@@if(page === 'shop'){active}">Магазин</a></li>
+                <li><a href="./pools.html" class="@@if(page === 'pools'){active}">Опросы</a></li>
+                <li><a href="./faq.html" class="@@if(page === 'faq'){active}">FAQ</a></li>
+                <li><a href="./news.html" class="@@if(page === 'news'){active}">Новости</a></li>
+                <li><a href="./about-company.html" class="@@if(page === 'about-company'){active}">Контакты</a></li>
+
             </ul>
+        </nav>
+        <nav class="cabinet-nav">
+            <ul>
+                <li><a href="./cabinet.html" class="@@if(page === 'cabinet'){active}">Мои данные</a></li>
+                <li><a href="#">Оплата</a></li>
+                <li><a href="#">Интернет</a></li>
+                <li><a href="#">Услуги</a></li>
+                <li><a href="./cabinet-block.html" class="@@if(page === 'cabinet-block'){active}">Блокировка</a></li>
+                <li><a href="#">Пароль</a></li>
+            </ul>
+
+            <div class="cabinet-user-menu-info">Алексей Петров <br>
+                Договор №139020001
+            </div>
+            <footer class="cabinet-menu-footer">
+                <a href="#" class="exit-user">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+                        <defs>
+                            <style>.cross-close {
+                                fill: none;
+                                stroke: #fff;
+                                stroke-linecap: round;
+                                stroke-miterlimit: 22.93;
+                                stroke-width: 4px;
+                            }</style>
+                        </defs>
+                        <line class="cross-close" x1="28" y1="2" x2="2" y2="28"></line>
+                        <line class="cross-close" x1="28" y1="28" x2="2" y2="2"></line>
+                    </svg>
+                    <span class="text">Выход</span></a>
+                <a href="callto:+71231231212" class="make-call">
+                    <div class="phone-tooltip">812 756 57 58</div>
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                         viewBox="0 0 42 42">
+                        <defs>
+                            <style>.a-make-call {
+                                fill: none;
+                            }
+
+                            .b-make-call {
+                                clip-path: url(#a-make-call);
+                            }
+
+                            .c-make-call, .d-make-call {
+                                fill: #4fed00;
+                            }
+
+                            .d-make-call {
+                                fill-rule: evenodd;
+                            }</style>
+                            <clipPath id="a-make-call" transform="translate(0 0)">
+                                <rect class="a-make-call" width="42" height="42"></rect>
+                            </clipPath>
+                        </defs>
+                        <g class="b-make-call">
+                            <path class="c-make-call"
+                                  d="M21,3A18,18,0,1,1,3,21,18,18,0,0,1,21,3m0-3A21,21,0,1,0,42,21,21,21,0,0,0,21,0"
+                                  transform="translate(0 0)"></path>
+                            <path class="d-make-call" d="M21,23a2,2,0,1,0-2-2,2,2,0,0,0,2,2"
+                                  transform="translate(0 0)"></path>
+                            <path class="d-make-call" d="M15,23a2,2,0,1,0-2-2,2,2,0,0,0,2,2"
+                                  transform="translate(0 0)"></path>
+                            <path class="d-make-call" d="M27,23a2,2,0,1,0-2-2,2,2,0,0,0,2,2"
+                                  transform="translate(0 0)"></path>
+                            <path class="d-make-call" d="M21,17a2,2,0,1,0-2-2,2,2,0,0,0,2,2"
+                                  transform="translate(0 0)"></path>
+                            <path class="d-make-call" d="M15,17a2,2,0,1,0-2-2,2,2,0,0,0,2,2"
+                                  transform="translate(0 0)"></path>
+                            <path class="d-make-call" d="M27,17a2,2,0,1,0-2-2,2,2,0,0,0,2,2"
+                                  transform="translate(0 0)"></path>
+                            <path class="d-make-call" d="M21,29a2,2,0,1,0-2-2,2,2,0,0,0,2,2"
+                                  transform="translate(0 0)"></path>
+                            <path class="d-make-call" d="M15,29a2,2,0,1,0-2-2,2,2,0,0,0,2,2"
+                                  transform="translate(0 0)"></path>
+                            <path class="d-make-call" d="M27,29a2,2,0,1,0-2-2,2,2,0,0,0,2,2"
+                                  transform="translate(0 0)"></path>
+                        </g>
+                    </svg>
+                </a>
+            </footer>
         </nav>
 
         <ul class="social-icons">
@@ -109,10 +190,74 @@
                 </svg>
             </a></li>
         </ul>
+        <a href="#" class="back-to-main-menu">Главное меню</a>
         <footer class="slider-menu-footer">
             @@if(isHome === 'true') {<a href="#" class="close-slider-menu"><span class="text">Закрыть</span></a>}
-            <a href="#" class="phone-icon"></a>
-            <!--<a href="#" class="personal-area"><img src="img/login-white.png" alt="login"></a>-->
+            <a href="callto:+71231231212" class="make-call">
+                <div class="phone-tooltip">812 756 57 58</div>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 42 42">
+                    <defs>
+                        <style>.a-make-call {
+                            fill: none;
+                        }
+
+                        .b-make-call {
+                            clip-path: url(#a-make-call);
+                        }
+
+                        .c-make-call, .d-make-call {
+                            fill: #4fed00;
+                        }
+
+                        .d-make-call {
+                            fill-rule: evenodd;
+                        }</style>
+                        <clipPath id="a-make-call" transform="translate(0 0)">
+                            <rect class="a-make-call" width="42" height="42"/>
+                        </clipPath>
+                    </defs>
+                    <g class="b-make-call">
+                        <path class="c-make-call"
+                              d="M21,3A18,18,0,1,1,3,21,18,18,0,0,1,21,3m0-3A21,21,0,1,0,42,21,21,21,0,0,0,21,0"
+                              transform="translate(0 0)"/>
+                        <path class="d-make-call" d="M21,23a2,2,0,1,0-2-2,2,2,0,0,0,2,2" transform="translate(0 0)"/>
+                        <path class="d-make-call" d="M15,23a2,2,0,1,0-2-2,2,2,0,0,0,2,2" transform="translate(0 0)"/>
+                        <path class="d-make-call" d="M27,23a2,2,0,1,0-2-2,2,2,0,0,0,2,2" transform="translate(0 0)"/>
+                        <path class="d-make-call" d="M21,17a2,2,0,1,0-2-2,2,2,0,0,0,2,2" transform="translate(0 0)"/>
+                        <path class="d-make-call" d="M15,17a2,2,0,1,0-2-2,2,2,0,0,0,2,2" transform="translate(0 0)"/>
+                        <path class="d-make-call" d="M27,17a2,2,0,1,0-2-2,2,2,0,0,0,2,2" transform="translate(0 0)"/>
+                        <path class="d-make-call" d="M21,29a2,2,0,1,0-2-2,2,2,0,0,0,2,2" transform="translate(0 0)"/>
+                        <path class="d-make-call" d="M15,29a2,2,0,1,0-2-2,2,2,0,0,0,2,2" transform="translate(0 0)"/>
+                        <path class="d-make-call" d="M27,29a2,2,0,1,0-2-2,2,2,0,0,0,2,2" transform="translate(0 0)"/>
+                    </g>
+                </svg>
+            </a>
+            <a href="#" class="personal-area">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 42 42">
+                    <defs>
+                        <style>.a-login {
+                            fill: none;
+                        }
+
+                        .b-login {
+                            clip-path: url(#a-login);
+                        }
+
+                        .c-login {
+                            fill: #4fed00;
+                            fill-rule: evenodd;
+                        }</style>
+                        <clipPath id="a-login" transform="translate(0 0)">
+                            <rect class="a-login" width="42" height="42"/>
+                        </clipPath>
+                    </defs>
+                    <g class="b-login">
+                        <path class="c-login"
+                              d="M21,0A21,21,0,1,0,42,21,21,21,0,0,0,21,0M15,30l4.18-8.35a5,5,0,1,1,3.64,0L27,30H15Z"
+                              transform="translate(0 0)"/>
+                    </g>
+                </svg>
+            </a>
         </footer>
     </div>
 </section>

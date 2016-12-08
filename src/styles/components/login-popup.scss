@@ -1,0 +1,71 @@
+.login-popup {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, .9);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .5s;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .show-login-popup & {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .center-block {
+    top: auto;
+    position: relative;
+    flex-direction: column;
+    text-align: center;
+
+    h1 {
+      color: #fff;
+      margin-bottom: .75em;
+    }
+
+    .form-line-wrap {
+      display: flex;
+      justify-content: center;
+
+      @media #{$media-sm} {
+        flex-wrap: wrap;
+      }
+
+      .input-wrap {
+        flex-grow: 1;
+
+        &:not(:last-child) {
+          margin-right: 20px;
+
+          @media #{$media-sm} {
+            margin: 0 0 20px 0;
+          }
+        }
+
+        input {
+          width: 100%;
+          text-align: center;
+        }
+      }
+    }
+
+    .login-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .forgot-password {
+        color: $white-60;
+        font-size: 18px;
+        margin: 40px 0 45px;
+      }
+
+    }
+  }
+}

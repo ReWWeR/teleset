@@ -1,0 +1,205 @@
+.four-blocks {
+  display: flex;
+  flex-wrap: wrap;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .5s, transform .5s;
+  transform: translateY(100%);
+
+  @media #{$media-sm} {
+    display: none;
+  }
+
+  .fig {
+    position: absolute;
+
+    &.fig-circle-main {
+      bottom: -105px/$desktop-home-ratio*100vw;
+      left: 709px/$desktop-home-ratio*100vw;
+    }
+
+    &.fig-square-main {
+      top: 50%;
+      transform: translateY(-111px/$desktop-home-ratio/2*100vw);
+      left: 160px/$desktop-home-ratio*100vw;
+    }
+
+    &.fig-cross-main {
+      top: 135px/$desktop-home-ratio*100vw;
+      left: 710px/$desktop-home-ratio*100vw;
+    }
+  }
+
+  .show-four-blocks-section & {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .block {
+    flex-basis: 50%;
+    flex-grow: 1;
+    position: relative;
+    overflow: hidden;
+
+    a {
+      transition: transform .5s;
+      display: flex;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    &.home-page-block {
+
+      .hero {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        height: $hero-height/$desktop-height-ratio/2*100vh;
+        z-index: 1;
+      }
+      .fig {
+        position: absolute;
+      }
+
+      .fig-cross-1 {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 600px/$desktop-width-half*100%;
+      }
+
+      .fig-cross-3 {
+        right: 180px/$desktop-width-half*100%;
+        bottom: 180px/$desktop-width-half*100%;
+      }
+
+      .fig-square-1 {
+        left: 160px/$desktop-width-half*100%;
+        bottom: 120px/$desktop-width-half*100%;
+      }
+    }
+
+    &.support-block {
+      a {
+        align-items: center;
+        justify-content: center;
+
+        .support-item {
+          background: #fff;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          width: 270px;
+          height: 270px;
+          color: $black-30;
+          font-size: 20px;
+          text-align: center;
+          padding: 10px 30px;
+
+          img {
+            margin-bottom: 30px;
+          }
+        }
+
+        .fig {
+          position: absolute;
+        }
+
+        .fig-cross-2 {
+          top: 57px/$desktop-width-half*100%;
+          left: 184px/$desktop-width-half*100%;
+        }
+      }
+    }
+
+    &.pay-block {
+      a {
+        justify-content: center;
+        align-items: center;
+
+        button.btn {
+          padding: (32px/36px*1em) (45px/36px*1em);
+          font-size: 36px;
+        }
+
+        .fig {
+          position: absolute;
+        }
+
+        .fig-cross-2 {
+          bottom: 215px/$desktop-width-half*100%;
+          left: 80px/$desktop-width-half*100%;
+        }
+
+        .fig-cross-3 {
+          bottom: 160px/$desktop-width-half*100%;
+          left: 175px/$desktop-width-half*100%;
+        }
+
+        .fig-cross-5 {
+          bottom: 60px/$desktop-width-half*100%;
+          right: 320px/$desktop-width-half*100%;
+        }
+
+        .fig-square-2 {
+          top: 80px/$desktop-width-half*100%;
+          right: 120px/$desktop-width-half*100%;
+        }
+      }
+    }
+
+    &.tariff-block {
+
+      .hero-2 {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        height: $hero-2-height/$desktop-height-ratio/2*100vh;
+        z-index: 1;
+      }
+      .fig {
+        position: absolute;
+      }
+
+      .fig-square-big {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 600px/$desktop-width-half*100%;
+      }
+
+      .fig-square-1 {
+        left: 160px/$desktop-width-half*100%;
+        bottom: 120px/$desktop-width-half*100%;
+      }
+
+      .fig-cross-2 {
+        right: 512px/$desktop-width-half*100%;
+        bottom: 200px/$desktop-width-half*100%;
+      }
+
+      .fig-cross-5 {
+        right: 62px/$desktop-width-half*100%;
+        bottom: 110px/$desktop-width-half*100%;
+      }
+    }
+  }
+}

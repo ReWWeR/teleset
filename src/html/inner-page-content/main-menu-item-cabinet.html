@@ -1,0 +1,93 @@
+<section class="main-menu-item cabinet-page">
+    <main class="cabinet-main">
+        <div class="wrapper">
+            @@include('../global/breadcrumbs.html', {"cur-page":"Мои данные"})
+            <article class="main-article">
+                <h1>Мои данные</h1>
+                <form action="./">
+                    <div class="cabinet-personal-info">
+                        <div class="input-row">
+                            <div class="input-with-label">
+                                <input type="text" id="name" name="name" value="Алексей Иванович Петров" required>
+                                <label for="name" class="input-label">Имя</label>
+                            </div>
+                        </div>
+                        <div class="input-row">
+                            <div class="input-with-label">
+                                <input type="email" id="email" name="email" value="alexey@rambler.ru" required>
+                                <label for="name" class="input-label">Эл. Почта</label>
+                            </div>
+                            <div class="input-with-label">
+                                <input type="tel" id="tel" name="tel" value="+7 (999) 656-66-66" required>
+                                <label for="name" class="input-label">Тел.</label>
+                            </div>
+                        </div>
+                        <div class="input-row">
+                            <div class="input-with-label">
+                                <input type="text" id="street" name="street" value="Большая Академическая" required>
+                                <label for="street" class="input-label">Улица</label>
+                            </div>
+                        </div>
+                        <div class="input-row input-row-5-items">
+                            <div class="input-with-label">
+                                <input type="text" id="bld" name="bld" value="12" required>
+                                <label for="bld" class="input-label">Дом</label>
+                            </div>
+                            <div class="input-with-label">
+                                <input type="text" id="corp" name="corp" value="1" required>
+                                <label for="corp" class="input-label">Кор.</label>
+                            </div>
+                            <div class="input-with-label">
+                                <input type="text" id="pod" name="pod" value="2" required>
+                                <label for="pod" class="input-label">Под.</label>
+                            </div>
+                            <div class="input-with-label">
+                                <input type="text" id="floor" name="floor" value="6" required>
+                                <label for="floor" class="input-label">Эт.</label>
+                            </div>
+                            <div class="input-with-label">
+                                <input type="text" id="apt" name="apt" value="123" required>
+                                <label for="apt" class="input-label">Кв.</label>
+                            </div>
+                        </div>
+                        <div class="input-row">
+                            <div class="input-with-label">
+                                <input type="text" id="inn" name="inn" value="9495493920" required disabled>
+                                <label for="inn" class="input-label">ИНН</label>
+                            </div>
+                            <div class="input-with-label">
+                                <input type="text" id="birthday" name="birthday" value="21 дек 1998" required disabled>
+                                <label for="birthday" class="input-label">Дата рождения</label>
+                            </div>
+                        </div>
+                        <div class="input-row">
+                            <div class="input-with-label">
+                                <input type="text" id="pass" name="passp" value="44 55  343567" required disabled>
+                                <label for="pass" class="input-label">Паспорт</label>
+                            </div>
+                            <div class="input-with-label">
+                                <input type="text" id="pass-date" name="pass-date" value="21 дек 1998" required disabled>
+                                <label for="pass-date" class="input-label">Дата выдачи</label>
+                            </div>
+                        </div>
+                        <div class="input-row">
+                            <div class="input-with-label">
+                                <input type="text" id="pass-who" name="pass-who" value="ГУВД по району Академика Павлова" required disabled>
+                                <label for="pass-who" class="input-label">Выдан</label>
+                            </div>
+                        </div>
+                        <div class="input-row">
+                            <div class="input-with-label">
+                                <input type="text" id="pass-where" name="pass-where" value="г. Дубна, Столешников пер., 15" required disabled>
+                                <label for="pass-where" class="input-label">Где</label>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-with-left-arrow">Сохранить</a>
+                    </div>
+                </form>
+            </article>
+
+        </div>
+        @@include('./../global/footer-inner.html')
+    </main>
+</section>

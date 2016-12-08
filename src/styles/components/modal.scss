@@ -1,0 +1,101 @@
+.modal-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 998;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .5s;
+
+  .modal {
+    background: #fff;
+    border-radius: 36px;
+    padding: 40px;
+    position: relative;
+    z-index: 999;
+    width: 800px/$desktop-home-ratio*100vw;
+    height: 480px/$desktop-home-ratio*100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media #{$desktop-bad-ratio} {
+      width: 800px/$desktop-height-ratio*100vh;
+      height: 480px/$desktop-height-ratio*100vh;
+    }
+
+    @media #{$media-sm} {
+      width: 550px/$mobile-ratio*100vw;
+      height: 700px/$mobile-ratio*100vw;
+      padding: 10px;
+    }
+
+    @media #{$media-sm-with-ratio} {
+      width: 1000px/$mobile-ratio-height*100vh;
+      height: 550px/$mobile-ratio-height*100vh;
+    }
+
+    .modal-editable-area {
+      color: $black-30;
+      font-size: 36px/$desktop-home-ratio*100vw;
+      display: flex;
+      flex-grow: 1;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      overflow-y: auto;
+      width: 100%;
+      margin: 10px 0;
+
+      @media #{$media-sm} {
+        font-size: 36px/$mobile-ratio*100vw;
+      }
+    }
+
+    .modal-close {
+      width: 30px;
+      height: 30px;
+
+      @media #{$media-sm} {
+       width: 15px;
+        height: 15px;
+      }
+
+      svg {
+        line {
+          stroke: $blue;
+        }
+      }
+    }
+
+    button {
+      min-height: 53px;
+
+      @media #{$media-sm} {
+        min-height: 20px;
+      }
+    }
+  }
+
+  .show-support-modal & {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .inner-page & {
+    position: absolute;
+
+    .modal {
+      width: 45vw;
+
+      @media #{$media-sm} {
+        width: 90vw;
+      }
+    }
+  }
+}

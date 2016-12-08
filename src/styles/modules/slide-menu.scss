@@ -5,9 +5,13 @@
   height: 100vh;
   z-index: 3;
   transition: transform .5s ease, opacity 1s ease;
-  transform: translateX(100%);
+  transform: translateY(100%);
   opacity: 0;
   pointer-events: none;
+
+  @media #{$media-sm} {
+    transform: translateX(0);
+  }
 
   .logo {
     width: 138px/$desktop-home-ratio*100vw;
@@ -27,6 +31,12 @@
     position: relative;
     z-index: 999;
     transition: opacity .5s, transform .5s;
+    overflow: hidden;
+
+    &:before {
+      opacity: 0;
+      transition: opacity .5s;
+    }
 
     @media #{$media-sm} {
       width: 100%;
@@ -40,7 +50,7 @@
       }
     }
 
-    .slide-menu-nav {
+    .slide-menu-nav, .cabinet-nav {
       position: absolute;
       top: 30%;
       bottom: 32%;
@@ -95,6 +105,100 @@
 
     }
 
+    .cabinet-nav {
+      right: 0;
+      top: 0;
+      width: 55%;
+      height: 100vh;
+      background: $purple-dark;
+      z-index: 2;
+      transition: opacity .5s, transform .5s;
+      transform: translateX(100%);
+      opacity: 0;
+
+      @media #{$media-sm} {
+        display: none;
+      }
+
+      ul {
+        padding-left: 50px;
+        top: 30%;
+        position: absolute;
+      }
+
+      .cabinet-user-menu-info, .exit-user {
+        font-size: 18px;
+        color: $white-50;
+        position: absolute;
+        top: 700px/$desktop-height-ratio*100%;
+        left: 50px;
+      }
+
+      .cabinet-menu-footer {
+        bottom: 50px;
+        position: absolute;
+        display: flex;
+        width: 100%;
+
+        .exit-user {
+          display: flex;
+          align-items: center;
+          top: auto;
+          position: relative;
+          margin-right: auto;
+
+          svg {
+            width: 30px;
+            margin-right: 20px;
+
+            line {
+              stroke: $green;
+            }
+          }
+        }
+
+        .make-call {
+          margin-left: auto;
+
+            svg {
+              path {
+                fill: $yellow;
+              }
+            }
+        }
+      }
+    }
+
+    .back-to-main-menu {
+      display: flex;
+      align-items: center;
+      color: $white-30;
+      font-size: 18px;
+      position: absolute;
+      bottom: 60px;
+      z-index: 2;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .5s;
+
+      @media #{$media-sm} {
+        display: none;
+      }
+
+      &:hover {
+        color: $yellow;
+      }
+
+      &:before {
+        content: '';
+        background: url('./../img/arrow-yellow.svg') no-repeat;
+        height: 24px;
+        width: 14px;
+        transform: rotate(180deg);
+        margin-right: 20px;
+      }
+    }
+
     .social-icons {
       position: absolute;
       top: 78.65%;
@@ -142,6 +246,10 @@
       padding-bottom: 47px;
       width: calc(100% - 120px);
 
+      @media #{$media-sm} {
+        display: none;
+      }
+
       .close-slider-menu {
         margin-right: auto;
         color: $white-30;
@@ -172,14 +280,60 @@
           margin-left: 45px;
           line-height: 30px;
         }
+
+        & + .make-call {
+          margin: inherit;
+        }
       }
 
-      .phone-icon {
-        margin: 0 auto;
+      .make-call {
+        margin-left: auto;
+        margin-right: inherit;
+
+        svg {
+          path {
+            fill: $yellow;
+          }
+        }
       }
 
       .personal-area {
         margin-left: auto;
+
+        svg {
+          path {
+            fill: #fff;
+          }
+        }
+      }
+    }
+
+    &.show-cabinet-menu {
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(0,0,0,.2);
+        z-index: 1;
+        opacity: 1;
+      }
+
+      .cabinet-nav {
+        transform: translateX(0);
+        opacity: 1;
+      }
+
+      .slider-menu-footer {
+        display: none;
+      }
+
+      .back-to-main-menu {
+        opacity: 1;
+        pointer-events: auto;
       }
     }
   }
@@ -191,6 +345,12 @@
     position: absolute;
     left: 50%;
     top: 0;
+
+    &.only-menu-section {
+      @media #{$media-sm} {
+        display: none;
+      }
+    }
 
     @media #{$media-sm} {
       width: 100%;
@@ -280,6 +440,10 @@
       overflow-x: hidden;
     }
 
+    .show-filter-options &, .show-sub-options & {
+      overflow: hidden;
+    }
+
   }
 
   .show-menu & {
@@ -288,9 +452,17 @@
     pointer-events: auto;
   }
 
-  .inner-page & {
+  .inner-page &, .show-hamburger & {
     transform: translateX(0);
     opacity: 1;
     pointer-events: auto;
+
+    .close-slider-menu {
+      display: none;
+    }
+  }
+
+  .show-hamburger & {
+
   }
 }

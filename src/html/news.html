@@ -1,0 +1,11 @@
+@@include('./assets/head.html', {"title":"Телесеть - новости"})
+<body class="white-bg">
+<main class="inner-page">
+    @@include('./global/mobile-header.html')
+    <div class="slide-menu">
+        @@include('./global/menu-container.html', {"page": "news", "isHome": "false"})
+        @@include('./inner-page-content/main-menu-item-news.html')
+    </div>
+</main>
+</body>
+</html>

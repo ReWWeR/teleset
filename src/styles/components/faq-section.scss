@@ -1,0 +1,119 @@
+.faq-section {
+  .faq-accordion-title-main {
+
+    > span {
+      font-size: 36px/$desktop-home-ratio*100vw;
+      display: flex;
+      align-items: center;
+      margin-bottom: 27px/$desktop-home-ratio*100vw;
+      cursor: pointer;
+
+      @media #{$media-sm} {
+        font-size: 36px/$mobile-ratio*100vw;
+        margin-bottom: 27px/$mobile-ratio*100vw;
+      }
+
+      svg {
+        transition: transform .5s;
+        width: 28px/$desktop-home-ratio*100vw;
+        margin-right: 30px/$desktop-home-ratio*100vw;
+
+        @media #{$media-sm} {
+          width: 28px/$mobile-ratio*100vw;
+          margin-right: 30px/$mobile-ratio*100vw;
+        }
+
+        path {
+          transition: fill .5s;
+        }
+      }
+    }
+
+    .faq-accordion-sub-title {
+      height: 0;
+      overflow: hidden;
+
+      > span {
+        font-size: 24px/$desktop-home-ratio*100vw;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        @media #{$media-sm} {
+          font-size: 24px/$mobile-ratio*100vw;
+        }
+
+        &:before {
+          content: '+';
+          display: flex;
+          flex-shrink: 0;
+          align-items: center;
+          justify-content: center;
+          width: 28px/$desktop-home-ratio*100vw;
+          height: 28px/$desktop-home-ratio*100vw;
+          margin-right: 30px/$desktop-home-ratio*100vw;
+          border: 1px solid rgba(0, 0, 0, 0.2);
+          border-radius: 100%;
+          color: $black-20;
+
+          @media #{$media-sm} {
+            width: 28px/$mobile-ratio*100vw;
+            height: 28px/$mobile-ratio*100vw;
+            margin-right: 30px/$mobile-ratio*100vw;
+          }
+        }
+      }
+
+      .faq-accordion-content {
+        height: 0;
+        overflow: hidden;
+        font-size: 18px/$desktop-home-ratio*100vw;
+        color: $black-60;
+        margin-bottom: 20px/$desktop-home-ratio*100vw;
+        padding-left: 60px/$desktop-home-ratio*100vw;
+
+        @media #{$media-sm} {
+          font-size: 18px/$mobile-ratio*100vw;
+          margin-bottom: 20px/$mobile-ratio*100vw;
+          padding-left: 60px/$mobile-ratio*100vw;
+        }
+      }
+
+      &.open {
+        span:before {
+          content: '-';
+        }
+      }
+    }
+
+    &.open {
+
+      svg {
+        transform: rotate(180deg);
+
+        path {
+          fill: $yellow;
+        }
+      }
+
+      .faq-accordion-sub-title {
+        height: auto;
+
+        &.open {
+
+          & > .faq-accordion-content {
+            margin-top: 20px/$desktop-home-ratio*100vw;
+
+            @media #{$media-sm} {
+              margin-top: 20px/$mobile-ratio*100vw;
+            }
+          }
+
+          .faq-accordion-content {
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+}

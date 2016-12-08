@@ -13,12 +13,18 @@
     display: none;
   }
 
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   .logo {
     width: 138px;
     display: block;
-    float: left;
     position: relative;
     z-index: 3;
+    margin-right: auto;
 
     .purple-bg & {
       svg {
@@ -27,12 +33,42 @@
         }
       }
     }
+
+    .yellow-bg & {
+      svg {
+        line, circle, rect {
+          stroke: #fff;
+        }
+      }
+    }
+
+    .grey-bg & {
+      svg {
+        line, circle, rect {
+          stroke: $blue;
+        }
+      }
+    }
+
+    .white-bg & {
+      svg {
+        line, circle, rect {
+          stroke: inherit;
+        }
+      }
+    }
   }
 
   .main-navigation {
-    position: absolute;
-    left: 50%;
-    transform: translateX(calc(-50% + 48px));
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity .5s;
+
+    .show-four-blocks-section & {
+      opacity: 0;
+      pointer-events: none;
+    }
+
 
     ul {
       li {
@@ -51,9 +87,17 @@
           border-radius: 14px;
           transition: border $transition-time;
 
+          .homepage-body.show-login-popup & {
+            color: $white-60;
+          }
+
           &:hover, &.active {
             border-color: $yellow;
             color: #000;
+
+            .homepage-body.show-login-popup & {
+              color: #fff;
+            }
           }
 
           .purple-bg & {
@@ -61,13 +105,77 @@
               color: $yellow;
             }
           }
+
+          .yellow-bg & {
+            &, &.active, &:hover {
+              color: #fff;
+            }
+
+            &.active, &:hover {
+              border-color: #fff;
+            }
+          }
+
+          .grey-bg & {
+            &, &.active, &:hover {
+              color: $blue;
+            }
+
+            &.active, &:hover {
+              border-color: $blue;
+            }
+          }
+
+          &.four-blocks-button {
+            padding: 0;
+
+            .purple-bg & {
+              svg {
+                path {
+                  fill: $yellow;
+                }
+              }
+            }
+
+            .yellow-bg & {
+              svg {
+                path {
+                  fill: #fff;
+                }
+              }
+            }
+
+            .grey-bg & {
+              svg {
+                path {
+                  fill: $blue;
+                }
+              }
+            }
+
+            .white-bg & {
+              svg {
+                path {
+                  fill: inherit;
+                }
+              }
+            }
+
+            .green-bg & {
+              svg {
+                path {
+                  fill: #fff;
+                }
+              }
+            }
+
+            &:hover {
+              border-color: transparent;
+            }
+          }
         }
       }
     }
-  }
-
-  .personal-area {
-    float: right;
   }
 }
 
@@ -98,6 +206,47 @@ header.mobile-header {
         transition: stroke .5s;
       }
     }
+
+    .purple-bg & {
+      svg {
+        line, circle, rect {
+          stroke: $yellow;
+        }
+      }
+    }
+
+    .yellow-bg & {
+      svg {
+        line, circle, rect {
+          stroke: #fff;
+        }
+      }
+    }
+
+    .grey-bg & {
+      svg {
+        line, circle, rect {
+          stroke: $blue;
+        }
+      }
+    }
+
+    .white-bg & {
+      svg {
+        line, circle, rect {
+          stroke: inherit;
+        }
+      }
+    }
+
+    .green-bg & {
+      svg {
+        line, circle, rect {
+          stroke: #fff;
+        }
+      }
+    }
+
   }
   &.decolorify-items {
 
@@ -113,7 +262,6 @@ header.mobile-header {
           background: #fff;
         }
       }
-
     }
   }
 
@@ -136,6 +284,26 @@ header.mobile-header {
         position: absolute;
         transition: transform .5s, opacity .5s, height .5s, background .5s;
         border-radius: 2px;
+
+        .purple-bg & {
+          background: $yellow;
+        }
+
+        .yellow-bg & {
+          background: #fff;
+        }
+
+        .grey-bg & {
+          background: $blue;
+        }
+
+        .white-bg & {
+          background: inherit;
+        }
+
+        .green-bg & {
+          background: #fff;
+        }
       }
 
       & {
@@ -166,6 +334,59 @@ header.mobile-header {
         &:after {
           opacity: 0;
         }
+      }
+    }
+  }
+}
+
+.personal-area {
+  margin-left: auto;
+  width: 42px;
+
+  .purple-bg & {
+    svg {
+      path {
+        fill: $yellow;
+      }
+    }
+  }
+
+  .yellow-bg & {
+    svg {
+      path {
+        fill: #fff;
+      }
+    }
+  }
+
+  .grey-bg & {
+    svg {
+      path {
+        fill: $blue;
+      }
+    }
+  }
+
+  .white-bg & {
+    svg {
+      path {
+        fill: inherit;
+      }
+    }
+  }
+
+  .green-bg & {
+    svg {
+      path {
+        fill: #fff;
+      }
+    }
+  }
+
+  .homepage-body.show-login-popup & {
+    svg {
+      path {
+        fill: #fff;
       }
     }
   }

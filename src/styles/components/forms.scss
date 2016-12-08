@@ -1,4 +1,4 @@
-input[type=text], input[type=number], input[type=email], input[type=tel] {
+input[type=text], input[type=number], input[type=email], input[type=tel], input[type=password] {
   border: none;
   background: $purple;
   height: 54px;
@@ -15,7 +15,7 @@ input[type=text], input[type=number], input[type=email], input[type=tel] {
     padding: 0 30px 0 15px;
   }
 
-  &::-webkit-input-placeholder  {
+  &::-webkit-input-placeholder {
     font-size: 16px;
     font-weight: 600;
     color: $white-60;
@@ -27,6 +27,52 @@ input[type=text], input[type=number], input[type=email], input[type=tel] {
 
   &:focus {
     outline: none;
+  }
+
+  &.input-white {
+    background: #fff;
+    color: #000;
+
+    &::-webkit-input-placeholder {
+      color: $black-30;
+    }
+  }
+
+  &.input-big {
+    height: 90px;
+    font: $font-ultima;
+    font-size: 36px;
+    border-radius: 18px;
+
+    &::-webkit-input-placeholder {
+      font: $font-ultima;
+      font-size: 36px;
+    }
+
+    @media #{$media-sm} {
+      height: 45px;
+      font-size: 18px;
+
+      &::-webkit-input-placeholder {
+        font-size: 18px;
+      }
+    }
+  }
+
+  &[disabled] {
+    border-left: none !important;
+
+    &, & + label {
+      background: #fff;
+      border: 1px solid $lighter-grey;
+      color: $main-black;
+      opacity: 1;
+    }
+
+    & + label {
+      border-right: none !important;
+      color: $black-20;
+    }
   }
 }
 
@@ -45,6 +91,41 @@ input[type=text], input[type=number], input[type=email], input[type=tel] {
       top: 50%;
       right: 15px;
       margin-top: -7px;
+    }
+  }
+}
+
+.input-with-label {
+  display: flex;
+  align-items: center;
+
+  input {
+    order: 2;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    flex-grow: 1;
+    padding-left: 10px;
+
+    @media #{$media-sm} {
+      background: $purple;
+      color: $white-60;
+      height: 52px;
+    }
+  }
+
+  .input-label {
+    background: $purple;
+    color: $white-60;
+    font-size: 16px;
+    align-self: stretch;
+    line-height: 52px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    padding-left: 20px;
+    order: 1;
+
+    @media #{$media-sm} {
+      line-height: 50px;
     }
   }
 }

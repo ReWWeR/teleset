@@ -6,6 +6,12 @@
       fill: $purple;
       stroke: $purple;
     }
+
+    &.fig-square-2 {
+      line, circle, rect {
+        fill: none
+      }
+    }
   }
 
   &.fig-yellow {
@@ -132,6 +138,22 @@
     }
   }
 
+  &.fig-cross-6 {
+    width: 180px/$desktop-home-ratio*100vw;
+
+    @media #{$desktop-bad-ratio} {
+      width: 180px/$desktop-height-ratio*100vh;
+    }
+
+    @media #{$media-sm} {
+      width: 180px/$mobile-ratio*100vw;
+    }
+
+    @media #{$media-sm-with-ratio} {
+      width: 180px/$mobile-ratio*100vh;
+    }
+  }
+
   &.fig-circle-1 {
     width: 90px/$desktop-home-ratio*100vw;
 
@@ -180,6 +202,22 @@
     }
   }
 
+  &.fig-circle-4 {
+    width: 182px/$desktop-home-ratio*100vw;
+
+    @media #{$desktop-bad-ratio} {
+      width: 182px/$desktop-height-ratio*100vh;
+    }
+
+    @media #{$media-sm} {
+      width: 182px/$mobile-ratio*100vw;
+    }
+
+    @media #{$media-sm-with-ratio} {
+      width: 182px/$mobile-ratio*100vh;
+    }
+  }
+
   &.fig-square-1 {
     width: 24px/$desktop-home-ratio*100vw;
 
@@ -211,6 +249,23 @@
       width: 54px/$mobile-ratio*100vh;
     }
   }
+
+  &.fig-square-3 {
+    width: 111px/$desktop-home-ratio*100vw;
+
+    @media #{$desktop-bad-ratio} {
+      width: 111px/$desktop-height-ratio*100vh;
+    }
+
+    @media #{$media-sm} {
+      width: 111px/$mobile-ratio*100vw;
+    }
+
+    @media #{$media-sm-with-ratio} {
+      width: 111px/$mobile-ratio*100vh;
+    }
+  }
+
   &.fig-square-big {
     width: 600px/$desktop-home-ratio*100vw;
 

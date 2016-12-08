@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13.9 23.8">
+    <defs>
+        <style>.arrow-svg {
+            fill: #ffb103;
+            fill-rule: evenodd;
+            }</style>
+    </defs>
+    <path class="arrow-svg"
+          d="M299.59,384.69a2,2,0,0,1,2.83,0l9.9,9.9a2,2,0,0,1-2.83,2.83l-9.9-9.9A2,2,0,0,1,299.59,384.69Z"
+          transform="translate(-299 -384.1)"/>
+    <path class="arrow-svg" d="M299.59,404.49l9.9-9.9a2,2,0,1,1,2.83,2.83l-9.9,9.9A2,2,0,0,1,299.59,404.49Z"
+          transform="translate(-299 -384.1)"/>
+</svg>

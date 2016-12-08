@@ -88,11 +88,11 @@
 
   &.btn-purple {
     background: $purple;
-    color: $yellow;
+    color: #fff;
 
     &:hover {
       background: $yellow;
-      color: #fff;
+      color: $yellow;
     }
 
     &.btn-purple-white {
@@ -160,10 +160,14 @@
   }
 
   &.btn-with-left-arrow {
-    color: $yellow;
+    color: $green;
+    display: flex;
+    align-items: center;
+    padding-left: 0;
+    padding-right: 0;
 
     &:hover {
-      color: #fff;
+      color: $yellow;
     }
 
     &:before {
@@ -174,10 +178,12 @@
       height: 54px;
       border-radius: 18px;
       background: #fff;
-      background-image: url('./../img/arrow-green.svg');
+      background-image: url('./../img/tick.svg');
       background-repeat: no-repeat;
       background-position: center;
-      background-size: 14px 24px;
+      background-size: 32px 22px;
+      background-color: $green;
+      margin-right: 20px;
     }
 
     span {

@@ -8,11 +8,24 @@
 
 @import "base";
 @import "layout";
+
 @import "components/buttons";
 @import "components/figures";
 @import "components/forms";
+@import "components/switch";
 @import "components/breadcrumbs";
 @import "components/fullpage-connect";
+@import "components/payment-pages";
+@import "components/support-pages";
+@import "components/modal";
+@import "components/accordion-channels";
+@import "components/shop-items";
+@import "components/news-list";
+@import "components/news-filter";
+@import "components/faq-section";
+@import "components/four-blocks";
+@import "components/cabinet-page";
+@import "components/login-popup";
 
 @import "global/header";
 @import "global/footer-landing";
@@ -26,5 +39,6 @@
 @import "modules/main-article";
 @import "modules/connect-form";
 
+@import "animations/initial-state-animation-objects";
 @import "animations/homepage-animation";
 @import "animations/additional-animations";

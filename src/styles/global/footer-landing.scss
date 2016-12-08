@@ -5,8 +5,31 @@
   z-index: 1;
   padding-bottom: 43px;
 
+  .show-login-popup & {
+    z-index: 2;
+  }
+
   @media #{$media-sm} {
     display: none;
+  }
+
+  .show-four-blocks-section & {
+    z-index: 3;
+
+    .author-logo, .make-call, .social-icons {
+      display: none;
+    }
+
+    .hamburger-line {
+      &, &:before, &:after {
+        background: #fff!important;
+      }
+    }
+  }
+
+  .wrapper {
+    display: flex;
+    align-items: center;
   }
 
   .copyright {
@@ -21,7 +44,7 @@
       color: $black-30;
     }
 
-    .purple-bg & {
+    .purple-bg &, .yellow-bg &, .grey-bg & {
       & {
         color: $white-50;
       }
@@ -33,7 +56,7 @@
   }
 
   .author-logo {
-    float: right;
+    margin-left: auto;
     text-align: right;
     color: $black-10;
     min-width: 220px;
@@ -46,26 +69,54 @@
       color: $yellow;
     }
 
+    .yellow-bg & {
+      color: #fff;
+    }
+
+    .grey-bg & {
+      color: $blue;
+    }
+
     svg {
       width: 52px;
       float: right;
       margin-left: 20px;
 
       polygon {
-        stroke: $yellow;
+        stroke: $blue;
+
+        .yellow-bg & {
+          stroke: #fff;
+        }
+
+        .grey-bg & {
+          stroke: $blue;
+        }
       }
+    }
+
+    .homepage-body.show-login-popup & {
+      color: #fff;
     }
   }
 
   a.hamburger-menu {
     color: $black-50;
     display: block;
-    float: left;
+    margin-right: auto;
     font: $font-body;
     font-weight: 600;
 
     .purple-bg & {
       color: $yellow;
+    }
+
+    .yellow-bg & {
+      color: #fff;
+    }
+
+    .grey-bg & {
+      color: $blue;
     }
 
     .hamburger-button {
@@ -85,7 +136,15 @@
           height: 4px;
           width: 100%;
           border-radius: 2px;
-          background: $yellow;
+          background: $purple;
+
+          .yellow-bg & {
+            background: #fff;
+          }
+
+          .grey-bg & {
+            background: $blue;
+          }
         }
 
         &:before {
@@ -104,6 +163,167 @@
       padding-left: 20px;
       font-size: 18px;
       line-height: 30px;
+    }
+  }
+
+  .social-icons {
+    display: flex;
+    margin-right: auto;
+    li {
+      &:not(:last-child) {
+        margin-right: 40px;
+      }
+      a {
+        svg {
+          height: 22px;
+
+          path {
+            transition: fill .5s,stroke .5s;
+            fill: $light-grey;
+            stroke: $light-grey;
+          }
+
+        }
+
+        &:hover {
+          svg {
+            path {
+              fill: $yellow;
+              stroke: $yellow;
+            }
+          }
+        }
+
+        .purple-bg & {
+          svg {
+            path {
+              fill: $yellow;
+              stroke: $yellow;
+            }
+          }
+        }
+
+        .yellow-bg & {
+          svg {
+            path {
+              fill: #fff;
+              stroke: #fff;
+            }
+          }
+        }
+
+        .grey-bg & {
+          svg {
+            path {
+              fill: $blue;stroke: $blue;
+            }
+          }
+        }
+
+        .white-bg & {
+          svg {
+            path {
+              fill: inherit;stroke: inherit;
+            }
+          }
+        }
+
+        .green-bg & {
+          svg {
+            path {
+              fill: #fff;
+              stroke: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.make-call {
+  width: 42px;
+  margin-right: auto;
+  position: relative;
+
+  .purple-bg & {
+    svg {
+      path {
+        fill: $yellow;
+      }
+    }
+  }
+
+  .yellow-bg & {
+    svg {
+      path {
+        fill: #fff;
+      }
+    }
+  }
+
+  .grey-bg & {
+    svg {
+      path {
+        fill: $blue;
+      }
+    }
+  }
+
+  .white-bg & {
+    svg {
+      path {
+        fill: inherit;
+      }
+    }
+  }
+
+  .green-bg & {
+    svg {
+      path {
+        fill: #fff;
+      }
+    }
+  }
+
+  &:hover {
+    .phone-tooltip {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+
+  .phone-tooltip {
+    background: $light-grey;
+    font-size: 30px;
+    font-weight: 300;
+    color: #fff;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 22px 60px;
+    border-radius: 18px;
+    min-width: 300px;
+    bottom: calc(100% + 17px);
+    left: 50%;
+    transform: translateX(-50%);
+    transition: opacity .5s;
+    opacity: 0;
+    pointer-events: none;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 17px 17px 0 17px;
+      border-color: $light-grey transparent transparent transparent;
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
     }
   }
 }

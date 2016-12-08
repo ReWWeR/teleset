@@ -1,5 +1,12 @@
 .breadcrumbs {
   padding-top: 115px;
+  z-index: 2;
+  position: absolute;
+  color: #fff;
+
+  .white-bg & {
+    color: #000;
+  }
 
   @media #{$desktop-bad-ratio} {
     padding-top: 115px/$desktop-height-ratio * 100vh;
@@ -40,8 +47,16 @@
       a {
         color: $white-50;
 
+        .white-bg & {
+          color: $black-50;
+        }
+
         &:hover {
           color: #fff;
+
+          .white-bg & {
+            color: #000;
+          }
         }
       }
     }
