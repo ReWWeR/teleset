@@ -235,7 +235,7 @@ header.mobile-header {
     .white-bg & {
       svg {
         line, circle, rect {
-          stroke: inherit;
+          //stroke: inherit;
         }
       }
     }
@@ -299,7 +299,7 @@ header.mobile-header {
         }
 
         .white-bg & {
-          background: inherit;
+          background: $purple;
         }
 
         .green-bg & {

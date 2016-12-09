@@ -102,15 +102,16 @@
 
             &.has-submenu {
               &:after {
-                content: '+';
-                display: inline-block;
+                content: '';
                 background-color: #fff;
                 -webkit-mask: url(./../img/arrow-green.svg) no-repeat center;
                 -webkit-mask-size: 65%;
                 transform: rotate(-90deg);
                 height: 26px;
                 margin-left: 30px;
-                line-height: .8;
+                display: none;
+                width: 20px;
+                margin-bottom: -4px;
               }
             }
           }
@@ -335,6 +336,7 @@
 
       .has-submenu {
           &:after {
+            display: inline-block!important;
             transform: rotate(90deg)!important;
           }
       }
