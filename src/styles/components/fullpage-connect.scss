@@ -13,6 +13,10 @@
     h1 {
       color: #fff;
     }
+
+    h1, p, a {
+      opacity: 0;
+    }
   }
 
   .hero {
@@ -22,6 +26,7 @@
     width: $hero-2-width/$desktop-home-ratio*100vw;
     z-index: 2;
     transition: transform .75s, opacity .5s;
+    opacity: 0;
 
     .show-connect-form & {
       transform: translateX(-680px/$desktop-home-ratio*100vw);
@@ -41,9 +46,10 @@
     position: fixed;
     transition: transform 1s;
     z-index: 1;
+    transform: scale(0);
 
     .show-connect-form & {
-      transform: translateX((140px/$desktop-home-ratio*100vw) - 800px/$desktop-home-ratio*100vw);
+      transform: translateX((140px/$desktop-home-ratio*100vw) - 800px/$desktop-home-ratio*100vw)!important;
     }
 
     &.fig-square-big {

@@ -44,7 +44,16 @@
                 <li><a href="./channels.html" class="@@if(page === 'channels'){active}">Каналы</a></li>
             </ul>
             <ul>
-                <li><a href="./cabinet.html" class="@@if(page === 'cabinet'){active}">Кабинет</a></li>
+                <li><a href="./cabinet.html" class="@@if(page === 'cabinet'){active} has-submenu">Кабинет</a>
+                    <ul class="mobile-cabinet-menu">
+                        <li><a href="./cabinet.html" class="@@if(page === 'cabinet'){active}">Мои данные</a></li>
+                        <li><a href="#">Оплата</a></li>
+                        <li><a href="#">Интернет</a></li>
+                        <li><a href="#">Услуги</a></li>
+                        <li><a href="./cabinet-block.html" class="@@if(page === 'cabinet-block'){active}">Блокировка</a></li>
+                        <li><a href="#">Пароль</a></li>
+                    </ul>
+                </li>
                 <li><a href="./shop.html" class="@@if(page === 'shop'){active}">Магазин</a></li>
                 <li><a href="./pools.html" class="@@if(page === 'pools'){active}">Опросы</a></li>
                 <li><a href="./faq.html" class="@@if(page === 'faq'){active}">FAQ</a></li>

@@ -7,6 +7,7 @@
       right: -171px/($desktop-home-ratio/2)*100%;
       left: initial;
       transform: translateY(-50%);
+      opacity: 0;
 
       @media #{$desktop-bad-ratio} {
         right: -171px/$desktop-height-ratio*100vh;
@@ -47,8 +48,14 @@
       top: 30%;
       z-index: 1;
 
+      h1, p, .btn {
+        opacity: 0;
+      }
+
       p {
         color: #fff;
+        margin-bottom: .9em;
+        padding: 0;
       }
 
       .btn {
@@ -58,8 +65,12 @@
       }
     }
 
+    .fig {
+      transform: scale(0);
+    }
+
     .fig-cross-1 {
-      transform: translateY(-50%);
+      transform: translateY(-50%) scale(0);
       right: -300px/($desktop-home-ratio/2)*100%;
       left: auto;
 

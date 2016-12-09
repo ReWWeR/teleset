@@ -28,6 +28,7 @@
 
   .payment-form {
     text-align: center;
+    transform: scale(0);
 
     @media #{$media-sm} {
       text-align: left;

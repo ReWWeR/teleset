@@ -12,12 +12,28 @@ $delay-200: 2s;
   animation-fill-mode: forwards;
 }
 
+%figures-scale-center {
+  animation-name: figures-scale-center;
+  animation-duration: .33s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
 @keyframes figures-scale {
   from {
     transform: scale(0);
   }
   to {
     transform: scale(1);
+  }
+}
+
+@keyframes figures-scale-center {
+  from {
+    transform: scale(0) translateY(-50%);
+  }
+  to {
+    transform: scale(1) translateY(-50%);
   }
 }
 
@@ -48,6 +64,13 @@ $delay-200: 2s;
   }
 }
 
+%hero-animation-center {
+  animation-name: hero-animation-center;
+  animation-duration: .5s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
 %hero-2-animation {
   animation-name: hero-2-animation;
   animation-duration: .5s;
@@ -76,6 +99,26 @@ $delay-200: 2s;
 }
 
 @keyframes hero-animation-mobile {
+  0% {
+    opacity: 0;
+    transform: translateY(-30%) scaleX(1);
+  }
+
+  25% {
+    transform: translateY(-40%) scaleX(1);
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(-50%) scaleX(1);
+  }
+}
+
+@keyframes hero-animation-center {
   0% {
     opacity: 0;
     transform: translateY(-30%) scaleX(1);
@@ -167,7 +210,7 @@ $delay-200: 2s;
   opacity: 0;
 }
 
-.homepage {
+.homepage, .payment-fullpage {
   .fig {
     transform: scale(0);
   }
@@ -196,15 +239,20 @@ body.loaded {
   }
 }
 
-body.loaded .homepage {
+body.loaded .homepage, body.loaded .payment-fullpage, .payment-page, .connect-fullpage, .support-fullpage, .support-page {
 
-  .fig-cross-1, .fig-cross-4, .fig-circle-3, .fig-cross-5 {
+  .fig-cross-1, .fig-cross-4, .fig-circle-3, .fig-cross-5, .fig-square-big {
     @extend %figures-scale;
   }
 
   .fig-cross-2, .fig-cross-3, .fig-circle-1, .fig-circle-2, .fig-square-1, .fig-square-2, .fig-square-3 {
     @extend %figures-scale;
     animation-delay: $delay-33;
+  }
+
+  .payment-form, .support-form {
+    @extend %figures-scale;
+    animation-delay: $delay-133;
   }
 
   .hero {
@@ -231,6 +279,50 @@ body.loaded .homepage {
     a {
       @extend %plan-animation;
       animation-delay: $delay-133 + ($delay-11 * 2);
+    }
+  }
+}
+
+body.loaded {
+  .header-inner-page {
+    .hero {
+      @extend %hero-animation-center;
+      animation-delay: $delay-80;
+    }
+
+    .hero-2 {
+      @extend %hero-2-animation;
+      animation-delay: $delay-80;
+    }
+
+    .plan-description {
+      h1 {
+        @extend %plan-animation;
+        animation-delay: $delay-133;
+      }
+
+      p {
+        @extend %plan-animation;
+        animation-delay: $delay-133 + $delay-11;
+      }
+
+      a {
+        @extend %plan-animation;
+        animation-delay: $delay-133 + ($delay-11 * 2);
+      }
+    }
+
+    .fig-cross-1 {
+      @extend %figures-scale-center;
+    }
+
+    .fig-cross-4, .fig-circle-3, .fig-cross-5, .fig-square-big {
+      @extend %figures-scale;
+    }
+
+    .fig-cross-2, .fig-cross-3, .fig-circle-1, .fig-circle-2, .fig-square-1, .fig-square-2, .fig-square-3 {
+      @extend %figures-scale;
+      animation-delay: $delay-33;
     }
   }
 }

@@ -477,7 +477,7 @@
 
   .show-connect-step-map & {
     .hero, .fig-square-big {
-      opacity: 0;
+      opacity: 0!important;
       pointer-events: none;
     }
   }

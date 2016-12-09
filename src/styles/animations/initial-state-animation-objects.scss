@@ -18,5 +18,31 @@ body.loaded.initial-animation {
       animation: none;
       transform: initial;
     }
+
+    .payment-form {
+      animation: none;
+      transform: scale(1);
+    }
   }
+
+  .header-inner-page {
+    .hero {
+      animation: none;
+      transform: translateY(-50%);
+      opacity: 1;
+    }
+  }
+
+  .connect-fullpage {
+    .hero-2 {
+      animation: none;
+      opacity: 1;
+    }
+
+    .fig {
+      animation: none;
+      transform: scale(1);
+    }
+  }
+
 }
