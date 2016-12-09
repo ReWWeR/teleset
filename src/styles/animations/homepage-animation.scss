@@ -42,6 +42,10 @@ $delay-200: 2s;
   animation-duration: .5s;
   animation-timing-function: ease;
   animation-fill-mode: forwards;
+
+  @media #{$media-sm} {
+    animation-name: hero-animation-mobile;
+  }
 }
 
 %hero-2-animation {
@@ -53,8 +57,8 @@ $delay-200: 2s;
 
 @keyframes hero-animation {
   0% {
-     opacity: 0;
-     transform: translateY(20%) scaleX(-1);
+    opacity: 0;
+    transform: translateY(20%) scaleX(-1);
   }
 
   25% {
@@ -68,6 +72,26 @@ $delay-200: 2s;
   100% {
     opacity: 1;
     transform: translateY(0) scaleX(-1);
+  }
+}
+
+@keyframes hero-animation-mobile {
+  0% {
+    opacity: 0;
+    transform: translateY(-30%) scaleX(1);
+  }
+
+  25% {
+    transform: translateY(-40%) scaleX(1);
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(-50%) scaleX(1);
   }
 }
 

@@ -1,0 +1,22 @@
+body.loaded.initial-animation {
+  .homepage {
+    .hero {
+      animation: none;
+      opacity: 1;
+      transform: scaleX(-1);
+    }
+
+    .plan-description {
+      p, h1, a {
+        animation: none;
+        opacity: 1;
+        transform: initial;
+      }
+    }
+
+    .fig {
+      animation: none;
+      transform: initial;
+    }
+  }
+}

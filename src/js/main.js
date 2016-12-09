@@ -194,4 +194,7 @@ $(document).ready(function () {
 
 window.onload = function () {
     $('body').addClass('loaded');
+    setTimeout(function(){
+        $('body').addClass('initial-animation');
+    }, 2000)
 };
