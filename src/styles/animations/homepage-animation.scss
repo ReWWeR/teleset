@@ -250,11 +250,6 @@ body.loaded .homepage, body.loaded .payment-fullpage, .payment-page, .connect-fu
     animation-delay: $delay-33;
   }
 
-  .payment-form, .support-form {
-    @extend %figures-scale;
-    animation-delay: $delay-133;
-  }
-
   .hero {
     @extend %hero-animation;
     animation-delay: $delay-80;
@@ -276,7 +271,41 @@ body.loaded .homepage, body.loaded .payment-fullpage, .payment-page, .connect-fu
       animation-delay: $delay-133 + $delay-11;
     }
 
-    a {
+    a, .flex-form-wrap {
+      @extend %plan-animation;
+      animation-delay: $delay-133 + ($delay-11 * 2);
+    }
+  }
+
+  .support-form {
+    h1 {
+      @extend %plan-animation;
+      animation-delay: $delay-133;
+    }
+
+    .flex-form-wrap, p.show-on-success {
+      @extend %plan-animation;
+      animation-delay: $delay-133 + $delay-11;
+    }
+
+    p, .btn {
+      @extend %plan-animation;
+      animation-delay: $delay-133 + ($delay-11 * 2);
+    }
+  }
+
+  .payment-form {
+    h1 {
+      @extend %plan-animation;
+      animation-delay: $delay-133;
+    }
+
+    .flex-form-wrap, p {
+      @extend %plan-animation;
+      animation-delay: $delay-133 + $delay-11;
+    }
+
+    .btn {
       @extend %plan-animation;
       animation-delay: $delay-133 + ($delay-11 * 2);
     }

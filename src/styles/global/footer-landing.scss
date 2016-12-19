@@ -52,6 +52,14 @@
       .grey-text {
         color: $white-30;
       }
+
+    }
+
+    .homepage-inner & {
+      color: $black-50;
+      .grey-text {
+        color: $black-30;
+      }
     }
   }
 
@@ -77,6 +85,10 @@
       color: $blue;
     }
 
+    .homepage-inner & {
+      color: $black-10;
+    }
+
     svg {
       width: 52px;
       float: right;
@@ -90,6 +102,10 @@
         }
 
         .grey-bg & {
+          stroke: $blue;
+        }
+
+        .homepage-inner & {
           stroke: $blue;
         }
       }
@@ -119,6 +135,10 @@
       color: $blue;
     }
 
+    .homepage-inner & {
+      color: $black-50;
+    }
+
     .hamburger-button {
       display: block;
       float: left;
@@ -144,6 +164,14 @@
 
           .grey-bg & {
             background: $blue;
+          }
+
+          .purple-bg & {
+            background-color: $yellow;
+          }
+
+          .homepage-inner & {
+            background: $purple;
           }
         }
 
@@ -179,8 +207,8 @@
 
           path {
             transition: fill .5s,stroke .5s;
-            fill: $light-grey;
-            stroke: $light-grey;
+            fill: $super-light-grey-2;
+            stroke: $super-light-grey-2;
           }
 
         }
@@ -236,6 +264,16 @@
             }
           }
         }
+
+        .homepage-inner & {
+          svg {
+            path {
+              fill: $super-light-grey-2;
+              stroke: $super-light-grey-2;
+            }
+
+          }
+        }
       }
     }
   }
@@ -243,10 +281,11 @@
 
 .make-call {
   width: 42px;
-  margin-right: auto;
-  position: relative;
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
 
-  .purple-bg & {
+  .purple-bg &, .homepage-inner & {
     svg {
       path {
         fill: $yellow;
@@ -282,6 +321,14 @@
     svg {
       path {
         fill: #fff;
+      }
+    }
+  }
+
+  .homepage-inner & {
+    svg {
+      path {
+        fill: $green;
       }
     }
   }

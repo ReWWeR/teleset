@@ -62,7 +62,7 @@
       }
 
       @media #{$media-sm-with-ratio} {
-        right: -600px/($desktop-home-ratio/2)*100%;
+        right: -300px/$mobile-ratio-height*100vh;
         left: auto;
       }
 
@@ -106,7 +106,7 @@
 
     &.fig-circle-3 {
       height: 420px/$desktop-height-ratio*100vh;
-      bottom: -240px/$desktop-height-ratio*100%;
+      bottom: -350px/$desktop-height-ratio*100%;
       left: 57.50%;
     }
 

@@ -17,6 +17,7 @@
     @media #{$media-sm} {
       width: $hero-width/$mobile-ratio*100vw;
       max-width: $hero-width;
+      top: 50%;
     }
 
     @media #{$media-sm-with-ratio} {
@@ -28,7 +29,6 @@
 
   .payment-form {
     text-align: center;
-    transform: scale(0);
 
     @media #{$media-sm} {
       text-align: left;
@@ -36,7 +36,7 @@
 
     h1 {
       color: #fff;
-
+      opacity: 0;
       padding-bottom: 70px/$desktop-home-ratio*100vw;
 
       @media #{$desktop-bad-ratio} {
@@ -50,6 +50,10 @@
       @media #{$media-sm-with-ratio} {
         padding-bottom: 70px/$mobile-ratio-height*100vh;
       }
+    }
+
+    .flex-form-wrap, .btn, p {
+      opacity: 0;
     }
 
     .form-line-wrap {
@@ -71,6 +75,10 @@
         flex-grow: 1;
         padding: 0 10px;
 
+        @media #{$media-sm} {
+          max-width: none;
+        }
+
         &:not(:last-child) {
           @media #{$media-sm} {
             margin-bottom: 20px;
@@ -88,6 +96,7 @@
       font-size: 18px/$desktop-home-ratio*100vw;
       color: $white-60;
       margin-bottom: 32px/$desktop-home-ratio*100vw;
+      opacity: 0;
 
       @media #{$desktop-bad-ratio} {
         font-size: 18px/$desktop-height-ratio*100vh;

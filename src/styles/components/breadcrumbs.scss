@@ -5,6 +5,10 @@
   color: #fff;
   opacity: 0;
 
+  @media #{$media-sm} {
+    display: none;
+  }
+
   .white-bg & {
     color: #000;
   }

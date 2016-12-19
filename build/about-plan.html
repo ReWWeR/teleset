@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./styles/style.css">
     <script src="./js/main.js"></script>
 </head>
-<body class="yellow-bg">
+<body class="show-menu yellow-bg">
 <main class="inner-page">
     <header class="mobile-header">
     <div class="wrapper">
@@ -253,7 +253,7 @@
         </ul>
         <a href="#" class="back-to-main-menu">Главное меню</a>
         <footer class="slider-menu-footer">
-            
+            <a href="#" class="close-slider-menu"><span class="text">Закрыть</span></a>
             <a href="callto:+71231231212" class="make-call">
                 <div class="phone-tooltip">812 756 57 58</div>
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 42 42">
@@ -291,8 +291,7 @@
                         <path class="d-make-call" d="M15,29a2,2,0,1,0-2-2,2,2,0,0,0,2,2" transform="translate(0 0)"/>
                         <path class="d-make-call" d="M27,29a2,2,0,1,0-2-2,2,2,0,0,0,2,2" transform="translate(0 0)"/>
                     </g>
-                </svg>
-            </a>
+                </svg></a>
             <a href="#" class="personal-area">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 42 42">
                     <defs>
@@ -489,7 +488,7 @@
             </div>
         </div>
     </header>
-    <main class="about-plan-main inner-main-content" id="main">
+    <main class="about-plan-main inner-main-content white-bg" id="main">
         <div class="wrapper">
             <h2>Хватайся за плюс</h2>
             <p>Интернет + ТВ — это круглосуточный доступ к развлечениям. Высокая и стабильная скорость позволяет играть,
@@ -502,59 +501,79 @@
 
 
             <section class="plan-grid">
-    <div class="plan-item"><span class="yellow-text plan-title"><svg xmlns="http://www.w3.org/2000/svg"
-                                                                     xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                     class="plan-title-icon"
-                                                                     width="48" height="82" viewBox="0 0 48 82">
-  <image id="PULT" width="48" height="82"
-         xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAABSCAMAAAAl4KfkAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAeFBMVEUAAABP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QAAAACQJ+eZAAAAJnRSTlMAOIzI8EjPDaWkFdD0ijwXvwYQI3ZG+NcB2kf5J3sld9gCeXjHoyxP9OAAAAABYktHRACIBR1IAAAACXBIWXMAAAsSAAALEgHS3X78AAAAB3RJTUUH4AsYEC4m/cHQ4gAAAV1JREFUSMftV9mWgjAMDaCgKOC+W8Wl//+JQ2k8Q21DWw8+zBzuCwncS9IkDw0AIgijAScwiMIAVAxjbkE8bNCTkY0uME5e/HTiwq+CpPh/R36lkDGc8sGs6vOiM83yAowo8myKJHFyrM+MYKNmhklV9Uf+HFoxR0UAocynAAsKmVUIUf3MbHyArCZGIOchtwtyOSUgU7NmVOUkmSiw82FBCJar1dJkU4L1hvPNWrdJwVZ4W92mBLuGu1M/ERH2wtvrNik4HDk/HnSbrtLpfD6ZbFLg3Yf/IGCXCzPZnfXhKryrblOCsuGW6qeOInwwS+x2Yyb7L3X6+4J+lvpZ6mfp4wj9LH1VoEyRg0DtgINA7bFdUJpedhrB/wzA7vf2KnlcdL2v0p6X9Yf/OuC9cHivNMrStDDibWmCMXfGsw6XxK58XPwgdVS8VssqhlNWz6RRBc/1WKB1AX/8LuA/m5fx4rc072gAAAAASUVORK5CYII="/>
-</svg>
+    <div class="plan-item">
+        <div class="plan-title-icon icon-pult">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                 width="48" height="82" viewBox="0 0 48 82">
+                <image id="PULT" width="48" height="82"
+                       xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAABSCAMAAAAl4KfkAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAeFBMVEUAAABP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QAAAACQJ+eZAAAAJnRSTlMAOIzI8EjPDaWkFdD0ijwXvwYQI3ZG+NcB2kf5J3sld9gCeXjHoyxP9OAAAAABYktHRACIBR1IAAAACXBIWXMAAAsSAAALEgHS3X78AAAAB3RJTUUH4AsYEC4m/cHQ4gAAAV1JREFUSMftV9mWgjAMDaCgKOC+W8Wl//+JQ2k8Q21DWw8+zBzuCwncS9IkDw0AIgijAScwiMIAVAxjbkE8bNCTkY0uME5e/HTiwq+CpPh/R36lkDGc8sGs6vOiM83yAowo8myKJHFyrM+MYKNmhklV9Uf+HFoxR0UAocynAAsKmVUIUf3MbHyArCZGIOchtwtyOSUgU7NmVOUkmSiw82FBCJar1dJkU4L1hvPNWrdJwVZ4W92mBLuGu1M/ERH2wtvrNik4HDk/HnSbrtLpfD6ZbFLg3Yf/IGCXCzPZnfXhKryrblOCsuGW6qeOInwwS+x2Yyb7L3X6+4J+lvpZ6mfp4wj9LH1VoEyRg0DtgINA7bFdUJpedhrB/wzA7vf2KnlcdL2v0p6X9Yf/OuC9cHivNMrStDDibWmCMXfGsw6XxK58XPwgdVS8VssqhlNWz6RRBc/1WKB1AX/8LuA/m5fx4rc072gAAAAASUVORK5CYII="/>
+            </svg>
+        </div>
+        <span class="yellow-text plan-title">
  140 каналов</span>Плюс 20 HD-каналов
     </div>
-    <div class="plan-item"><span class="yellow-text plan-title"><svg xmlns="http://www.w3.org/2000/svg"
-                                                                     xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                     class="plan-title-icon" width="93" height="49"
-                                                                     viewBox="0 0 93 49">
-  <image id="_100" data-name="100" width="93" height="49"
-         xlink:href="data:img/png;base64,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"/>
-</svg> 100 Мбит/с</span>Стабильная скорость
+    <div class="plan-item">
+        <div class="plan-title-icon icon-wifi">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                 width="93" height="49"
+                 viewBox="0 0 93 49">
+                <image id="_100" data-name="100" width="93" height="49"
+                       xlink:href="data:img/png;base64,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"/>
+            </svg>
+        </div>
+        <span class="yellow-text plan-title">
+        100 Мбит/с</span>Стабильная скорость
     </div>
-    <div class="plan-item"><span class="yellow-text plan-title"><svg xmlns="http://www.w3.org/2000/svg"
-                                                                     xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                     class="plan-title-icon"
-                                                                     width="82" height="66" viewBox="0 0 82 66">
-  <image id="DEV" width="82" height="66"
-         xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFIAAABCCAMAAADzJHEyAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAdVBMVEUAAABP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QAAAADmzEIaAAAAJXRSTlMACp73ARAfOIzI8EjPDaWkFdD0ijwXvwbHKYLD7yiyZvj9oEHrR9U5qwAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfgCxgQLib9wdDiAAABj0lEQVRYw+2XyXKDMAyGHZayJDQkmKRsYQvv/4oFWwQCPRTLmvbAf2HQmG8kJNkyYwsdDNM0DkynjK6XoZNomQPS1Im0O6EduSN35I78K6Rl2x8SaW+T9SPOcT2/U5bvuc4CeDyp40adjjNg8IkHDjoHIzG86CH2jobgozZiz5R+aooaYheZgZdrxGPV6ot5dAXMkCPI9U2ZB9QbhN7XIxDv2D65A9Nhrowa6aPwU8buMk88IzyRsUigvpjsQr4dYK0amwuUz+QP2Bh3kmZ51+VZmrxFLlmA3AQsHlMdPorJbisjy2pe21WJR6bLhkmxyHLdhCUOWVRrZFWgkJCZumnjuG1qyBEGmcjlT6hj/pTvBQIpc1O/OoPXswypITOxupkMjTBkCGQuVreToRWGXB1prdo3nn3/X5AEgVOkh6CICEqdoCEptg2CzY1iC6Y4KH57nGk9dJVHg7XG0YBggCEYswiGQYKR9W2w3ngpe2kxWBOM/xSXFBZquO0BMRx/bXDWFHUwy5f2a+kgfZfnb5GlA/VmK0CjAAAAAElFTkSuQmCC"/>
-</svg>
+    <div class="plan-item">
+        <div class="plan-title-icon icon-radio">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                 width="82" height="66" viewBox="0 0 82 66">
+                <image id="DEV" width="82" height="66"
+                       xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFIAAABCCAMAAADzJHEyAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAdVBMVEUAAABP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QAAAADmzEIaAAAAJXRSTlMACp73ARAfOIzI8EjPDaWkFdD0ijwXvwbHKYLD7yiyZvj9oEHrR9U5qwAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfgCxgQLib9wdDiAAABj0lEQVRYw+2XyXKDMAyGHZayJDQkmKRsYQvv/4oFWwQCPRTLmvbAf2HQmG8kJNkyYwsdDNM0DkynjK6XoZNomQPS1Im0O6EduSN35I78K6Rl2x8SaW+T9SPOcT2/U5bvuc4CeDyp40adjjNg8IkHDjoHIzG86CH2jobgozZiz5R+aooaYheZgZdrxGPV6ot5dAXMkCPI9U2ZB9QbhN7XIxDv2D65A9Nhrowa6aPwU8buMk88IzyRsUigvpjsQr4dYK0amwuUz+QP2Bh3kmZ51+VZmrxFLlmA3AQsHlMdPorJbisjy2pe21WJR6bLhkmxyHLdhCUOWVRrZFWgkJCZumnjuG1qyBEGmcjlT6hj/pTvBQIpc1O/OoPXswypITOxupkMjTBkCGQuVreToRWGXB1prdo3nn3/X5AEgVOkh6CICEqdoCEptg2CzY1iC6Y4KH57nGk9dJVHg7XG0YBggCEYswiGQYKR9W2w3ngpe2kxWBOM/xSXFBZquO0BMRx/bXDWFHUwy5f2a+kgfZfnb5GlA/VmK0CjAAAAAElFTkSuQmCC"/>
+            </svg>
+        </div>
+        <span class="yellow-text plan-title">
  Без приставки</span>Один кабель для интернета и ТВ
     </div>
-    <div class="plan-item"><span class="yellow-text plan-title"><svg xmlns="http://www.w3.org/2000/svg"
-                                                                     xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                     class="plan-title-icon"
-                                                                     width="78" height="78" viewBox="0 0 78 78">
-  <image id="GO" width="78" height="78"
-         xlink:href="data:img/png;base64,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"/>
-</svg>
+    <div class="plan-item">
+        <div class="plan-title-icon icon-speed">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                 width="78" height="78" viewBox="0 0 78 78">
+                <image id="GO" width="78" height="78"
+                       xlink:href="data:img/png;base64,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"/>
+            </svg>
+        </div>
+        <span class="yellow-text plan-title">
  Нет зависимости</span>ТВ-сигнала
         от интернета
     </div>
-    <div class="plan-item"><span class="yellow-text plan-title"><svg xmlns="http://www.w3.org/2000/svg"
-                                                                     xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                     class="plan-title-icon"
-                                                                     width="84" height="56" viewBox="0 0 84 56">
-  <image id="BIGB" width="84" height="56"
-         xlink:href="data:img/png;base64,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"/>
-</svg>
+    <div class="plan-item">
+        <div class="plan-title-icon icon-camera">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                 width="84" height="56" viewBox="0 0 84 56">
+                <image id="BIGB" width="84" height="56"
+                       xlink:href="data:img/png;base64,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"/>
+            </svg>
+        </div>
+        <span class="yellow-text plan-title">
  Трансляция</span>Панорам
         улиц Дубны
     </div>
-    <div class="plan-item"><span class="yellow-text plan-title"><svg xmlns="http://www.w3.org/2000/svg"
-                                                                     xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                     class="plan-title-icon"
-                                                                     width="84" height="84" viewBox="0 0 84 84">
-  <image id="SUPPORT" width="84" height="84"
-         xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAABUCAMAAAArteDzAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABOFBMVEUAAABP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QAAAABTYdtoAAAAZnRSTlMAEVCCqtDo9B97zP0BSb/+TM8hs2T2CqTztHxTLR0QFcn1oUUEHNjwgBOb5kDBFqwGA0oS0QLi+jB/9xqcLk+teYWy7gVCyp0PI326TpY8tb2mpae+3z4z3JPboN0JZhu3ftImIFHcez6nAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAAd0SU1FB+ALGBAuJv3B0OIAAANhSURBVFjD7ZlpW9pAEMfXgHIKEQXkCgpEORRRAcXa015Se2Fbe9PLfP+PUNzZDUkwyW6yvOjz9P/GPLszPyab2ZlNRMhVC1IguLgU0rTQ0mIwIC24e7gpHInGNJNi0UjYDzG+nEhqtyiZWI57Zcormq1WZE/I1KrmqNUUP3MtrbkovcaJzGQN3uu5fKFYUpRSsZDPrRsmshkeZnlDd9ysVGvGqVq1sqlPbpTZmeoW9dquN2anG/VtOr+lMsdJmclm43aLRpOm2hZjrBl6760de6OdFl0BtnWlz2i37WTV3qVPi4W5Roz3Os52nT1iyJBZKZKfe/tulvuEmnbfBWQf7XZcLVGHrEDOzVAmz6jtzpysK3lasrNZHGpIcoeFOckByKwV55q1DD/dZGMi1AT7A0ejBOyjBiMTNWBvJZxswnA7dVYmQnVYLqdeEIEawhwoQodQXSIOJlFsUWFnIlTBLlF7gwXocVUeaBW64aGtgQQ1ucbBRDWo2pKtQYBtg5iVw04B2/kgns/zQfPYKWg7v4jnC3zQAnbqzoz3pGz/SG88RT5oUXc86melHh0+7ppab4kPWjI5d49hVLZ0eM4TmGI5Dcg4TuupgfdYZ3FPT2LtdS2DmuIPqnV7JOFFQicbAXpnbKAqiuIHGlYUdQDbPIv6+O/AMO0Nir0G+LKPID9VMVAV8tUE8g0l1/+h/wp0Lik1l+TXt6l/6HSbzqWgzKX0zaVI+24n6MTMlGHU0vjucEJPTfd+TIfNLfouJzRzSmI1tWis+KTyQ8T3OKHgO9Hth/T7GPqAG+qohxj6SCwU3nfOHguFlmHBn4gN9SmGPhMLJS8Sz4VCz+GVZyg21BcYui3g05tBF/CoXgqF0hfeV/MItX/oH2XQa6C+6YiEpsinrLeunzt4RD/MjLhe/Nx0Sajvpuvak0YtTWuNLOWSQ/rHrvcfyMiV3hq6V16p7Y8EkfyEg70wdKGTC69U9TNlnEUUdGXqbCeeYy1HdUjoy9fZtu5N3y41W0leoQh9D5lIseF4PISj0sg7FJ3/MEJ/3gwN8WXLBxShg19T6O+bgTFc+4Ki+IH+z4OxMOhEfyJH02Yg4vZBI5EPimrmVOwjpXRZT8Xek98oUdvULDEFZSZWAaVvVr1rKNLXbOv5FzSbXFNFJsp1AAAAAElFTkSuQmCC"/>
-</svg>
+    <div class="plan-item">
+        <div class="plan-title-icon icon-headphones">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                 width="84" height="84" viewBox="0 0 84 84">
+                <image id="SUPPORT" width="84" height="84"
+                       xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAABUCAMAAAArteDzAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABOFBMVEUAAABP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QBP7QAAAABTYdtoAAAAZnRSTlMAEVCCqtDo9B97zP0BSb/+TM8hs2T2CqTztHxTLR0QFcn1oUUEHNjwgBOb5kDBFqwGA0oS0QLi+jB/9xqcLk+teYWy7gVCyp0PI326TpY8tb2mpae+3z4z3JPboN0JZhu3ftImIFHcez6nAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAAd0SU1FB+ALGBAuJv3B0OIAAANhSURBVFjD7ZlpW9pAEMfXgHIKEQXkCgpEORRRAcXa015Se2Fbe9PLfP+PUNzZDUkwyW6yvOjz9P/GPLszPyab2ZlNRMhVC1IguLgU0rTQ0mIwIC24e7gpHInGNJNi0UjYDzG+nEhqtyiZWI57Zcormq1WZE/I1KrmqNUUP3MtrbkovcaJzGQN3uu5fKFYUpRSsZDPrRsmshkeZnlDd9ysVGvGqVq1sqlPbpTZmeoW9dquN2anG/VtOr+lMsdJmclm43aLRpOm2hZjrBl6760de6OdFl0BtnWlz2i37WTV3qVPi4W5Roz3Os52nT1iyJBZKZKfe/tulvuEmnbfBWQf7XZcLVGHrEDOzVAmz6jtzpysK3lasrNZHGpIcoeFOckByKwV55q1DD/dZGMi1AT7A0ejBOyjBiMTNWBvJZxswnA7dVYmQnVYLqdeEIEawhwoQodQXSIOJlFsUWFnIlTBLlF7gwXocVUeaBW64aGtgQQ1ucbBRDWo2pKtQYBtg5iVw04B2/kgns/zQfPYKWg7v4jnC3zQAnbqzoz3pGz/SG88RT5oUXc86melHh0+7ppab4kPWjI5d49hVLZ0eM4TmGI5Dcg4TuupgfdYZ3FPT2LtdS2DmuIPqnV7JOFFQicbAXpnbKAqiuIHGlYUdQDbPIv6+O/AMO0Nir0G+LKPID9VMVAV8tUE8g0l1/+h/wp0Lik1l+TXt6l/6HSbzqWgzKX0zaVI+24n6MTMlGHU0vjucEJPTfd+TIfNLfouJzRzSmI1tWis+KTyQ8T3OKHgO9Hth/T7GPqAG+qohxj6SCwU3nfOHguFlmHBn4gN9SmGPhMLJS8Sz4VCz+GVZyg21BcYui3g05tBF/CoXgqF0hfeV/MItX/oH2XQa6C+6YiEpsinrLeunzt4RD/MjLhe/Nx0Sajvpuvak0YtTWuNLOWSQ/rHrvcfyMiV3hq6V16p7Y8EkfyEg70wdKGTC69U9TNlnEUUdGXqbCeeYy1HdUjoy9fZtu5N3y41W0leoQh9D5lIseF4PISj0sg7FJ3/MEJ/3gwN8WXLBxShg19T6O+bgTFc+4Ki+IH+z4OxMOhEfyJH02Yg4vZBI5EPimrmVOwjpXRZT8Xek98oUdvULDEFZSZWAaVvVr1rKNLXbOv5FzSbXFNFJsp1AAAAAElFTkSuQmCC"/>
+            </svg>
+        </div>
+        <span class="yellow-text plan-title">
  Поддержка 24/7</span>Самая быстрая
         поддержка
     </div>
@@ -623,7 +642,7 @@
                     </g>
                 </svg>
                 <span class="text">
-                Design by<br><span>Apus Agency</span>
+                Made by<br><span>Apus Agency</span>
                 </span>
             </a>
         </div>
@@ -635,6 +654,638 @@
     </main>
 </section>
     </div>
+</main>
+<main class="homepage-inner">
+    <div class="fullpage-wrap">
+        <header class="header">
+    <div class="wrapper">
+        <a href="./" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138 30">
+                <defs>
+                    <style>.a, .b, .c-l, .d {
+                        fill: none;
+                        stroke-linecap: round;
+                        stroke-linejoin: round;
+                        stroke-width: 10px;
+                    }
+
+                    .a {
+                        stroke: #ffb103;
+                    }
+
+                    .b {
+                        stroke: #8f00ff;
+                    }
+
+                    .c-l {
+                        stroke: #4fed00;
+                    }
+
+                    .d {
+                        stroke: #11f5ff;
+                    }</style>
+                </defs>
+                <line class="a" x1="15" y1="5" x2="15" y2="25"/>
+                <line class="a" x1="25" y1="15" x2="5" y2="15"/>
+                <circle class="b" cx="51" cy="15" r="10"/>
+                <line class="c-l" x1="87" y1="5" x2="87" y2="25"/>
+                <line class="c-l" x1="97" y1="15" x2="77" y2="15"/>
+                <rect class="d" x="113" y="5" width="20" height="20"/>
+            </svg>
+        </a>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="./" class="active">Тариф</a></li>
+                <li><a href="./connect-fullpage.html" class="">Подключение</a></li>
+                <li><a href="#" class="four-blocks-button">
+                    <svg id="_4" data-name="4" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                         viewBox="0 0 18 18">
+                        <defs>
+                            <style>.cls-1 {
+                                fill: #ffb103
+                            }</style>
+                        </defs>
+                        <path id="_4-2" data-name="4" class="cls-1" d="M0 0h8v8H0z"/>
+                        <path id="_4-3" data-name="4" class="cls-1" d="M10 0h8v8h-8z"/>
+                        <path id="_4-4" data-name="4" class="cls-1" d="M0 10h8v8H0z"/>
+                        <path id="_4-5" data-name="4" class="cls-1" d="M10 10h8v8h-8z"/>
+                    </svg>
+                </a></li>
+                <li><a href="./payment-fullpage.html" class="">Оплата</a></li>
+                <li><a href="./support-fullpage.html" class="">Поддержка</a></li>
+            </ul>
+        </nav>
+        <a href="#" class="personal-area">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 42 42">
+                <defs>
+                    <style>.a-login {
+                        fill: none;
+                    }
+
+                    .b-login {
+                        clip-path: url(#a-login);
+                    }
+
+                    .c-login {
+                        fill: #4fed00;
+                        fill-rule: evenodd;
+                    }</style>
+                    <clipPath id="a-login" transform="translate(0 0)">
+                        <rect class="a-login" width="42" height="42"/>
+                    </clipPath>
+                </defs>
+                <g class="b-login">
+                    <path class="c-login"
+                          d="M21,0A21,21,0,1,0,42,21,21,21,0,0,0,21,0M15,30l4.18-8.35a5,5,0,1,1,3.64,0L27,30H15Z"
+                          transform="translate(0 0)"/>
+                </g>
+            </svg>
+        </a>
+    </div>
+</header>
+
+        <header class="mobile-header">
+    <div class="wrapper">
+        <a href="./" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138 30">
+                <defs>
+                    <style>.a, .b, .c-l, .d {
+                        fill: none;
+                        stroke-linecap: round;
+                        stroke-linejoin: round;
+                        stroke-width: 10px;
+                    }
+
+                    .a {
+                        stroke: #ffb103;
+                    }
+
+                    .b {
+                        stroke: #8f00ff;
+                    }
+
+                    .c-l {
+                        stroke: #4fed00;
+                    }
+
+                    .d {
+                        stroke: #11f5ff;
+                    }</style>
+                </defs>
+                <line class="a" x1="15" y1="5" x2="15" y2="25"/>
+                <line class="a" x1="25" y1="15" x2="5" y2="15"/>
+                <circle class="b" cx="51" cy="15" r="10"/>
+                <line class="c-l" x1="87" y1="5" x2="87" y2="25"/>
+                <line class="c-l" x1="97" y1="15" x2="77" y2="15"/>
+                <rect class="d" x="113" y="5" width="20" height="20"/>
+            </svg>
+        </a>
+        <span class="hamburger-menu-mobile"><span></span></span>
+
+    </div>
+</header>
+        <main class="homepage">
+            <img src="img/hero.png" alt="" class="hero">
+            <section class="plan-description">
+                <h1>Хватайся за плюс</h1>
+                <p>Интернет 100 Мбит/с за <span class="yellow-text">400</span> <sup>руб</sup></p>
+                <a href="./about-plan.html" class="btn btn-primary btn-purple">Узнать больше</a>
+            </section>
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="30px"
+                 class="fig fig-purple fig-cross-1">
+                <defs>
+                    <style>.a-c {
+                        fill: none;
+                        stroke: #ffb103;
+                        stroke-linecap: round;
+                        stroke-linejoin: round;
+                        stroke-width: 200px;
+                    }</style>
+                </defs>
+                <line class="a-c" x1="300" y1="100" x2="300" y2="500"/>
+                <line class="a-c" x1="500" y1="300" x2="100" y2="300"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="30px"
+                 class="fig fig-white fig-cross-2">
+                <defs>
+                    <style>.a-c {
+                        fill: none;
+                        stroke: #ffb103;
+                        stroke-linecap: round;
+                        stroke-linejoin: round;
+                        stroke-width: 200px;
+                    }</style>
+                </defs>
+                <line class="a-c" x1="300" y1="100" x2="300" y2="500"/>
+                <line class="a-c" x1="500" y1="300" x2="100" y2="300"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="30px"
+                 class="fig fig-green fig-cross-3">
+                <defs>
+                    <style>.a-c {
+                        fill: none;
+                        stroke: #ffb103;
+                        stroke-linecap: round;
+                        stroke-linejoin: round;
+                        stroke-width: 200px;
+                    }</style>
+                </defs>
+                <line class="a-c" x1="300" y1="100" x2="300" y2="500"/>
+                <line class="a-c" x1="500" y1="300" x2="100" y2="300"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="30px"
+                 class="fig fig-yellow fig-cross-4">
+                <defs>
+                    <style>.a-c {
+                        fill: none;
+                        stroke: #ffb103;
+                        stroke-linecap: round;
+                        stroke-linejoin: round;
+                        stroke-width: 200px;
+                    }</style>
+                </defs>
+                <line class="a-c" x1="300" y1="100" x2="300" y2="500"/>
+                <line class="a-c" x1="500" y1="300" x2="100" y2="300"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 420" width="30px"
+                 class="fig fig-yellow fig-circle-1">
+                <defs>
+                    <style>.b-a {
+                        fill: none;
+                        stroke: #8f00ff;
+                        stroke-linecap: round;
+                        stroke-linejoin: round;
+                        stroke-width: 140px;
+                    }</style>
+                </defs>
+                <circle class="b-a" cx="210" cy="210" r="140"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 420" width="30px"
+                 class="fig fig-blue fig-circle-2">
+                <defs>
+                    <style>.b-a {
+                        fill: none;
+                        stroke: #8f00ff;
+                        stroke-linecap: round;
+                        stroke-linejoin: round;
+                        stroke-width: 140px;
+                    }</style>
+                </defs>
+                <circle class="b-a" cx="210" cy="210" r="140"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 420" width="30px"
+                 class="fig fig-green fig-circle-3">
+                <defs>
+                    <style>.b-a {
+                        fill: none;
+                        stroke: #8f00ff;
+                        stroke-linecap: round;
+                        stroke-linejoin: round;
+                        stroke-width: 140px;
+                    }</style>
+                </defs>
+                <circle class="b-a" cx="210" cy="210" r="140"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54.14 54.14" width="30px"
+                 class="fig fig-blue fig-square-1">
+                <defs>
+                    <style>.c-a {
+                        fill: none;
+                        stroke: #11f5ff;
+                        stroke-linecap: round;
+                        stroke-linejoin: round;
+                        stroke-width: 14.14px;
+                    }</style>
+                </defs>
+                <rect class="c-a" x="431.04" y="72.9" width="28.28" height="28.28"
+                      transform="translate(-349.27 280.32) rotate(-45)"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54.14 54.14" width="30px"
+                 class="fig fig-square fig-blue fig-square-2">
+                <defs>
+                    <style>.c-a {
+                        fill: none;
+                        stroke: #11f5ff;
+                        stroke-linecap: round;
+                        stroke-linejoin: round;
+                        stroke-width: 14.14px;
+                    }</style>
+                </defs>
+                <rect class="c-a" x="431.04" y="72.9" width="28.28" height="28.28"
+                      transform="translate(-349.27 280.32) rotate(-45)"/>
+            </svg>
+        </main>
+        <footer class="footer-landing">
+    <div class="wrapper">
+        <small class="copyright">ООО «Телесеть» <span class="grey-text">Интернет и ТВ в Дубне</span></small>
+        <a href="#" class="hamburger-menu"><span class="hamburger-button"><span class="hamburger-line"></span></span>
+            <span class="text">Весь сайт</span></a>
+        <ul class="social-icons">
+            <li><a href="#">
+                <svg id="c4b0ed52-959a-41a8-acb1-2fa419913d06" data-name="instagram" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 21 21">
+                    <defs>
+                        <style>.e8544f19-70bf-4a9a-b9b1-5473fc0e4930 {
+                            fill: #fff;
+                        }</style>
+                    </defs>
+                    <title>Instagram</title>
+                    <path class="e8544f19-70bf-4a9a-b9b1-5473fc0e4930"
+                          d="M-8.52,124.91v-0.52c0-2.61,0-3-.06-4.07a7.71,7.71,0,0,0-.49-2.55,5.15,5.15,0,0,0-1.21-1.86,5.15,5.15,0,0,0-1.86-1.21,7.71,7.71,0,0,0-2.55-.49c-1.08,0-1.45-.06-4.07-0.06h-0.52c-2.61,0-3,0-4.07.06a7.71,7.71,0,0,0-2.55.49,5.15,5.15,0,0,0-1.86,1.21A5.15,5.15,0,0,0-29,117.77a7.71,7.71,0,0,0-.49,2.55c-0.05,1.12-.06,1.48-0.06,4.33s0,3.21.06,4.33a7.71,7.71,0,0,0,.49,2.55,5.16,5.16,0,0,0,1.21,1.86,5.16,5.16,0,0,0,1.86,1.21,7.71,7.71,0,0,0,2.55.49c1.12,0.05,1.48.06,4.33,0.06s3.21,0,4.33-.06a7.71,7.71,0,0,0,2.55-.49,5.15,5.15,0,0,0,1.86-1.21,5.15,5.15,0,0,0,1.21-1.86A7.71,7.71,0,0,0-8.58,129c0-1.09.06-1.45,0.06-4.07M-19,116c2.8,0,3.14,0,4.24.06a5.81,5.81,0,0,1,2,.36,3.26,3.26,0,0,1,1.21.79,3.25,3.25,0,0,1,.79,1.21,5.81,5.81,0,0,1,.36,2c0.05,1.11.06,1.44,0.06,4.24s0,3.14-.06,4.24a5.81,5.81,0,0,1-.36,1.95,3.25,3.25,0,0,1-.79,1.21,3.26,3.26,0,0,1-1.21.79,5.81,5.81,0,0,1-2,.36c-1.11.05-1.44,0.06-4.24,0.06s-3.14,0-4.24-.06a5.81,5.81,0,0,1-1.95-.36,3.25,3.25,0,0,1-1.21-.79,3.25,3.25,0,0,1-.79-1.21,5.81,5.81,0,0,1-.36-1.95c-0.05-1.11-.06-1.44-0.06-4.24s0-3.14.06-4.24a5.81,5.81,0,0,1,.36-2,3.26,3.26,0,0,1,.79-1.21,3.26,3.26,0,0,1,1.21-.79,5.81,5.81,0,0,1,1.95-.36C-22.16,116-21.82,116-19,116Z"
+                          transform="translate(29.52 -114.15)"></path>
+                    <path class="e8544f19-70bf-4a9a-b9b1-5473fc0e4930"
+                          d="M-19,128.15a3.5,3.5,0,0,1-3.5-3.5,3.5,3.5,0,0,1,3.5-3.5,3.5,3.5,0,0,1,3.5,3.5,3.5,3.5,0,0,1-3.5,3.5m0-8.89a5.39,5.39,0,0,0-5.39,5.39A5.39,5.39,0,0,0-19,130a5.39,5.39,0,0,0,5.39-5.39A5.39,5.39,0,0,0-19,119.26Z"
+                          transform="translate(29.52 -114.15)"></path>
+                    <path class="e8544f19-70bf-4a9a-b9b1-5473fc0e4930"
+                          d="M-12.16,119a1.26,1.26,0,0,1-1.26,1.26A1.26,1.26,0,0,1-14.68,119a1.26,1.26,0,0,1,1.26-1.26A1.26,1.26,0,0,1-12.16,119"
+                          transform="translate(29.52 -114.15)"></path>
+                </svg>
+            </a></li>
+            <li><a href="#">
+                <svg id="48566538-19ce-4b81-9048-a44829e6cfa9" data-name="twitter" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 25.84 21">
+                    <defs>
+                        <style>.\33 c98491a-4ae1-47bf-9841-174f972e1412 {
+                            fill: #fff;
+                        }</style>
+                    </defs>
+                    <title>Twitter</title>
+                    <path class="3c98491a-4ae1-47bf-9841-174f972e1412"
+                          d="M81.55,115.86a10.62,10.62,0,0,1-3,.84,5.32,5.32,0,0,0,2.33-2.93A10.6,10.6,0,0,1,77.47,115a5.31,5.31,0,0,0-9,4.84,15,15,0,0,1-10.93-5.54,5.31,5.31,0,0,0,1.64,7.08,5.29,5.29,0,0,1-2.4-.66s0,0,0,.07A5.3,5.3,0,0,0,61,126a5.31,5.31,0,0,1-2.39.09,5.31,5.31,0,0,0,5,3.68,10.7,10.7,0,0,1-7.85,2.2,15.08,15.08,0,0,0,23.21-12.7q0-.34,0-0.69a10.77,10.77,0,0,0,2.65-2.74"
+                          transform="translate(-55.71 -113.37)"></path>
+                </svg>
+            </a></li>
+            <li><a href="#">
+                <svg id="896a8161-9468-490e-9824-bdf30cf4401c" data-name="ok" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 12.74 22">
+                    <defs>
+                        <style>.\37
+
+                        4
+                        b1f89e-7a56-4bab-adba-8ce6a369b8cb {
+                            fill: #fff;
+                        }</style>
+                    </defs>
+                    <title>ok</title>
+                    <path class="74b1f89e-7a56-4bab-adba-8ce6a369b8cb"
+                          d="M150.94,114.41h0a2.35,2.35,0,1,1-2.35,2.35,2.35,2.35,0,0,1,2.35-2.35m0,8a5.68,5.68,0,1,0-5.68-5.68A5.68,5.68,0,0,0,150.94,122.43Z"
+                          transform="translate(-144.57 -111.08)"></path>
+                    <path class="74b1f89e-7a56-4bab-adba-8ce6a369b8cb"
+                          d="M153.24,127.07a10.64,10.64,0,0,0,3.3-1.37,1.66,1.66,0,0,0-1.77-2.82,7.21,7.21,0,0,1-7.64,0,1.66,1.66,0,0,0-1.77,2.82,10.65,10.65,0,0,0,3.3,1.37l-3.17,3.17a1.66,1.66,0,0,0,2.35,2.35l3.12-3.12,3.12,3.12a1.66,1.66,0,0,0,2.35-2.35Z"
+                          transform="translate(-144.57 -111.08)"></path>
+                </svg>
+            </a></li>
+        </ul>
+        <a href="callto:+71231231212" class="make-call">
+            <div class="phone-tooltip">812 756 57 58</div>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 42 42">
+                <defs>
+                    <style>.a-make-call {
+                        fill: none;
+                    }
+
+                    .b-make-call {
+                        clip-path: url(#a-make-call);
+                    }
+
+                    .c-make-call, .d-make-call {
+                        fill: #4fed00;
+                    }
+
+                    .d-make-call {
+                        fill-rule: evenodd;
+                    }</style>
+                    <clipPath id="a-make-call" transform="translate(0 0)">
+                        <rect class="a-make-call" width="42" height="42"/>
+                    </clipPath>
+                </defs>
+                <g class="b-make-call">
+                    <path class="c-make-call" d="M21,3A18,18,0,1,1,3,21,18,18,0,0,1,21,3m0-3A21,21,0,1,0,42,21,21,21,0,0,0,21,0"
+                          transform="translate(0 0)"/>
+                    <path class="d-make-call" d="M21,23a2,2,0,1,0-2-2,2,2,0,0,0,2,2" transform="translate(0 0)"/>
+                    <path class="d-make-call" d="M15,23a2,2,0,1,0-2-2,2,2,0,0,0,2,2" transform="translate(0 0)"/>
+                    <path class="d-make-call" d="M27,23a2,2,0,1,0-2-2,2,2,0,0,0,2,2" transform="translate(0 0)"/>
+                    <path class="d-make-call" d="M21,17a2,2,0,1,0-2-2,2,2,0,0,0,2,2" transform="translate(0 0)"/>
+                    <path class="d-make-call" d="M15,17a2,2,0,1,0-2-2,2,2,0,0,0,2,2" transform="translate(0 0)"/>
+                    <path class="d-make-call" d="M27,17a2,2,0,1,0-2-2,2,2,0,0,0,2,2" transform="translate(0 0)"/>
+                    <path class="d-make-call" d="M21,29a2,2,0,1,0-2-2,2,2,0,0,0,2,2" transform="translate(0 0)"/>
+                    <path class="d-make-call" d="M15,29a2,2,0,1,0-2-2,2,2,0,0,0,2,2" transform="translate(0 0)"/>
+                    <path class="d-make-call" d="M27,29a2,2,0,1,0-2-2,2,2,0,0,0,2,2" transform="translate(0 0)"/>
+                </g>
+            </svg>
+        </a>
+        <a href="http://apus.ag/" class="author-logo" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 52 40">
+                <defs>
+                    <style>.a, .c {
+                        fill: none;
+                    }
+
+                    .c {
+                        stroke: #aaa;
+                        stroke-linecap: round;
+                        stroke-linejoin: round;
+                        stroke-width: 4px;
+                    }</style>
+                    <clipPath id="a">
+                        <rect class="a" width="52" height="40"/>
+                    </clipPath>
+                </defs>
+                <title>Apus Agency</title>
+                <g class="b">
+                    <polygon class="c" points="26 20 2 2 2 38 26 20"/>
+                    <polygon class="c" points="26 20 50 2 50 38 26 20"/>
+                </g>
+            </svg>
+            <span class="opacity-60">Made by</span><br>Apus Agency
+        </a>
+    </div>
+</footer>
+    </div>
+    <div class="four-blocks">
+    <div class="block white-bg home-page-block">
+        <a href="./">
+            <img class="hero" src="./img/hero.png" alt="">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="30px"
+                 class="fig fig-purple fig-cross-1">
+                <defs>
+                    <style>.a-c {
+                        fill: none;
+                        stroke: #ffb103;
+                        stroke-linecap: round;
+                        stroke-linejoin: round;
+                        stroke-width: 200px;
+                    }</style>
+                </defs>
+                <line class="a-c" x1="300" y1="100" x2="300" y2="500"/>
+                <line class="a-c" x1="500" y1="300" x2="100" y2="300"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="30px"
+                 class="fig fig-green fig-cross-3">
+                <defs>
+                    <style>.a-c {
+                        fill: none;
+                        stroke: #ffb103;
+                        stroke-linecap: round;
+                        stroke-linejoin: round;
+                        stroke-width: 200px;
+                    }</style>
+                </defs>
+                <line class="a-c" x1="300" y1="100" x2="300" y2="500"></line>
+                <line class="a-c" x1="500" y1="300" x2="100" y2="300"></line>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54.14 54.14" width="30px"
+                 class="fig fig-blue fig-square-1">
+                <defs>
+                    <style>.c-a {
+                        fill: none;
+                        stroke: #11f5ff;
+                        stroke-linecap: round;
+                        stroke-linejoin: round;
+                        stroke-width: 14.14px;
+                    }</style>
+                </defs>
+                <rect class="c-a" x="431.04" y="72.9" width="28.28" height="28.28"
+                      transform="translate(-349.27 280.32) rotate(-45)"></rect>
+            </svg>
+        </a>
+    </div>
+    <div class="block grey-bg support-block">
+        <a href="./support-fullpage.html">
+            <div class="support-item">
+                <img src="./img/robot-happy.svg" alt="">
+                Привет, расскажи нам о проблеме
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="30px"
+                 class="fig fig-white fig-cross-2">
+                <defs>
+                    <style>.a-c {
+                        fill: none;
+                        stroke: #ffb103;
+                        stroke-linecap: round;
+                        stroke-linejoin: round;
+                        stroke-width: 200px;
+                    }</style>
+                </defs>
+                <line class="a-c" x1="300" y1="100" x2="300" y2="500"></line>
+                <line class="a-c" x1="500" y1="300" x2="100" y2="300"></line>
+            </svg>
+        </a>
+    </div>
+    <div class="block yellow-bg pay-block"><a href="./payment-fullpage.html">
+        <button class="btn btn-primary btn-purple btn-purple-white">Оплатить</button>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="30px"
+             class="fig fig-white fig-cross-2">
+            <defs>
+                <style>.a-c {
+                    fill: none;
+                    stroke: #ffb103;
+                    stroke-linecap: round;
+                    stroke-linejoin: round;
+                    stroke-width: 200px;
+                }</style>
+            </defs>
+            <line class="a-c" x1="300" y1="100" x2="300" y2="500"></line>
+            <line class="a-c" x1="500" y1="300" x2="100" y2="300"></line>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="30px"
+             class="fig fig-purple fig-cross-3">
+            <defs>
+                <style>.a-c {
+                    fill: none;
+                    stroke: #ffb103;
+                    stroke-linecap: round;
+                    stroke-linejoin: round;
+                    stroke-width: 200px;
+                }</style>
+            </defs>
+            <line class="a-c" x1="300" y1="100" x2="300" y2="500"></line>
+            <line class="a-c" x1="500" y1="300" x2="100" y2="300"></line>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="30px"
+             class="fig fig-white fig-cross-5">
+            <defs>
+                <style>.a-c {
+                    fill: none;
+                    stroke: #ffb103;
+                    stroke-linecap: round;
+                    stroke-linejoin: round;
+                    stroke-width: 200px;
+                }</style>
+            </defs>
+            <line class="a-c" x1="300" y1="100" x2="300" y2="500"></line>
+            <line class="a-c" x1="500" y1="300" x2="100" y2="300"></line>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54.14 54.14" width="30px"
+             class="fig fig-purple fig-square-2">
+            <defs>
+                <style>.c-a {
+                    fill: none;
+                    stroke: #11f5ff;
+                    stroke-linecap: round;
+                    stroke-linejoin: round;
+                    stroke-width: 14.14px;
+                }</style>
+            </defs>
+            <rect class="c-a" x="431.04" y="72.9" width="28.28" height="28.28"
+                  transform="translate(-349.27 280.32) rotate(-45)"></rect>
+        </svg>
+    </a></div>
+    <div class="block purple-bg tariff-block">
+        <a href="./connect-fullpage.html">
+            <img class="hero-2" src="./img/hero-2.png" alt="">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" class="fig fig-yellow fig-square-big">
+                <defs>
+                    <style>.a-sq {
+                        fill: #f9b016;
+                        fill-rule: evenodd;
+                    }</style>
+                </defs>
+                <path class="a-sq"
+                      d="M96,96H516a90,90,0,0,1,90,90V606a90,90,0,0,1-90,90H96A90,90,0,0,1,6,606V186A90,90,0,0,1,96,96Z"
+                      transform="translate(-6 -96)"></path>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="30px"
+                 class="fig fig-white fig-cross-2">
+                <defs>
+                    <style>.a-c {
+                        fill: none;
+                        stroke: #ffb103;
+                        stroke-linecap: round;
+                        stroke-linejoin: round;
+                        stroke-width: 200px;
+                    }</style>
+                </defs>
+                <line class="a-c" x1="300" y1="100" x2="300" y2="500"></line>
+                <line class="a-c" x1="500" y1="300" x2="100" y2="300"></line>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="30px"
+                 class="fig fig-white fig-cross-5">
+                <defs>
+                    <style>.a-c {
+                        fill: none;
+                        stroke: #ffb103;
+                        stroke-linecap: round;
+                        stroke-linejoin: round;
+                        stroke-width: 200px;
+                    }</style>
+                </defs>
+                <line class="a-c" x1="300" y1="100" x2="300" y2="500"></line>
+                <line class="a-c" x1="500" y1="300" x2="100" y2="300"></line>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54.14 54.14" width="30px"
+                 class="fig fig-blue fig-square-1">
+                <defs>
+                    <style>.c-a {
+                        fill: none;
+                        stroke: #11f5ff;
+                        stroke-linecap: round;
+                        stroke-linejoin: round;
+                        stroke-width: 14.14px;
+                    }</style>
+                </defs>
+                <rect class="c-a" x="431.04" y="72.9" width="28.28" height="28.28"
+                      transform="translate(-349.27 280.32) rotate(-45)"></rect>
+            </svg>
+        </a>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="30px"
+         class="fig fig-yellow fig-cross-6 fig-cross-main">
+        <defs>
+            <style>.a-c {
+                fill: none;
+                stroke: #ffb103;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+                stroke-width: 200px;
+            }</style>
+        </defs>
+        <line class="a-c" x1="300" y1="100" x2="300" y2="500"></line>
+        <line class="a-c" x1="500" y1="300" x2="100" y2="300"></line>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 420" width="30px" class="fig fig-white fig-circle-4 fig-circle-main">
+        <defs>
+            <style>.b-a {
+                fill: none;
+                stroke: #8f00ff;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+                stroke-width: 140px;
+            }</style>
+        </defs>
+        <circle class="b-a" cx="210" cy="210" r="140"/>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54.14 54.14" width="30px" class="fig fig-blue fig-square-3 fig-square-main">
+        <defs>
+            <style>.c-a {
+                fill: none;
+                stroke: #11f5ff;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+                stroke-width: 14.14px;
+            }</style>
+        </defs>
+        <rect class="c-a" x="431.04" y="72.9" width="28.28" height="28.28" transform="translate(-349.27 280.32) rotate(-45)"/>
+    </svg>
+</div>
+    <div class="login-popup modal">
+    <div class="center-block">
+        <h1>Кабинет</h1>
+
+        <form action="./cabinet.html" id="login-form" class="login-form" novalidate="novalidate">
+            <div class="flex-form-wrap">
+                <div class="form-line-wrap">
+                    <div class="input-wrap"><input type="text" class="input-white input-big" name="doc_number" id="doc_number" placeholder="№ Договора" required="" aria-required="true"></div>
+                    <div class="input-wrap"><input type="password" class="input-white input-big" name="password" id="password" placeholder="Пароль" required="" aria-required="true"></div>
+                </div>
+            </div>
+            <a href="#" class="forgot-password">Забыли пароль?</a>
+            <button id="login-button" class="btn btn-primary btn-purple btn-purple-white"><span>Войти</span></button>
+        </form>
+
+    </div>
+</div>
 </main>
 </body>
 </html>

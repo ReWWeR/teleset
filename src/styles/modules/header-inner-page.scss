@@ -121,8 +121,9 @@
 
     .fig-cross-1 {
       height: 30px;
-      bottom: 420px/$desktop-height-ratio*100%;
+      top: 261px/$desktop-height-ratio*100%;
       right: 356px/($desktop-home-ratio/2)*100%;
+      width: auto;
     }
 
     .fig-cross-2 {
@@ -271,11 +272,11 @@
       }
 
       @media #{$media-sm-with-ratio} {
-        right: -171px/$mobile-ratio-height*100vh;
+        //right: -171px/$mobile-ratio-height*100vh;
       }
 
       @media #{$media-sm} {
-        right: -171px/($desktop-home-ratio/2)*100%;
+        //right: -171px/($desktop-home-ratio/2)*100%;
         left: initial;
         top: 50%;
       }

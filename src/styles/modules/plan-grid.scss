@@ -11,17 +11,18 @@
   .plan-item {
     background: $purple;
     border-radius: 30px/$desktop-home-ratio*100vw;
-    flex: 1 1 (180px/$desktop-home-ratio*100vw);
+    flex: 1 1 30%;
     margin: 5px/$desktop-home-ratio*100vw;
-    padding: (25px/$desktop-home-ratio*100vw) (10px/$desktop-home-ratio*100vw);
+    padding: (20px/$desktop-home-ratio*100vw) (10px/$desktop-home-ratio*100vw);
     font-size: (20px/$desktop-home-ratio*100vw);
     color: #fff;
     line-height: 1.1;
     text-align: center;
+    display: flex;
+    flex-direction: column;
 
     @media #{$desktop-bad-ratio} {
       font-size: 20px/$desktop-height-ratio * 100vh;
-      flex-basis: 180px/$desktop-height-ratio * 100vh;
       padding: (25px/$desktop-height-ratio*100vh) (10px/$desktop-height-ratio*100vh);
       border-radius: 30px/$desktop-height-ratio * 100vh;
       margin: 5px/$desktop-height-ratio * 100vh;
@@ -29,29 +30,93 @@
 
     @media #{$media-sm} {
       font-size: 22px/$mobile-ratio * 100vw;
-      flex-basis: 200px/$mobile-ratio * 100vw;
       padding: (25px/$mobile-ratio*100vw) (20px/$mobile-ratio*100vw);
       border-radius: 30px/$mobile-ratio * 100vw;
       margin: 10px/$mobile-ratio * 100vw;
+      flex-basis: 48%;
+
+      &:nth-child(2n+1) {
+        margin-left: 0;
+      }
+
+      &:nth-child(2n+2) {
+        margin-right: 0;
+      }
     }
 
     @media #{$media-sm-with-ratio} {
       padding: (25px/$mobile-ratio-height*100vh) (10px/$mobile-ratio-height*100vh);
       font-size: 22px/$mobile-ratio-height * 100vh;
-      flex-basis: 200px/$mobile-ratio-height * 100vh;
       border-radius: 30px/$mobile-ratio-height * 100vh;
       margin: 10px/$mobile-ratio-height * 100vh;
 
     }
 
     .plan-title-icon {
-      display: block;
-      margin: 0 auto (15px/$desktop-home-ratio*100vw);
-      height: (82px/$desktop-home-ratio*100vw);
+      display: flex;
+      align-items: center;
+      margin: 0 auto;
+      height: 100px/$desktop-home-ratio*100vw;
+
+      @media #{$media-sm} {
+        height: 100px/$mobile-ratio*100vw;
+      }
+
+      svg {
+        width: 100%;
+      }
+
+      &.icon-pult {
+        width: 48px/$desktop-home-ratio*100vw;
+
+        @media #{$media-sm} {
+          width: 48px/$mobile-ratio*100vw;
+        }
+      }
+
+      &.icon-wifi {
+        width: 93px/$desktop-home-ratio*100vw;
+
+        @media #{$media-sm} {
+          width: 93px/$mobile-ratio*100vw;
+        }
+      }
+
+      &.icon-radio {
+        width: 82px/$desktop-home-ratio*100vw;
+
+        @media #{$media-sm} {
+          width: 82px/$mobile-ratio*100vw;
+        }
+      }
+
+      &.icon-speed {
+        width: 78px/$desktop-home-ratio*100vw;
+
+        @media #{$media-sm} {
+          width: 78px/$mobile-ratio*100vw;
+        }
+      }
+
+      &.icon-camera {
+        width: 84px/$desktop-home-ratio*100vw;
+
+        @media #{$media-sm} {
+          width: 84px/$mobile-ratio*100vw;
+        }
+      }
+
+      &.icon-headphones {
+        width: 84px/$desktop-home-ratio*100vw;
+
+        @media #{$media-sm} {
+          width: 84px/$mobile-ratio*100vw;
+        }
+      }
 
       @media #{$desktop-bad-ratio} {
         font-size: 20px/$desktop-height-ratio * 100vh;
-        flex-basis: 180px/$desktop-height-ratio * 100vh;
+        //flex-basis: 180px/$desktop-height-ratio * 100vh;
         width: 100px/$desktop-height-ratio * 100vh;
       }
 

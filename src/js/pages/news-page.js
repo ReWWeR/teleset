@@ -1,7 +1,7 @@
 $(document).ready(function () {
     var $getNewsBtn = $('#get-news');
     var $newsList = $('.news-list');
-    var endpoint = 'http://www.mocky.io/v2/584739203f0000e316fe698e';
+    var endpoint = 'http://www.mocky.io/v2/58583781120000c717c8af08';
 
     $getNewsBtn.on('click', function(){
         $.ajax({
@@ -35,5 +35,34 @@ $(document).ready(function () {
         $newsFilterBtn.removeClass('active');
         $newsSubBtn.removeClass('active');
     })
+
+    $('.news-filter-popup-sub, .news-filter-popup-filter').click(function(e){
+        e.stopPropagation();
+
+        if (e.target.className === 'news-filter-popup-sub' || e.target.className === 'news-filter-popup-filter') {
+            $('body').removeClass('show-filter-options').removeClass('show-sub-options');
+            $newsFilterBtn.removeClass('active');
+            $newsSubBtn.removeClass('active');
+        }
+    });
+
+    var $newsInputSubscribe = $('#subscribe-news');
+    var $newsForm = $('#news-subscribe-form');
+
+    $.validator.methods.email = function( value, element ) {
+        return this.optional( element ) || /[a-z]+@[a-z]+\.[a-z]+/.test( value );
+    };
+
+    $newsForm.validate({
+        errorPlacement: function (error, element) {
+            return true;
+        },
+        highlight: function (element, errorClass, validClass) {
+            $(element).closest('.input-wrap').addClass(errorClass).removeClass(validClass);
+        },
+        unhighlight: function (element, errorClass, validClass) {
+            $(element).closest('.input-wrap').addClass(validClass).removeClass(errorClass);
+        }
+    });
 
 });

@@ -278,7 +278,7 @@
     }
 
     @media #{$media-sm-with-ratio} {
-      width: 600px/$mobile-ratio*100vh;
+      width: 450px/$mobile-ratio*100vh;
     }
   }
 }

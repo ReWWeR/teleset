@@ -24,12 +24,13 @@
     bottom: 0;
     right: 212px/$desktop-home-ratio*100vw;
     width: $hero-2-width/$desktop-home-ratio*100vw;
-    z-index: 2;
+    z-index: 1;
     transition: transform .75s, opacity .5s;
     opacity: 0;
 
     .show-connect-form & {
       transform: translateX(-680px/$desktop-home-ratio*100vw);
+      z-index: 2;
 
       @media #{$desktop-bad-ratio} {
         transform: translateX(-680px/$desktop-height-ratio*100vh);
@@ -58,6 +59,7 @@
       background: $yellow;
       border-radius: 90px;
       transition: transform 1s, border-radius 1s, opacity .5s;
+      z-index: 0;
 
       .loaded & {
         opacity: 1;
@@ -133,4 +135,8 @@
       }
     }
   }
+}
+
+body.connect-fullpage-overflow {
+  overflow: hidden;
 }

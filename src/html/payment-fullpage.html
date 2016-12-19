@@ -1,12 +1,12 @@
 @@include('./assets/head.html', {"title":"Телесеть - Оплата"})
 <body class="yellow-bg">
+<div class="fullpage-wrap">
 @@include('./global/header-landing.html', {"page":"payment"})
 
 @@include('./global/mobile-header.html')
 <main class="payment-fullpage">
 
     <div class="wrapper">
-        @@include('./global/breadcrumbs.html', {"cur-page":"Оплата"})
 
         <img src="./img/hero.png" class="hero" alt="">
         <div class="center-block">
@@ -34,6 +34,7 @@
     </div>
 </main>
 @@include('./global/footer-landing.html')
+</div>
 <div class="slide-menu">
     @@include('./global/menu-container.html', {"page": "payment", "isHome": "true"})
     @@include('./modules/main-menu-item.html')

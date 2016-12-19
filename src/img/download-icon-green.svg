@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 20 20">
+    <defs>
+        <style>
+            .a,.e{fill:none;}
+            .b{clip-path:url(#a);}
+            .c{fill: #4fed00}
+            .d{fill-rule:evenodd;}
+            .e{stroke:#fff;stroke-linecap:round;stroke-miterlimit:22.93;stroke-width:1.87px;}
+        </style>
+        <clipPath id="a" transform="translate(0 0)">
+            <rect class="a" width="20" height="20"/>
+        </clipPath>
+    </defs>
+    <title>download-icon</title>
+    <g class="b">
+        <g class="b">
+            <g class="c">
+                <g class="b">
+                    <path class="d" d="M0,10A10,10,0,1,1,10,20,10,10,0,0,1,0,10" transform="translate(0 0)"/>
+                </g>
+            </g>
+        </g>
+        <line class="e" x1="10" y1="15" x2="14" y2="11"/>
+        <line class="e" x1="10" y1="15" x2="6" y2="11"/>
+        <line class="e" x1="10" y1="15" x2="10" y2="5"/>
+    </g>
+</svg>

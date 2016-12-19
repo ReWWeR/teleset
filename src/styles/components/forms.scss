@@ -7,12 +7,20 @@ input[type=text], input[type=number], input[type=email], input[type=tel], input[
   font-size: 22px;
   color: #fff;
   padding: 0 40px 0 20px;
+  text-indent: 20px;
 
   @media #{$media-sm} {
     background: #fff;
     color: #000;
-    height: 42px;
-    padding: 0 30px 0 15px;
+    height: 84px/$mobile-ratio*100vw;
+    padding: 0 (30px/$mobile-ratio*100vw) 0 (15px/$mobile-ratio*100vw);
+    font-size: 44px/$mobile-ratio*100vw;
+  }
+
+  @media #{$media-sm-with-ratio} {
+    height: 84px/$mobile-ratio-height*100vh;
+    padding: 0 (30px/$mobile-ratio-height*100vh) 0 (15px/$mobile-ratio-height*100vh);
+    font-size: 44px/$mobile-ratio-height*100vh;
   }
 
   &::-webkit-input-placeholder {
@@ -22,6 +30,11 @@ input[type=text], input[type=number], input[type=email], input[type=tel], input[
 
     @media #{$media-sm} {
       color: $black-30;
+      font-size: 32px/$mobile-ratio*100vw;
+    }
+
+    @media #{$media-sm-with-ratio} {
+      font-size: 32px/$mobile-ratio-height*100vh;
     }
   }
 
@@ -50,11 +63,20 @@ input[type=text], input[type=number], input[type=email], input[type=tel], input[
     }
 
     @media #{$media-sm} {
-      height: 45px;
-      font-size: 18px;
+      height: 90px/$mobile-ratio*100vw;
+      font-size: 36px/$mobile-ratio*100vw;
 
       &::-webkit-input-placeholder {
-        font-size: 18px;
+        font-size: 36px/$mobile-ratio*100vw;
+      }
+    }
+
+    @media #{$media-sm-with-ratio} {
+      height: 90px/$mobile-ratio-height*100vh;
+      font-size: 36px/$mobile-ratio-height*100vh;
+
+      &::-webkit-input-placeholder {
+        font-size: 36px/$mobile-ratio-height*100vh;
       }
     }
   }
@@ -91,6 +113,12 @@ input[type=text], input[type=number], input[type=email], input[type=tel], input[
       top: 50%;
       right: 15px;
       margin-top: -7px;
+    }
+
+    &.input-wrap-button {
+      &:after {
+        right: 60px;
+      }
     }
   }
 }

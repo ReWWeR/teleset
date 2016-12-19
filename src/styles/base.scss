@@ -162,6 +162,14 @@ sup {
   background: #fff!important;
 }
 
+.homepage-inner {
+  background: #fff !important;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
 .disabled, [disabled] {
   pointer-events: none;
   opacity: .3;
@@ -175,4 +183,17 @@ body {
   &.show-login-popup {
     overflow: hidden;
   }
+}
+
+.text-left {
+  text-align: left!important;;
+}
+
+.text-right {
+  text-align: right!important;
+}
+
+video::-webkit-media-controls-start-playback-button {
+  display: none!important;
+  -webkit-appearance: none;
 }

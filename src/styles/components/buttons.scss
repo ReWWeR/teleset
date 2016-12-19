@@ -11,17 +11,21 @@
   }
 
   @media #{$media-sm} {
-    padding: (22px/$mobile-ratio*100vw) (30px/$mobile-ratio*100vw);
+    padding: (20px/$mobile-ratio*100vw) (30px/$mobile-ratio*100vw);
   }
 
   @media #{$media-sm-with-ratio} {
-    padding: (22px/$mobile-ratio-height*100vh) (30px/$mobile-ratio-height*100vh);
+    padding: (20px/$mobile-ratio-height*100vh) (30px/$mobile-ratio-height*100vh);
   }
 
   &[disabled],&.disabled {
-    opacity: .1;
+    color: rgba(255,255,255,.1);
     pointer-events: none;
-    background: #000!important;
+    background: rgba(0,0,0,.1)!important;
+
+    span {
+      color: rgba(255,255,255,.1);
+    }
 
     svg {
       path {
@@ -56,6 +60,7 @@
     font-weight: 600;
     border-radius: 26px/$desktop-home-ratio*100vw;
     padding: (27px/$desktop-home-ratio*100vw) (24px/$desktop-home-ratio*100vw);
+    text-align: center;
 
     @media #{$desktop-bad-ratio} {
       border-radius: 26px/$desktop-height-ratio*100vh;
@@ -66,13 +71,13 @@
     @media #{$media-sm} {
       border-radius: 30px/$mobile-ratio*100vw;
       font-size: 36px/$mobile-ratio*100vw;
-      padding: (32px/$mobile-ratio*100vw) (38px/$mobile-ratio*100vw);
+      padding: (32px/$mobile-ratio*100vw) (25px/$mobile-ratio*100vw);
     }
 
     @media #{$media-sm-with-ratio} {
       border-radius: 30px/$mobile-ratio-height*100vh;
       font-size: 36px/$mobile-ratio*100vh;
-      padding: (32px/$mobile-ratio-height*100vh) (38px/$mobile-ratio-height*100vh);
+      padding: (32px/$mobile-ratio-height*100vh) (25px/$mobile-ratio-height*100vh);
     }
   }
 
@@ -124,6 +129,12 @@
   }
 
   &.btn-with-arrow {
+
+    @media #{$media-sm} {
+      display: inline-flex;
+      align-items: center;
+    }
+
     &:after {
       content: '';
       display: block;

@@ -6,7 +6,6 @@
   z-index: 3;
   transition: transform .5s ease, opacity 1s ease;
   transform: translateY(100%);
-  opacity: 0;
   pointer-events: none;
 
   @media #{$media-sm} {
@@ -163,8 +162,8 @@
           margin-right: auto;
 
           svg {
-            width: 30px;
-            margin-right: 20px;
+            width: 30px/$desktop-home-ratio*100vw;
+            margin-right: 20px/$desktop-home-ratio*100vw;
 
             line {
               stroke: $green;
@@ -174,6 +173,14 @@
 
         .make-call {
           margin-left: auto;
+          width: 42px/$desktop-home-ratio*100vw;
+          font-size: 0;
+
+          .phone-tooltip {
+            font-size: 30px/$desktop-home-ratio*100vw;
+            padding: (22px/$desktop-home-ratio*100vw) (60px/$desktop-home-ratio*100vw);
+            min-width: 300px/$desktop-home-ratio*100vw;
+          }
 
           svg {
             path {
@@ -233,16 +240,32 @@
       li {
         display: block;
         float: left;
-        margin-left: 42px;
+        margin-left: 42px/$desktop-home-ratio*100vw;
 
         &:first-child {
           margin-left: 0;
         }
 
-        svg {
-          height: 22px;
+        @media #{$media-sm} {
+          margin-left: 42px/$mobile-ratio*100vw;
+        }
 
-          line, path {
+        @media #{$media-sm-with-ratio} {
+          margin-left: 42px/$mobile-ratio-height*100vh;
+        }
+
+        svg {
+          height: 22px/$desktop-home-ratio*100vw;
+
+          @media #{$media-sm} {
+            height: 50px/$mobile-ratio*100vw;
+          }
+
+          @media #{$media-sm-with-ratio} {
+            height: 50px/$mobile-ratio-height*100vh;
+          }
+
+            line, path {
             transition: fill $transition-time, stroke $transition-time;
             fill: $yellow;
             stroke: $yellow;
@@ -273,15 +296,15 @@
       .close-slider-menu {
         margin-right: auto;
         color: $white-30;
-        font-size: 18px;
+        font-size: 18px/$desktop-home-ratio*100vw;
         position: relative;
 
         &:before, &:after {
           content: '';
           display: block;
-          width: 30px;
-          height: 4px;
-          border-radius: 2px;
+          width: 30px/$desktop-home-ratio*100vw;
+          height: 4px/$desktop-home-ratio*100vw;
+          border-radius: 2px/$desktop-home-ratio*100vw;
           background: #fff;
           position: absolute;
           top: 50%;
@@ -297,18 +320,22 @@
         }
 
         .text {
-          margin-left: 45px;
-          line-height: 30px;
-        }
-
-        & + .make-call {
-          margin: inherit;
+          margin-left: 45px/$desktop-home-ratio*100vw;
         }
       }
 
       .make-call {
-        margin-left: auto;
-        margin-right: inherit;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 42px/$desktop-home-ratio*100vw;
+        font-size: 0;
+
+        .phone-tooltip {
+          font-size: 30px/$desktop-home-ratio*100vw;
+          padding: (22px/$desktop-home-ratio*100vw) (60px/$desktop-home-ratio*100vw);
+          min-width: 300px/$desktop-home-ratio*100vw;
+        }
 
         svg {
           path {
@@ -319,6 +346,7 @@
 
       .personal-area {
         margin-left: auto;
+        width: 42px/$desktop-home-ratio*100vw;
 
         svg {
           path {
@@ -331,7 +359,9 @@
     &.show-cabinet-menu {
 
       .mobile-cabinet-menu {
-        display: block;
+        @media #{$media-sm} {
+          display: block;
+        }
       }
 
       .has-submenu {
@@ -482,7 +512,6 @@
 
   .show-menu & {
     transform: translateX(0);
-    opacity: 1;
     pointer-events: auto;
   }
 
@@ -490,10 +519,6 @@
     transform: translateX(0);
     opacity: 1;
     pointer-events: auto;
-
-    .close-slider-menu {
-      display: none;
-    }
   }
 
   .show-hamburger & {

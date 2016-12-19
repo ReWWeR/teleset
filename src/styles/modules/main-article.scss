@@ -74,4 +74,19 @@
       }
     }
   }
+
+  .download-instruction {
+    display: inline-flex;
+    align-items: center;
+    color: $green;
+
+    img {
+      width: 28px/$desktop-home-ratio*100vw;
+      margin-right: 10px;
+
+      @media #{$media-sm} {
+        width: 28px/$mobile-ratio*100vw;
+      }
+    }
+  }
 }

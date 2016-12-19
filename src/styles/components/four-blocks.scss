@@ -7,7 +7,6 @@
   bottom: 0;
   right: 0;
   z-index: 2;
-  opacity: 0;
   pointer-events: none;
   transition: opacity .5s, transform .5s;
   transform: translateY(100%);
@@ -37,7 +36,6 @@
   }
 
   .show-four-blocks-section & {
-    opacity: 1;
     pointer-events: auto;
     transform: translateY(0);
   }

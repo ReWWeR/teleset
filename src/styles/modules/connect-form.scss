@@ -6,7 +6,6 @@
   background: $purple;
   z-index: 2;
   transition: transform .5s, opacity .7s;
-  opacity: 0;
   transform: translateX(100%);
 
   @media #{$media-sm} {
@@ -15,7 +14,6 @@
 
   .show-connect-form & {
     transform: translateX(0);
-    opacity: 1;
   }
 
   .connect-form-step {
@@ -65,7 +63,8 @@
   .connect-form-wrapper {
     width: 600px/$desktop-home-ratio*100vw;
     max-width: 600px;
-    height: 600px;
+    height: 600px/$desktop-home-ratio*100vw;
+    max-height: 600px;
     background: #fff;
     padding: (120px/$desktop-home-ratio*100vw) (60px/$desktop-home-ratio*100vw) (60px/$desktop-home-ratio*100vw);
     position: relative;
@@ -74,8 +73,9 @@
 
     @media #{$desktop-bad-ratio} {
       height: 600px/$desktop-height-ratio*100vh;
+      width: 600px/$desktop-height-ratio*100vh;;
       max-height: 600px;
-      min-height: 400px;
+      max-width: 600px;
       padding: (120px/$desktop-height-ratio*100vh) (60px/$desktop-height-ratio*100vh) (60px/$desktop-height-ratio*100vh);
     }
 
@@ -87,6 +87,8 @@
       height: auto;
       top: 30vh;
       position: absolute;
+      max-width: 100%;
+      overflow: visible;
     }
 
     @media #{$media-sm-with-ratio} {
@@ -224,14 +226,23 @@
   }
   .step-info {
     color: $grey;
-    font-size: 18px;
+    font-size: 18px/$desktop-home-ratio*100vw;
     line-height: 1.66;
-    float: left;
-    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+
+    @media #{$desktop-bad-ratio} {
+      font-size: 18px/$desktop-height-ratio*100vh;
+    }
 
     @media #{$media-sm}{
-      font-size: 9px;
+      font-size: 18px/$mobile-ratio*100vw;
       color: $white-60;
+    }
+
+    @media #{$media-sm-with-ratio} {
+      font-size: 18px/$mobile-ratio-height*100vh;
     }
 
     .step-tick {
@@ -251,6 +262,8 @@
     @media #{$media-sm} {
       background: #fff;
       color: $yellow;
+      display: inline-flex;
+      align-items: center;
     }
   }
 
@@ -262,6 +275,8 @@
     left: 0;
     width: 100%;
     padding: 0 (60px/$desktop-home-ratio*100vw);
+    display: flex;
+    align-items: center;
 
     @media #{$desktop-bad-ratio} {
       bottom: 30px/$desktop-height-ratio*100vh;
@@ -413,6 +428,7 @@
 
           &:before {
             transform: rotate(90deg);
+            background-image: url("../img/robot-neutral-purple.svg");
           }
         }
       }

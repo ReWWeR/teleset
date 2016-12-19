@@ -1,12 +1,12 @@
 @@include('./assets/head.html', {"title":"Телесеть - Поддержка"})
 <body class="grey-bg">
+<div class="fullpage-wrap">
 @@include('./global/header-landing.html', {"page":"support"})
 
 @@include('./global/mobile-header.html')
 <main class="support-fullpage">
 
     <div class="wrapper">
-        @@include('./global/breadcrumbs.html', {"cur-page":"Поддержка"})
 
         <img src="./img/hero-2.png" class="hero hero-2" alt="">
         <div class="center-block">
@@ -19,11 +19,13 @@
                     <div class="flex-form-wrap">
                         <div class="form-line-wrap">
                             <div class="input-wrap"><input type="text" class="input-white input-big" name="doc_number" id="doc_number"
-                                                           placeholder="№ Договора" required></div>
+                                                           placeholder="№ Договора" minlength="5" required></div>
                         </div>
                     </div>
                     <p class="form-info">Пожалуйста, укажите номер договора,
-                        чтобы мы смогли вам помочь.</p>
+                        чтобы мы смогли вам помочь. <br>
+                        <img src="./img/robot-happy.svg" alt="">
+                    </p>
                     <a href="./" class="btn btn-primary btn-purple btn-purple-white show-on-success"><span>Вернуться</span></a>
                 </form>
             </div>
@@ -31,6 +33,7 @@
     </div>
 </main>
 @@include('./global/footer-landing.html')
+</div>
 <div class="slide-menu">
     @@include('./global/menu-container.html', {"page": "support", "isHome": "true"})
     @@include('./modules/main-menu-item.html')

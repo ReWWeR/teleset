@@ -104,8 +104,9 @@
                         <a href="#">
                             <img src="./img/news-image.jpg" alt="Новость" class="news-image">
                         </a>
-                        <footer class="news-footer"><a href="#" class="share-link"><img src="./img/share-icon.svg"
-                                                                                        alt="share"></a><span
+                        <footer class="news-footer">
+                            @@include('../modules/share-clickable.html')
+                            <span
                                 class="news-tag">HBO HD</span><span
                                 class="date">16 okt 2016</span></footer>
                     </article>
@@ -116,8 +117,9 @@
 
                         <p>We inform that in connection with the scheduled maintenance works, on September 08 with 9.30
                             to 14.00, there may be interruptions in the broadcast TV signal.</p>
-                        <footer class="news-footer"><a href="#" class="share-link"><img src="./img/share-icon.svg"
-                                                                                        alt="share"></a>
+                        <footer class="news-footer">
+                            @@include('../modules/share-clickable.html')
+
                             <span
                                     class="news-tag green-bg">HBO HD</span><span
                                     class="date">16 okt 2016</span></footer>
@@ -129,8 +131,9 @@
                         <a href="#">
                             <img src="./img/news-image.jpg" alt="Новость" class="news-image">
                         </a>
-                        <footer class="news-footer"><a href="#" class="share-link"><img src="./img/share-icon.svg"
-                                                                                        alt="share"></a><span
+                        <footer class="news-footer">
+                            @@include('../modules/share-clickable.html')
+                            <span
                                 class="news-tag black-bg">HBO HD</span><span
                                 class="date">16 okt 2016</span></footer>
                     </article>
@@ -189,22 +192,27 @@
                 <h4>Подпишитесь на рассылку. <br>
                     Узнайте первыми о новостях и акциях.</h4>
                 <div class="input-wrapper">
-                <input type="email" class="input-white">
-                    <button class="input-button">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13.9 23.8">
-                        <defs>
-                            <style>.arrow-svg {
-                                fill: #fff;
-                                fill-rule: evenodd;
-                            }</style>
-                        </defs>
-                        <path class="arrow-svg"
-                              d="M299.59,384.69a2,2,0,0,1,2.83,0l9.9,9.9a2,2,0,0,1-2.83,2.83l-9.9-9.9A2,2,0,0,1,299.59,384.69Z"
-                              transform="translate(-299 -384.1)"/>
-                        <path class="arrow-svg" d="M299.59,404.49l9.9-9.9a2,2,0,1,1,2.83,2.83l-9.9,9.9A2,2,0,0,1,299.59,404.49Z"
-                              transform="translate(-299 -384.1)"/>
-                    </svg>
-                    </button>
+                    <form action="./" id="news-subscribe-form">
+                        <div class="input-wrap input-wrap-button">
+                            <input type="email" class="input-white" id="subscribe-news">
+                            <button class="input-button">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13.9 23.8">
+                                    <defs>
+                                        <style>.arrow-svg {
+                                            fill: #fff;
+                                            fill-rule: evenodd;
+                                        }</style>
+                                    </defs>
+                                    <path class="arrow-svg"
+                                          d="M299.59,384.69a2,2,0,0,1,2.83,0l9.9,9.9a2,2,0,0,1-2.83,2.83l-9.9-9.9A2,2,0,0,1,299.59,384.69Z"
+                                          transform="translate(-299 -384.1)"/>
+                                    <path class="arrow-svg"
+                                          d="M299.59,404.49l9.9-9.9a2,2,0,1,1,2.83,2.83l-9.9,9.9A2,2,0,0,1,299.59,404.49Z"
+                                          transform="translate(-299 -384.1)"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </form>
                 </div>
             </div>
             <a href="#" class="modal-close">

@@ -1,12 +1,12 @@
 @@include('./assets/head.html', {"title":"Телесеть - подключение"})
-<body class="purple-bg">
+<body class="purple-bg connect-fullpage-overflow">
+<div class="fullpage-wrap">
 @@include('./global/header-landing.html', {"page":"connect"})
 
 <main class="fullpage-content connect-fullpage">
     @@include('./global/mobile-header.html')
 
     <div class="wrapper">
-        @@include('./global/breadcrumbs.html', {"cur-page":"Подключение"})
 
         <img src="./img/hero-2.png" class="hero hero-2" alt="">
         <section class="plan-description">
@@ -105,8 +105,10 @@
     </div>
 </main>
 @@include('./global/footer-landing.html')
+</div>
+
 <div class="slide-menu">
-    @@include('./global/menu-container.html', {"page": "main", "isHome": "true"})
+    @@include('./global/menu-container.html', {"page": "connect", "isHome": "true"})
     @@include('./modules/main-menu-item.html')
 </div>
 @@include('./modules/four-blocks.html')

@@ -24,17 +24,23 @@
   .support-form {
     text-align: center;
     color: $white-60;
-    transform: scale(0);
 
     h1 {
       color: #fff;
       padding-bottom: 50px/90px * 1em;
+      opacity: 0;
     }
 
     .form-info {
       color: $white-60;
       width: 30vw;
       margin: 0 auto;
+      opacity: 0;
+
+      img {
+        margin-top: .3em;
+        width: 2em;
+      }
 
       @media #{$media-sm} {
         width: 80vw;
@@ -43,6 +49,14 @@
 
     .input-wrap {
       margin-bottom: 25px/$desktop-home-ratio*100vw;
+
+      input[type=text] {
+        text-align: center;
+      }
+    }
+
+    .flex-form-wrap {
+      opacity: 0;
     }
   }
 
@@ -69,6 +83,7 @@
 
   .show-on-success {
     display: none;
+    opacity: 0;
   }
 
   .show-support-modal & {
@@ -99,6 +114,32 @@
 
     @media #{$media-sm} {
       padding: 0 10px;
+    }
+  }
+
+  .support-form {
+      text-align: left;
+
+    .input-wrap {
+      input {
+        width: 100%;
+      }
+    }
+
+    .form-info {
+      display: flex;
+      align-items: center;
+      margin-left: 0;
+
+      .success-screen & {
+        display: none;
+      }
+
+      img {
+        flex-grow: 0;
+        margin-top: 0;
+        margin-right: 10px;
+      }
     }
   }
 }

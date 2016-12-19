@@ -12322,6 +12322,9 @@ $(document).ready(function () {
     var $hideMenuButton = $('.close-slider-menu');
     var coordinates = {};
 
+    var $closeMenuInnerPage = $('.close-slider-menu', '.inner-page');
+    var $showMenuButtonInnerPage = $('.hamburger-menu', '.homepage-inner');
+
     $showMenuButton
         .on('click', function () {
             $body.addClass('show-menu');
@@ -12330,6 +12333,15 @@ $(document).ready(function () {
     $hideMenuButton.on('click', function () {
         $body.removeClass('show-menu');
     });
+
+    $closeMenuInnerPage.click(function(){
+        $body.addClass('show-fullpage');
+    })
+
+    $showMenuButtonInnerPage.click(function(){
+        $body.removeClass('show-fullpage');
+    })
+
 
     function smoothScroll() {
         $('a[href*="#"]:not([href="#"])').click(function () {
@@ -12508,6 +12520,16 @@ $(document).ready(function () {
 
     $(window).on('resize', resizer)
     resizer();
+
+    $('.modal').click(function(e){
+        console.log(e.target);
+        e.stopPropagation();
+
+        if ($(e.target).hasClass('modal')) {
+            $('body').removeClass('show-login-popup');
+        }
+    });
+
 });
 
 window.onload = function () {
@@ -12537,7 +12559,7 @@ $(document).ready(function(){
 $(document).ready(function () {
     var $getNewsBtn = $('#get-news');
     var $newsList = $('.news-list');
-    var endpoint = 'http://www.mocky.io/v2/584739203f0000e316fe698e';
+    var endpoint = 'http://www.mocky.io/v2/58583781120000c717c8af08';
 
     $getNewsBtn.on('click', function(){
         $.ajax({
@@ -12571,6 +12593,35 @@ $(document).ready(function () {
         $newsFilterBtn.removeClass('active');
         $newsSubBtn.removeClass('active');
     })
+
+    $('.news-filter-popup-sub, .news-filter-popup-filter').click(function(e){
+        e.stopPropagation();
+
+        if (e.target.className === 'news-filter-popup-sub' || e.target.className === 'news-filter-popup-filter') {
+            $('body').removeClass('show-filter-options').removeClass('show-sub-options');
+            $newsFilterBtn.removeClass('active');
+            $newsSubBtn.removeClass('active');
+        }
+    });
+
+    var $newsInputSubscribe = $('#subscribe-news');
+    var $newsForm = $('#news-subscribe-form');
+
+    $.validator.methods.email = function( value, element ) {
+        return this.optional( element ) || /[a-z]+@[a-z]+\.[a-z]+/.test( value );
+    };
+
+    $newsForm.validate({
+        errorPlacement: function (error, element) {
+            return true;
+        },
+        highlight: function (element, errorClass, validClass) {
+            $(element).closest('.input-wrap').addClass(errorClass).removeClass(validClass);
+        },
+        unhighlight: function (element, errorClass, validClass) {
+            $(element).closest('.input-wrap').addClass(validClass).removeClass(errorClass);
+        }
+    });
 
 });
 $(document).ready(function() {
@@ -12607,9 +12658,17 @@ $(document).ready(function() {
     });
 });
 $(document).ready(function(){
+    $shareLink = $('.share-link');
+
+    $shareLink.click(function () {
+        $(this).closest('.share-clickable').toggleClass('show-share');
+    })
+});
+$(document).ready(function(){
     $loadmoreBtn = $('.load-more-shop-items');
     $shopCol = $('.shop-item-column');
     $showPopupBtn = $('.show-all-info');
+    $shopPageWrap = $('.shop-page');
 
     $loadmoreBtn.on('click', function() {
         if ($shopCol.find('.shop-item.hidden').length > 1) {
@@ -12622,20 +12681,47 @@ $(document).ready(function(){
 
     $showPopupBtn.on('click', function() {
         $(this).next().next().addClass('show');
+        $shopPageWrap.addClass('show-shop-popup');
     })
 
     $('.close-popup').on('click', function(){
         $(this).closest('.shop-item-popup').removeClass('show');
+        $shopPageWrap.removeClass('show-shop-popup');
     })
 });
 $(document).ready(function(){
 
+    var $supportSubmit = $('#support-submit');
+    var supportMsgFirstClick = false;
+
+    $supportSubmit.validate({
+        errorPlacement: function (error, element) {
+            return true;
+        },
+        highlight: function (element, errorClass, validClass) {
+            $(element).closest('.input-wrap').addClass(errorClass).removeClass(validClass);
+        },
+        unhighlight: function (element, errorClass, validClass) {
+            $(element).closest('.input-wrap').addClass(validClass).removeClass(errorClass);
+        }
+    });
+
+
+
    $('#doc_number').on('keypress', function(e) {
-       if (e.which === 13) {
+       if (e.which === 13 && $supportSubmit.valid()) {
            $('body').addClass('show-support-modal');
            $('#support-submit').on('submit', function(e){ e.preventDefault(); })
        }
    });
+
+
+    $('#supportMessage').click(function(){
+        if (!supportMsgFirstClick) {
+            $('#supportMessage').text('');
+            supportMsgFirstClick = true;
+        }
+    });
 
        $('.modal-close').on('click', function() {$('body').removeClass('show-support-modal')});
        $('#send-support-ticket').on('click', function() {

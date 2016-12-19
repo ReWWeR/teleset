@@ -4,6 +4,9 @@ $(document).ready(function () {
     var $hideMenuButton = $('.close-slider-menu');
     var coordinates = {};
 
+    var $closeMenuInnerPage = $('.close-slider-menu', '.inner-page');
+    var $showMenuButtonInnerPage = $('.hamburger-menu', '.homepage-inner');
+
     $showMenuButton
         .on('click', function () {
             $body.addClass('show-menu');
@@ -12,6 +15,15 @@ $(document).ready(function () {
     $hideMenuButton.on('click', function () {
         $body.removeClass('show-menu');
     });
+
+    $closeMenuInnerPage.click(function(){
+        $body.addClass('show-fullpage');
+    })
+
+    $showMenuButtonInnerPage.click(function(){
+        $body.removeClass('show-fullpage');
+    })
+
 
     function smoothScroll() {
         $('a[href*="#"]:not([href="#"])').click(function () {
@@ -190,6 +202,16 @@ $(document).ready(function () {
 
     $(window).on('resize', resizer)
     resizer();
+
+    $('.modal').click(function(e){
+        console.log(e.target);
+        e.stopPropagation();
+
+        if ($(e.target).hasClass('modal')) {
+            $('body').removeClass('show-login-popup');
+        }
+    });
+
 });
 
 window.onload = function () {

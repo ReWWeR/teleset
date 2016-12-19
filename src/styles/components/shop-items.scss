@@ -44,12 +44,18 @@
       margin: 0 10px;
       position: relative;
 
+      &.shop-item-animate {
+        h3, img, p, footer {
+          opacity: 0;
+        }
+      }
+
       @media #{$media-sm} {
         width: 330px/$mobile-ratio*100vw;
         padding: (30px/$mobile-ratio*100vw) (30px/$mobile-ratio*100vw);
 
         &.hidden {
-          display: block!important;
+          display: block !important;
         }
       }
 
@@ -201,6 +207,7 @@
         &.show {
           opacity: 1;
           pointer-events: auto;
+          z-index: 1;
         }
       }
     }
@@ -213,5 +220,32 @@
 
   @media #{$media-sm} {
     display: none;
+  }
+}
+
+.shop-page, .shop-item {
+  &:before {
+    content: '';
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .9);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .5s;
+    z-index: 1;
+  }
+  &.show-shop-popup {
+    &:before {
+      opacity: 1;
+    }
+  }
+}
+
+.shop-item {
+  &:before {
+    position: absolute;
   }
 }
