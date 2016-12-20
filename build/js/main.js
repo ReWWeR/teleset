@@ -12536,198 +12536,8 @@ window.onload = function () {
     $('body').addClass('loaded');
     setTimeout(function(){
         $('body').addClass('initial-animation');
-    }, 2000)
+    }, 3000)
 };
-$(document).ready(function(){
-    $('.accordion-title').on('click', function(){
-        $(this).toggleClass('accordion-open');
-    })
-
-    $('.play-video-icon').on('click', function(){
-        var video = $(this).next();
-        $(video).get(0).play();
-        $(this).closest('.accordion-content').addClass('playing-video');
-    })
-});
-$(document).ready(function(){
-    $faqTitleMain = $('.faq-accordion-title-main span');
-    $faqSubTitle = $('.faq-accordion-content span');
-
-    $faqTitleMain.click(function(){$(this).parent().toggleClass('open')})
-    $faqSubTitle.click(function(){$(this).parent().toggleClass('open')})
-});
-$(document).ready(function () {
-    var $getNewsBtn = $('#get-news');
-    var $newsList = $('.news-list');
-    var endpoint = 'http://www.mocky.io/v2/58583781120000c717c8af08';
-
-    $getNewsBtn.on('click', function(){
-        $.ajax({
-            url: endpoint,
-            method: 'GET'
-        })
-        .done(function(msg){
-            $newsList.append(msg);
-        })
-    });
-
-    var $newsFilterBtn = $('.news-filter-btn');
-    var $newsSubBtn = $('.news-sub-btn');
-    var $modalCloseBtn = $('.news-filter-popup-filter .modal-close, .news-filter-popup-sub .modal-close');
-
-
-    $newsFilterBtn.click(function() {
-        $('body').toggleClass('show-filter-options').removeClass('show-sub-options');
-        $(this).toggleClass('active');
-        $newsSubBtn.removeClass('active');
-    });
-
-    $newsSubBtn.click(function() {
-        $('body').toggleClass('show-sub-options').removeClass('show-filter-options');
-        $(this).toggleClass('active');
-        $newsFilterBtn.removeClass('active');
-    });
-
-    $modalCloseBtn.click(function(){
-        $('body').removeClass('show-filter-options').removeClass('show-sub-options');
-        $newsFilterBtn.removeClass('active');
-        $newsSubBtn.removeClass('active');
-    })
-
-    $('.news-filter-popup-sub, .news-filter-popup-filter').click(function(e){
-        e.stopPropagation();
-
-        if (e.target.className === 'news-filter-popup-sub' || e.target.className === 'news-filter-popup-filter') {
-            $('body').removeClass('show-filter-options').removeClass('show-sub-options');
-            $newsFilterBtn.removeClass('active');
-            $newsSubBtn.removeClass('active');
-        }
-    });
-
-    var $newsInputSubscribe = $('#subscribe-news');
-    var $newsForm = $('#news-subscribe-form');
-
-    $.validator.methods.email = function( value, element ) {
-        return this.optional( element ) || /[a-z]+@[a-z]+\.[a-z]+/.test( value );
-    };
-
-    $newsForm.validate({
-        errorPlacement: function (error, element) {
-            return true;
-        },
-        highlight: function (element, errorClass, validClass) {
-            $(element).closest('.input-wrap').addClass(errorClass).removeClass(validClass);
-        },
-        unhighlight: function (element, errorClass, validClass) {
-            $(element).closest('.input-wrap').addClass(validClass).removeClass(errorClass);
-        }
-    });
-
-});
-$(document).ready(function() {
-    var $paymentSubmit = $('#payment-submit');
-    var $paymentButton = $('#payment-button');
-
-    $paymentSubmit.validate({
-        errorPlacement: function (error, element) {
-            return true;
-        },
-        highlight: function (element, errorClass, validClass) {
-            $(element).closest('.input-wrap').addClass(errorClass).removeClass(validClass);
-        },
-        unhighlight: function (element, errorClass, validClass) {
-            $(element).closest('.input-wrap').addClass(validClass).removeClass(errorClass);
-        }
-    });
-
-    $('input', $paymentSubmit).on('keyup', function(){
-        if($paymentSubmit.valid()) {
-            $paymentButton.attr('disabled', false)
-        } else {
-            $paymentButton.attr('disabled', true)
-        }
-    });
-
-    $paymentButton.on('click', function (e) {
-        e.preventDefault();
-        $('body').addClass('show-payment-success');
-        $.ajax({
-            url: 'http://www.mocky.io/v2/5838b4f211000097158fd3c7',
-            method: "POST"
-        })
-    });
-});
-$(document).ready(function(){
-    $shareLink = $('.share-link');
-
-    $shareLink.click(function () {
-        $(this).closest('.share-clickable').toggleClass('show-share');
-    })
-});
-$(document).ready(function(){
-    $loadmoreBtn = $('.load-more-shop-items');
-    $shopCol = $('.shop-item-column');
-    $showPopupBtn = $('.show-all-info');
-    $shopPageWrap = $('.shop-page');
-
-    $loadmoreBtn.on('click', function() {
-        if ($shopCol.find('.shop-item.hidden').length > 1) {
-            $shopCol.find('.shop-item.hidden').eq(0).removeClass('hidden');
-        } else if ($shopCol.find('.shop-item.hidden').length === 1) {
-            $shopCol.find('.shop-item.hidden').eq(0).removeClass('hidden');
-            $(this).remove();
-        }
-    });
-
-    $showPopupBtn.on('click', function() {
-        $(this).next().next().addClass('show');
-        $shopPageWrap.addClass('show-shop-popup');
-    })
-
-    $('.close-popup').on('click', function(){
-        $(this).closest('.shop-item-popup').removeClass('show');
-        $shopPageWrap.removeClass('show-shop-popup');
-    })
-});
-$(document).ready(function(){
-
-    var $supportSubmit = $('#support-submit');
-    var supportMsgFirstClick = false;
-
-    $supportSubmit.validate({
-        errorPlacement: function (error, element) {
-            return true;
-        },
-        highlight: function (element, errorClass, validClass) {
-            $(element).closest('.input-wrap').addClass(errorClass).removeClass(validClass);
-        },
-        unhighlight: function (element, errorClass, validClass) {
-            $(element).closest('.input-wrap').addClass(validClass).removeClass(errorClass);
-        }
-    });
-
-
-
-   $('#doc_number').on('keypress', function(e) {
-       if (e.which === 13 && $supportSubmit.valid()) {
-           $('body').addClass('show-support-modal');
-           $('#support-submit').on('submit', function(e){ e.preventDefault(); })
-       }
-   });
-
-
-    $('#supportMessage').click(function(){
-        if (!supportMsgFirstClick) {
-            $('#supportMessage').text('');
-            supportMsgFirstClick = true;
-        }
-    });
-
-       $('.modal-close').on('click', function() {$('body').removeClass('show-support-modal')});
-       $('#send-support-ticket').on('click', function() {
-           $('body').removeClass('show-support-modal').addClass('success-screen')
-       })
-});
 ;(function ( $, window, document, undefined ) {
 
     var pluginName = 'accordion',
@@ -13022,3 +12832,193 @@ $(document).ready(function(){
     }
 
 })( jQuery, window, document );
+$(document).ready(function(){
+    $('.accordion-title').on('click', function(){
+        $(this).toggleClass('accordion-open');
+    })
+
+    $('.play-video-icon').on('click', function(){
+        var video = $(this).next();
+        $(video).get(0).play();
+        $(this).closest('.accordion-content').addClass('playing-video');
+    })
+});
+$(document).ready(function(){
+    $faqTitleMain = $('.faq-accordion-title-main span');
+    $faqSubTitle = $('.faq-accordion-content span');
+
+    $faqTitleMain.click(function(){$(this).parent().toggleClass('open')})
+    $faqSubTitle.click(function(){$(this).parent().toggleClass('open')})
+});
+$(document).ready(function () {
+    var $getNewsBtn = $('#get-news');
+    var $newsList = $('.news-list');
+    var endpoint = 'http://www.mocky.io/v2/58583781120000c717c8af08';
+
+    $getNewsBtn.on('click', function(){
+        $.ajax({
+            url: endpoint,
+            method: 'GET'
+        })
+        .done(function(msg){
+            $newsList.append(msg);
+        })
+    });
+
+    var $newsFilterBtn = $('.news-filter-btn');
+    var $newsSubBtn = $('.news-sub-btn');
+    var $modalCloseBtn = $('.news-filter-popup-filter .modal-close, .news-filter-popup-sub .modal-close');
+
+
+    $newsFilterBtn.click(function() {
+        $('body').toggleClass('show-filter-options').removeClass('show-sub-options');
+        $(this).toggleClass('active');
+        $newsSubBtn.removeClass('active');
+    });
+
+    $newsSubBtn.click(function() {
+        $('body').toggleClass('show-sub-options').removeClass('show-filter-options');
+        $(this).toggleClass('active');
+        $newsFilterBtn.removeClass('active');
+    });
+
+    $modalCloseBtn.click(function(){
+        $('body').removeClass('show-filter-options').removeClass('show-sub-options');
+        $newsFilterBtn.removeClass('active');
+        $newsSubBtn.removeClass('active');
+    })
+
+    $('.news-filter-popup-sub, .news-filter-popup-filter').click(function(e){
+        e.stopPropagation();
+
+        if (e.target.className === 'news-filter-popup-sub' || e.target.className === 'news-filter-popup-filter') {
+            $('body').removeClass('show-filter-options').removeClass('show-sub-options');
+            $newsFilterBtn.removeClass('active');
+            $newsSubBtn.removeClass('active');
+        }
+    });
+
+    var $newsInputSubscribe = $('#subscribe-news');
+    var $newsForm = $('#news-subscribe-form');
+
+    $.validator.methods.email = function( value, element ) {
+        return this.optional( element ) || /[a-z]+@[a-z]+\.[a-z]+/.test( value );
+    };
+
+    $newsForm.validate({
+        errorPlacement: function (error, element) {
+            return true;
+        },
+        highlight: function (element, errorClass, validClass) {
+            $(element).closest('.input-wrap').addClass(errorClass).removeClass(validClass);
+        },
+        unhighlight: function (element, errorClass, validClass) {
+            $(element).closest('.input-wrap').addClass(validClass).removeClass(errorClass);
+        }
+    });
+
+});
+$(document).ready(function() {
+    var $paymentSubmit = $('#payment-submit');
+    var $paymentButton = $('#payment-button');
+
+    $paymentSubmit.validate({
+        errorPlacement: function (error, element) {
+            return true;
+        },
+        highlight: function (element, errorClass, validClass) {
+            $(element).closest('.input-wrap').addClass(errorClass).removeClass(validClass);
+        },
+        unhighlight: function (element, errorClass, validClass) {
+            $(element).closest('.input-wrap').addClass(validClass).removeClass(errorClass);
+        }
+    });
+
+    $('input', $paymentSubmit).on('keyup', function(){
+        if($paymentSubmit.valid()) {
+            $paymentButton.attr('disabled', false)
+        } else {
+            $paymentButton.attr('disabled', true)
+        }
+    });
+
+    $paymentButton.on('click', function (e) {
+        e.preventDefault();
+        $('body').addClass('show-payment-success');
+        $.ajax({
+            url: 'http://www.mocky.io/v2/5838b4f211000097158fd3c7',
+            method: "POST"
+        })
+    });
+});
+$(document).ready(function(){
+    $shareLink = $('.share-link');
+
+    $shareLink.click(function () {
+        $(this).closest('.share-clickable').toggleClass('show-share');
+    })
+});
+$(document).ready(function(){
+    $loadmoreBtn = $('.load-more-shop-items');
+    $shopCol = $('.shop-item-column');
+    $showPopupBtn = $('.show-all-info');
+    $shopPageWrap = $('.shop-page');
+
+    $loadmoreBtn.on('click', function() {
+        if ($shopCol.find('.shop-item.hidden').length > 1) {
+            $shopCol.find('.shop-item.hidden').eq(0).removeClass('hidden');
+        } else if ($shopCol.find('.shop-item.hidden').length === 1) {
+            $shopCol.find('.shop-item.hidden').eq(0).removeClass('hidden');
+            $(this).remove();
+        }
+    });
+
+    $showPopupBtn.on('click', function() {
+        $(this).next().next().addClass('show');
+        $shopPageWrap.addClass('show-shop-popup');
+    })
+
+    $('.close-popup').on('click', function(){
+        $(this).closest('.shop-item-popup').removeClass('show');
+        $shopPageWrap.removeClass('show-shop-popup');
+    })
+});
+$(document).ready(function(){
+
+    var $supportSubmit = $('#support-submit');
+    var supportMsgFirstClick = false;
+
+    $supportSubmit.validate({
+        errorPlacement: function (error, element) {
+            return true;
+        },
+        highlight: function (element, errorClass, validClass) {
+            $(element).closest('.input-wrap').addClass(errorClass).removeClass(validClass);
+        },
+        unhighlight: function (element, errorClass, validClass) {
+            $(element).closest('.input-wrap').addClass(validClass).removeClass(errorClass);
+        }
+    });
+
+
+
+   $('#doc_number').on('keypress', function(e) {
+       if (e.which === 13 && $supportSubmit.valid()) {
+           $('body').addClass('show-support-modal');
+           $('#support-submit').on('submit', function(e){ e.preventDefault(); })
+       }
+   });
+
+
+    $('#supportMessage').click(function(){
+        if (!supportMsgFirstClick) {
+            $('#supportMessage').text('');
+            supportMsgFirstClick = true;
+        }
+    });
+
+       $('.modal-close').on('click', function() {$('body').removeClass('show-support-modal')});
+       $('#send-support-ticket').on('click', function() {
+           $('body').removeClass('show-support-modal').addClass('success-screen')
+       })
+});

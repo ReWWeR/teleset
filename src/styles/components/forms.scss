@@ -27,10 +27,12 @@ input[type=text], input[type=number], input[type=email], input[type=tel], input[
     font-size: 16px;
     font-weight: 600;
     color: $white-60;
+    line-height: normal;
 
     @media #{$media-sm} {
       color: $black-30;
       font-size: 32px/$mobile-ratio*100vw;
+      line-height: 2;
     }
 
     @media #{$media-sm-with-ratio} {
@@ -48,6 +50,7 @@ input[type=text], input[type=number], input[type=email], input[type=tel], input[
 
     &::-webkit-input-placeholder {
       color: $black-30;
+      line-height: normal;
     }
   }
 
@@ -60,6 +63,7 @@ input[type=text], input[type=number], input[type=email], input[type=tel], input[
     &::-webkit-input-placeholder {
       font: $font-ultima;
       font-size: 36px;
+      line-height: normal;
     }
 
     @media #{$media-sm} {

@@ -25,6 +25,7 @@
     position: relative;
     z-index: 3;
     margin-right: auto;
+    font-size: 0;
 
     .purple-bg & {
       svg {
@@ -91,7 +92,11 @@
     pointer-events: auto;
     transition: opacity .5s;
     position: absolute;
-    transform: translateX(-4px);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    left: 50%;
+    transform: translateX(-50%);
 
     .show-four-blocks-section & {
       opacity: 0;
@@ -100,6 +105,8 @@
 
 
     ul {
+      margin-left: -7px;
+
       li {
         display: block;
         float: left;
@@ -388,6 +395,7 @@ header.mobile-header {
 .personal-area {
   margin-left: auto;
   width: 42px;
+  font-size: 0;
 
   .purple-bg & {
     svg {

@@ -5,7 +5,7 @@
     bottom: 60px/$desktop-height-ratio*100vh;
     z-index: 1;
     width: $hero-width/$desktop-home-ratio*100vw;
-    max-width: $hero-width;
+    //max-width: $hero-width;
 
     @media #{$desktop-bad-ratio} {
       max-height: $hero-height;

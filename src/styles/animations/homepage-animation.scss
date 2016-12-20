@@ -201,7 +201,6 @@ $delay-200: 2s;
   }
 }
 
-
 .header {
   transform: translateY(-100%);
 }
@@ -239,7 +238,7 @@ body.loaded {
   }
 }
 
-body.loaded .homepage, body.loaded .payment-fullpage, .payment-page, .connect-fullpage, .support-fullpage, .support-page {
+body.loaded .homepage, body.loaded .payment-fullpage, body.loaded .payment-page, body.loaded .connect-fullpage, body.loaded .support-fullpage, body.loaded .support-page {
 
   .fig-cross-1, .fig-cross-4, .fig-circle-3, .fig-cross-5, .fig-square-big {
     @extend %figures-scale;
