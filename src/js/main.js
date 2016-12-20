@@ -218,5 +218,5 @@ window.onload = function () {
     $('body').addClass('loaded');
     setTimeout(function(){
         $('body').addClass('initial-animation');
-    }, 3000)
+    }, 2000)
 };

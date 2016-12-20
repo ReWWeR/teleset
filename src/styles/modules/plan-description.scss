@@ -20,6 +20,10 @@
     }
   }
 
+  p + p {
+    padding-top: 0;
+  }
+
   h1 {
     padding-bottom: 24px/90px * 1em;
     font-size: 90px/$desktop-home-ratio * 100vw;

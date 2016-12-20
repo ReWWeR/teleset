@@ -32,6 +32,10 @@
 @import "global/footer-landing";
 @import "global/footer-inner";
 
+@import "animations/initial-state-animation-objects";
+@import "animations/homepage-animation";
+@import "animations/additional-animations";
+
 @import "modules/homepage-animation-elements";
 @import "modules/plan-description";
 @import "modules/slide-menu";
@@ -39,7 +43,3 @@
 @import "modules/plan-grid";
 @import "modules/main-article";
 @import "modules/connect-form";
-
-@import "animations/initial-state-animation-objects";
-@import "animations/homepage-animation";
-@import "animations/additional-animations";

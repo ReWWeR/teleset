@@ -35,12 +35,12 @@ body.loaded.initial-animation {
 
   .connect-fullpage {
     .hero-2 {
-      animation: none;
+      animation-name: none;
       opacity: 1;
     }
 
     .fig {
-      animation: none;
+      animation-name: none!important;
       transform: initial;
     }
   }
