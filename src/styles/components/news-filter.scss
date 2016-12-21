@@ -104,17 +104,29 @@
 
     .input-button {
       background: $green;
-      width: 46px;
-      height: 46px;
+      width: 46px/$desktop-home-ratio*100vw;
+      height: 46px/$desktop-home-ratio*100vw;
       position: absolute;
-      right: 5px;
-      top: 3px;
+      right: 5px/$desktop-home-ratio*100vw;
+      top: 3px/$desktop-home-ratio*100vw;
       border: none;
-      border-radius: 10px;
+      border-radius: 10px/$desktop-home-ratio*100vw;
       cursor: pointer;
 
+      @media #{$desktop-bad-ratio} {
+        width: 46px/$desktop-height-ratio*100vh;
+        height: 46px/$desktop-height-ratio*100vh;
+        right: 5px/$desktop-height-ratio*100vh;
+        top: 3px/$desktop-height-ratio*100vh;
+        border-radius: 10px/$desktop-height-ratio*100vh;
+      }
+
       svg {
-        height: 20px;
+        height: 20px/$desktop-home-ratio*100vw;
+
+        @media #{$desktop-bad-ratio} {
+          height: 20px/$desktop-height-ratio*100vh;
+        }
       }
 
     }

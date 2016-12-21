@@ -268,7 +268,7 @@
     .hero {
 
       @media #{$desktop-bad-ratio} {
-        right: -171px/$desktop-height-ratio*100vh;
+        //right: -171px/$desktop-height-ratio*100vh;
       }
 
       @media #{$media-sm-with-ratio} {

@@ -141,17 +141,26 @@
       }
 
       .cabinet-user-menu-info, .exit-user {
-        font-size: 18px;
+        font-size: 18px/$desktop-home-ratio*100vw;
         color: $white-50;
         position: absolute;
         top: 700px/$desktop-height-ratio*100%;
         left: 50px;
+
+        @media #{$desktop-bad-ratio} {
+          font-size: 18px/$desktop-height-ratio*100vh;
+        }
+
+        @media #{$desktop-1600} {
+          font-size: 18px;
+        }
       }
 
       .cabinet-menu-footer {
         bottom: 50px;
         position: absolute;
         display: flex;
+        align-items: center;
         width: 100%;
 
         .exit-user {
@@ -163,7 +172,17 @@
 
           svg {
             width: 30px/$desktop-home-ratio*100vw;
+            max-width: 30px;
             margin-right: 20px/$desktop-home-ratio*100vw;
+
+            @media #{$desktop-bad-ratio} {
+              width: 30px/$desktop-height-ratio*100vh;
+              margin-right: 20px/$desktop-height-ratio*100vh;
+            }
+
+            @media #{$desktop-1600} {
+              margin-right: 20px;
+            }
 
             line {
               stroke: $green;
@@ -195,13 +214,23 @@
       display: flex;
       align-items: center;
       color: $white-30;
-      font-size: 18px;
+      font-size: 18px/$desktop-home-ratio*100vw;
       position: absolute;
-      bottom: 60px;
+      bottom: 60px/$desktop-home-ratio*100vw;
       z-index: 2;
       opacity: 0;
       pointer-events: none;
       transition: opacity .5s;
+
+      @media #{$desktop-bad-ratio} {
+        font-size: 18px/$desktop-height-ratio*100vh;
+        bottom: 60px/$desktop-height-ratio*100vh;
+      }
+
+      @media #{$desktop-1600} {
+        font-size: 18px;
+        bottom: 60px;
+      }
 
       @media #{$media-sm} {
         display: none;
@@ -214,10 +243,22 @@
       &:before {
         content: '';
         background: url('./../img/arrow-yellow.svg') no-repeat;
-        height: 24px;
-        width: 14px;
+        height: 24px/$desktop-home-ratio*100vw;
+        width: 14px/$desktop-home-ratio*100vw;
+        max-width: 14px;
+        max-height: 24px;
         transform: rotate(180deg);
-        margin-right: 20px;
+        margin-right: 20px/$desktop-home-ratio*100vw;
+
+        @media #{$desktop-bad-ratio} {
+          width: 14px/$desktop-height-ratio*100vh;
+          height: 24px/$desktop-height-ratio*100vh;
+          margin-right: 20px/$desktop-height-ratio*100vh;
+        }
+
+        @media #{$desktop-1600} {
+          margin-right: 20px;
+        }
       }
     }
 
@@ -246,6 +287,10 @@
           margin-left: 0;
         }
 
+        @media #{$desktop-bad-ratio} {
+          margin-left: 42px/$desktop-height-ratio*100vh;
+        }
+
         @media #{$media-sm} {
           margin-left: 42px/$mobile-ratio*100vw;
         }
@@ -256,6 +301,10 @@
 
         svg {
           height: 22px/$desktop-home-ratio*100vw;
+
+          @media #{$desktop-bad-ratio} {
+            height: 22px/$desktop-height-ratio*100vh;
+          }
 
           @media #{$media-sm} {
             height: 50px/$mobile-ratio*100vw;
@@ -268,13 +317,11 @@
             line, path {
             transition: fill $transition-time, stroke $transition-time;
             fill: $yellow;
-            stroke: $yellow;
           }
 
           &:hover {
             line, path {
               fill: #fff;
-              stroke: #fff;
             }
           }
         }
@@ -299,16 +346,38 @@
         font-size: 18px/$desktop-home-ratio*100vw;
         position: relative;
 
+        @media #{$desktop-bad-ratio} {
+          font-size: 18px/$desktop-height-ratio*100vh;
+        }
+
+        @media #{$desktop-1600} {
+          font-size: 18px;
+        }
+
         &:before, &:after {
           content: '';
           display: block;
           width: 30px/$desktop-home-ratio*100vw;
           height: 4px/$desktop-home-ratio*100vw;
+          max-width: 30px;
+          max-height: 4px;
           border-radius: 2px/$desktop-home-ratio*100vw;
           background: #fff;
           position: absolute;
           top: 50%;
-          margin-top: -2px;
+          margin-top: -2px/$desktop-home-ratio*100vw;
+
+          @media #{$desktop-bad-ratio} {
+            width: 30px/$desktop-height-ratio*100vh;
+            height: 4px/$desktop-height-ratio*100vh;
+            border-radius: 2px/$desktop-height-ratio*100vh;
+            margin-top: -2px/$desktop-height-ratio*100vh;
+          }
+
+          @media #{$desktop-1600} {
+            border-radius: 2px;
+            margin-top: -2px;
+          }
         }
 
         &:before {
@@ -321,6 +390,14 @@
 
         .text {
           margin-left: 45px/$desktop-home-ratio*100vw;
+
+          @media #{$desktop-bad-ratio} {
+            margin-left: 45px/$desktop-height-ratio*100vh;
+          }
+
+          @media #{$desktop-1600} {
+            margin-left: 45px;
+          }
         }
       }
 
@@ -329,12 +406,29 @@
         left: 50%;
         transform: translateX(-50%);
         width: 42px/$desktop-home-ratio*100vw;
+        max-width: 42px;
         font-size: 0;
+
+        @media #{$desktop-bad-ratio} {
+          width: 42px/$desktop-height-ratio*100vh;
+        }
 
         .phone-tooltip {
           font-size: 30px/$desktop-home-ratio*100vw;
           padding: (22px/$desktop-home-ratio*100vw) (60px/$desktop-home-ratio*100vw);
           min-width: 300px/$desktop-home-ratio*100vw;
+
+          @media #{$desktop-bad-ratio} {
+            font-size: 30px/$desktop-height-ratio*100vh;
+            padding: (22px/$desktop-height-ratio*100vh) (60px/$desktop-height-ratio*100vh);
+            min-width: 300px/$desktop-height-ratio*100vh;
+          }
+
+          @media #{$desktop-1600} {
+            font-size: 20px;
+            padding: 22px 60px;
+            min-width: 300px;
+          }
         }
 
         svg {
@@ -347,6 +441,11 @@
       .personal-area {
         margin-left: auto;
         width: 42px/$desktop-home-ratio*100vw;
+        max-width: 42px;
+
+        @media #{$desktop-bad-ratio} {
+          width: 42px/$desktop-height-ratio*100vh;
+        }
 
         svg {
           path {

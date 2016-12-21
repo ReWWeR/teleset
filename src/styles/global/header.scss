@@ -20,7 +20,8 @@
   }
 
   .logo {
-    width: 138px;
+    max-width: 138px;
+    width: 138px/$desktop-home-ratio*100vw;
     display: block;
     position: relative;
     z-index: 3;
@@ -105,23 +106,40 @@
 
 
     ul {
-      margin-left: -7px;
+      margin-left: -7px/$desktop-home-ratio*100vw;
+      display: flex;
+      align-items: center;
+
+      @media #{$desktop-1600} {
+        margin-left: -7px;
+      }
 
       li {
-        display: block;
-        float: left;
-        margin-left: 7px;
+        display: inline-flex;
+        margin-left: 7px/$desktop-home-ratio*100vw;
+
+        @media #{$desktop-1600} {
+          margin-left: 7px;
+        }
 
         &:first-child {
           margin-left: 0;
         }
 
         a {
-          padding: 8px 23px;
-          font-size: 18px;
-          border: 3px solid transparent;
-          border-radius: 14px;
+          padding: (13px/$desktop-home-ratio*100vw) (20px/$desktop-home-ratio*100vw);
+          font-size: 18px/$desktop-home-ratio*100vw;
+          border: (3px/$desktop-home-ratio*100vw) solid transparent;
+          border-radius: 14px/$desktop-home-ratio*100vw;
           transition: border $transition-time;
+          display: inline-flex;
+
+          @media #{$desktop-1600} {
+            padding: 8px 23px;
+            font-size: 18px;
+            border: 3px solid transparent;
+            border-radius: 14px;
+          }
 
           .homepage-body.show-login-popup & {
             color: $white-60;
@@ -176,6 +194,10 @@
             padding: 0;
             line-height: 1.5;
 
+            svg {
+            width: 18px/$desktop-home-ratio*100vw;
+            max-width: 18px;
+            }
             .purple-bg &, .homepage-inner & {
               svg {
                 path {
@@ -254,6 +276,11 @@ header.mobile-header {
 
     svg {
       width: 138px/$mobile-ratio * 100vw;
+
+      @media #{$media-sm-with-ratio} {
+        width: 138px/$mobile-ratio-height * 100vh;
+      }
+
       line, circle, rect {
         transition: stroke .5s;
       }
@@ -326,6 +353,11 @@ header.mobile-header {
     z-index: 9999;
     float: right;
 
+    @media #{$media-sm-with-ratio} {
+      width: 42px/$mobile-ratio-height*100vh;
+      height: 42px/$mobile-ratio-height*100vh;
+    }
+
     span {
       &, &:before, &:after {
         content: '';
@@ -336,6 +368,13 @@ header.mobile-header {
         position: absolute;
         transition: transform .5s, opacity .5s, height .5s, background .5s;
         border-radius: 4px/$mobile-ratio*100vw;
+
+        @media #{$media-sm-with-ratio} {
+          width: 42px/$mobile-ratio-height*100vh;
+          height: 8px/$mobile-ratio-height*100vh;
+          border-radius: 4px/$mobile-ratio-height*100vh;
+
+        }
 
         .purple-bg & {
           background: $yellow;
@@ -364,24 +403,40 @@ header.mobile-header {
 
       &:before {
         top: 15px/$mobile-ratio*100vw;
+
+        @media #{$media-sm-with-ratio} {
+          top: 15px/$mobile-ratio-height*100vh
+        }
       }
 
       &:after {
         top: 30px/$mobile-ratio*100vw;
+
+        @media #{$media-sm-with-ratio} {
+          top: 30px/$mobile-ratio-height*100vh
+        }
       }
     }
 
     .show-hamburger & {
       span {
         transform: rotate(45deg);
-        height: 2px;
+        height: 4px;
         background: $green;
         transform-origin: left;
+
+        @media #{$media-sm-with-ratio} {
+          height: 4px/$mobile-ratio-height*100vh;
+        }
 
         &:before {
           transform: rotate(-90deg) translateX(35%);
           height: 2px;
           background: $green;
+
+          @media #{$media-sm-with-ratio} {
+            height: 4px/$mobile-ratio-height*100vh;
+          }
         }
 
         &:after {
@@ -394,8 +449,9 @@ header.mobile-header {
 
 .personal-area {
   margin-left: auto;
-  width: 42px;
+  width: 42px/$desktop-home-ratio*100vw;
   font-size: 0;
+  position: relative;
 
   .purple-bg & {
     svg {

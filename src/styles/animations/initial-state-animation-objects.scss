@@ -3,7 +3,7 @@ body.loaded.initial-animation {
     .hero {
       animation: none;
       opacity: 1;
-      transform: scaleX(-1);
+      transform: scaleX(-1) translateY(-50%);
     }
 
     .plan-description {
@@ -44,5 +44,7 @@ body.loaded.initial-animation {
       transform: initial;
     }
   }
-
+  .shop-item-animate {
+    animation-name: none;
+  }
 }

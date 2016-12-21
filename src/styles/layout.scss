@@ -1,8 +1,17 @@
 .wrapper {
-  padding: 0 60px;
+  padding: 0 (60px/$desktop-home-ratio*100vw);
+
+
+  @media #{$desktop-bad-ratio} {
+    padding: 0 (60px/$desktop-height-ratio*100vh);
+  }
 
   @media #{$media-sm} {
-    padding: 0 27px;
+    padding: 0 (60px/$mobile-ratio*100vw);
+  }
+
+  @media #{$media-sm-with-ratio} {
+    padding: 0 (60px/$mobile-ratio-height*100vh);
   }
 
   .show-connect-form .connect-fullpage > & {
@@ -116,7 +125,11 @@
     @media #{$media-sm} {
       margin-left: auto;
       align-self: center;
-      flex-basis: 50%;
+      flex-basis: 250px/$mobile-ratio*100vw;
+    }
+
+    @media #{$media-sm-with-ratio} {
+      flex-basis: 250px/$mobile-ratio*100vw;
     }
   }
 }

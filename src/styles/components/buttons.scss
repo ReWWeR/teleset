@@ -5,6 +5,7 @@
   transition: background $transition-time, color $transition-time, opacity $transition-time;
   border: none;
   cursor: pointer;
+  font-size: 22px/$desktop-home-ratio*100vw;
 
   @media #{$desktop-bad-ratio} {
     padding: (12px/$desktop-height-ratio*100vh) (24px/$desktop-height-ratio*100vh);
@@ -12,6 +13,7 @@
 
   @media #{$media-sm} {
     padding: (20px/$mobile-ratio*100vw) (30px/$mobile-ratio*100vw);
+    font-size: 22px/$mobile-ratio*100vw;
   }
 
   @media #{$media-sm-with-ratio} {
@@ -172,7 +174,7 @@
 
   &.btn-with-left-arrow {
     color: $green;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     padding-left: 0;
     padding-right: 0;
@@ -185,22 +187,33 @@
       content: '';
       display: block;
       float: left;
-      width: 54px;
-      height: 54px;
-      border-radius: 18px;
-      background: #fff;
+      width: 54px/$desktop-home-ratio*100vw;
+      height: 54px/$desktop-home-ratio*100vw;
+      border-radius: 18px/$desktop-home-ratio*100vw;
       background-image: url('./../img/tick.svg');
       background-repeat: no-repeat;
       background-position: center;
-      background-size: 32px 22px;
+      background-size: (32px/$desktop-home-ratio*100vw) (22px/$desktop-home-ratio*100vw);
       background-color: $green;
-      margin-right: 20px;
+      margin-right: (20px/$desktop-home-ratio*100vw);
+
+      @media #{$media-sm} {
+        width: 54px/$mobile-ratio*100vw;
+        height: 54px/$mobile-ratio*100vw;
+        border-radius: 18px/$mobile-ratio*100vw;
+        background-size: (32px/$mobile-ratio*100vw) (22px/$mobile-ratio*100vw);
+        margin-right: (20px/$mobile-ratio*100vw);
+      }
     }
 
     span {
       display: block;
       float: left;
-      padding: 12px 0 12px 15px;
+      padding: (12px/$desktop-home-ratio*100vw) 0 (12px/$desktop-home-ratio*100vw) (15px/$desktop-home-ratio*100vw);
+
+      @media #{$media-sm} {
+        padding: (12px/$mobile-ratio*100vw) 0 (12px/$mobile-ratio*100vw) (15px/$mobile-ratio*100vw);
+      }
     }
   }
 }

@@ -34,11 +34,21 @@
 
   .copyright {
     position: fixed;
-    left: -100px;
+    left: -100px/$desktop-home-ratio*100vw;
     top: 30%;
     transform: rotate(-90deg) translateX(-50%);
-    font-size: 18px;
+    font-size: 18px/$desktop-home-ratio*100vw;
     color: $black-50;
+
+    @media #{$desktop-bad-ratio} {
+      font-size: 18px/$desktop-height-ratio*100vh;
+      left: -100px/$desktop-home-ratio*100vw;
+    }
+
+    @media #{$desktop-1600} {
+      font-size: 18px;
+      left: -100px;
+    }
 
     .grey-text {
       color: $black-30;
@@ -67,11 +77,16 @@
     margin-left: auto;
     text-align: right;
     color: $black-10;
-    min-width: 220px;
+    min-width: 220px/$desktop-home-ratio*100vw;
     font: $font-body;
     font-weight: 600;
     line-height: 1.22;
-    font-size: 18px;
+    font-size: 18px/$desktop-home-ratio*100vw;
+
+    @media #{$desktop-1600} {
+      min-width: 220px;
+      font-size: 18px;
+    }
 
     .purple-bg & {
       color: $yellow;
@@ -90,9 +105,14 @@
     }
 
     svg {
-      width: 52px;
+      width: 52px/$desktop-home-ratio*100vw;
+      max-width: 52px;
       float: right;
-      margin-left: 20px;
+      margin-left: 20px/$desktop-home-ratio*100vw;
+
+      @media #{$desktop-1600} {
+        margin-left: 20px;
+      }
 
       polygon {
         stroke: $blue;
@@ -142,8 +162,10 @@
     .hamburger-button {
       display: block;
       float: left;
-      width: 30px;
-      height: 30px;
+      max-width: 30px;
+      max-height: 30px;
+      width: 30px/$desktop-home-ratio*100vw;
+      height: 30px/$desktop-home-ratio*100vw;
       position: relative;
 
       .hamburger-line {
@@ -153,10 +175,15 @@
           content: '';
           position: absolute;
           display: block;
-          height: 4px;
+          max-height: 4px;
+          height: 4px/$desktop-home-ratio*100vw;
           width: 100%;
-          border-radius: 2px;
+          border-radius: 2px/$desktop-home-ratio*100vw;
           background: $purple;
+
+          @media #{$desktop-1600} {
+            border-radius: 2px;
+          }
 
           .yellow-bg & {
             background: #fff;
@@ -176,11 +203,19 @@
         }
 
         &:before {
-          top: 13px;
+          top: 13px/$desktop-home-ratio*100vw;
+
+          @media #{$desktop-1600} {
+            top: 13px;
+          }
         }
 
         &:after {
-          top: 26px;
+          top: 26px/$desktop-home-ratio*100vw;
+
+          @media #{$desktop-1600} {
+            top: 26px;
+          }
         }
       }
     }
@@ -188,9 +223,15 @@
     .text {
       display: block;
       float: left;
-      padding-left: 20px;
-      font-size: 18px;
-      line-height: 30px;
+      padding-left: 20px/$desktop-home-ratio*100vw;
+      font-size: 18px/$desktop-home-ratio*100vw;
+      line-height: 30px/$desktop-home-ratio*100vw;
+
+      @media #{$desktop-1600} {
+        padding-left: 20px;
+        font-size: 18px;
+        line-height: 30px;
+      }
     }
   }
 
@@ -199,16 +240,19 @@
     margin-right: auto;
     li {
       &:not(:last-child) {
-        margin-right: 40px;
+        margin-right: 40px/$desktop-home-ratio*100vw;
+        @media #{$desktop-1600} {
+          margin-right: 40px;
+        }
       }
       a {
         svg {
-          height: 22px;
+          height: 22px/$desktop-home-ratio*100vw;
+          max-height: 22px;
 
           path {
             transition: fill .5s,stroke .5s;
             fill: $super-light-grey-2;
-            stroke: $super-light-grey-2;
           }
 
         }
@@ -217,7 +261,6 @@
           svg {
             path {
               fill: $yellow;
-              stroke: $yellow;
             }
           }
         }
@@ -226,7 +269,6 @@
           svg {
             path {
               fill: $yellow;
-              stroke: $yellow;
             }
           }
         }
@@ -235,7 +277,6 @@
           svg {
             path {
               fill: #fff;
-              stroke: #fff;
             }
           }
         }
@@ -260,7 +301,6 @@
           svg {
             path {
               fill: #fff;
-              stroke: #fff;
             }
           }
         }
@@ -269,7 +309,6 @@
           svg {
             path {
               fill: $super-light-grey-2;
-              stroke: $super-light-grey-2;
             }
 
           }
@@ -280,7 +319,8 @@
 }
 
 .make-call {
-  width: 42px;
+  width: 42px/$desktop-home-ratio*100vw;
+  max-width: 42px;
   position: absolute;
   transform: translateX(-50%);
   left: 50%;
@@ -342,16 +382,16 @@
 
   .phone-tooltip {
     background: $light-grey;
-    font-size: 30px;
+    font-size: 30px/$desktop-home-ratio*100vw;
     font-weight: 300;
     color: #fff;
     position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 22px 60px;
-    border-radius: 18px;
-    min-width: 300px;
+    padding: (22px/$desktop-home-ratio*100vw) (60px/$desktop-home-ratio*100vw);
+    border-radius: 18px/$desktop-home-ratio*100vw;
+    min-width: 300px/$desktop-home-ratio*100vw;
     bottom: calc(100% + 17px);
     left: 50%;
     transform: translateX(-50%);
@@ -359,18 +399,30 @@
     opacity: 0;
     pointer-events: none;
 
+    @media #{$desktop-1600} {
+      font-size: 30px;
+      padding: 22px 60px;
+      border-radius: 18px;
+      min-width: 300px;
+      bottom: calc(100% + 17px);
+    }
+
     &:before {
       content: '';
       display: block;
       width: 0;
       height: 0;
       border-style: solid;
-      border-width: 17px 17px 0 17px;
+      border-width: (17px/$desktop-home-ratio*100vw) (17px/$desktop-home-ratio*100vw) 0 (17px/$desktop-home-ratio*100vw);
       border-color: $light-grey transparent transparent transparent;
       position: absolute;
       top: 100%;
       left: 50%;
       transform: translateX(-50%);
+
+      @media #{$desktop-1600} {
+        border-width: 17px 17px 0 17px;
+      }
     }
   }
 }

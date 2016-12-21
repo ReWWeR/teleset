@@ -1,5 +1,5 @@
 .breadcrumbs {
-  padding-top: 115px;
+  padding-top: 115px/$desktop-home-ratio*100vw;
   z-index: 2;
   position: absolute;
   color: #fff;
@@ -27,11 +27,19 @@
 
   ul {
     li {
-      font-size: 18px;
+      font-size: 18px/$desktop-home-ratio*100vw;
       display: inline-block;
 
+      @media #{$desktop-bad-ratio} {
+        font-size: 18px/$desktop-height-ratio*100vh;
+      }
+
       @media #{$media-sm} {
-        font-size: 9px;
+        font-size: 9px/$mobile-ratio*100vw;
+      }
+
+      @media #{$media-sm-with-ratio} {
+        font-size: 9px/$mobile-ratio-height*100vh;
       }
 
       &:not(:last-child) {
