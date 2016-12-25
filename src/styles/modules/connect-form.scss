@@ -93,10 +93,18 @@
     }
 
     h1 {
-      margin-bottom: 30px/$desktop-home-ratio*100vw;
+      margin-bottom: 97px/$desktop-home-ratio*100vw;
+
+      .inner-page & {
+        margin-bottom: 30px/$desktop-home-ratio*100vw;
+
+        @media #{$desktop-bad-ratio} {
+          margin-bottom: 30px/$desktop-height-ratio*100vh;
+        }
+      }
 
       @media #{$desktop-bad-ratio} {
-        margin-bottom: 30px/$desktop-height-ratio*100vh;
+        margin-bottom: 97px/$desktop-height-ratio*100vh;
       }
 
       @media #{$media-sm} {
@@ -115,11 +123,19 @@
     font-size: 16px/$desktop-home-ratio*100vw;
     font-weight: 600;
     line-height: 1.1;
-    margin: 30px 0;
+    margin: (30px/$desktop-home-ratio*100vw) 0;
+
+    .inner-page & {
+      margin: (15px/$desktop-home-ratio*100vw) 0;
+    }
 
     @media #{$desktop-bad-ratio} {
       font-size: 16px/$desktop-height-ratio*100vh;
       margin: (30px/$desktop-height-ratio*100vh) 0;
+
+      .inner-page & {
+        margin: (15px/$desktop-height-ratio*100vh) 0;
+      }
     }
 
     @media #{$media-sm} {
@@ -136,26 +152,20 @@
       margin: (30px/$mobile-ratio-height*100vh) 0;
     }
 
-    &:before {
-      content: '';
+    .robot-animation {
       display: block;
       float: left;
-      background: url('./../img/robot-neutral.svg');
-      background-size: 36px/$desktop-home-ratio*100vw;
-      background-repeat: no-repeat;
       margin-right: 24px/$desktop-home-ratio*100vw;
       width: 36px/$desktop-home-ratio*100vw;
       height: 36px/$desktop-home-ratio*100vw;
 
       @media #{$desktop-bad-ratio} {
-        background-size: 36px/$desktop-height-ratio*100vh;
         margin-right: 24px/$desktop-height-ratio*100vh;
         width: 36px/$desktop-height-ratio*100vh;
         height: 36px/$desktop-height-ratio*100vh;
       }
 
       @media #{$media-sm} {
-        background-size: 24px;
         margin-right: 24px/$mobile-ratio*100vw;
         width: 24px;
         height: 24px;
@@ -169,19 +179,6 @@
 
     &.success-robot, &.error-robot {
       display: none;
-    }
-
-    &.success-robot {
-
-      &:before {
-        background-image: url('./../img/robot-happy.svg');
-      }
-    }
-
-    &.error-robot {
-      &:before {
-        background-image: url('./../img/robot-sad.svg');
-      }
     }
   }
 
@@ -297,7 +294,7 @@
     @extend %clearfix;
 
     position: absolute;
-    bottom: 30px/$desktop-home-ratio*100vw;
+    bottom: 62px/$desktop-home-ratio*100vw;
     left: 0;
     width: 100%;
     padding: 0 (60px/$desktop-home-ratio*100vw);
@@ -305,7 +302,7 @@
     align-items: center;
 
     @media #{$desktop-bad-ratio} {
-      bottom: 30px/$desktop-height-ratio*100vh;
+      bottom: 62px/$desktop-height-ratio*100vh;
       padding: 0 (60px/$desktop-height-ratio*100vh);
     }
 
@@ -373,8 +370,12 @@
     left: 0;
     right: 0;
     bottom: 0;
-    border-radius: 90px;
+    border-radius: 90px/$desktop-home-ratio*100vw;
     z-index: 0;
+
+    @media #{$desktop-bad-ratio} {
+      border-radius: 90px/$desktop-height-ratio*100vh;
+    }
 
     @media #{$media-sm} {
       border-radius: 20px;
@@ -439,8 +440,8 @@
 
         .robot-notification {
           position: absolute;
-          left: -42px/$desktop-home-ratio*100vw;
-          bottom: 0;
+          left: -60px/$desktop-home-ratio*100vw;
+          bottom: 24px/$desktop-home-ratio*100vw;
           transform: rotate(-90deg);
           transform-origin: left;
           width: 450px/$desktop-home-ratio*100vw;
@@ -448,13 +449,13 @@
           opacity: 1;
 
           @media #{$desktop-bad-ratio} {
-            left: -42px/$desktop-height-ratio*100vh;
+            left: -60px/$desktop-height-ratio*100vh;
+            bottom: 24px/$desktop-height-ratio*100vh;
             width: 450px/$desktop-height-ratio*100vh;
           }
 
-          &:before {
+          .robot-animation {
             transform: rotate(90deg);
-            background-image: url("../img/robot-neutral-purple.svg");
           }
         }
       }

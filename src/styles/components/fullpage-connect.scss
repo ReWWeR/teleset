@@ -38,7 +38,7 @@
       z-index: 2;
 
       @media #{$desktop-bad-ratio} {
-        transform: translateX(-680px/$desktop-height-ratio*100vh);
+        transform: translateX(-500px/$desktop-home-ratio*100vw);
       }
     }
 

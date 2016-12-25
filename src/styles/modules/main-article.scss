@@ -1,7 +1,7 @@
 .main-article {
   h1 {
     padding-top: 30vh;
-    padding-bottom: 1.26em;
+    padding-bottom: 1.1em;
   }
 
   a {
@@ -56,10 +56,16 @@
     }
 
     .link-map {
-      display: block;
-      float: left;
+      display: flex;
+      align-items: center;
       clear: both;
-      margin-top: 30px/$desktop-home-ratio*100vw;
+      padding-top: 30px/$desktop-home-ratio*100vw;
+
+      .link-icon {
+        font-size: 0;
+        width: 28px/$desktop-home-ratio*100vw;
+        margin-right: 10px/$desktop-home-ratio*100vw;
+      }
 
       @media #{$desktop-bad-ratio} {
         margin-top: 30px/$desktop-height-ratio * 100vh;

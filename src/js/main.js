@@ -129,7 +129,7 @@ $(document).ready(function () {
         var marker = new google.maps.Marker({
             position: coordinates,
             map: map,
-            icon: './img/step-tick.svg'
+            icon: './img/marker.png'
         });
         $body.addClass('show-connect-step-map');
     });

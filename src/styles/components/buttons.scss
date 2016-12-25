@@ -1,5 +1,5 @@
 .btn {
-  padding: (12px/$desktop-home-ratio*100vw) (24px/$desktop-home-ratio*100vw);
+  padding: (15px/$desktop-home-ratio*100vw) (30px/$desktop-home-ratio*100vw);
   font: $font-body;
   display: inline-block;
   transition: background $transition-time, color $transition-time, opacity $transition-time;
@@ -8,7 +8,8 @@
   font-size: 22px/$desktop-home-ratio*100vw;
 
   @media #{$desktop-bad-ratio} {
-    padding: (12px/$desktop-height-ratio*100vh) (24px/$desktop-height-ratio*100vh);
+    padding: (15px/$desktop-height-ratio*100vh) (30px/$desktop-height-ratio*100vh);
+    font-size: 22px/$desktop-height-ratio*100vh;
   }
 
   @media #{$media-sm} {
@@ -131,6 +132,11 @@
   }
 
   &.btn-with-arrow {
+    padding-right: 20px/$desktop-home-ratio*100vw;
+
+    @media #{$desktop-bad-ratio} {
+      padding-right:20px/$desktop-height-ratio*100vh;
+    }
 
     @media #{$media-sm} {
       display: inline-flex;
@@ -197,6 +203,14 @@
       background-color: $green;
       margin-right: (20px/$desktop-home-ratio*100vw);
 
+      @media #{$desktop-bad-ratio} {
+        width: 54px/$desktop-height-ratio*100vh;
+        height: 54px/$desktop-height-ratio*100vh;
+        border-radius: 18px/$desktop-height-ratio*100vh;
+        background-size: (32px/$desktop-height-ratio*100vh) (22px/$desktop-height-ratio*100vh);
+        margin-right: (20px/$desktop-height-ratio*100vh);
+      }
+
       @media #{$media-sm} {
         width: 54px/$mobile-ratio*100vw;
         height: 54px/$mobile-ratio*100vw;
@@ -210,6 +224,10 @@
       display: block;
       float: left;
       padding: (12px/$desktop-home-ratio*100vw) 0 (12px/$desktop-home-ratio*100vw) (15px/$desktop-home-ratio*100vw);
+
+      @media #{$desktop-bad-ratio} {
+        padding: (12px/$desktop-height-ratio*100vh) 0 (12px/$desktop-height-ratio*100vh) (15px/$desktop-height-ratio*100vh);
+      }
 
       @media #{$media-sm} {
         padding: (12px/$mobile-ratio*100vw) 0 (12px/$mobile-ratio*100vw) (15px/$mobile-ratio*100vw);

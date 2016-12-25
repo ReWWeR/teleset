@@ -78,17 +78,17 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        height: 600px/$desktop-width-half*100%;
+        height: 270px/$desktop-home-ratio*100vw;
       }
 
       .fig-cross-3 {
-        right: 180px/$desktop-width-half*100%;
-        bottom: 180px/$desktop-width-half*100%;
+        right: 180px/$desktop-home-ratio*100vw;
+        bottom: 180px/$desktop-home-ratio*100vw;
       }
 
       .fig-square-1 {
-        left: 160px/$desktop-width-half*100%;
-        bottom: 120px/$desktop-width-half*100%;
+        left: 160px/$desktop-home-ratio*100vw;
+        bottom: 120px/$desktop-home-ratio*100vw;
       }
     }
 
@@ -121,8 +121,8 @@
         }
 
         .fig-cross-2 {
-          top: 57px/$desktop-width-half*100%;
-          left: 184px/$desktop-width-half*100%;
+          top: 57px/$desktop-home-ratio*100vw;
+          left: 184px/$desktop-home-ratio*100vw;
         }
       }
     }
@@ -133,8 +133,9 @@
         align-items: center;
 
         button.btn {
-          padding: (32px/36px*1em) (45px/36px*1em);
+          padding: (21px/36px*1em) (42px/36px*1em);
           font-size: 36px;
+          border-radius: 30px/$desktop-home-ratio*100vw;
         }
 
         .fig {
@@ -142,23 +143,25 @@
         }
 
         .fig-cross-2 {
-          bottom: 215px/$desktop-width-half*100%;
-          left: 80px/$desktop-width-half*100%;
+          bottom: 215px/$desktop-home-ratio*100vw;
+          left: 80px/$desktop-home-ratio*100vw;
+          width: 45px/$desktop-home-ratio*100vw;
         }
 
         .fig-cross-3 {
-          bottom: 160px/$desktop-width-half*100%;
-          left: 175px/$desktop-width-half*100%;
+          bottom: 160px/$desktop-home-ratio*100vw;
+          left: 175px/$desktop-home-ratio*100vw;
         }
 
         .fig-cross-5 {
-          bottom: 60px/$desktop-width-half*100%;
-          right: 320px/$desktop-width-half*100%;
+          bottom: 60px/$desktop-home-ratio*100vw;
+          right: 320px/$desktop-home-ratio*100vw;
+          width: 60px/$desktop-home-ratio*100vw;
         }
 
         .fig-square-2 {
-          top: 80px/$desktop-width-half*100%;
-          right: 120px/$desktop-width-half*100%;
+          top: 80px/$desktop-home-ratio*100vw;
+          right: 120px/$desktop-home-ratio*100vw;
         }
       }
     }
@@ -169,7 +172,7 @@
         position: absolute;
         left: 50%;
         bottom: 0;
-        transform: translateX(-50%);
+        transform: translateX(-50%) scaleX(-1);
         height: $hero-2-height/$desktop-height-ratio/2*100vh;
         z-index: 1;
       }
@@ -181,22 +184,22 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        height: 600px/$desktop-width-half*100%;
+        height: 270px/$desktop-home-ratio*100vw;
       }
 
       .fig-square-1 {
-        left: 160px/$desktop-width-half*100%;
-        bottom: 120px/$desktop-width-half*100%;
+        left: 160px/$desktop-home-ratio*100vw;
+        bottom: 120px/$desktop-home-ratio*100vw;
       }
 
       .fig-cross-2 {
-        right: 512px/$desktop-width-half*100%;
-        bottom: 200px/$desktop-width-half*100%;
+        right: 512px/$desktop-home-ratio*100vw;
+        bottom: 200px/$desktop-home-ratio*100vw;
       }
 
       .fig-cross-5 {
-        right: 62px/$desktop-width-half*100%;
-        bottom: 110px/$desktop-width-half*100%;
+        right: 62px/$desktop-home-ratio*100vw;
+        bottom: 110px/$desktop-home-ratio*100vw;
       }
     }
   }

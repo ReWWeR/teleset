@@ -3,7 +3,7 @@
   bottom: 0;
   width: 100%;
   z-index: 1;
-  padding-bottom: 43px;
+  padding-bottom: 42px;
 
   .show-login-popup & {
     z-index: 2;
@@ -34,7 +34,7 @@
 
   .copyright {
     position: fixed;
-    left: -100px/$desktop-home-ratio*100vw;
+    left: -110px/$desktop-home-ratio*100vw;
     top: 30%;
     transform: rotate(-90deg) translateX(-50%);
     font-size: 18px/$desktop-home-ratio*100vw;
@@ -42,16 +42,26 @@
 
     @media #{$desktop-bad-ratio} {
       font-size: 18px/$desktop-height-ratio*100vh;
-      left: -100px/$desktop-home-ratio*100vw;
+      left: -110px/$desktop-home-ratio*100vw;
     }
 
     @media #{$desktop-1600} {
       font-size: 18px;
-      left: -100px;
+      left: -110px;
     }
 
     .grey-text {
       color: $black-30;
+      text-indent: 18px/$desktop-home-ratio*100vw;
+      display: inline-block;
+
+      @media #{$desktop-bad-ratio} {
+        text-indent: 18px/$desktop-height-ratio*100vh;
+      }
+
+      @media #{$desktop-1600} {
+        text-indent: 18px;
+      }
     }
 
     .purple-bg &, .yellow-bg &, .grey-bg & {
@@ -237,7 +247,11 @@
 
   .social-icons {
     display: flex;
-    margin-right: auto;
+    margin-right: 492px/$desktop-home-ratio*100vw;
+
+    @media #{$desktop-1600} {
+      margin-right: 492px;
+    }
     li {
       &:not(:last-child) {
         margin-right: 40px/$desktop-home-ratio*100vw;
@@ -246,6 +260,8 @@
         }
       }
       a {
+        font-size: 0;
+
         svg {
           height: 22px/$desktop-home-ratio*100vw;
           max-height: 22px;
@@ -284,7 +300,7 @@
         .grey-bg & {
           svg {
             path {
-              fill: $blue;stroke: $blue;
+              fill: $blue;
             }
           }
         }
@@ -324,6 +340,7 @@
   position: absolute;
   transform: translateX(-50%);
   left: 50%;
+  font-size: 0;
 
   .purple-bg &, .homepage-inner & {
     svg {

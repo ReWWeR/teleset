@@ -51,7 +51,7 @@
 
     .slide-menu-nav, .cabinet-nav {
       position: absolute;
-      top: 30%;
+      top: 28.5%;
       bottom: 32%;
       width: 100%;
 
@@ -63,14 +63,14 @@
 
       ul {
         float: left;
-        margin-left: 13%;
+        margin-left: 152px/$desktop-home-ratio*100vw;
 
         @media #{$media-sm} {
           margin-left: 0;
         }
 
         @media #{$media-sm-with-ratio} {
-          margin-left: 13%;
+          margin-left: 19%;
         }
 
         &:first-child {
@@ -82,6 +82,7 @@
             font: $font-body;
             font-weight: 300;
             font-size: 2.625vw; //42px;
+            line-height: 1.43;
 
             @media #{$desktop-bad-ratio} {
               font-size: 42px/$desktop-height-ratio*100vh;
@@ -122,7 +123,7 @@
     .cabinet-nav {
       right: 0;
       top: 0;
-      width: 55%;
+      width: 50%;
       height: 100vh;
       background: $purple-dark;
       z-index: 2;
@@ -135,8 +136,8 @@
       }
 
       ul {
-        padding-left: 50px;
-        top: 30%;
+        padding-left: 57px/$desktop-home-ratio*100vw;
+        top: 28.5%;
         position: absolute;
       }
 
@@ -145,7 +146,7 @@
         color: $white-50;
         position: absolute;
         top: 700px/$desktop-height-ratio*100%;
-        left: 50px;
+        left: 60px/$desktop-home-ratio*100vw;
 
         @media #{$desktop-bad-ratio} {
           font-size: 18px/$desktop-height-ratio*100vh;
@@ -157,7 +158,7 @@
       }
 
       .cabinet-menu-footer {
-        bottom: 50px;
+        bottom: 46px;
         position: absolute;
         display: flex;
         align-items: center;
@@ -194,11 +195,23 @@
           margin-left: auto;
           width: 42px/$desktop-home-ratio*100vw;
           font-size: 0;
+          right: 40px/$desktop-home-ratio*100vw;
 
           .phone-tooltip {
             font-size: 30px/$desktop-home-ratio*100vw;
             padding: (22px/$desktop-home-ratio*100vw) (60px/$desktop-home-ratio*100vw);
             min-width: 300px/$desktop-home-ratio*100vw;
+            left: -180%;
+
+            &:before {
+              left: 82%;
+            }
+
+            @media #{$desktop-1600} {
+              font-size: 30px;
+              padding: 22px 60px;
+              min-width: 300px;
+            }
           }
 
           svg {
@@ -216,7 +229,7 @@
       color: $white-30;
       font-size: 18px/$desktop-home-ratio*100vw;
       position: absolute;
-      bottom: 60px/$desktop-home-ratio*100vw;
+      bottom: 49px/$desktop-home-ratio*100vw;
       z-index: 2;
       opacity: 0;
       pointer-events: none;
@@ -224,12 +237,12 @@
 
       @media #{$desktop-bad-ratio} {
         font-size: 18px/$desktop-height-ratio*100vh;
-        bottom: 60px/$desktop-height-ratio*100vh;
+        bottom: 49px/$desktop-height-ratio*100vh;
       }
 
       @media #{$desktop-1600} {
         font-size: 18px;
-        bottom: 60px;
+        bottom: 49px;
       }
 
       @media #{$media-sm} {
@@ -269,7 +282,7 @@
 
     .social-icons {
       position: absolute;
-      top: 78.65%;
+      top: 702px/$desktop-height-ratio*100%;
 
       @media #{$media-sm} {
         position: relative;
@@ -333,7 +346,7 @@
       align-items: center;
       position: absolute;
       bottom: 0;
-      padding-bottom: 47px;
+      padding-bottom: 40px;
       width: calc(100% - 120px);
 
       @media #{$media-sm} {
@@ -425,7 +438,7 @@
           }
 
           @media #{$desktop-1600} {
-            font-size: 20px;
+            font-size: 30px;
             padding: 22px 60px;
             min-width: 300px;
           }

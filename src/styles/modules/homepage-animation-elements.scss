@@ -61,7 +61,7 @@
     &.fig-cross-1 {
       height: 600px/$desktop-height-ratio*100vh;
       bottom: 150px/$desktop-height-ratio*100%;
-      right: 850px/$desktop-home-ratio*100%;
+      right: 860px/$desktop-home-ratio*100%;
 
       @media #{$media-sm} {
         right: -600px/$desktop-home-ratio*100%;
@@ -106,8 +106,8 @@
     }
 
     &.fig-circle-2 {
-      height: 30px/$desktop-height-ratio*100vh;
-      bottom: 514px/$desktop-height-ratio*100%;
+      height: 18px/$desktop-height-ratio*100vh;
+      bottom: 520px/$desktop-height-ratio*100%;
       left: 46.56%;
     }
 
@@ -124,8 +124,8 @@
     }
 
     &.fig-square-2 {
-      height: 54px/$desktop-height-ratio*100vh;
-      bottom: 400px/$desktop-height-ratio*100%;
+      height: 40px/$desktop-height-ratio*100vh;
+      bottom: 407px/$desktop-height-ratio*100%;
       left: 37.50%;
     }
   }

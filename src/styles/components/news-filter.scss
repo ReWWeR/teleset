@@ -49,12 +49,14 @@
   transition: opacity .5s;
 
   .news-center-block {
-    margin-left: 60px/$desktop-home-ratio*100vw;
+    //margin-left: 60px/$desktop-home-ratio*100vw;
+    width: 100%;
 
     h4 {
       color: #fff;
-      font-size: 30px/$desktop-home-ratio*100vw;
+      font-size: 28px/$desktop-home-ratio*100vw;
       line-height: 1.3333;
+      padding-bottom: .8em;
     }
 
     .news-switchers {
@@ -65,7 +67,7 @@
         border-radius: 20px;
         display: flex;
         align-items: center;
-        padding: (20px/$desktop-home-ratio*100vw) (30px/$desktop-home-ratio*100vw);
+        padding: (15px/$desktop-home-ratio*100vw) (16px/$desktop-home-ratio*100vw) (15px/$desktop-home-ratio*100vw) (30px/$desktop-home-ratio*100vw);
         margin-right: 10px;
 
         span {

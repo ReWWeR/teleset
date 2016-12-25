@@ -46,6 +46,7 @@
     line-height: 1.1;
     color: #000;
     padding-bottom: 36px/40px * 1em;
+    font-family: $font-ultima-name;
 
     @media #{$desktop-bad-ratio} {
       font-size: 36px/$desktop-height-ratio*100vh;

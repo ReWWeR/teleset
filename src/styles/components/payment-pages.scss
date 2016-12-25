@@ -12,6 +12,8 @@
     @media #{$desktop-bad-ratio} {
       //max-height: $hero-height;
       height: $hero-height/$desktop-height-ratio*100vh;
+      left: auto;
+      right: 900px/$desktop-home-ratio*100vw;
       width: auto;
     }
 
@@ -38,18 +40,18 @@
     h1 {
       color: #fff;
       opacity: 0;
-      padding-bottom: 70px/$desktop-home-ratio*100vw;
+      padding-bottom: 52px/$desktop-home-ratio*100vw;
 
       @media #{$desktop-bad-ratio} {
-        padding-bottom: 70px/$desktop-height-ratio*100vh;
+        padding-bottom: 52px/$desktop-height-ratio*100vh;
       }
 
       @media #{$media-sm} {
-        padding-bottom: 70px/$mobile-ratio*100vw;
+        padding-bottom: 52px/$mobile-ratio*100vw;
       }
 
       @media #{$media-sm-with-ratio} {
-        padding-bottom: 70px/$mobile-ratio-height*100vh;
+        padding-bottom: 52px/$mobile-ratio-height*100vh;
       }
     }
 
@@ -72,12 +74,12 @@
       }
 
       .input-wrap {
-        max-width: 330px/$desktop-home-ratio*100vw;
+        max-width: 350px/$desktop-home-ratio*100vw;
         flex-grow: 1;
         padding: 0 (10px/$desktop-home-ratio*100vw);
 
         @media #{$desktop-bad-ratio} {
-          max-width: 330px/$desktop-height-ratio*100vh;
+          max-width: 350px/$desktop-height-ratio*100vh;
           padding: 0 (10px/$desktop-height-ratio*100vh);
         }
 
@@ -101,22 +103,24 @@
     .form-info {
       font-size: 18px/$desktop-home-ratio*100vw;
       color: $white-60;
-      margin-bottom: 32px/$desktop-home-ratio*100vw;
+      margin: 0 auto (27px/$desktop-home-ratio*100vw);
       opacity: 0;
+      max-width: 420px/$desktop-home-ratio*100vw;
 
       @media #{$desktop-bad-ratio} {
         font-size: 18px/$desktop-height-ratio*100vh;
-        margin-bottom: 32px/$desktop-height-ratio*100vh;
+        margin: 0 auto (27px/$desktop-height-ratio*100vh);
+        max-width: 420px/$desktop-height-ratio*100vh;
       }
 
       @media #{$media-sm} {
         font-size: 18px/$mobile-ratio*100vw;
-        margin-bottom: 32px/$mobile-ratio*100vw;
+        margin-bottom: 51px/$mobile-ratio*100vw;
       }
 
       @media #{$media-sm-with-ratio} {
         font-size: 18px/$mobile-ratio-height*100vh;
-        margin-bottom: 32px/$mobile-ratio-height*100vh;
+        margin-bottom: 51px/$mobile-ratio-height*100vh;
       }
     }
   }
@@ -170,6 +174,11 @@
     z-index: 1;
     width: 100%;
     padding: 0 60px;
+
+    .form-info {
+      margin-left: 0;
+      margin-right: 0;
+    }
 
     @media #{$media-sm} {
       padding: 0 27px;

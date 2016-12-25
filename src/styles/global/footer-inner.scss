@@ -1,6 +1,6 @@
 .footer-inner {
   background: $dark-grey;
-  margin-top: 85px/$desktop-home-ratio*100vw;
+  margin-top: 109px/$desktop-home-ratio*100vw;
   padding: (120px/$desktop-home-ratio*100vw) 0;
   color: $white-20;
   font-size: (18px/$desktop-home-ratio*100vw);
@@ -9,7 +9,7 @@
   @media #{$desktop-bad-ratio} {
     font-size: 18px/$desktop-height-ratio * 100vh;
     padding: (120px/$desktop-height-ratio*100vh) 0;
-    margin-top: 85px/$desktop-height-ratio *100vh;
+    margin-top: 109px/$desktop-height-ratio *100vh;
   }
 
   @media #{$media-sm} {

@@ -1,5 +1,5 @@
 .header {
-  padding: 50px 0 0;
+  padding: 42px 0 0;
   position: relative;
   z-index: 3;
 
@@ -116,10 +116,18 @@
 
       li {
         display: inline-flex;
-        margin-left: 7px/$desktop-home-ratio*100vw;
+        margin-left: 20px/$desktop-home-ratio*100vw;
+
+        &.four-blocks-li {
+          padding: 0 18px/$desktop-home-ratio*100vw;
+
+          @media #{$desktop-1600} {
+            padding: 0 18px;
+          }
+        }
 
         @media #{$desktop-1600} {
-          margin-left: 7px;
+          margin-left: 20px;
         }
 
         &:first-child {
@@ -127,7 +135,7 @@
         }
 
         a {
-          padding: (13px/$desktop-home-ratio*100vw) (20px/$desktop-home-ratio*100vw);
+          padding: (9px/$desktop-home-ratio*100vw) (16px/$desktop-home-ratio*100vw);
           font-size: 18px/$desktop-home-ratio*100vw;
           border: (3px/$desktop-home-ratio*100vw) solid transparent;
           border-radius: 14px/$desktop-home-ratio*100vw;
@@ -135,7 +143,7 @@
           display: inline-flex;
 
           @media #{$desktop-1600} {
-            padding: 8px 23px;
+            padding: 9px 16px;
             font-size: 18px;
             border: 3px solid transparent;
             border-radius: 14px;
@@ -452,6 +460,12 @@ header.mobile-header {
   width: 42px/$desktop-home-ratio*100vw;
   font-size: 0;
   position: relative;
+
+  svg {
+    path {
+      fill: $purple;
+    }
+  }
 
   .purple-bg & {
     svg {

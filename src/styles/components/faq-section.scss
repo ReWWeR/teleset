@@ -45,6 +45,8 @@
 
         &:before {
           content: '+';
+          font-size: 36px/$desktop-home-ratio*100vw;
+          font-weight: 300;
           display: flex;
           flex-shrink: 0;
           align-items: center;
@@ -60,6 +62,7 @@
             width: 28px/$mobile-ratio*100vw;
             height: 28px/$mobile-ratio*100vw;
             margin-right: 30px/$mobile-ratio*100vw;
+            font-size: 36px/$desktop-home-ratio*100vw;
           }
         }
       }
@@ -69,12 +72,12 @@
         overflow: hidden;
         font-size: 18px/$desktop-home-ratio*100vw;
         color: $black-60;
-        margin-bottom: 20px/$desktop-home-ratio*100vw;
+        margin-bottom: 10px/$desktop-home-ratio*100vw;
         padding-left: 60px/$desktop-home-ratio*100vw;
 
         @media #{$media-sm} {
           font-size: 18px/$mobile-ratio*100vw;
-          margin-bottom: 20px/$mobile-ratio*100vw;
+          margin-bottom: 10px/$mobile-ratio*100vw;
           padding-left: 60px/$mobile-ratio*100vw;
         }
       }
@@ -102,10 +105,10 @@
         &.open {
 
           & > .faq-accordion-content {
-            margin-top: 20px/$desktop-home-ratio*100vw;
+            margin-top: 15px/$desktop-home-ratio*100vw;
 
             @media #{$media-sm} {
-              margin-top: 20px/$mobile-ratio*100vw;
+              margin-top: 15px/$mobile-ratio*100vw;
             }
           }
 

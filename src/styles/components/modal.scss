@@ -14,8 +14,8 @@
 
   .modal {
     background: #fff;
-    border-radius: 36px;
-    padding: 40px;
+    border-radius: 36px/$desktop-home-ratio*100vw;
+    padding: 40px/$desktop-home-ratio*100vw;
     position: relative;
     z-index: 999;
     width: 800px/$desktop-home-ratio*100vw;
@@ -25,6 +25,8 @@
     align-items: center;
 
     @media #{$desktop-bad-ratio} {
+      border-radius: 36px/$desktop-height-ratio*100vh;
+      padding: 40px/$desktop-height-ratio*100vh;
       width: 800px/$desktop-height-ratio*100vh;
       height: 480px/$desktop-height-ratio*100vh;
     }
@@ -52,14 +54,23 @@
       width: 100%;
       margin: 10px 0;
 
+      @media #{$desktop-bad-ratio} {
+        font-size: 36px/$desktop-height-ratio*100vh;
+      }
+
       @media #{$media-sm} {
         font-size: 36px/$mobile-ratio*100vw;
       }
     }
 
     .modal-close {
-      width: 30px;
-      height: 30px;
+      width: 30px/$desktop-home-ratio*100vw;
+      height: 30px/$desktop-home-ratio*100vw;
+
+      @media #{$desktop-bad-ratio} {
+        width: 30px/$desktop-height-ratio*100vh;
+        height: 30px/$desktop-height-ratio*100vh;
+      }
 
       @media #{$media-sm} {
        width: 15px;
@@ -74,7 +85,11 @@
     }
 
     button {
-      min-height: 53px;
+      min-height: 53px/$desktop-home-ratio*100vw;
+
+      @media #{$desktop-bad-ratio} {
+        min-height: 53px/$desktop-height-ratio*100vh;
+      }
 
       @media #{$media-sm} {
         min-height: 20px;

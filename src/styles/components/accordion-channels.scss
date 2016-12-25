@@ -109,10 +109,22 @@
           }
         }
 
+        svg {
+          > * {
+            transition: fill .5s;
+          }
+        }
+
         &.accordion-open {
           background-color: transparent;
           position: absolute;
           width: 100%;
+
+          svg {
+            > * {
+              fill: #fff;
+            }
+          }
 
           span {
             color: #fff;
@@ -216,9 +228,13 @@
           span {
             display: block;
             float: left;
-            padding: 12px;
+            padding: (8px/$desktop-home-ratio*100vw) (10px/$desktop-home-ratio*100vw);
             border: 2px solid rgba(255, 255, 255, .3);
             border-radius: 10px;
+
+            @media #{$desktop-bad-ratio} {
+              padding: (8px/$desktop-height-ratio*100vh) (10px/$desktop-height-ratio*100vh);
+            }
 
             @media #{$media-sm} {
               padding: 5px;

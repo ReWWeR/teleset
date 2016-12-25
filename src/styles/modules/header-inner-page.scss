@@ -19,7 +19,7 @@
 
       &.hero-2 {
         bottom: 0;
-        right: 0;
+        right: -43px/$desktop-home-ratio*100vw;
         top: auto;
         transform: translateY(0);
         width: $hero-2-width/$desktop-home-ratio*100vw;
@@ -27,6 +27,7 @@
         @media #{$desktop-bad-ratio} {
           width: auto;
           height: $hero-2-height/$desktop-height-ratio*100vh;
+          right: -43px/$desktop-height-ratio*100vh;
         }
 
         @media #{$media-sm} {
