@@ -14,14 +14,14 @@
 
   @media #{$media-sm} {
     font-size: 18px/$mobile-ratio * 100vw;
-    padding: (60px/$mobile-ratio*100vw) 0;
-    margin-top: 57px/$mobile-ratio *100vw;
+    padding: (119px/$mobile-ratio*100vw) 0;
+    margin-top: 104px/$mobile-ratio *100vw;
   }
 
   @media #{$media-sm-with-ratio} {
     font-size: 18px/$mobile-ratio-height * 100vh;
-    padding: (60px/$mobile-ratio-height*100vh) 0;
-    margin-top: 57px/$mobile-ratio-height *100vh;
+    padding: (119px/$mobile-ratio-height*100vh) 0;
+    margin-top: 104px/$mobile-ratio-height *100vh;
   }
 
   .subfooter {
@@ -33,11 +33,11 @@
     }
 
     @media #{$media-sm} {
-      margin-bottom: 25px/$mobile-ratio*100vw;
+      margin-bottom: 50px/$mobile-ratio*100vw;
     }
 
     @media #{$media-sm-with-ratio} {
-      margin-bottom: 25px/$mobile-ratio-height*100vh;
+      margin-bottom: 50px/$mobile-ratio-height*100vh;
     }
 
     &:after {
@@ -63,11 +63,12 @@
 
         @media #{$media-sm} {
           width: 138px/$mobile-ratio * 100vw;
-          margin-right: 5px;
+          margin-right: 20px/$mobile-ratio*100vw;
         }
 
         @media #{$media-sm-with-ratio} {
           width: 138px/$mobile-ratio-height * 100vh;
+          margin-right: 20px/$mobile-ratio-height*100vh;
         }
 
         line, circle, rect {
@@ -104,11 +105,13 @@
 
         @media #{$media-sm} {
           width: 52px/$mobile-ratio * 100vw;
-          margin-right: 5px;
+          margin-right: 20px/$mobile-ratio*100vw;
         }
 
         @media #{$media-sm-with-ratio} {
           width: 52px/$mobile-ratio-height * 100vh;
+          margin-right: 20px/$mobile-ratio-height * 100vh;
+
         }
       }
 

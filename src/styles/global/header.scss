@@ -261,12 +261,16 @@ header.mobile-header {
   top: 0;
   width: 100%;
   z-index: 4;
-  padding-top: 25px;
+  padding-top: 44px/$mobile-ratio*100vw;
   display: none;
 
   .wrapper {
     display: flex;
     align-items: center;
+  }
+
+  @media #{$media-sm-with-ratio} {
+    padding-top: 44px/$mobile-ratio-height*100vh;
   }
 
   @media #{$media-sm} {

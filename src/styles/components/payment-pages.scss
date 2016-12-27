@@ -47,11 +47,11 @@
       }
 
       @media #{$media-sm} {
-        padding-bottom: 52px/$mobile-ratio*100vw;
+        padding-bottom: 86px/$mobile-ratio*100vw;
       }
 
       @media #{$media-sm-with-ratio} {
-        padding-bottom: 52px/$mobile-ratio-height*100vh;
+        padding-bottom: 86px/$mobile-ratio-height*100vh;
       }
     }
 
@@ -89,13 +89,17 @@
 
         &:not(:last-child) {
           @media #{$media-sm} {
-            margin-bottom: 20px;
+            margin-bottom: 10px/$mobile-ratio*100vw;
           }
         }
 
         > input {
           width: 100%;
           text-align: center;
+
+          @media #{$media-sm} {
+            text-align: left;
+          }
         }
       }
     }
@@ -115,12 +119,14 @@
 
       @media #{$media-sm} {
         font-size: 18px/$mobile-ratio*100vw;
-        margin-bottom: 51px/$mobile-ratio*100vw;
+        margin-bottom: 28px/$mobile-ratio*100vw;
+        max-width: 360px/$mobile-ratio*100vw;
       }
 
       @media #{$media-sm-with-ratio} {
         font-size: 18px/$mobile-ratio-height*100vh;
-        margin-bottom: 51px/$mobile-ratio-height*100vh;
+        margin-bottom: 28px/$mobile-ratio-height*100vh;
+        max-width: 360px/$mobile-ratio-height*100vh;
       }
     }
   }
@@ -181,7 +187,12 @@
     }
 
     @media #{$media-sm} {
-      padding: 0 27px;
+      top: 33%;
+      padding: 0 60px/$mobile-ratio*100vw;
+    }
+
+    @media #{$media-sm-with-ratio} {
+      padding: 0 60px/$mobile-ratio-height*100vh;
     }
 
     .form-line-wrap {

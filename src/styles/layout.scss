@@ -71,7 +71,7 @@
   }
 
   @media #{$media-sm} {
-    padding: (65px/$mobile-ratio*100vw) 0;
+    padding: (65px/$mobile-ratio*100vw) 0 (104px/$mobile-ratio*100vw);
     display: flex;
     align-items: center;
   }
@@ -95,8 +95,13 @@
 
     @media #{$media-sm} {
       font-size: 28px/$mobile-ratio * 100vw;
+      margin-right: 39px/$mobile-ratio * 100vw;
       float: none;
       align-self: center;
+
+      br {
+        display: none;
+      }
     }
 
     @media #{$media-sm-with-ratio} {
@@ -137,11 +142,15 @@
     @media #{$media-sm} {
       margin-left: auto;
       align-self: center;
+      padding: (20px/$mobile-ratio*100vw) (38px/$mobile-ratio*100vw);
+      font-size: 36px/$mobile-ratio*100vw;
       flex-basis: 250px/$mobile-ratio*100vw;
     }
 
     @media #{$media-sm-with-ratio} {
-      flex-basis: 250px/$mobile-ratio*100vw;
+      padding: (20px/$mobile-ratio-height*100vh) (38px/$mobile-ratio-height*100vh);
+      font-size: 36px/$mobile-ratio-height*100vh;
+      flex-basis: 250px/$mobile-ratio-height*100vh;
     }
   }
 }

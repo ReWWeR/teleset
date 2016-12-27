@@ -54,7 +54,8 @@
 
     @media #{$media-sm} {
       font-size: 36px/$mobile-ratio * 100vw;
-      width: 46vw;
+      width: 60vw;
+      padding-bottom: .6em;
     }
 
     @media #{$media-sm-with-ratio} {

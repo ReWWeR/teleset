@@ -10,7 +10,9 @@
   }
 
   @media #{$media-sm} {
-    display: none;
+    .hamburger-menu, .social-icons, .author-logo {
+      display: none!important;
+    }
   }
 
   .show-four-blocks-section & {
@@ -342,6 +344,17 @@
   left: 50%;
   font-size: 0;
 
+  @media #{$media-sm} {
+    min-width: 42px/$mobile-ratio*100vw;
+    left: 60px/$mobile-ratio*100vw;
+    transform: none;
+  }
+
+  @media #{$media-sm-with-ratio} {
+    min-width: 42px/$mobile-ratio-height*100vh;
+    left: 60px/$mobile-ratio-height*100vh;
+  }
+
   .purple-bg &, .homepage-inner & {
     svg {
       path {
@@ -415,6 +428,10 @@
     transition: opacity .5s;
     opacity: 0;
     pointer-events: none;
+
+    @media #{$media-sm} {
+      display: none;
+    }
 
     @media #{$desktop-1600} {
       font-size: 30px;

@@ -13,7 +13,7 @@
   }
 
   @media #{$media-sm} {
-    padding: (20px/$mobile-ratio*100vw) (30px/$mobile-ratio*100vw);
+    padding: (15px/$mobile-ratio*100vw) (30px/$mobile-ratio*100vw);
     font-size: 22px/$mobile-ratio*100vw;
   }
 
@@ -141,6 +141,11 @@
     @media #{$media-sm} {
       display: inline-flex;
       align-items: center;
+      padding-right: 17px/$mobile-ratio*100vw;
+    }
+
+    @media #{$media-sm-with-ratio} {
+      padding-right: 17px/$mobile-ratio-height*100vh;
     }
 
     &:after {

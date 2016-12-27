@@ -48,7 +48,7 @@
     @media #{$media-sm} {
       font-size: 22px/$mobile-ratio * 100vw;
       padding: (25px/$mobile-ratio*100vw) (20px/$mobile-ratio*100vw);
-      border-radius: 44px/$mobile-ratio * 100vw;
+      border-radius: 50px/$mobile-ratio * 100vw;
       margin: 10px/$mobile-ratio * 100vw;
       flex: 0 1 250px/$mobile-ratio*100vw;
       height: 250px/$mobile-ratio*100vw;
@@ -57,7 +57,7 @@
     @media #{$media-sm-with-ratio} {
       font-size: 22px/$mobile-ratio-height * 100vh;
       padding: (25px/$mobile-ratio-height*100vh) (20px/$mobile-ratio-height*100vh);
-      border-radius: 44px/$mobile-ratio-height * 100vh;
+      border-radius: 50px/$mobile-ratio-height * 100vh;
       margin: 10px/$mobile-ratio-height * 100vh;
       flex: 1 1 250px/$mobile-ratio-height*100vh;
       height: 250px/$mobile-ratio-height*100vh;

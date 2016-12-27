@@ -82,7 +82,7 @@
       background: none;
       padding: 0 (60px/$mobile-ratio*100vw) 0;
       height: auto;
-      top: 30vh;
+      top: 33vh;
       position: absolute;
       max-width: 100%;
       overflow: visible;
@@ -101,6 +101,10 @@
         @media #{$desktop-bad-ratio} {
           margin-bottom: 30px/$desktop-height-ratio*100vh;
         }
+
+        @media #{$media-sm} {
+          margin-bottom: .8em;
+        }
       }
 
       @media #{$desktop-bad-ratio} {
@@ -110,6 +114,7 @@
       @media #{$media-sm} {
         margin-bottom: 92px/$mobile-ratio*100vw;
         color: #fff;
+
       }
 
       @media #{$media-sm-with-ratio} {
@@ -127,6 +132,14 @@
 
     .inner-page & {
       margin: (15px/$desktop-home-ratio*100vw) 0;
+
+      @media #{$media-sm} {
+        margin: (18px/$mobile-ratio*100vw) 0 (57px/$mobile-ratio*100vw);
+      }
+
+      @media #{$media-sm-with-ratio} {
+        margin: (18px/$mobile-ratio-height*100vh) 0 (57px/$mobile-ratio-height*100vh);
+      }
     }
 
     @media #{$desktop-bad-ratio} {
@@ -140,7 +153,7 @@
 
     @media #{$media-sm} {
       font-size: 18px/$mobile-ratio*100vw;
-      margin: (30px/$mobile-ratio*100vw) 0;
+      margin: (18px/$mobile-ratio*100vw) 0 (57px/$mobile-ratio*100vw);
       color: $white-60;
       padding: 0 5px;
       display: flex;
@@ -166,14 +179,17 @@
       }
 
       @media #{$media-sm} {
-        margin-right: 24px/$mobile-ratio*100vw;
-        width: 24px;
-        height: 24px;
-        flex-basis: 42px;
+        margin-right: 18px/$mobile-ratio*100vw;
+        width: 42px/$mobile-ratio*100vw;
+        height: 42px/$mobile-ratio*100vw;
+        flex-basis: 70px/$mobile-ratio*100vw;
       }
 
       @media #{$media-sm-with-ratio} {
-        margin-right: 24px/$mobile-ratio-height*100vh;
+        margin-right: 18px/$mobile-ratio-height*100vh;
+        width: 42px/$mobile-ratio-height*100vh;
+        height: 42px/$mobile-ratio-height*100vh;
+        flex-basis: 70px/$mobile-ratio-height*100vh;
       }
     }
 
@@ -223,14 +239,14 @@
 
         @media #{$media-sm} {
           flex-basis: 185px/$mobile-ratio*100vw;
-          margin-bottom: 20px/$mobile-ratio*100vw;
-          padding: 0 (8px/$mobile-ratio*100vw) 0;
+          margin-bottom: 12px/$mobile-ratio*100vw;
+          padding: 0 (6px/$mobile-ratio*100vw) 0;
         }
 
         @media #{$media-sm-with-ratio} {
           flex-basis: 150px/$mobile-ratio-height*100vh;
-          margin-bottom: 20px/$mobile-ratio-height*100vh;
-          padding: 0 (8px/$mobile-ratio-height*100vh) 0;
+          margin-bottom: 12px/$mobile-ratio-height*100vh;
+          padding: 0 (6px/$mobile-ratio-height*100vh) 0;
         }
 
         input {
@@ -310,6 +326,7 @@
       margin: (30px/$mobile-ratio*100vw) 0 0;
       position: relative;
       padding: 0;
+      bottom: 0;
     }
 
     @media #{$media-sm-with-ratio} {

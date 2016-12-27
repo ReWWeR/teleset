@@ -2,6 +2,11 @@
   h1 {
     padding-top: 30vh;
     padding-bottom: 1.1em;
+
+    @media #{$media-sm} {
+      padding-top: 33vh;
+      padding-bottom: .78em;
+    }
   }
 
   a {
@@ -65,6 +70,16 @@
         font-size: 0;
         width: 28px/$desktop-home-ratio*100vw;
         margin-right: 10px/$desktop-home-ratio*100vw;
+
+        @media #{$media-sm} {
+          width: 40px/$mobile-ratio*100vw;
+          margin-right: 22px/$mobile-ratio*100vw;
+        }
+
+        @media #{$media-sm-with-ratio} {
+          width: 40px/$mobile-ratio-height*100vh;
+          margin-right: 22px/$mobile-ratio-height*100vh;
+        }
       }
 
       @media #{$desktop-bad-ratio} {
@@ -91,7 +106,13 @@
       margin-right: 10px;
 
       @media #{$media-sm} {
-        width: 28px/$mobile-ratio*100vw;
+        width: 40px/$mobile-ratio*100vw;
+        margin-right: 20px/$mobile-ratio*100vw;
+      }
+
+      @media #{$media-sm-with-ratio} {
+        width: 40px/$mobile-ratio-height*100vh;
+        margin-right: 20px/$mobile-ratio-height*100vh;
       }
     }
   }

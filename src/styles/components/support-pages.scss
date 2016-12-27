@@ -58,10 +58,17 @@
           width: 36px/$desktop-height-ratio*100vh;
           min-width: 36px/$desktop-height-ratio*100vh;
         }
+
+        @media #{$media-sm} {
+          width: 36px/$mobile-ratio*100vw;
+          min-width: 36px/$mobile-ratio*100vw;
+          margin-right: 16px/$mobile-ratio*100vw;
+        }
       }
 
       @media #{$media-sm} {
         width: 80vw;
+        font-size: 18px/$mobile-ratio*100vw;
       }
     }
 
