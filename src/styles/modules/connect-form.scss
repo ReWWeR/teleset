@@ -5,8 +5,9 @@
   top: 0;
   background: $purple;
   z-index: 2;
-  transition: transform .5s, opacity .7s;
+  transition: transform .5s, opacity .0001s;
   transform: translateX(100%);
+  opacity: 0;
 
   @media #{$media-sm} {
     background: none;
@@ -452,6 +453,7 @@
 
     .show-connect-form & {
       z-index: 1;
+      opacity: 1;
       .connect-form-wrapper {
         overflow: visible;
 

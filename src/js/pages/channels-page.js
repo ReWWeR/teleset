@@ -1,6 +1,8 @@
 $(document).ready(function(){
     $('.accordion-title').on('click', function(){
         $(this).toggleClass('accordion-open');
+        var marginTop = -$(this).outerHeight();
+        $(this).next().css('margin-top', marginTop);
     })
 
     $('.play-video-icon').on('click', function(){

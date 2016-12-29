@@ -7,6 +7,7 @@
   transition: transform .5s ease, opacity 1s ease;
   transform: translateY(100%);
   pointer-events: none;
+  opacity: 0;
 
   @media #{$media-sm} {
     transform: translateX(0);
@@ -622,6 +623,7 @@
 
   .show-menu & {
     transform: translateX(0);
+    opacity: 1;
     pointer-events: auto;
   }
 
