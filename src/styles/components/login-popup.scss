@@ -8,9 +8,8 @@
   opacity: 0;
   pointer-events: none;
   transition: opacity .5s;
-  z-index: 1;
+  z-index: 2;
   display: flex;
-  align-items: center;
   justify-content: center;
 
   .show-login-popup & {
@@ -19,7 +18,7 @@
   }
 
   .center-block {
-    top: auto;
+    justify-content: flex-start;
     position: relative;
     flex-direction: column;
     text-align: center;

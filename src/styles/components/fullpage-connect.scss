@@ -56,16 +56,16 @@
 
     .show-connect-form &,
     .show-connect-step-success & {
-      transition: transform 1s;
+      transition: transform .75s;
     }
 
     .show-connect-form & {
       transform: translateX((140px/$desktop-home-ratio*100vw) - 800px/$desktop-home-ratio*100vw)!important;
-      transition: transform 1s;
+      transition: transform .75s;
     }
 
     &.fig-square-big {
-      right: 140px/$desktop-home-ratio*100vw;
+      right: 139px/$desktop-home-ratio*100vw;
       bottom: 150px/$desktop-home-ratio*100vw;
       background: $yellow;
       border-radius: 90px;
@@ -83,7 +83,7 @@
       .show-connect-form & {
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
-        transition: transform 1s, border-radius 1s, opacity .5s;
+        transition: transform .75s, border-radius .75s, opacity .5s;
       }
     }
 

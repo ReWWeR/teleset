@@ -103,7 +103,8 @@
                         <li><a href="#">Оплата</a></li>
                         <li><a href="#">Интернет</a></li>
                         <li><a href="#">Услуги</a></li>
-                        <li><a href="./cabinet-block.html" class="">Блокировка</a></li>
+                        <li><a href="./cabinet-block.html" class="">Блокировка</a>
+                        </li>
                         <li><a href="#">Пароль</a></li>
                     </ul>
                 </li>
@@ -254,7 +255,21 @@
         </ul>
         <a href="#" class="back-to-main-menu">Главное меню</a>
         <footer class="slider-menu-footer">
-            <a href="#" class="close-slider-menu"><span class="text">Закрыть</span></a>
+            <a href="#" class="close-slider-menu">
+                <svg xmlns="http://www.w3.org/2000/svg" class="close-menu-icon" viewBox="0 0 30 30">
+                    <defs>
+                        <style>.a-close-icon {
+                            fill: none;
+                            stroke: #11f5ff;
+                            stroke-linecap: round;
+                            stroke-miterlimit: 22.93;
+                            stroke-width: 4px;
+                        }</style>
+                    </defs>
+                    <line class="a-close-icon" x1="28" y1="2" x2="2" y2="28"/>
+                    <line class="a-close-icon" x1="28" y1="28" x2="2" y2="2"/>
+                </svg>
+                <span class="text">Закрыть</span></a>
             <a href="callto:+71231231212" class="make-call">
                 <div class="phone-tooltip">812 756 57 58</div>
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 42 42">
@@ -292,7 +307,8 @@
                         <path class="d-make-call" d="M15,29a2,2,0,1,0-2-2,2,2,0,0,0,2,2" transform="translate(0 0)"/>
                         <path class="d-make-call" d="M27,29a2,2,0,1,0-2-2,2,2,0,0,0,2,2" transform="translate(0 0)"/>
                     </g>
-                </svg></a>
+                </svg>
+            </a>
             <a href="#" class="personal-area">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 42 42">
                     <defs>
@@ -336,7 +352,7 @@
                 <h1>Faq</h1>
 
                 <section class="faq-section">
-                    <ul class="faq-accordion-title-main">
+                    <ul class="faq-accordion-title-main" data-toggle="collapse" data-target="#collapse-1">
                         <span>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28"><defs>
                                 <style>.a-arrow-round {
@@ -357,52 +373,54 @@
                                         class="b-arrow-round" x1="14" y1="18.5" x2="21" y2="11.5"/>
                             <line class="b-arrow-round" x1="14" y1="18.5" x2="7"
                                   y2="11.5"/></svg>
-                            General questions</span>
-                        <ul class="faq-accordion-sub-title">
-                            <span>What is included in the cost of connection?</span>
-                            <li class="faq-accordion-content">You can make a challenge to master due to bad signal
-                                quality or lack of it. To invoke the wizard, you must submit an application to the
-                                subscription Department. The Manager will take your application, agreeing with You. The
-                                deadline applications is three working days.
-                            </li>
-                        </ul>
-                        <ul class="faq-accordion-sub-title">
-                            <span>I have a bad signal quality, how can I call
-the master?</span>
-                            <li class="faq-accordion-content">You can make a challenge to master due to bad signal
-                                quality or lack of it. To invoke the wizard, you must submit an application to the
-                                subscription Department. The Manager will take your application, agreeing with You. The
-                                deadline applications is three working days.
-                            </li>
-                        </ul>
-                        <ul class="faq-accordion-sub-title">
-                            <span>Can I call the wizard for TV settings?</span>
-                            <li class="faq-accordion-content">You can make a challenge to master due to bad signal
-                                quality or lack of it. To invoke the wizard, you must submit an application to the
-                                subscription Department. The Manager will take your application, agreeing with You. The
-                                deadline applications is three working days.
-                            </li>
-                        </ul>
-                        <ul class="faq-accordion-sub-title">
-                            <span>What is the disconnect for non-payment?
-When this is happening?</span>
-                            <li class="faq-accordion-content">You can make a challenge to master due to bad signal
-                                quality or lack of it. To invoke the wizard, you must submit an application to the
-                                subscription Department. The Manager will take your application, agreeing with You. The
-                                deadline applications is three working days.
-                            </li>
-                        </ul>
-                        <ul class="faq-accordion-sub-title">
-                            <span>I turned off the debt? What are the conditions
-for the resumption of services?</span>
-                            <li class="faq-accordion-content">You can make a challenge to master due to bad signal
-                                quality or lack of it. To invoke the wizard, you must submit an application to the
-                                subscription Department. The Manager will take your application, agreeing with You. The
-                                deadline applications is three working days.
-                            </li>
-                        </ul>
+                            General Questions</span>
                     </ul>
-                    <ul class="faq-accordion-title-main">
+                    <div class="collapse faq-main-sub" id="collapse-1">
+                        <ul class="faq-accordion-sub-title">
+                            <span class="collapsed" data-toggle="collapse" data-target="#collapse-general1">What is included in the cost of connection?</span>
+                            <li class="faq-accordion-content collapse" id="collapse-general1">You can make a challenge to master due to bad signal
+                                quality or lack of it. To invoke the wizard, you must submit an application to the
+                                subscription Department. The Manager will take your application, agreeing with You. The
+                                deadline applications is three working days.
+                            </li>
+                           </ul>
+                        <ul class="faq-accordion-sub-title">
+                            <span class="collapsed" data-toggle="collapse" data-target="#collapse-general2">I have a bad signal quality, how can I call
+the master?</span>
+                            <li class="faq-accordion-content collapse" id="collapse-general2">You can make a challenge to master due to bad signal
+                                quality or lack of it. To invoke the wizard, you must submit an application to the
+                                subscription Department. The Manager will take your application, agreeing with You. The
+                                deadline applications is three working days.
+                            </li>
+                        </ul>
+                        <ul class="faq-accordion-sub-title">
+                            <span class="collapsed" data-toggle="collapse" data-target="#collapse-general3">Can I call the wizard for TV settings?</span>
+                            <li class="faq-accordion-content collapse" id="collapse-general3">You can make a challenge to master due to bad signal
+                                quality or lack of it. To invoke the wizard, you must submit an application to the
+                                subscription Department. The Manager will take your application, agreeing with You. The
+                                deadline applications is three working days.
+                            </li>
+                        </ul>
+                        <ul class="faq-accordion-sub-title">
+                            <span class="collapsed" data-toggle="collapse" data-target="#collapse-general4">What is the disconnect for non-payment?
+When this is happening?</span>
+                            <li class="faq-accordion-content collapse" id="collapse-general4">You can make a challenge to master due to bad signal
+                                quality or lack of it. To invoke the wizard, you must submit an application to the
+                                subscription Department. The Manager will take your application, agreeing with You. The
+                                deadline applications is three working days.
+                            </li>
+                        </ul>
+                        <ul class="faq-accordion-sub-title">
+                            <span class="collapsed" data-toggle="collapse" data-target="#collapse-general5">I turned off the debt? What are the conditions
+for the resumption of services?</span>
+                            <li class="faq-accordion-content collapse" id="collapse-general5">You can make a challenge to master due to bad signal
+                                quality or lack of it. To invoke the wizard, you must submit an application to the
+                                subscription Department. The Manager will take your application, agreeing with You. The
+                                deadline applications is three working days.
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="faq-accordion-title-main" data-toggle="collapse" data-target="#collapse-2">
                         <span>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28"><defs>
                                 <style>.a-arrow-round {
@@ -424,51 +442,53 @@ for the resumption of services?</span>
                             <line class="b-arrow-round" x1="14" y1="18.5" x2="7"
                                   y2="11.5"/></svg>
                             Internet</span>
-                        <ul class="faq-accordion-sub-title">
-                            <span>What is included in the cost of connection?</span>
-                            <li class="faq-accordion-content">You can make a challenge to master due to bad signal
-                                quality or lack of it. To invoke the wizard, you must submit an application to the
-                                subscription Department. The Manager will take your application, agreeing with You. The
-                                deadline applications is three working days.
-                            </li>
-                        </ul>
-                        <ul class="faq-accordion-sub-title">
-                            <span>I have a bad signal quality, how can I call
-the master?</span>
-                            <li class="faq-accordion-content">You can make a challenge to master due to bad signal
-                                quality or lack of it. To invoke the wizard, you must submit an application to the
-                                subscription Department. The Manager will take your application, agreeing with You. The
-                                deadline applications is three working days.
-                            </li>
-                        </ul>
-                        <ul class="faq-accordion-sub-title">
-                            <span>Can I call the wizard for TV settings?</span>
-                            <li class="faq-accordion-content">You can make a challenge to master due to bad signal
-                                quality or lack of it. To invoke the wizard, you must submit an application to the
-                                subscription Department. The Manager will take your application, agreeing with You. The
-                                deadline applications is three working days.
-                            </li>
-                        </ul>
-                        <ul class="faq-accordion-sub-title">
-                            <span>What is the disconnect for non-payment?
-When this is happening?</span>
-                            <li class="faq-accordion-content">You can make a challenge to master due to bad signal
-                                quality or lack of it. To invoke the wizard, you must submit an application to the
-                                subscription Department. The Manager will take your application, agreeing with You. The
-                                deadline applications is three working days.
-                            </li>
-                        </ul>
-                        <ul class="faq-accordion-sub-title">
-                            <span>I turned off the debt? What are the conditions
-for the resumption of services?</span>
-                            <li class="faq-accordion-content">You can make a challenge to master due to bad signal
-                                quality or lack of it. To invoke the wizard, you must submit an application to the
-                                subscription Department. The Manager will take your application, agreeing with You. The
-                                deadline applications is three working days.
-                            </li>
-                        </ul>
                     </ul>
-                    <ul class="faq-accordion-title-main">
+                    <div class="collapse faq-main-sub" id="collapse-2">
+                        <ul class="faq-accordion-sub-title">
+                            <span class="collapsed" data-toggle="collapse" data-target="#collapse-internet-1">What is included in the cost of connection?</span>
+                            <li class="faq-accordion-content collapse" id="collapse-internet-1">You can make a challenge to master due to bad signal
+                                quality or lack of it. To invoke the wizard, you must submit an application to the
+                                subscription Department. The Manager will take your application, agreeing with You. The
+                                deadline applications is three working days.
+                            </li>
+                            </ul>
+                        <ul class="faq-accordion-sub-title">
+                            <span class="collapsed" data-toggle="collapse" data-target="#collapse-internet-2">I have a bad signal quality, how can I call
+the master?</span>
+                            <li class="faq-accordion-content collapse" id="collapse-internet-2">You can make a challenge to master due to bad signal
+                                quality or lack of it. To invoke the wizard, you must submit an application to the
+                                subscription Department. The Manager will take your application, agreeing with You. The
+                                deadline applications is three working days.
+                            </li>
+                        </ul>
+                        <ul class="faq-accordion-sub-title">
+                            <span class="collapsed" data-toggle="collapse" data-target="#collapse-internet-3">Can I call the wizard for TV settings?</span>
+                            <li class="faq-accordion-content collapse" id="collapse-internet-3">You can make a challenge to master due to bad signal
+                                quality or lack of it. To invoke the wizard, you must submit an application to the
+                                subscription Department. The Manager will take your application, agreeing with You. The
+                                deadline applications is three working days.
+                            </li>
+                        </ul>
+                        <ul class="faq-accordion-sub-title">
+                            <span class="collapsed" data-toggle="collapse" data-target="#collapse-internet-4">What is the disconnect for non-payment?
+When this is happening?</span>
+                            <li class="faq-accordion-content collapse" id="collapse-internet-4">You can make a challenge to master due to bad signal
+                                quality or lack of it. To invoke the wizard, you must submit an application to the
+                                subscription Department. The Manager will take your application, agreeing with You. The
+                                deadline applications is three working days.
+                            </li>
+                        </ul>
+                        <ul class="faq-accordion-sub-title">
+                            <span class="collapsed" data-toggle="collapse" data-target="#collapse-internet-5">I turned off the debt? What are the conditions
+for the resumption of services?</span>
+                            <li class="faq-accordion-content collapse" id="collapse-internet-5">You can make a challenge to master due to bad signal
+                                quality or lack of it. To invoke the wizard, you must submit an application to the
+                                subscription Department. The Manager will take your application, agreeing with You. The
+                                deadline applications is three working days.
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="faq-accordion-title-main" data-toggle="collapse" data-target="#collapse-3">
                         <span>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28"><defs>
                                 <style>.a-arrow-round {
@@ -490,50 +510,52 @@ for the resumption of services?</span>
                             <line class="b-arrow-round" x1="14" y1="18.5" x2="7"
                                   y2="11.5"/></svg>
                             TV</span>
-                        <ul class="faq-accordion-sub-title">
-                            <span>What is included in the cost of connection?</span>
-                            <li class="faq-accordion-content">You can make a challenge to master due to bad signal
-                                quality or lack of it. To invoke the wizard, you must submit an application to the
-                                subscription Department. The Manager will take your application, agreeing with You. The
-                                deadline applications is three working days.
-                            </li>
-                        </ul>
-                        <ul class="faq-accordion-sub-title">
-                            <span>I have a bad signal quality, how can I call
-the master?</span>
-                            <li class="faq-accordion-content">You can make a challenge to master due to bad signal
-                                quality or lack of it. To invoke the wizard, you must submit an application to the
-                                subscription Department. The Manager will take your application, agreeing with You. The
-                                deadline applications is three working days.
-                            </li>
-                        </ul>
-                        <ul class="faq-accordion-sub-title">
-                            <span>Can I call the wizard for TV settings?</span>
-                            <li class="faq-accordion-content">You can make a challenge to master due to bad signal
-                                quality or lack of it. To invoke the wizard, you must submit an application to the
-                                subscription Department. The Manager will take your application, agreeing with You. The
-                                deadline applications is three working days.
-                            </li>
-                        </ul>
-                        <ul class="faq-accordion-sub-title">
-                            <span>What is the disconnect for non-payment?
-When this is happening?</span>
-                            <li class="faq-accordion-content">You can make a challenge to master due to bad signal
-                                quality or lack of it. To invoke the wizard, you must submit an application to the
-                                subscription Department. The Manager will take your application, agreeing with You. The
-                                deadline applications is three working days.
-                            </li>
-                        </ul>
-                        <ul class="faq-accordion-sub-title">
-                            <span>I turned off the debt? What are the conditions
-for the resumption of services?</span>
-                            <li class="faq-accordion-content">You can make a challenge to master due to bad signal
-                                quality or lack of it. To invoke the wizard, you must submit an application to the
-                                subscription Department. The Manager will take your application, agreeing with You. The
-                                deadline applications is three working days.
-                            </li>
-                        </ul>
                     </ul>
+                    <div class="collapse faq-main-sub" id="collapse-3">
+                        <ul class="faq-accordion-sub-title">
+                            <span class="collapsed" data-toggle="collapse" data-target="#collapse-tv-1">What is included in the cost of connection?</span>
+                            <li class="faq-accordion-content collapse" id="collapse-tv-1">You can make a challenge to master due to bad signal
+                                quality or lack of it. To invoke the wizard, you must submit an application to the
+                                subscription Department. The Manager will take your application, agreeing with You. The
+                                deadline applications is three working days.
+                            </li>
+                            </ul>
+                        <ul class="faq-accordion-sub-title">
+                            <span class="collapsed" data-toggle="collapse" data-target="#collapse-tv-2">I have a bad signal quality, how can I call
+the master?</span>
+                            <li class="faq-accordion-content collapse" id="collapse-tv-2">You can make a challenge to master due to bad signal
+                                quality or lack of it. To invoke the wizard, you must submit an application to the
+                                subscription Department. The Manager will take your application, agreeing with You. The
+                                deadline applications is three working days.
+                            </li>
+                        </ul>
+                        <ul class="faq-accordion-sub-title">
+                            <span class="collapsed" data-toggle="collapse" data-target="#collapse-tv-3">Can I call the wizard for TV settings?</span>
+                            <li class="faq-accordion-content collapse" id="collapse-tv-3">You can make a challenge to master due to bad signal
+                                quality or lack of it. To invoke the wizard, you must submit an application to the
+                                subscription Department. The Manager will take your application, agreeing with You. The
+                                deadline applications is three working days.
+                            </li>
+                        </ul>
+                        <ul class="faq-accordion-sub-title">
+                            <span class="collapsed" data-toggle="collapse" data-target="#collapse-tv-4">What is the disconnect for non-payment?
+When this is happening?</span>
+                            <li class="faq-accordion-content collapse" id="collapse-tv-4">You can make a challenge to master due to bad signal
+                                quality or lack of it. To invoke the wizard, you must submit an application to the
+                                subscription Department. The Manager will take your application, agreeing with You. The
+                                deadline applications is three working days.
+                            </li>
+                        </ul>
+                        <ul class="faq-accordion-sub-title">
+                            <span class="collapsed" data-toggle="collapse" data-target="#collapse-tv-5">I turned off the debt? What are the conditions
+for the resumption of services?</span>
+                            <li class="faq-accordion-content collapse" id="collapse-tv-5">You can make a challenge to master due to bad signal
+                                quality or lack of it. To invoke the wizard, you must submit an application to the
+                                subscription Department. The Manager will take your application, agreeing with You. The
+                                deadline applications is three working days.
+                            </li>
+                        </ul>
+                    </div>
                 </section>
             </div>
 

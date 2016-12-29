@@ -149,7 +149,7 @@
             border-radius: 14px;
           }
 
-          .homepage-body.show-login-popup & {
+          .homepage-body.show-login-popup &, .show-login-popup .homepage-inner & {
             color: $white-60;
           }
 
@@ -157,7 +157,7 @@
             border-color: $yellow;
             color: #000;
 
-            .homepage-body.show-login-popup & {
+            .homepage-body.show-login-popup &, .show-login-popup .homepage-inner & {
               color: #fff;
             }
           }
@@ -462,6 +462,7 @@ header.mobile-header {
 .personal-area {
   margin-left: auto;
   width: 42px/$desktop-home-ratio*100vw;
+  max-width: 42px;
   font-size: 0;
   position: relative;
 

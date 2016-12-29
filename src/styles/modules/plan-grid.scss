@@ -31,7 +31,7 @@
     padding: (20px/$desktop-home-ratio*100vw) (10px/$desktop-home-ratio*100vw) (34px/$desktop-home-ratio*100vw);
     font-size: (20px/$desktop-home-ratio*100vw);
     color: #fff;
-    line-height: 1.1;
+    line-height: normal;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -206,7 +206,7 @@
       display: block;
       font: $font-ultima;
       font-size: (20px/$desktop-home-ratio*100vw);
-      line-height: 1.1;
+      line-height: normal;
 
       @media #{$desktop-bad-ratio} {
         font-size: 20px/$desktop-height-ratio * 100vh;

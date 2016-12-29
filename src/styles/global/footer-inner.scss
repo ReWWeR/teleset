@@ -79,7 +79,7 @@
       .text {
         float: left;
         color: #fff;
-        line-height: 1.1;
+        line-height: normal;
 
         span {
           color: $white-40;
@@ -118,7 +118,7 @@
       .text {
         float: right;
         color: $white-40;
-        line-height: 1.1;
+        line-height: normal;
         margin-left: 18px;
 
         @media #{$media-sm} {

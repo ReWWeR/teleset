@@ -43,9 +43,9 @@
 
   p {
     font-size: 36px/$desktop-home-ratio * 100vw;
-    line-height: 1.1;
+    line-height: normal;
     color: #000;
-    padding-bottom: 36px/40px * 1em;
+    padding-bottom: .6em;
     font-family: $font-ultima-name;
 
     @media #{$desktop-bad-ratio} {
@@ -55,7 +55,6 @@
     @media #{$media-sm} {
       font-size: 36px/$mobile-ratio * 100vw;
       width: 60vw;
-      padding-bottom: .6em;
     }
 
     @media #{$media-sm-with-ratio} {

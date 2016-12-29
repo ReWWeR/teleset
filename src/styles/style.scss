@@ -1,13 +1,15 @@
 @import "assets/reset";
 @import "assets/reboot";
 @import "fonts/fonts";
-@import "assets/variables";
+//@import "assets/vendor-prefixes";
+@import "assets/component-animations";
 
 @import "helpers/helpers";
 @import "helpers/mixins";
 
 @import "base";
 @import "layout";
+
 
 @import "components/buttons";
 @import "components/figures";

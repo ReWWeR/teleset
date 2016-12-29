@@ -86,7 +86,8 @@ $(document).ready(function () {
         },
         unhighlight: function (element, errorClass, validClass) {
             $(element).closest('.input-wrap').addClass(validClass).removeClass(errorClass);
-        }
+        },
+        ignore: ".ignore"
     });
 
     $('input.access-check').on('keyup', function () {
@@ -108,7 +109,7 @@ $(document).ready(function () {
         } else {
             $connectForm1.closest('.connect-form-step').removeClass('success-response').removeClass('error-response');
         }
-
+        console.log($connectForm1.valid());
         if ($connectForm1.valid()) {
             $submitStep1.attr('disabled', false)
         } else {

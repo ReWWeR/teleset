@@ -84,26 +84,27 @@
 }
 
 .shop-item-animate {
-  @extend %opacity-fade;
+  @extend %plan-animation;
+  animation-delay: 0s;
 
   img {
-    @extend %plan-animation;
-    animation-delay: 0s;
-  }
-
-  h3 {
     @extend %plan-animation;
     animation-delay: .11s;
   }
 
-  p {
+  h3 {
     @extend %plan-animation;
     animation-delay: .22s;
   }
 
-  footer {
+  p {
     @extend %plan-animation;
     animation-delay: .33s;
+  }
+
+  footer {
+    @extend %plan-animation;
+    animation-delay: .44s;
   }
 }
 

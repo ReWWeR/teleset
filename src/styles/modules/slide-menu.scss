@@ -16,7 +16,11 @@
     width: 138px/$desktop-home-ratio*100vw;
     max-width: 138px;
     display: block;
-    padding-top: 50px;
+    padding-top: 50px/$desktop-home-ratio*100vw;
+
+    @media #{$desktop-1600} {
+      padding-top: 50px;
+    }
 
     @media #{$media-sm} {
       display: none;
@@ -35,6 +39,16 @@
     &:before {
       opacity: 0;
       transition: opacity .5s;
+      content: '';
+      position: absolute;
+      pointer-events: none;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: rgba(0, 0, 0, .2);
+      z-index: 1;
+
     }
 
     @media #{$media-sm} {
@@ -141,11 +155,15 @@
         position: absolute;
       }
 
+      .cabinet-user-menu-info {
+        line-height: 1.22;
+      }
+
       .cabinet-user-menu-info, .exit-user {
         font-size: 18px/$desktop-home-ratio*100vw;
         color: $white-50;
         position: absolute;
-        top: 700px/$desktop-height-ratio*100%;
+        top: 695px/$desktop-height-ratio*100%;
         left: 60px/$desktop-home-ratio*100vw;
 
         @media #{$desktop-bad-ratio} {
@@ -158,11 +176,15 @@
       }
 
       .cabinet-menu-footer {
-        bottom: 46px;
+        bottom: 46px/$desktop-home-ratio*100vw;
         position: absolute;
         display: flex;
         align-items: center;
         width: 100%;
+
+        @media #{$desktop-1600} {
+          bottom: 46px;
+        }
 
         .exit-user {
           display: flex;
@@ -327,7 +349,7 @@
             height: 50px/$mobile-ratio-height*100vh;
           }
 
-            line, path {
+          line, path {
             transition: fill $transition-time, stroke $transition-time;
             fill: $yellow;
           }
@@ -346,8 +368,12 @@
       align-items: center;
       position: absolute;
       bottom: 0;
-      padding-bottom: 40px;
+      padding-bottom: 40px/$desktop-home-ratio*100vw;
       width: calc(100% - 120px);
+
+      @media #{$desktop-1600} {
+        padding-bottom: 40px;
+      }
 
       @media #{$media-sm} {
         display: none;
@@ -358,6 +384,8 @@
         color: $white-30;
         font-size: 18px/$desktop-home-ratio*100vw;
         position: relative;
+        display: flex;
+        align-items: center;
 
         @media #{$desktop-bad-ratio} {
           font-size: 18px/$desktop-height-ratio*100vh;
@@ -367,49 +395,27 @@
           font-size: 18px;
         }
 
-        &:before, &:after {
-          content: '';
-          display: block;
+        .close-menu-icon {
           width: 30px/$desktop-home-ratio*100vw;
-          height: 4px/$desktop-home-ratio*100vw;
+          height: 30px/$desktop-home-ratio*100vw;
           max-width: 30px;
-          max-height: 4px;
-          border-radius: 2px/$desktop-home-ratio*100vw;
-          background: #fff;
-          position: absolute;
-          top: 50%;
-          margin-top: -2px/$desktop-home-ratio*100vw;
+          max-height: 30px;
 
           @media #{$desktop-bad-ratio} {
             width: 30px/$desktop-height-ratio*100vh;
-            height: 4px/$desktop-height-ratio*100vh;
-            border-radius: 2px/$desktop-height-ratio*100vh;
-            margin-top: -2px/$desktop-height-ratio*100vh;
+            height: 30px/$desktop-height-ratio*100vh;
           }
-
-          @media #{$desktop-1600} {
-            border-radius: 2px;
-            margin-top: -2px;
-          }
-        }
-
-        &:before {
-          transform: rotate(-45deg);
-        }
-
-        &:after {
-          transform: rotate(45deg);
         }
 
         .text {
-          margin-left: 45px/$desktop-home-ratio*100vw;
+          margin-left: 20px/$desktop-home-ratio*100vw;
 
           @media #{$desktop-bad-ratio} {
-            margin-left: 45px/$desktop-height-ratio*100vh;
+            margin-left: 20px/$desktop-height-ratio*100vh;
           }
 
           @media #{$desktop-1600} {
-            margin-left: 45px;
+            margin-left: 20px;
           }
         }
       }
@@ -477,21 +483,13 @@
       }
 
       .has-submenu {
-          &:after {
-            display: inline-block!important;
-            transform: rotate(90deg)!important;
-          }
+        &:after {
+          display: inline-block !important;
+          transform: rotate(90deg) !important;
+        }
       }
 
       &:before {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background: rgba(0, 0, 0, .2);
-        z-index: 1;
         opacity: 1;
         @media #{$media-sm} {
           display: none;

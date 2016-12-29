@@ -35,6 +35,7 @@
     .form-info {
       color: $white-60;
       font-weight: 600;
+      line-height: 1;
       padding: 0 50px/$desktop-home-ratio*100vw;
       width: 30vw;
       margin: 0 auto;
@@ -73,7 +74,7 @@
     }
 
     .input-wrap {
-      margin-bottom: 22px/$desktop-home-ratio*100vw;
+      margin-bottom: 24px/$desktop-home-ratio*100vw;
 
       input[type=text] {
         text-align: center;
@@ -181,8 +182,7 @@
       padding-left: 0;
 
       .robot-animation {
-        //width: 36px/18px*1em;
-        margin-right: 10px/$desktop-home-ratio*100vw;
+        margin-right: 20px/$desktop-home-ratio*100vw;
         margin-top: 0;
       }
 

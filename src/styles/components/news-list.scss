@@ -110,6 +110,8 @@
           position: absolute;
           left: 0;
           font-size: 0;
+          z-index: 1;
+          background: linear-gradient(to right, #fff 0%, #fff 50%, transparent 50%);
         }
 
         .social-icons {
@@ -160,10 +162,6 @@
 
           @media #{$media-sm} {
             width: 172px/$mobile-ratio*100vw;
-          }
-
-          .share-link {
-            z-index: 1;
           }
 
           .social-icons {

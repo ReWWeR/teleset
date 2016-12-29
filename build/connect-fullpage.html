@@ -249,9 +249,9 @@
                     <div class="form-line-wrap">
                         <div class="input-wrap"><input class="access-check" type="text" name="building" id="building"
                                                        placeholder="Дом" required></div>
-                        <div class="input-wrap"><input type="text" name="pod" id="pod" placeholder="Под."></div>
-                        <div class="input-wrap"><input type="text" name="floor" id="floor" placeholder="Эт."></div>
-                        <div class="input-wrap"><input type="text" name="apartment" id="apartment" placeholder="Кв.">
+                        <div class="input-wrap"><input class="access-check" type="number" name="pod" id="pod" placeholder="Под." required></div>
+                        <div class="input-wrap"><input class="access-check" type="number" name="floor" id="floor" placeholder="Эт." required></div>
+                        <div class="input-wrap"><input class="access-check" type="number" name="apartment" id="apartment" placeholder="Кв." required>
                         </div>
                     </div>
 
@@ -654,7 +654,8 @@
                         <li><a href="#">Оплата</a></li>
                         <li><a href="#">Интернет</a></li>
                         <li><a href="#">Услуги</a></li>
-                        <li><a href="./cabinet-block.html" class="">Блокировка</a></li>
+                        <li><a href="./cabinet-block.html" class="">Блокировка</a>
+                        </li>
                         <li><a href="#">Пароль</a></li>
                     </ul>
                 </li>
@@ -805,7 +806,21 @@
         </ul>
         <a href="#" class="back-to-main-menu">Главное меню</a>
         <footer class="slider-menu-footer">
-            <a href="#" class="close-slider-menu"><span class="text">Закрыть</span></a>
+            <a href="#" class="close-slider-menu">
+                <svg xmlns="http://www.w3.org/2000/svg" class="close-menu-icon" viewBox="0 0 30 30">
+                    <defs>
+                        <style>.a-close-icon {
+                            fill: none;
+                            stroke: #11f5ff;
+                            stroke-linecap: round;
+                            stroke-miterlimit: 22.93;
+                            stroke-width: 4px;
+                        }</style>
+                    </defs>
+                    <line class="a-close-icon" x1="28" y1="2" x2="2" y2="28"/>
+                    <line class="a-close-icon" x1="28" y1="28" x2="2" y2="2"/>
+                </svg>
+                <span class="text">Закрыть</span></a>
             <a href="callto:+71231231212" class="make-call">
                 <div class="phone-tooltip">812 756 57 58</div>
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 42 42">
@@ -843,7 +858,8 @@
                         <path class="d-make-call" d="M15,29a2,2,0,1,0-2-2,2,2,0,0,0,2,2" transform="translate(0 0)"/>
                         <path class="d-make-call" d="M27,29a2,2,0,1,0-2-2,2,2,0,0,0,2,2" transform="translate(0 0)"/>
                     </g>
-                </svg></a>
+                </svg>
+            </a>
             <a href="#" class="personal-area">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 42 42">
                     <defs>

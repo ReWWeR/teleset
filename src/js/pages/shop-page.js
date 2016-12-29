@@ -5,12 +5,8 @@ $(document).ready(function(){
     $shopPageWrap = $('.shop-page');
 
     $loadmoreBtn.on('click', function() {
-        if ($shopCol.find('.shop-item.hidden').length > 1) {
-            $shopCol.find('.shop-item.hidden').eq(0).removeClass('hidden');
-        } else if ($shopCol.find('.shop-item.hidden').length === 1) {
-            $shopCol.find('.shop-item.hidden').eq(0).removeClass('hidden');
+            $shopCol.find('.shop-item.hidden').removeClass('hidden');
             $(this).remove();
-        }
     });
 
     $showPopupBtn.on('click', function() {

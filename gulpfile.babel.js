@@ -25,6 +25,8 @@ const paths = {
     jsAdditional: [`${dirs.src}/libs/jquery/dist/jquery.js`,
                    `${dirs.src}/libs/jquery-validation/dist/jquery.validate.js`,
                    `${dirs.src}/libs/jquery-mask-plugin/dist/jquery.mask.js`,
+                   `${dirs.src}/libs/bootstrap/js/transition.js`,
+                   `${dirs.src}/libs/bootstrap/js/collapse.js`,
                    `${dirs.src}/js/**/*.js`],
     htmlDest: `${dirs.dest}`,
     fontsSrc: `${dirs.src}/fonts/`,
