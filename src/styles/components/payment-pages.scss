@@ -120,13 +120,12 @@
       @media #{$media-sm} {
         font-size: 18px/$mobile-ratio*100vw;
         margin-bottom: 28px/$mobile-ratio*100vw;
-        max-width: 360px/$mobile-ratio*100vw;
+        max-width: 100%;
       }
 
       @media #{$media-sm-with-ratio} {
         font-size: 18px/$mobile-ratio-height*100vh;
         margin-bottom: 28px/$mobile-ratio-height*100vh;
-        max-width: 360px/$mobile-ratio-height*100vh;
       }
     }
   }

@@ -183,3 +183,28 @@
     display: inline-block;
   }
 }
+
+.inner-page-overflow.show-menu {
+  overflow: hidden;
+
+  &.menu-clicked {
+    .homepage-inner {
+      opacity: 1;
+    }
+  }
+  .homepage-inner {
+    opacity: 0;
+  }
+}
+
+.menu-clicked {
+  .slide-menu {
+    opacity: 1;
+  }
+}
+
+.mobileBP {
+  .menu-container {
+    display: none;
+  }
+}

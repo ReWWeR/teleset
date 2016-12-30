@@ -1,38 +1,50 @@
 @@include('./assets/head.html', {"title":"Телесеть - Поддержка"})
 <body class="grey-bg dark-grey-bg-2">
 <div class="fullpage-wrap">
-@@include('./global/header-landing.html', {"page":"support"})
+    @@include('./global/header-landing.html', {"page":"support"})
 
-@@include('./global/mobile-header.html')
-<main class="support-fullpage">
+    @@include('./global/mobile-header.html')
+    <main class="support-fullpage">
 
-    <div class="wrapper">
+        <div class="wrapper">
 
-        <img src="./img/hero-2.png" class="hero hero-2" alt="">
-        <div class="center-block">
-            <div class="support-form">
-                <h1>Поддержка</h1>
-                <h1 class="show-on-success">Все<br>готово!</h1>
-                <p class="form-info-success show-on-success">Наш оператор скоро свяжется с вами.</p>
+            <img src="./img/hero-2.png" class="hero hero-2" alt="">
+            <div class="center-block">
+                <div class="support-form">
+                    <h1>Поддержка</h1>
+                    <h1 class="show-on-success">Все<br>готово!</h1>
+                    <p class="form-info-success show-on-success">Наш оператор скоро свяжется с вами.</p>
 
-                <form action="" id="support-submit">
-                    <div class="flex-form-wrap">
-                        <div class="form-line-wrap">
-                            <div class="input-wrap"><input type="text" class="input-white input-big center-placeholder" name="doc_number" id="doc_number"
-                                                           placeholder="№ Договора" minlength="5" required></div>
+                    <form action="" id="support-submit">
+                        <div class="flex-form-wrap">
+                            <div class="form-line-wrap">
+                                <div class="input-wrap input-big-wrap"><input type="text"
+                                                                              class="input-white input-big center-placeholder"
+                                                                              name="doc_number" id="doc_number"
+                                                                              placeholder="№ Договора" minlength="5"
+                                                                              required></div>
+                                <p class="form-info">Пожалуйста, укажите номер договора,
+                                    чтобы мы смогли вам помочь. <br>
+                                    <span class="hide-on-validation">
+                                    @@include('./modules/robot-bodymovin.html')
+                                    </span>
+                                    <span class="show-on-valid">
+                                        @@include('./modules/robot-happy.html')
+                                    </span>
+                                    <span class="show-on-error">
+                                        @@include('./modules/robot-sad.html')
+                                    </span>
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                    <p class="form-info">Пожалуйста, укажите номер договора,
-                        чтобы мы смогли вам помочь. <br>
-                        @@include('./modules/robot-happy.html')
-                    </p>
-                    <a href="./" class="btn btn-primary btn-purple btn-purple-white show-on-success"><span>Вернуться</span></a>
-                </form>
+                        <a href="./"
+                           class="btn btn-primary btn-purple btn-purple-white show-on-success"><span>Вернуться</span></a>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
-</main>
-@@include('./global/footer-landing.html')
+    </main>
+    @@include('./global/footer-landing.html')
 </div>
 <div class="slide-menu">
     @@include('./global/menu-container.html', {"page": "support", "isHome": "true"})

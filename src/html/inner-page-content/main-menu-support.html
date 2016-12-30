@@ -12,14 +12,22 @@
                     <form action="" id="support-submit">
                         <div class="flex-form-wrap">
                             <div class="form-line-wrap">
-                                <div class="input-wrap"><input type="text" class="input-white input-big center-placeholder" name="doc_number" id="doc_number"
+                                <div class="input-wrap input-big-wrap"><input type="text" class="input-white input-big center-placeholder" name="doc_number" id="doc_number"
                                                                placeholder="Номер договора" required></div>
+                                <p class="form-info text-left">
+                            <span class="hide-on-validation">
+                                    @@include('./../modules/robot-bodymovin.html')
+                                    </span>
+                                    <span class="show-on-valid">
+                                        @@include('./../modules/robot-happy.html')
+                                    </span>
+                                    <span class="show-on-error">
+                                        @@include('./../modules/robot-sad.html')
+                                    </span>
+                                    Пожалуйста, укажите номер договора,
+                                    чтобы мы смогли вам помочь.</p>
                             </div>
                         </div>
-                        <p class="form-info text-left">
-                            @@include('./../modules/robot-happy.html')
-                            Пожалуйста, укажите номер договора,
-                            чтобы мы смогли вам помочь.</p>
                         <a href="./" class="btn btn-primary btn-purple btn-purple-white show-on-success"><span>Вернуться</span></a>
                     </form>
                 </div>

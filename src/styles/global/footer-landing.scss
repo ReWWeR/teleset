@@ -2,7 +2,7 @@
   position: fixed;
   bottom: 0;
   width: 100%;
-  z-index: 2;
+  z-index: 3;
   padding-bottom: 42px;
 
   .show-login-popup & {
@@ -15,11 +15,16 @@
     }
   }
 
+  .author-logo, .make-call, .social-icons {
+    transition: opacity .5s;
+  }
+
   .show-four-blocks-section & {
-    z-index: 3;
+    //z-index: 3;
 
     .author-logo, .make-call, .social-icons {
-      display: none;
+      opacity: 0;
+      pointer-events: none;
     }
 
     .hamburger-line {

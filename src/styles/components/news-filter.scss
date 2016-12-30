@@ -4,9 +4,14 @@
   right: 60px;
 
   @media #{$media-sm} {
-    display: none;
+    top: 150px/$mobile-ratio*100vw;
+    right: 60px/$mobile-ratio*100vw;
   }
 
+  @media #{$media-sm-with-ratio} {
+    top: 150px/$mobile-ratio-height*100vh;
+    right: 60px/$mobile-ratio-height*100vh;
+  }
   .show-filter-options &, .show-sub-options & {
     z-index: 1;
   }
@@ -17,6 +22,14 @@
     a {
       display: block;
       width: 42px;
+
+      @media #{$media-sm} {
+        width: 42px/$mobile-ratio*100vw;
+      }
+
+      @media #{$media-sm-with-ratio} {
+        width: 42px/$mobile-ratio-height*100vh;
+      }
 
       svg {
         .c-sub, .c-filter {
@@ -58,6 +71,14 @@
       font-size: 28px/$desktop-home-ratio*100vw;
       line-height: 1.3333;
       padding-bottom: .8em;
+
+      @media #{$media-sm} {
+        font-size: 28px/$mobile-ratio*100vw;
+      }
+
+      @media #{$media-sm-with-ratio} {
+        font-size: 28px/$mobile-ratio-height*100vh;
+      }
     }
 
     .news-switchers {
@@ -74,6 +95,24 @@
         span {
           font-size: (22px/$desktop-home-ratio*100vw);
           margin-right: 20px;
+
+          @media #{$media-sm} {
+            font-size: 22px/$mobile-ratio*100vw;
+            margin-right: 20px/$mobile-ratio*100vw;
+          }
+
+          @media #{$media-sm-with-ratio} {
+            font-size: 22px/$mobile-ratio-height*100vh;
+            margin-right: 20px/$mobile-ratio-height*100vh;
+          }
+        }
+
+        @media #{$media-sm} {
+          padding: (15px/$mobile-ratio*100vw) (16px/$mobile-ratio*100vw) (15px/$mobile-ratio*100vw) (30px/$mobile-ratio*100vw);
+        }
+
+        @media #{$media-sm-with-ratio} {
+          padding: (15px/$mobile-ratio-height*100vh) (16px/$mobile-ratio-height*100vh) (15px/$mobile-ratio-height*100vh) (30px/$mobile-ratio-height*100vh);
         }
       }
     }
@@ -87,9 +126,31 @@
     align-items: center;
     font-size: 18px/$desktop-home-ratio*100vw;
 
+    @media #{$media-sm} {
+      bottom: 50px/$mobile-ratio*100vw;
+      left: 60px/$mobile-ratio*100vw;
+      font-size: 18px/$mobile-ratio*100vw;
+    }
+
+    @media #{$media-sm-with-ratio} {
+      bottom: 50px/$mobile-ratio-height*100vh;
+      left: 60px/$mobile-ratio-height*100vh;
+      font-size: 18px/$mobile-ratio-height*100vh;
+    }
+
     svg {
       width: 30px/$desktop-home-ratio*100vw;
       margin-right: 20px;
+
+      @media #{$media-sm} {
+        width: 30px/$mobile-ratio*100vw;
+        margin-right: 20px/$mobile-ratio*100vw;
+      }
+
+      @media #{$media-sm-with-ratio} {
+        width: 30px/$mobile-ratio-height*100vh;
+        margin-right: 20px/$mobile-ratio-height*100vh;
+      }
 
       line {
         stroke: $green;
@@ -124,11 +185,35 @@
         border-radius: 10px/$desktop-height-ratio*100vh;
       }
 
+      @media #{$media-sm} {
+        width: 70px/$mobile-ratio*100vw;
+        height: 70px/$mobile-ratio*100vw;
+        right: 10px/$mobile-ratio*100vw;
+        top: 6px/$mobile-ratio*100vw;
+        border-radius: 10px/$mobile-ratio*100vw;
+      }
+
+      @media #{$media-sm-with-ratio} {
+        width: 70px/$mobile-ratio-height*100vh;
+        height: 70px/$mobile-ratio-height*100vh;
+        right: 10px/$mobile-ratio-height*100vh;
+        top: 6px/$mobile-ratio-height*100vh;
+        border-radius: 10px/$mobile-ratio-height*100vh;
+      }
+
       svg {
         height: 20px/$desktop-home-ratio*100vw;
 
         @media #{$desktop-bad-ratio} {
           height: 20px/$desktop-height-ratio*100vh;
+        }
+
+        @media #{$media-sm} {
+          height: 20px/$mobile-ratio*100vw;
+        }
+
+        @media #{$media-sm-with-ratio} {
+          height: 20px/$mobile-ratio-height*100vh;
         }
       }
 

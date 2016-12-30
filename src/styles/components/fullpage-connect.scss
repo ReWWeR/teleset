@@ -1,13 +1,15 @@
 .fullpage-content {
   .plan-description {
     position: fixed;
-    left: 270px/$desktop-home-ratio*100vw;
+    right: 1000px/$desktop-home-ratio*100vw;
     bottom: 270px/$desktop-home-ratio*100vw;
     z-index: 0;
+    width: 320px/$desktop-home-ratio*100vw;
 
     @media #{$desktop-bad-ratio} {
-      left: 270px/$desktop-height-ratio*100vh;
       bottom: 270px/$desktop-height-ratio*100vh;
+      width: 320px/$desktop-height-ratio*100vh;
+      right: calc(50% + 13.25vh);
     }
 
     h1 {
@@ -22,7 +24,7 @@
   .hero {
     position: fixed;
     bottom: 0;
-    right: 212px/$desktop-home-ratio*100vw;
+    left: 957px/$desktop-home-ratio*100vw;
     width: $hero-2-width/$desktop-home-ratio*100vw;
     z-index: 1;
     //transition: transform .75s, opacity .5s;
@@ -30,7 +32,7 @@
 
     body.loaded.initial-animation.show-connect-form &,
     body.loaded.initial-animation.show-connect-step-success & {
-      transition: transform .75s, opacity .5s;
+      transition: transform .75s, opacity .5s, left .75s;
     }
 
     body.loaded.initial-animation.show-connect-form & {
@@ -38,7 +40,8 @@
       z-index: 2;
 
       @media #{$desktop-bad-ratio} {
-        transform: translateX(-500px/$desktop-home-ratio*100vw);
+        transform: translateX(-560px/$desktop-height-ratio*100vh);
+        left: 50%;
       }
     }
 
@@ -60,15 +63,15 @@
     }
 
     .show-connect-form & {
-      transform: translateX((140px/$desktop-home-ratio*100vw) - 800px/$desktop-home-ratio*100vw)!important;
+      transform: translateX(calc(-100% - 3.7vw))!important;
       transition: transform .75s;
     }
 
     &.fig-square-big {
-      right: 139px/$desktop-home-ratio*100vw;
+      left: 860px/$desktop-home-ratio*100vw;
       bottom: 150px/$desktop-home-ratio*100vw;
       background: $yellow;
-      border-radius: 90px;
+      border-radius: 90px/$desktop-home-ratio*100vw;
       //transition: transform 1s, border-radius 1s, opacity .5s;
       z-index: 0;
 
@@ -78,6 +81,7 @@
 
       @media #{$desktop-bad-ratio} {
         bottom: 150px/$desktop-height-ratio*100vh;
+        border-radius: 90px/$desktop-height-ratio*100vh;
       }
 
       .show-connect-form & {

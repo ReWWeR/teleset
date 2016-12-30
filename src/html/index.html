@@ -1,7 +1,7 @@
 @@include('./assets/head.html', {"title":"Телесеть - главная"})
 <body class="homepage-body">
+@@include('./global/header-landing.html', {"page":"main"})
 <div class="fullpage-wrap">
-    @@include('./global/header-landing.html', {"page":"main"})
     @@include('./global/mobile-header.html')
     <main class="homepage">
         <img src="img/hero.png" alt="" class="hero">
@@ -128,8 +128,8 @@
                   transform="translate(-349.27 280.32) rotate(-45)"/>
         </svg>
     </main>
-    @@include('./global/footer-landing.html')
 </div>
+@@include('./global/footer-landing.html')
 <div class="slide-menu">
     @@include('./global/menu-container.html', {"page": "main", "isHome": "true"})
     @@include('./modules/main-menu-item.html')

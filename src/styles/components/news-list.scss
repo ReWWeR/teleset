@@ -100,6 +100,7 @@
         transition: width .5s;
         width: 43px/$desktop-home-ratio*100vw;
         position: relative;
+        z-index: 0;
 
         @media #{$media-sm} {
           width: 56px/$mobile-ratio*100vw;

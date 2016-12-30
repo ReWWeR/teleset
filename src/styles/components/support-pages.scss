@@ -76,8 +76,36 @@
     .input-wrap {
       margin-bottom: 24px/$desktop-home-ratio*100vw;
 
+      @media #{$media-sm} {
+        margin-bottom: 24px/$mobile-ratio*100vw;
+      }
+
       input[type=text] {
         text-align: center;
+      }
+
+      & + .form-info {
+        .show-on-valid, .show-on-error {
+          display: none;
+        }
+      }
+
+      &.error, &.valid {
+        & + .form-info .hide-on-validation {
+          display: none;
+        }
+      }
+
+      &.error {
+        & + .form-info .show-on-error {
+          display: block;
+        }
+      }
+
+      &.valid {
+        & + .form-info .show-on-valid {
+          display: block;
+        }
       }
     }
 
@@ -184,6 +212,10 @@
       .robot-animation {
         margin-right: 20px/$desktop-home-ratio*100vw;
         margin-top: 0;
+
+        @media #{$media-sm} {
+          margin-right: 20px/$mobile-ratio*100vw;
+        }
       }
 
       .success-screen & {

@@ -14,6 +14,10 @@ $(document).ready(function () {
 
     $hideMenuButton.on('click', function () {
         $body.removeClass('show-menu');
+        $body.addClass('menu-clicked');
+        setTimeout(function() {
+            $('body').removeClass('menu-clicked');
+        }, 500)
     });
 
     $closeMenuInnerPage.click(function(){
@@ -22,6 +26,10 @@ $(document).ready(function () {
 
     $showMenuButtonInnerPage.click(function(){
         $body.removeClass('show-fullpage');
+        $body.addClass('menu-clicked');
+        setTimeout(function() {
+            $('body').removeClass('menu-clicked');
+        }, 500)
     })
 
 
@@ -199,6 +207,13 @@ $(document).ready(function () {
             } else {
                 $('.connect-fullpage').addClass('fullpage-content')
             }
+
+        if($mobileBP >= $(window).width() && !$('body').hasClass('mobileBP')){
+            $('body').addClass('mobileBP');
+            setTimeout(function(){
+                $('body').removeClass('mobileBP');
+            }, 500)
+        }
     }
 
     $(window).on('resize', resizer)
@@ -212,6 +227,7 @@ $(document).ready(function () {
             $('body').removeClass('show-login-popup');
         }
     });
+
 
 });
 

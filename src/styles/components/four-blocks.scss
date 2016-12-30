@@ -23,6 +23,12 @@
       left: 709px/$desktop-home-ratio*100vw;
     }
 
+    &.fig-circle-main-2 {
+      right: 0;
+      transform: translateX(50%);
+      top: 195px/$desktop-home-ratio*100vw;
+    }
+
     &.fig-square-main {
       top: 50%;
       transform: translateY(-111px/$desktop-home-ratio/2*100vw);
@@ -32,6 +38,12 @@
     &.fig-cross-main {
       top: 135px/$desktop-home-ratio*100vw;
       left: 710px/$desktop-home-ratio*100vw;
+    }
+
+    &.fig-cross-main-2 {
+      top: 50%;
+      transform: translateY(-50%);
+      right: 240px/$desktop-home-ratio*100vw;
     }
   }
 
@@ -49,14 +61,38 @@
     a {
       transition: transform .5s;
       display: flex;
+      align-items: center;
+      justify-content: center;
       position: absolute;
       top: 0;
       left: 0;
       right: 0;
       bottom: 0;
 
+      .hero, .support-item, button.btn, .hero-2 {
+        transition: transform .5s;
+      }
+
+      .fig {
+        transition: transform .5s;
+      }
+
       &:hover {
-        transform: scale(1.1);
+        .hero, .support-item, button.btn, .hero-2 {
+          transform: scale(1.1) translate(-50%, -50%);
+        }
+
+        .support-item, button.btn {
+          transform: scale(1.1);
+        }
+
+        .hero-2 {
+        transform: translateX(-50%) scaleX(-1.1) scaleY(1.1);
+        }
+
+        .fig-cross-1, .fig-square-big {
+          transform: scale(1.5);
+        }
       }
     }
 
@@ -75,9 +111,7 @@
       }
 
       .fig-cross-1 {
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        position: relative;
         height: 270px/$desktop-home-ratio*100vw;
       }
 
@@ -89,6 +123,16 @@
       .fig-square-1 {
         left: 160px/$desktop-home-ratio*100vw;
         bottom: 120px/$desktop-home-ratio*100vw;
+      }
+
+      a:hover {
+        .fig-cross-3 {
+          transform: scale(1.2) translate(100%, -100%);
+        }
+
+        .fig-square-1 {
+          transform: scale(1.2) translate(-100%, 100%);
+        }
       }
     }
 
@@ -111,7 +155,7 @@
           text-align: center;
           padding: 10px 30px;
 
-          img {
+          svg {
             margin-bottom: 30px;
           }
         }
@@ -123,6 +167,12 @@
         .fig-cross-2 {
           top: 57px/$desktop-home-ratio*100vw;
           left: 184px/$desktop-home-ratio*100vw;
+        }
+
+        &:hover {
+          .fig-cross-2 {
+            transform: scale(1.2) translate(-100%, -100%);
+          }
         }
       }
     }
@@ -163,6 +213,24 @@
           top: 80px/$desktop-home-ratio*100vw;
           right: 120px/$desktop-home-ratio*100vw;
         }
+
+        &:hover {
+          .fig-cross-2 {
+            transform: scale(1.2) translate(-100%, -100%);
+          }
+
+          .fig-cross-3 {
+            transform: scale(1.2) translate(-100%, 100%);
+          }
+
+          .fig-cross-5 {
+            transform: scale(1.2) translate(100%, 100%);
+          }
+
+          .fig-square-2 {
+            transform: scale(1.2) translate(100%, -100%);
+          }
+        }
       }
     }
 
@@ -181,9 +249,6 @@
       }
 
       .fig-square-big {
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
         height: 270px/$desktop-home-ratio*100vw;
       }
 
@@ -200,6 +265,21 @@
       .fig-cross-5 {
         right: 62px/$desktop-home-ratio*100vw;
         bottom: 110px/$desktop-home-ratio*100vw;
+      }
+
+      &:hover {
+        .fig-cross-2 {
+          transform: scale(1.2) translate(-100%, -100%);
+        }
+
+
+        .fig-cross-5 {
+          transform: scale(1.2) translate(100%, 100%);
+        }
+
+        .fig-square-1 {
+          transform: scale(1.2) translate(-100%, -100%);
+        }
       }
     }
   }

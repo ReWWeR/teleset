@@ -370,6 +370,16 @@ header.mobile-header {
       height: 42px/$mobile-ratio-height*100vh;
     }
 
+    svg {
+      opacity: 0;
+      transition: opacity .5s;
+      width: 30px/$mobile-ratio*100vw;
+
+      @media #{$media-sm-with-ratio} {
+        width: 30px/$mobile-ratio-height*100vh;
+      }
+    }
+
     span {
       &, &:before, &:after {
         content: '';
@@ -431,29 +441,14 @@ header.mobile-header {
     }
 
     .show-hamburger & {
+      height: auto;
+
       span {
-        transform: rotate(45deg);
-        height: 4px;
-        background: $green;
-        transform-origin: left;
+      opacity: 0;
+      }
 
-        @media #{$media-sm-with-ratio} {
-          height: 4px/$mobile-ratio-height*100vh;
-        }
-
-        &:before {
-          transform: rotate(-90deg) translateX(35%);
-          height: 2px;
-          background: $green;
-
-          @media #{$media-sm-with-ratio} {
-            height: 4px/$mobile-ratio-height*100vh;
-          }
-        }
-
-        &:after {
-          opacity: 0;
-        }
+      svg {
+        opacity: 1;
       }
     }
   }
