@@ -85,9 +85,11 @@
 
         @media #{$media-sm} {
           margin-left: 0;
+          width: 100%;
         }
 
         @media #{$media-sm-with-ratio} {
+          width: auto;
           margin-left: 19%;
         }
 
