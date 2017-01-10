@@ -3,7 +3,7 @@ body.loaded.initial-animation {
     .hero {
       animation: none;
       opacity: 1;
-      transform: scaleX(-1) translateY(-50%);
+      transform: translateY(0);
     }
 
     .plan-description {
@@ -28,7 +28,7 @@ body.loaded.initial-animation {
   .header-inner-page {
     .hero {
       animation: none;
-      transform: translateY(-50%);
+      transform: translateY(0%);
       opacity: 1;
     }
   }

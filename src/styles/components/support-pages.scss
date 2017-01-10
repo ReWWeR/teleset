@@ -1,23 +1,21 @@
 .support-fullpage, .support-page {
   .hero {
     position: fixed;
-    right: 252px/$desktop-home-ratio*100vw;
+    right: 1001px/$desktop-home-ratio*100vw;
+    height: $hero-4-height/$desktop-height-ratio*100vh;
     bottom: 0;
     opacity: 0;
 
     @media #{$desktop-bad-ratio} {
-      right: 400px/$desktop-home-ratio*100vw;
-      height: $hero-2-height/$desktop-height-ratio*100vh;
+      right: 1001px/$desktop-home-ratio*100vw;
     }
 
     @media #{$media-sm} {
+      height: $hero-4-height/$mobile-ratio-height*100vh;
       right: -150px/$mobile-ratio*100vw;
-      width: $hero-2-width/$mobile-ratio*100vw;
     }
 
     @media #{$media-sm-with-ratio} {
-      height: $hero-2-height/$mobile-ratio-height*100vh;
-      width: auto;
       right: -150px/$mobile-ratio-height*100vh;
     }
   }
@@ -166,6 +164,10 @@
     .input-wrap {
       input {
         width: 540px/$desktop-home-ratio*100vw;
+
+        @media #{$media-sm} {
+          width: 100%;
+        }
       }
     }
   }

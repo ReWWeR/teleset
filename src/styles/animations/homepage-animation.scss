@@ -81,11 +81,11 @@ $delay-200: 2s;
 @keyframes hero-animation {
   0% {
     opacity: 0;
-    transform: translateY(-20%) scaleX(-1);
+    transform: translateY(20%);
   }
 
   25% {
-    transform: translateY(-20%) scaleX(-1);
+    transform: translateY(10%);
   }
 
   50% {
@@ -94,18 +94,18 @@ $delay-200: 2s;
 
   100% {
     opacity: 1;
-    transform: translateY(-50%) scaleX(-1);
+    transform: translateY(0%);
   }
 }
 
 @keyframes hero-animation-mobile {
   0% {
     opacity: 0;
-    transform: translateY(-30%) scaleX(1);
+    transform: translateY(20%);
   }
 
   25% {
-    transform: translateY(-40%) scaleX(1);
+    transform: translateY(10%);
   }
 
   50% {
@@ -114,18 +114,18 @@ $delay-200: 2s;
 
   100% {
     opacity: 1;
-    transform: translateY(-50%) scaleX(1);
+    transform: translateY(0%);
   }
 }
 
 @keyframes hero-animation-center {
   0% {
     opacity: 0;
-    transform: translateY(-30%) scaleX(1);
+    transform: translateY(20%) scaleX(1);
   }
 
   25% {
-    transform: translateY(-40%) scaleX(1);
+    transform: translateY(10%) scaleX(1);
   }
 
   50% {
@@ -134,7 +134,7 @@ $delay-200: 2s;
 
   100% {
     opacity: 1;
-    transform: translateY(-50%) scaleX(1);
+    transform: translateY(0%) scaleX(1);
   }
 }
 
@@ -202,7 +202,8 @@ $delay-200: 2s;
 }
 
 .header {
-  transform: translateY(-120%);
+  //transform: translateY(-120%);
+  opacity: 0;
 }
 
 .footer-landing {
@@ -228,13 +229,16 @@ $delay-200: 2s;
 
 body.loaded {
   .header {
-    @extend %translate-animation;
-    animation-delay: .5s;
+    //@extend %translate-animation;
+    //animation-delay: .5s;
+    @extend %opacity-fade;
+    animation-delay: $delay-80;
   }
 
   .footer-landing, .breadcrumbs {
     @extend %opacity-fade;
-    animation-delay: $delay-200;
+    //animation-delay: $delay-200;
+    animation-delay: $delay-80;
   }
 }
 
@@ -262,17 +266,21 @@ body.loaded .homepage, body.loaded .payment-fullpage, body.loaded .payment-page,
   .plan-description {
     h1 {
       @extend %plan-animation;
-      animation-delay: $delay-133;
+      //animation-delay: $delay-133;
+      animation-delay: $delay-80;
     }
 
     p {
       @extend %plan-animation;
-      animation-delay: $delay-133 + $delay-11;
+      //animation-delay: $delay-133 + $delay-11;
+      animation-delay: $delay-80 + $delay-11;
+
     }
 
     a, .flex-form-wrap {
       @extend %plan-animation;
-      animation-delay: $delay-133 + ($delay-11 * 2);
+      //animation-delay: $delay-133 + ($delay-11 * 2);
+      animation-delay: $delay-80 + ($delay-11 * 2);
     }
   }
 

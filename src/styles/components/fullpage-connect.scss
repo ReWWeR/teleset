@@ -24,8 +24,9 @@
   .hero {
     position: fixed;
     bottom: 0;
-    left: 957px/$desktop-home-ratio*100vw;
-    width: $hero-2-width/$desktop-home-ratio*100vw;
+    left: 806px/$desktop-home-ratio*100vw;
+    height: $hero-2-height/$desktop-height-ratio*100vh;
+    //width: $hero-2-width/$desktop-home-ratio*100vw;
     z-index: 1;
     //transition: transform .75s, opacity .5s;
     opacity: 0;

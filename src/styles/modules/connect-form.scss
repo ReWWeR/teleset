@@ -467,6 +467,7 @@
           width: 450px/$desktop-home-ratio*100vw;
           color: $white-70;
           opacity: 1;
+          z-index: 1;
 
           @media #{$desktop-bad-ratio} {
             left: -60px/$desktop-height-ratio*100vh;

@@ -19,9 +19,11 @@
 
   .center-block {
     justify-content: flex-start;
-    position: relative;
     flex-direction: column;
     text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: auto;
 
     h1 {
       color: #fff;

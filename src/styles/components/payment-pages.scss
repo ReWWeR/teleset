@@ -1,32 +1,24 @@
 .payment-fullpage, .payment-page {
   .hero {
-    transform: scaleX(-1) translateY(-50%);
     position: fixed;
-    left: 72px/$desktop-home-ratio*100vw;
-    //bottom: 60px/$desktop-height-ratio*100vh;
+    left: 235px/$desktop-home-ratio*100vw;
+    bottom: 0;
     z-index: 1;
-    width: $hero-width/$desktop-home-ratio*100vw;
-    //max-width: $hero-width;
-    top: 50%;
+    height: $hero-3-height/$desktop-height-ratio*100vh;
 
     @media #{$desktop-bad-ratio} {
       //max-height: $hero-height;
-      height: $hero-height/$desktop-height-ratio*100vh;
       left: auto;
-      right: 900px/$desktop-home-ratio*100vw;
+      right: 830px/$desktop-home-ratio*100vw;
       width: auto;
     }
 
     @media #{$media-sm} {
-      width: $hero-width/$mobile-ratio*100vw;
-      max-width: $hero-width;
-      top: 50%;
+      height: $hero-3-height/$mobile-ratio-height*100vh;
     }
 
     @media #{$media-sm-with-ratio} {
-      max-height: $hero-height;
-      height: $hero-height/$mobile-ratio-height*100vh;
-      width: auto;
+
     }
   }
 
@@ -171,6 +163,10 @@
 }
 
 .payment-page {
+  .hero {
+    left: 235px/$desktop-home-ratio*100vw!important;
+  }
+
   .payment-form {
     text-align: left;
     position: absolute;

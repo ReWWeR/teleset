@@ -1,33 +1,23 @@
 .homepage {
   .hero {
     position: fixed;
-    right: 750px/$desktop-home-ratio*100vw;
-    top: 50%;
+    left: 170px/$desktop-home-ratio*100vw;
+    bottom: 0;
     z-index: 1;
-    width: $hero-width/$desktop-home-ratio*100vw;
+    //width: $hero-width/$desktop-home-ratio*100vw;
     //max-width: $hero-width;
-
-    @media #{$desktop-bad-ratio} {
-      max-height: $hero-height;
-      height: $hero-height/$desktop-height-ratio*100vh;
-      width: auto;
-      //right: -171px/$desktop-height-ratio*100vh;
-    }
+    height: $hero-height/$desktop-height-ratio*100vh;
 
     @media #{$media-sm} {
-      width: $hero-width/$mobile-ratio*100vw;
-      max-width: $hero-width;
-      right: -171px/($desktop-home-ratio/2)*100%;
+      //height: $hero-height/$mobile-ratio-height*100vh;
+      right: -300px/$mobile-ratio-height*100vh;
       left: initial;
-      top: 50%;
-      transform: translateY(-50%) scaleX(1)!important;
+      bottom: 0;
+      top: initial!important;
     }
 
     @media #{$media-sm-with-ratio} {
-      max-height: $hero-height;
-      height: $hero-height/$mobile-ratio-height*100vh;
       width: auto;
-      right: -171px/$mobile-ratio-height*100vh;
     }
   }
 

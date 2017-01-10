@@ -78,12 +78,16 @@
       }
 
       &:hover {
-        .hero, .support-item, button.btn, .hero-2 {
+        .support-item, button.btn, .hero-2 {
           transform: scale(1.1) translate(-50%, -50%);
         }
 
         .support-item, button.btn {
           transform: scale(1.1);
+        }
+
+        .hero {
+          transform: scale(1.1) translateX(-50%);
         }
 
         .hero-2 {
@@ -101,8 +105,8 @@
       .hero {
         position: absolute;
         left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
+        bottom: 0;
+        transform: translateX(-50%);
         height: $hero-height/$desktop-height-ratio/2*100vh;
         z-index: 1;
       }

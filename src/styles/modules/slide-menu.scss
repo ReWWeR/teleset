@@ -224,6 +224,8 @@
           width: 42px/$desktop-home-ratio*100vw;
           font-size: 0;
           right: 40px/$desktop-home-ratio*100vw;
+          position: relative;
+          left: initial;
 
           .phone-tooltip {
             font-size: 30px/$desktop-home-ratio*100vw;
@@ -257,7 +259,7 @@
       color: $white-30;
       font-size: 18px/$desktop-home-ratio*100vw;
       position: absolute;
-      bottom: 49px/$desktop-home-ratio*100vw;
+      bottom: 55px/$desktop-home-ratio*100vw;
       z-index: 2;
       opacity: 0;
       pointer-events: none;
@@ -265,12 +267,12 @@
 
       @media #{$desktop-bad-ratio} {
         font-size: 18px/$desktop-height-ratio*100vh;
-        bottom: 49px/$desktop-height-ratio*100vh;
+        bottom: 55px/$desktop-height-ratio*100vh;
       }
 
       @media #{$desktop-1600} {
         font-size: 18px;
-        bottom: 49px;
+        bottom: 55px;
       }
 
       @media #{$media-sm} {
@@ -539,27 +541,18 @@
 
     .hero {
       position: absolute;
-      top: 50%;
       left: 50%;
-      transform: translateX(-50%) translateY(-50%);
+      transform: translateX(-50%);
+      bottom: 0;
       z-index: 1;
-      width: $hero-width/$desktop-home-ratio*100vw;
-
-      @media #{$desktop-bad-ratio} {
-        max-height: $hero-height;
-        height: $hero-height/$desktop-height-ratio*100vh;
-        width: auto;
-      }
+      height: $hero-height/$desktop-height-ratio*100vh;
 
       @media #{$media-sm} {
-        width: $hero-width/$mobile-ratio*100vw;
-        max-width: $hero-width;
+        height: $hero-height/$mobile-ratio-height*100vh;
       }
 
       @media #{$media-sm-with-ratio} {
-        max-height: $hero-height;
         height: $hero-height/$mobile-ratio-height*100vh;
-        width: auto;
       }
     }
 
