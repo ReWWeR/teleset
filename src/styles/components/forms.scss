@@ -79,7 +79,7 @@ input[type=text], input[type=number], input[type=email], input[type=tel], input[
     font-size: 36px/$desktop-home-ratio*100vw;
     border-radius: 18px/$desktop-home-ratio*100vw;
     font-weight: 400;
-    padding-right: 50px/$desktop-home-ratio*100vw;
+    padding-right: 60px/$desktop-home-ratio*100vw;
 
     &::-webkit-input-placeholder {
       font-size: 36px/$desktop-home-ratio*100vw;
@@ -91,7 +91,7 @@ input[type=text], input[type=number], input[type=email], input[type=tel], input[
       height: 90px/$desktop-height-ratio*100vh;
       font-size: 36px/$desktop-height-ratio*100vh;
       border-radius: 18px/$desktop-height-ratio*100vh;
-      padding-right: 50px/$desktop-height-ratio*100vh;
+      padding-right: 60px/$desktop-height-ratio*100vh;
 
       &::-webkit-input-placeholder {
         font-size: 36px/$desktop-height-ratio*100vh;
@@ -102,7 +102,7 @@ input[type=text], input[type=number], input[type=email], input[type=tel], input[
       height: 90px/$mobile-ratio*100vw;
       font-size: 36px/$mobile-ratio*100vw;
       border-radius: 18px/$mobile-ratio*100vw;
-      padding-right: 50px/$mobile-ratio*100vw;
+      padding-right: 60px/$mobile-ratio*100vw;
 
       &::-webkit-input-placeholder {
         font-size: 36px/$mobile-ratio*100vw;
@@ -149,39 +149,36 @@ input[type=number]::-webkit-outer-spin-button {
 .input-wrap {
   position: relative;
 
-  &.valid {
+  &.valid, &.error {
     &:after {
       content: '';
       display: block;
       position: absolute;
       background: url("./../img/green-tick.svg");
-      background-size: cover;
+      background-size: contain;
       background-repeat: no-repeat;
       width: 20px/$desktop-home-ratio*100vw;
       height: 14px/$desktop-home-ratio*100vw;
       top: 50%;
       right: 24px/$desktop-home-ratio*100vw;
-      margin-top: -7px/$desktop-home-ratio*100vw;
+      transform: translateY(-50%);
 
       @media #{$desktop-bad-ratio} {
         width: 20px/$desktop-height-ratio*100vh;
         height: 14px/$desktop-height-ratio*100vh;
         right: 24px/$desktop-height-ratio*100vh;
-        margin-top: -7px/$desktop-height-ratio*100vh;
       }
 
       @media #{$media-sm} {
         width: 20px/$mobile-ratio*100vw;
         height: 14px/$mobile-ratio*100vw;
         right: 24px/$mobile-ratio*100vw;
-        margin-top: -7px/$mobile-ratio*100vw;
       }
 
       @media #{$media-sm-with-ratio} {
         width: 20px/$mobile-ratio-height*100vh;
         height: 14px/$mobile-ratio-height*100vh;
         right: 24px/$mobile-ratio-height*100vh;
-        margin-top: -7px/$mobile-ratio-height*100vh;
       }
     }
 
@@ -190,20 +187,25 @@ input[type=number]::-webkit-outer-spin-button {
       &:after {
       width: 30px/$desktop-home-ratio*100vw;
       height: 21px/$desktop-home-ratio*100vw;
+        right: 30px/$desktop-home-ratio*100vw;
+
 
         @media #{$desktop-bad-ratio} {
           width: 30px/$desktop-height-ratio*100vh;
           height: 21px/$desktop-height-ratio*100vh;
+          right: 30px/$desktop-height-ratio*100vh;
         }
 
         @media #{$media-sm} {
           width: 30px/$mobile-ratio*100vw;
           height: 21px/$mobile-ratio*100vw;
+          right: 30px/$mobile-ratio*100vw;
         }
 
         @media #{$media-sm-with-ratio} {
           width: 30px/$mobile-ratio-height*100vh;
           height: 21px/$mobile-ratio-height*100vh;
+          right: 30px/$mobile-ratio-height*100vh;
         }
       }
     }
@@ -215,6 +217,32 @@ input[type=number]::-webkit-outer-spin-button {
         @media #{$media-sm} {
           right: 60px/$mobile-ratio*100vw;
         }
+      }
+    }
+  }
+
+  &.error {
+    &:after {
+      background-image: url("./../img/error-input.svg");
+      width: 19px/$desktop-home-ratio*100vw;
+      height: 19px/$desktop-home-ratio*100vw;
+
+      @media #{$desktop-bad-ratio} {
+        width: 19px/$desktop-height-ratio*100vh;
+        height: 19px/$desktop-height-ratio*100vh;
+        right: 24px/$desktop-height-ratio*100vh;
+      }
+
+      @media #{$media-sm} {
+        width: 19px/$mobile-ratio*100vw;
+        height: 19px/$mobile-ratio*100vw;
+        right: 24px/$mobile-ratio*100vw;
+      }
+
+      @media #{$media-sm-with-ratio} {
+        width: 19px/$mobile-ratio-height*100vh;
+        height: 19px/$mobile-ratio-height*100vh;
+        right: 24px/$mobile-ratio-height*100vh;
       }
     }
   }

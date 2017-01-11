@@ -4,6 +4,12 @@
     padding-bottom: 1.1em;
 
     @media #{$media-sm} {
+      //padding-top: 33vh;
+      padding-top: 170px;
+      padding-bottom: 65px;
+    }
+
+    @media #{$media-sm-with-ratio} {
       padding-top: 33vh;
       padding-bottom: .78em;
     }

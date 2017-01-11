@@ -82,11 +82,11 @@
       }
 
       @media #{$media-sm} {
-        right: -400px/$mobile-ratio*100%;
+        right: -400px/$mobile-ratio*100vw;
       }
 
       @media #{$media-sm-with-ratio} {
-        right: -400px/$mobile-ratio-height*100vh;
+        right: -600px/$mobile-ratio-height*100vh;
       }
     }
 

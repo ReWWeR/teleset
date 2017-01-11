@@ -75,8 +75,12 @@
 
       @media #{$media-sm} {
         position: relative;
-        margin-top: 30vh;
+        margin-top: 170px;
         overflow: hidden;
+      }
+
+      @media #{$media-sm-with-ratio} {
+        margin-top: 30vh;
       }
 
       ul {
@@ -199,6 +203,12 @@
           position: relative;
           margin-right: auto;
 
+          &:hover {
+            .text {
+              color: #fff;
+            }
+          }
+
           svg {
             width: 30px/$desktop-home-ratio*100vw;
             max-width: 30px;
@@ -263,7 +273,7 @@
       z-index: 2;
       opacity: 0;
       pointer-events: none;
-      transition: opacity .5s;
+      transition: opacity .5s, color .5s;
 
       @media #{$desktop-bad-ratio} {
         font-size: 18px/$desktop-height-ratio*100vh;
@@ -280,7 +290,7 @@
       }
 
       &:hover {
-        color: $yellow;
+        color: #fff;
       }
 
       &:before {
@@ -335,11 +345,11 @@
         }
 
         @media #{$media-sm} {
-          margin-left: 42px/$mobile-ratio*100vw;
+          margin-left: 78px/$mobile-ratio*100vw;
         }
 
         @media #{$media-sm-with-ratio} {
-          margin-left: 42px/$mobile-ratio-height*100vh;
+          margin-left: 78px/$mobile-ratio-height*100vh;
         }
 
         svg {
@@ -394,6 +404,13 @@
         position: relative;
         display: flex;
         align-items: center;
+        transition: color $transition-time;
+
+        &:hover {
+          .text {
+            color: #fff;
+          }
+        }
 
         @media #{$desktop-bad-ratio} {
           font-size: 18px/$desktop-height-ratio*100vh;

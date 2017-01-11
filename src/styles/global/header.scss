@@ -139,7 +139,7 @@
           font-size: 18px/$desktop-home-ratio*100vw;
           border: (3px/$desktop-home-ratio*100vw) solid transparent;
           border-radius: 14px/$desktop-home-ratio*100vw;
-          transition: border $transition-time;
+          transition: border $transition-time, color $transition-time;
           display: inline-flex;
 
           @media #{$desktop-1600} {
@@ -153,7 +153,12 @@
             color: $white-60;
           }
 
-          &:hover, &.active {
+
+          &:hover {
+            color: $black-60;
+          }
+
+           &.active {
             border-color: $yellow;
             color: #000;
 
@@ -163,27 +168,47 @@
           }
 
           .purple-bg & {
-            &, &.active, &:hover {
+            &, &.active {
               color: $yellow;
+            }
+
+            &.active:hover {
+              color: $yellow;
+            }
+
+            &:hover {
+              color: rgba($yellow, .6);
             }
           }
 
           .yellow-bg & {
-            &, &.active, &:hover {
+            &, &.active {
               color: #fff;
+
+              &.active:hover {
+                color: #fff;
+              }
+
+              &:hover {
+                color: $white-60;
+              }
             }
 
-            &.active, &:hover {
+            &.active {
               border-color: #fff;
             }
           }
 
           .grey-bg & {
-            &, &.active, &:hover {
+            &, &.active, &.active:hover {
               color: $blue;
             }
 
-            &.active, &:hover {
+            &:hover {
+              color: rgba($blue, .6);
+            }
+
+            &.active {
               border-color: $blue;
             }
           }
@@ -201,6 +226,7 @@
           &.four-blocks-button {
             padding: 0;
             line-height: 1.5;
+            transition: opacity $transition-time;
 
             svg {
             width: 18px/$desktop-home-ratio*100vw;
@@ -248,6 +274,7 @@
 
             &:hover {
               border-color: transparent;
+              opacity: .6;
             }
           }
         }
@@ -285,6 +312,7 @@ header.mobile-header {
 
   .logo {
     margin-right: auto;
+    font-size: 0;
 
     svg {
       width: 138px/$mobile-ratio * 100vw;
@@ -370,8 +398,7 @@ header.mobile-header {
       height: 42px/$mobile-ratio-height*100vh;
     }
 
-    svg {
-      opacity: 0;
+    svg.close-menu-icon {
       transition: opacity .5s;
       width: 30px/$mobile-ratio*100vw;
 
@@ -380,75 +407,74 @@ header.mobile-header {
       }
     }
 
-    span {
-      &, &:before, &:after {
-        content: '';
-        display: block;
-        width: 42px/$mobile-ratio*100vw;
-        height: 8px/$mobile-ratio*100vw;
-        background: $purple;
-        position: absolute;
-        transition: transform .5s, opacity .5s, height .5s, background .5s;
-        border-radius: 4px/$mobile-ratio*100vw;
+    .close-icon-wrap {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      align-items: center;
+      right: 0;
+      font-size: 18px/$mobile-ratio*100vw;
+      color: $white-40;
+      opacity: 0;
+      transition: opacity $transition-time;
 
-        @media #{$media-sm-with-ratio} {
-          width: 42px/$mobile-ratio-height*100vh;
-          height: 8px/$mobile-ratio-height*100vh;
-          border-radius: 4px/$mobile-ratio-height*100vh;
+      @media #{$media-sm-with-ratio} {
+        font-size: 18px/$mobile-ratio-height*100vh;
+      }
 
-        }
+      svg {
+        margin-left: 20px/18px*1em;
+      }
 
-        .purple-bg & {
-          background: $yellow;
-        }
+      &:hover {
+        color: #fff;
+      }
+    }
 
-        .yellow-bg &, .dark-grey-bg & {
-          background: #fff;
-        }
+    svg.hamburger-menu-icon {
+      transition: opacity .5s;
+      width: 42px/$mobile-ratio*100vw;
+      height: 42px/$mobile-ratio*100vw;
 
-        .grey-bg & {
-          background: $blue;
-        }
-
-        .white-bg & {
-          background: $purple;
-        }
-
-        .green-bg & {
-          background: #fff;
-        }
+      @media #{$media-sm-with-ratio} {
+        width: 42px/$mobile-ratio-height*100vh;
+        height: 42px/$mobile-ratio-height*100vh;
       }
 
       & {
-        top: 0;
-      }
-
-      &:before {
-        top: 15px/$mobile-ratio*100vw;
-
-        @media #{$media-sm-with-ratio} {
-          top: 15px/$mobile-ratio-height*100vh
+        rect {
+          fill: $purple;
         }
       }
 
-      &:after {
-        top: 30px/$mobile-ratio*100vw;
+      .purple-bg & {
+        rect {
+            fill: $yellow;
+          }
+      }
 
-        @media #{$media-sm-with-ratio} {
-          top: 30px/$mobile-ratio-height*100vh
-        }
+      .yellow-bg &, .green-bg &, .dark-grey-bg &, .grey-bg & {
+        rect {
+            fill: #fff;
+          }
+      }
+
+      .white-bg & {
+        rect {
+            fill: inherit;
+          }
       }
     }
 
     .show-hamburger & {
-      height: auto;
 
-      span {
-      opacity: 0;
+      .close-icon-wrap {
+        opacity: 1;
       }
 
-      svg {
-        opacity: 1;
+      svg.hamburger-menu-icon {
+        opacity: 0;
       }
     }
   }
@@ -460,6 +486,12 @@ header.mobile-header {
   max-width: 42px;
   font-size: 0;
   position: relative;
+  transition: opacity $transition-time;
+
+  &:hover {
+    opacity: .6;
+  }
+
 
   svg {
     path {

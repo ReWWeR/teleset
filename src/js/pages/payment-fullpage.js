@@ -11,15 +11,22 @@ $(document).ready(function() {
         },
         unhighlight: function (element, errorClass, validClass) {
             $(element).closest('.input-wrap').addClass(validClass).removeClass(errorClass);
+        },
+        onkeyup: function() {
+            if (this.checkForm()) {
+                $paymentButton.attr('disabled', false)
+            } else {
+                $paymentButton.attr('disabled', true)
+            }
         }
     });
 
     $('input', $paymentSubmit).on('keyup', function(){
-        if($paymentSubmit.valid()) {
+        /*if($paymentSubmit.valid()) {
             $paymentButton.attr('disabled', false)
         } else {
             $paymentButton.attr('disabled', true)
-        }
+        }*/
     });
 
     $paymentButton.on('click', function (e) {

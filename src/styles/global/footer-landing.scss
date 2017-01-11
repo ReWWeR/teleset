@@ -1,5 +1,5 @@
 .footer-landing {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   width: 100%;
   z-index: 3;
@@ -11,7 +11,7 @@
 
   @media #{$media-sm} {
     .hamburger-menu, .social-icons, .author-logo {
-      display: none!important;
+      display: none !important;
     }
   }
 
@@ -29,7 +29,7 @@
 
     .hamburger-line {
       &, &:before, &:after {
-        background: #fff!important;
+        background: #fff !important;
       }
     }
   }
@@ -42,8 +42,8 @@
   .copyright {
     position: fixed;
     left: -110px/$desktop-home-ratio*100vw;
-    top: 30%;
-    transform: rotate(-90deg) translateX(-50%);
+    top: 50%;
+    transform: rotate(-90deg) translateX(0);
     font-size: 18px/$desktop-home-ratio*100vw;
     color: $black-50;
 
@@ -55,6 +55,10 @@
     @media #{$desktop-1600} {
       font-size: 18px;
       left: -110px;
+    }
+
+    @media #{$media-sm} {
+      display: none;
     }
 
     .grey-text {
@@ -103,16 +107,16 @@
   .author-logo {
     margin-left: auto;
     text-align: right;
-    color: $black-10;
     min-width: 220px/$desktop-home-ratio*100vw;
     font: $font-body;
     font-weight: 600;
     line-height: 1.22;
     font-size: 18px/$desktop-home-ratio*100vw;
     transition: color .5s;
+    color: $main-black;
 
     &:hover {
-      color: $main-black;
+      color: $black-10;
     }
 
     @media #{$desktop-1600} {
@@ -122,14 +126,26 @@
 
     .purple-bg & {
       color: $yellow;
+
+      &:hover {
+        color: rgba($yellow, .2);
+      }
     }
 
     .yellow-bg & {
       color: #fff;
+
+      &:hover {
+        color: rgba(255, 255, 255, .2);
+      }
     }
 
     .grey-bg & {
       color: $blue;
+
+      &:hover {
+        color: rgba($blue, .2);
+      }
     }
 
     .homepage-inner & {
@@ -170,86 +186,53 @@
 
   a.hamburger-menu {
     color: $black-50;
-    display: block;
+    display: flex;
+    align-items: center;
     margin-right: auto;
     font: $font-body;
     font-weight: 600;
 
-    .purple-bg & {
-      color: $yellow;
+    &:hover {
+      .text {
+        opacity: .6;
+        color: inherit;
+      }
     }
 
-    .yellow-bg & {
-      color: #fff;
+    svg rect {
+      fill: $purple;
     }
 
-    .grey-bg & {
-      color: $blue;
-    }
+    svg rect {
+      .purple-bg & {
+        fill: $yellow;
+      }
 
+      .yellow-bg & {
+        fill: #fff;
+      }
+
+      .grey-bg & {
+        fill: $blue;
+      }
+    }
     .homepage-inner & {
-      color: $black-50;
+      fill: $black-50;
     }
 
     .hamburger-button {
       display: block;
       float: left;
-      max-width: 30px;
-      max-height: 30px;
-      width: 30px/$desktop-home-ratio*100vw;
-      height: 30px/$desktop-home-ratio*100vw;
       position: relative;
+      font-size: 0;
 
-      .hamburger-line {
-        top: 0;
-
-        &, &:before, &:after {
-          content: '';
-          position: absolute;
-          display: block;
-          max-height: 4px;
-          height: 4px/$desktop-home-ratio*100vw;
-          width: 100%;
-          border-radius: 2px/$desktop-home-ratio*100vw;
-          background: $purple;
-
-          @media #{$desktop-1600} {
-            border-radius: 2px;
-          }
-
-          .yellow-bg & {
-            background: #fff;
-          }
-
-          .grey-bg & {
-            background: $blue;
-          }
-
-          .purple-bg & {
-            background-color: $yellow;
-          }
-
-          .homepage-inner & {
-            background: $purple;
-          }
-        }
-
-        &:before {
-          top: 13px/$desktop-home-ratio*100vw;
-
-          @media #{$desktop-1600} {
-            top: 13px;
-          }
-        }
-
-        &:after {
-          top: 26px/$desktop-home-ratio*100vw;
-
-          @media #{$desktop-1600} {
-            top: 26px;
-          }
-        }
+      svg {
+        max-width: 42px;
+        max-height: 42px;
+        width: 42px/$desktop-home-ratio*100vw;
+        height: 42px/$desktop-home-ratio*100vw;
       }
+
     }
 
     .text {
@@ -258,9 +241,22 @@
       padding-left: 20px/$desktop-home-ratio*100vw;
       font-size: 18px/$desktop-home-ratio*100vw;
       line-height: 30px/$desktop-home-ratio*100vw;
+      transition: opacity $transition-time;
 
       .homepage-body.show-login-popup &, .show-login-popup .homepage-inner & {
         color: #fff;
+      }
+
+      .purple-bg & {
+        color: $yellow;
+      }
+
+      .yellow-bg & {
+        color: #fff;
+      }
+
+      .grey-bg & {
+        color: $blue;
       }
 
       @media #{$desktop-1600} {
@@ -268,6 +264,7 @@
         font-size: 18px;
         line-height: 30px;
       }
+
     }
   }
 
@@ -287,24 +284,21 @@
       }
       a {
         font-size: 0;
+        transition: opacity $transition-time;
 
         svg {
           height: 22px/$desktop-home-ratio*100vw;
           max-height: 22px;
 
           path {
-            transition: fill .5s,stroke .5s;
+            transition: fill .5s, stroke .5s;
             fill: $super-light-grey-2;
           }
 
         }
 
         &:hover {
-          svg {
-            path {
-              fill: $yellow;
-            }
-          }
+          opacity: .6;
         }
 
         .purple-bg & {
@@ -334,7 +328,8 @@
         .white-bg & {
           svg {
             path {
-              fill: inherit;stroke: inherit;
+              fill: inherit;
+              stroke: inherit;
             }
           }
         }
@@ -368,10 +363,21 @@
   left: 50%;
   font-size: 0;
 
+  svg {
+    transition: opacity $transition-time;
+  }
+
+  &:hover {
+    svg {
+      opacity: .6;
+    }
+  }
+
   @media #{$media-sm} {
     min-width: 42px/$mobile-ratio*100vw;
     left: 60px/$mobile-ratio*100vw;
     transform: none;
+    position: static;
   }
 
   @media #{$media-sm-with-ratio} {

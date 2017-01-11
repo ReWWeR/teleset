@@ -2,7 +2,11 @@
   width: 400px/$desktop-home-ratio * 100vw;
 
   @media #{$media-sm} {
-    width: 100%;
+    width: calc(100% - 13vw);
+  }
+
+  @media #{$media-sm-with-ratio} {
+    width: calc(100% - 13vh);
   }
 
   .connect-success-step {

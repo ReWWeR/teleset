@@ -1,6 +1,6 @@
 .homepage {
   .hero {
-    position: fixed;
+    position: absolute;
     left: 170px/$desktop-home-ratio*100vw;
     bottom: 0;
     z-index: 1;
@@ -24,7 +24,7 @@
   .plan-description {
     margin-left: 855px/$desktop-home-ratio*100vw;
     z-index: 1;
-    position: fixed;
+    position: absolute;
     top: 30%;
 
     p {
@@ -45,7 +45,7 @@
   }
 
   .fig {
-    position: fixed;
+    position: absolute;
 
     &.fig-cross-1 {
       height: 600px/$desktop-height-ratio*100vh;

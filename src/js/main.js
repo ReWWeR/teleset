@@ -95,7 +95,14 @@ $(document).ready(function () {
         unhighlight: function (element, errorClass, validClass) {
             $(element).closest('.input-wrap').addClass(validClass).removeClass(errorClass);
         },
-        ignore: ".ignore"
+        ignore: ".ignore",
+        onkeyup: function() {
+            if (this.checkForm()) {
+                $submitStep1.attr('disabled', false)
+            } else {
+                $submitStep1.attr('disabled', true)
+            }
+        }
     });
 
     $('input.access-check').on('keyup', function () {
@@ -117,12 +124,11 @@ $(document).ready(function () {
         } else {
             $connectForm1.closest('.connect-form-step').removeClass('success-response').removeClass('error-response');
         }
-        console.log($connectForm1.valid());
-        if ($connectForm1.valid()) {
+        /*if ($connectForm1.valid()) {
             $submitStep1.attr('disabled', false)
         } else {
             $submitStep1.attr('disabled', true)
-        }
+        }*/
     });
 
     $submitStep1.on('click', function (e) {
@@ -162,15 +168,22 @@ $(document).ready(function () {
         },
         unhighlight: function (element, errorClass, validClass) {
             $(element).closest('.input-wrap').addClass(validClass).removeClass(errorClass);
+        },
+        onkeyup: function() {
+            if (this.checkForm()) {
+                $submitStep3.attr('disabled', false)
+            } else {
+                $submitStep3.attr('disabled', true)
+            }
         }
     });
 
     $('input.info-check').on('keyup', function(){
-        if($submitInfoForm.valid()) {
+        /*if($submitInfoForm.valid()) {
             $submitStep3.attr('disabled', false)
         } else {
             $submitStep3.attr('disabled', true)
-        }
+        }*/
     });
 
     $submitStep3.on('click', function (e) {

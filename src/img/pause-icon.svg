@@ -1,0 +1,14 @@
+<svg id="8b91cbd8-ec47-41b4-afcf-4b224f59c066" data-name="РЎР»РѕР№ 1" xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 140 140">
+    <defs>
+        <style>.b79a94ee-3e7c-4630-9b3b-8d08d177ac91{fill:#fff;fill-rule:evenodd;opacity:0.3;}.\32
+            5b54ab9-26e8-40f3-a608-570680bab550{fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:4px;}
+        </style>
+    </defs>
+    <title>pause-icon</title>
+    <path class="b79a94ee-3e7c-4630-9b3b-8d08d177ac91"
+          d="M-308.05,1284.71h56a42.12,42.12,0,0,1,42,42v56a42.12,42.12,0,0,1-42,42h-56a42.12,42.12,0,0,1-42-42v-56a42.12,42.12,0,0,1,42-42"
+          transform="translate(350.05 -1284.71)"/>
+    <rect class="25b54ab9-26e8-40f3-a608-570680bab550" x="49" y="42" width="12" height="56"/>
+    <rect class="25b54ab9-26e8-40f3-a608-570680bab550" x="79" y="42" width="12" height="56"/>
+</svg>
