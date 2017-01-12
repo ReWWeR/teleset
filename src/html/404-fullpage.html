@@ -1,0 +1,82 @@
+@@include('./assets/head.html', {"title":"Телесеть - 404 страница не найдена"})
+<body class="grey-bg dark-grey-bg-2">
+<div class="fullpage-wrap">
+    @@include('./global/header-landing.html', {"page":""})
+
+    @@include('./global/mobile-header.html')
+    <main class="fortyfour-fullpage">
+
+        <div class="wrapper">
+            <div class="not-found-content">
+                <span class="not-found-wrap">
+                Page not found <br>
+                <a href="./">Jump</a> to start level?
+                    </span>
+            </div>
+            <img src="./img/hero-5.png" class="hero hero-2" alt="">
+            <img src="./img/cross-fade-1.png" class="fig fig-cross-fade fig-cross-fade-1" alt="">
+            <img src="./img/cross-fade-2.png" class="fig fig-cross-fade fig-cross-fade-2" alt="">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="30px" class="fig fig-yellow fig-cross-2">
+                <defs>
+                    <style>.a-c {
+                        fill: none;
+                        stroke: #ffb103;
+                        stroke-linecap: round;
+                        stroke-linejoin: round;
+                        stroke-width: 200px;
+                    }</style>
+                </defs>
+                <line class="a-c" x1="300" y1="100" x2="300" y2="500"></line>
+                <line class="a-c" x1="500" y1="300" x2="100" y2="300"></line>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="30px" class="fig fig-green fig-cross-3">
+                <defs>
+                    <style>.a-c {
+                        fill: none;
+                        stroke: #ffb103;
+                        stroke-linecap: round;
+                        stroke-linejoin: round;
+                        stroke-width: 200px;
+                    }</style>
+                </defs>
+                <line class="a-c" x1="300" y1="100" x2="300" y2="500"></line>
+                <line class="a-c" x1="500" y1="300" x2="100" y2="300"></line>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 420" width="30px" class="fig fig-purple fig-circle-1">
+                <defs>
+                    <style>.b-a {
+                        fill: none;
+                        stroke: #8f00ff;
+                        stroke-linecap: round;
+                        stroke-linejoin: round;
+                        stroke-width: 140px;
+                    }</style>
+                </defs>
+                <circle class="b-a" cx="210" cy="210" r="140"></circle>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54.14 54.14" width="30px" class="fig fig-blue fig-square-1">
+                <defs>
+                    <style>.c-a {
+                        fill: none;
+                        stroke: #11f5ff;
+                        stroke-linecap: round;
+                        stroke-linejoin: round;
+                        stroke-width: 14.14px;
+                    }</style>
+                </defs>
+                <rect class="c-a" x="431.04" y="72.9" width="28.28" height="28.28" transform="translate(-349.27 280.32) rotate(-45)"></rect>
+            </svg>
+        </div>
+    </main>
+    @@include('./global/footer-landing.html')
+</div>
+<div class="slide-menu">
+    @@include('./global/menu-container.html', {"page": "support", "isHome": "true"})
+    @@include('./modules/main-menu-item.html')
+</div>
+@@include('./modules/support-page-modal.html')
+@@include('./modules/four-blocks.html')
+@@include('./modules/login-popup.html')
+
+</body>
+</html>

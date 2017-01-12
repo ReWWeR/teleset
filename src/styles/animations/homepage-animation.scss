@@ -242,13 +242,13 @@ body.loaded {
   }
 }
 
-body.loaded .homepage, body.loaded .payment-fullpage, body.loaded .payment-page, body.loaded .connect-fullpage, body.loaded .support-fullpage, body.loaded .support-page {
+body.loaded .homepage, body.loaded .payment-fullpage, body.loaded .payment-page, body.loaded .connect-fullpage, body.loaded .support-fullpage, body.loaded .support-page, body.loaded .fortyfour-fullpage {
 
   .fig-cross-1, .fig-cross-4, .fig-circle-3, .fig-cross-5, .fig-square-big {
     @extend %figures-scale;
   }
 
-  .fig-cross-2, .fig-cross-3, .fig-circle-1, .fig-circle-2, .fig-square-1, .fig-square-2, .fig-square-3 {
+  .fig-cross-2, .fig-cross-3, .fig-circle-1, .fig-circle-2, .fig-square-1, .fig-square-2, .fig-square-3, .fig-cross-fade-1, .fig-cross-fade-2 {
     @extend %figures-scale;
     animation-delay: $delay-33;
   }
@@ -260,6 +260,11 @@ body.loaded .homepage, body.loaded .payment-fullpage, body.loaded .payment-page,
 
   .hero-2 {
     @extend %hero-2-animation;
+    animation-delay: $delay-80;
+  }
+
+  .not-found-content {
+    @extend %plan-animation;
     animation-delay: $delay-80;
   }
 

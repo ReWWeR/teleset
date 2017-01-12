@@ -1,0 +1,163 @@
+.fortyfour-fullpage {
+  .not-found-content {
+    font-weight: 600;
+    font-size: 18px/$desktop-home-ratio*100vw;
+    line-height: 1.22;
+    color: #fff;
+    bottom: 471px/$desktop-height-ratio*100vh;
+    right: 215px/$desktop-home-ratio*100vw;
+    position: absolute;
+    z-index: 2;
+    opacity: 0;
+    transform: translateY(50%);
+
+    .not-found-wrap {
+
+      display: block;
+    }
+
+    @media #{$desktop-bad-ratio} {
+      font-size: 18px/$desktop-height-ratio*100vh;
+    }
+
+    a {
+      color: $green;
+
+      &:hover {
+        color: rgba($green, .6);
+      }
+    }
+  }
+
+  .hero {
+    position: absolute;
+    right: 255px/$desktop-home-ratio*100vw;
+    z-index: 1;
+    top: 43px/$desktop-height-ratio*100vh;
+    height: $hero-5-height/$desktop-height-ratio*100vh;
+    opacity: 0;
+
+    @media #{$media-sm} {
+      right: 20px/$mobile-ratio*100vw;
+      top: 43px/$mobile-ratio-height*100vh;
+      height: $hero-5-height/$mobile-ratio-height*100vh;
+    }
+
+  }
+
+  .fig {
+    transform: scale(0);
+    position: absolute;
+
+    &.fig-cross-2 {
+      height: 180px/$desktop-height-ratio*100vh;
+      width: 180px/$desktop-home-ratio*100vw;
+      bottom: 360px/$desktop-height-ratio*100vh;
+      right: 1180px/$desktop-home-ratio*100vw;
+
+      @media #{$media-sm} {
+        right: 360px/$mobile-ratio*100vw;
+        bottom: 180px/$mobile-ratio*100vw;
+      }
+
+      @media #{$media-sm-with-ratio} {
+        right: 360px/$mobile-ratio-height*100vh;
+        bottom: 180px/$mobile-ratio-height*100vh;
+      }
+    }
+
+    &.fig-circle-1 {
+      height: 270px/$desktop-height-ratio*100vh;
+      width: 270px/$desktop-home-ratio*100vw;
+      bottom: 410px/$desktop-height-ratio*100vh;
+      right: 870px/$desktop-home-ratio*100vw;
+
+        circle {
+          fill: none;
+        }
+
+      @media #{$media-sm} {
+        right: 870px/$mobile-ratio*100vw;
+        bottom: 410px/$mobile-ratio*100vw;
+      }
+
+      @media #{$media-sm-with-ratio} {
+        right: 870px/$mobile-ratio-height*100vh;
+        bottom: 410px/$mobile-ratio-height*100vh;
+      }
+    }
+
+    &.fig-cross-3 {
+      height: 270px/$desktop-height-ratio*100vh;
+      width: 270px/$desktop-home-ratio*100vw;
+      bottom: 160px/$desktop-height-ratio*100vh;
+      right: 480px/$desktop-home-ratio*100vw;
+
+      @media #{$media-sm} {
+        right: 480px/$mobile-ratio*100vw;
+        bottom: 160px/$mobile-ratio*100vw;
+      }
+
+      @media #{$media-sm-with-ratio} {
+        right: 480px/$mobile-ratio-height*100vh;
+        bottom: 160px/$mobile-ratio-height*100vh;
+      }
+    }
+
+    &.fig-square-1 {
+      height: 120px/$desktop-height-ratio*100vh;
+      width: 120px/$desktop-home-ratio*100vw;
+      bottom: 300px/$desktop-height-ratio*100vh;
+      right: 260px/$desktop-home-ratio*100vw;
+
+      @media #{$media-sm} {
+        right: 260px/$mobile-ratio*100vw;
+        bottom: 300px/$mobile-ratio*100vw;
+      }
+
+      @media #{$media-sm-with-ratio} {
+        right: 260px/$mobile-ratio-height*100vh;
+        bottom: 300px/$mobile-ratio-height*100vh;
+      }
+    }
+
+    &.fig-cross-fade {
+      position: absolute;
+
+      &.fig-cross-fade-1 {
+        bottom: 227px/$desktop-height-ratio*100vh;
+        right: 120px/$desktop-home-ratio*100vw;
+        width: 30px/$desktop-home-ratio*100vw;
+
+        @media #{$media-sm} {
+          right: 120px/$mobile-ratio*100vw;
+          bottom: 227px/$mobile-ratio*100vw;
+          width: 30px/$mobile-ratio*100vw;
+        }
+
+        @media #{$media-sm-with-ratio} {
+          right: 120px/$mobile-ratio-height*100vh;
+          bottom: 227px/$mobile-ratio-height*100vh;
+        }
+      }
+
+      &.fig-cross-fade-2 {
+        bottom: 235px/$desktop-height-ratio*100vh;
+        left: 188px/$desktop-home-ratio*100vw;
+        width: 15px/$desktop-home-ratio*100vw;
+
+        @media #{$media-sm} {
+          left: 188px/$mobile-ratio*100vw;
+          bottom: 235px/$mobile-ratio*100vw;
+          width: 15px/$mobile-ratio*100vw;
+        }
+
+        @media #{$media-sm-with-ratio} {
+          left: 188px/$mobile-ratio-height*100vh;
+          bottom: 235px/$mobile-ratio-height*100vh;
+        }
+      }
+
+    }
+  }
+}
