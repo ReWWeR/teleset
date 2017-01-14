@@ -8,11 +8,19 @@ input[type=text], input[type=number], input[type=email], input[type=tel], input[
   color: #fff;
   padding: 0 (40px/$desktop-home-ratio*100vw) 0 (20px/$desktop-home-ratio*100vw);
 
+  .cabinet-personal-info & {
+    padding: 0 (10px/$desktop-home-ratio*100vw);
+  }
+
   @media #{$desktop-bad-ratio} {
     height: 54px/$desktop-height-ratio*100vh;
     border-radius: 10px/$desktop-height-ratio*100vh;
     font-size: 22px/$desktop-height-ratio*100vh;
     padding: 0 (40px/$desktop-height-ratio*100vh) 0 (20px/$desktop-height-ratio*100vh);
+
+    .cabinet-personal-info & {
+      padding: 0 (10px/$desktop-height-ratio*100vh);
+    }
   }
 
   @media #{$media-sm} {
@@ -22,6 +30,10 @@ input[type=text], input[type=number], input[type=email], input[type=tel], input[
     padding: 0 (40px/$mobile-ratio*100vw) 0 (15px/$mobile-ratio*100vw);
     font-size: 44px/$mobile-ratio*100vw;
     border-radius: 20px/$mobile-ratio*100vw;
+
+    .cabinet-personal-info & {
+      padding: 0 (15px/$mobile-ratio*100vw);
+    }
   }
 
   @media #{$media-sm-with-ratio} {
@@ -29,6 +41,10 @@ input[type=text], input[type=number], input[type=email], input[type=tel], input[
     padding: 0 (40px/$mobile-ratio-height*100vh) 0 (15px/$mobile-ratio-height*100vh);
     font-size: 44px/$mobile-ratio-height*100vh;
     border-radius: 20px/$mobile-ratio-height*100vh;
+
+    .cabinet-personal-info & {
+      padding: 0 (15px/$mobile-ratio-height*100vh);
+    }
   }
 
   &::-webkit-input-placeholder {
@@ -61,6 +77,14 @@ input[type=text], input[type=number], input[type=email], input[type=tel], input[
 
     @media #{$desktop-bad-ratio} {
       text-indent: (20px/$desktop-height-ratio*100vh);
+    }
+
+    &.input-big {
+      text-indent: (40px/$desktop-home-ratio*100vw);
+
+      @media #{$desktop-bad-ratio} {
+        text-indent: (40px/$desktop-height-ratio*100vh);
+      }
     }
   }
 
@@ -123,18 +147,39 @@ input[type=text], input[type=number], input[type=email], input[type=tel], input[
   }
 
   &[disabled] {
-    border-left: none !important;
 
     &, & + label {
       background: #fff;
-      border: 1px solid $lighter-grey;
       color: $main-black;
       opacity: 1;
     }
 
     & + label {
-      border-right: none !important;
       color: $black-20;
+
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border: 1px solid $lighter-grey;
+        border-radius: 10px/$desktop-home-ratio*100vw;
+
+        @media #{$desktop-bad-ratio} {
+          border-radius: 10px/$desktop-height-ratio*100vh;
+        }
+
+        @media #{$media-sm} {
+          border-radius: 20px/$mobile-ratio*100vw;
+        }
+
+        @media #{$media-sm-with-ratio} {
+          border-radius: 20px/$mobile-ratio-height*100vh;
+        }
+      }
     }
   }
 }
@@ -251,6 +296,7 @@ input[type=number]::-webkit-outer-spin-button {
 .input-with-label {
   display: flex;
   align-items: center;
+  position: relative;
 
   input {
     order: 2;
@@ -271,8 +317,10 @@ input[type=number]::-webkit-outer-spin-button {
     background: $purple;
     color: $white-60;
     font-size: 16px/$desktop-home-ratio*100vw;
+    display: flex;
+    align-items: center;
     align-self: stretch;
-    line-height: 3.3;
+    //line-height: 3.3;
     border-bottom-left-radius: 10px/$desktop-home-ratio*100vw;
     border-top-left-radius: 10px/$desktop-home-ratio*100vw;
     padding-left: 20px/$desktop-home-ratio*100vw;
@@ -290,16 +338,15 @@ input[type=number]::-webkit-outer-spin-button {
     @media #{$media-sm} {
       font-size: 16px/$mobile-ratio*100vw;
       line-height: 5.2;
-      border-bottom-left-radius: 10px/$mobile-ratio*100vw;
-      border-top-left-radius: 10px/$mobile-ratio*100vw;
+      border-bottom-left-radius: 20px/$mobile-ratio*100vw;
+      border-top-left-radius: 20px/$mobile-ratio*100vw;
       padding-left: 20px/$mobile-ratio*100vw;
     }
 
     @media #{$media-sm-with-ratio} {
       font-size: 16px/$mobile-ratio-height*100vh;
-      //line-height: 52px/$mobile-ratio-height*100vh;
-      border-bottom-left-radius: 10px/$mobile-ratio-height*100vh;
-      border-top-left-radius: 10px/$mobile-ratio-height*100vh;
+      border-bottom-left-radius: 20px/$mobile-ratio-height*100vh;
+      border-top-left-radius: 20px/$mobile-ratio-height*100vh;
       padding-left: 20px/$mobile-ratio-height*100vh;
     }
   }

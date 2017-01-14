@@ -56,6 +56,7 @@
 
       .share-link {
         width: 28px/$desktop-home-ratio*100vw;
+        height: 28px/$desktop-home-ratio*100vw;
         margin-right: 15px/$desktop-home-ratio*100vw;
         position: relative;
 
@@ -113,6 +114,16 @@
           font-size: 0;
           z-index: 1;
           background: linear-gradient(to right, #fff 0%, #fff 50%, transparent 50%);
+          will-change: transform;
+
+          &:before {
+            content: '';
+            width: 5px;
+            position: absolute;
+            left: -5px;
+            height: 100%;
+            background: #fff;
+          }
         }
 
         .social-icons {
@@ -145,6 +156,7 @@
 
               svg {
                 height: 16px/$desktop-home-ratio*100vw;
+                will-change: transform;
 
                 @media #{$media-sm} {
                   height: 16px/$mobile-ratio*100vw;

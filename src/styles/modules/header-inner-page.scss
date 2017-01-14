@@ -9,11 +9,9 @@
       transform: translateY(0%);
       opacity: 0;
 
-
       @media #{$media-sm} {
         right: -300px/$mobile-ratio-height*100vh;
       }
-
 
       &.hero-2 {
         bottom: 0;
@@ -162,10 +160,31 @@
   .arrows-scroll-down {
     position: absolute;
     bottom: 30px;
-    left: 60px;
+    left: 60px/$desktop-home-ratio*100vw;
+
+
+    @media #{$desktop-bad-ratio} {
+      left: 60px/$desktop-height-ratio*100vh;
+    }
+
+    @media #{$media-sm} {
+      left: 60px/$mobile-ratio*100vw;
+    }
+
+    @media #{$media-sm-with-ratio} {
+      left: 60px/$mobile-ratio-height*100vh;
+    }
 
     &.to-right {
-      transform: rotate(-90deg);
+      //transform: rotate(-90deg);
+      flex-direction: row;
+      width: auto;
+      bottom: 50px;
+
+      svg {
+        transform: rotate(0deg);
+        margin-right: 6px;
+      }
     }
 
     svg {

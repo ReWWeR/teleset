@@ -8,7 +8,7 @@ a {
   text-decoration: none;
 
   &, .text {
-    transition: color $transition-time;
+    transition: color .2s;
   }
 
   &:hover {

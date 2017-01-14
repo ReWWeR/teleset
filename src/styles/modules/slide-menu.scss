@@ -52,7 +52,10 @@
       left: 0;
       background: rgba(0, 0, 0, .2);
       z-index: 1;
+    }
 
+    &.show-cabinet-menu:before {
+      pointer-events: auto;
     }
 
     @media #{$media-sm} {
@@ -71,7 +74,6 @@
       position: absolute;
       top: 28.5%;
       bottom: 32%;
-      width: 100%;
 
       @media #{$media-sm} {
         position: relative;
@@ -136,12 +138,42 @@
                 display: none;
                 width: 20px;
                 margin-bottom: -4px;
+
+                @media screen and (min-width: 1024px) {
+                  display: none!important;
+                }
               }
             }
           }
         }
       }
 
+    }
+
+    .slide-menu-nav {
+      width: calc(100% - 3.75vw);
+      display: flex;
+
+      @media #{$desktop-bad-ratio} {
+        width: calc(100% - 6.66667vh);
+      }
+
+      @media #{$media-sm} {
+        flex-direction: column;
+      }
+
+      @media #{$media-sm-with-ratio} {
+      }
+
+      ul {
+        flex-basis: 50%;
+        padding-right: 30px/$desktop-home-ratio*100vw;
+
+        &:last-child {
+            margin-left: 0;
+          padding-right: 60px/$desktop-home-ratio*100vw;
+        }
+      }
     }
 
     .cabinet-nav {
@@ -273,7 +305,7 @@
       z-index: 2;
       opacity: 0;
       pointer-events: none;
-      transition: opacity .5s, color .5s;
+      transition: opacity .2s, color .2s;
 
       @media #{$desktop-bad-ratio} {
         font-size: 18px/$desktop-height-ratio*100vh;
@@ -368,7 +400,7 @@
           }
 
           line, path {
-            transition: fill $transition-time, stroke $transition-time;
+            transition: fill .2s, stroke .2s;
             fill: $yellow;
           }
 

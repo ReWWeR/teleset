@@ -17,6 +17,7 @@
 
   .author-logo, .make-call, .social-icons {
     transition: opacity .5s;
+    will-change: opacity;
   }
 
   .show-four-blocks-section & {
@@ -112,12 +113,7 @@
     font-weight: 600;
     line-height: 1.22;
     font-size: 18px/$desktop-home-ratio*100vw;
-    transition: color .5s;
-    color: $main-black;
-
-    &:hover {
-      color: $black-10;
-    }
+    transition: color .2s;
 
     @media #{$desktop-1600} {
       min-width: 220px;
@@ -148,8 +144,16 @@
       }
     }
 
-    .homepage-inner & {
-      color: $black-10;
+    .homepage-body &, .homepage-inner & {
+      color: rgba($main-black, .6);
+
+      .opacity-60 {
+        opacity: .2;
+      }
+
+      &:hover {
+        color: $black-20;
+      }
     }
 
     svg {
@@ -192,6 +196,12 @@
     font: $font-body;
     font-weight: 600;
 
+    .homepage-inner & {
+      .text {
+      color: $black-50!important;
+      }
+    }
+
     &:hover {
       .text {
         opacity: .6;
@@ -201,6 +211,10 @@
 
     svg rect {
       fill: $purple;
+
+      .homepage-inner & {
+        fill: $purple !important;
+      }
     }
 
     svg rect {
@@ -225,12 +239,13 @@
       float: left;
       position: relative;
       font-size: 0;
+      will-change: opacity;
 
       svg {
-        max-width: 42px;
-        max-height: 42px;
-        width: 42px/$desktop-home-ratio*100vw;
-        height: 42px/$desktop-home-ratio*100vw;
+        max-width: 30px;
+        max-height: 30px;
+        width: 30px/$desktop-home-ratio*100vw;
+        height: 30px/$desktop-home-ratio*100vw;
       }
 
     }
@@ -241,7 +256,7 @@
       padding-left: 20px/$desktop-home-ratio*100vw;
       font-size: 18px/$desktop-home-ratio*100vw;
       line-height: 30px/$desktop-home-ratio*100vw;
-      transition: opacity $transition-time;
+      transition: opacity .2s;
 
       .homepage-body.show-login-popup &, .show-login-popup .homepage-inner & {
         color: #fff;
@@ -272,9 +287,6 @@
     display: flex;
     margin-right: 492px/$desktop-home-ratio*100vw;
 
-    @media #{$desktop-1600} {
-      margin-right: 492px;
-    }
     li {
       &:not(:last-child) {
         margin-right: 40px/$desktop-home-ratio*100vw;
@@ -284,7 +296,8 @@
       }
       a {
         font-size: 0;
-        transition: opacity $transition-time;
+        transition: opacity .2s;
+        will-change: opacity;
 
         svg {
           height: 22px/$desktop-home-ratio*100vw;
@@ -364,7 +377,8 @@
   font-size: 0;
 
   svg {
-    transition: opacity $transition-time;
+    transition: opacity .2s;
+    will-change: opacity;
   }
 
   &:hover {
