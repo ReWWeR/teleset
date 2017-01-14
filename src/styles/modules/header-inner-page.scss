@@ -124,7 +124,11 @@
       right: -300px/($desktop-home-ratio/2)*100%;
 
       @media #{$media-sm} {
-        right: -400px/$mobile-ratio*100%;
+        right: -400px/$mobile-ratio*100vw;
+      }
+
+      @media #{$media-sm-with-ratio} {
+        right: -400px/$mobile-ratio-height*100vh;
       }
     }
 
@@ -184,7 +188,12 @@
       svg {
         transform: rotate(0deg);
         margin-right: 6px;
+
+        @media #{$media-sm} {
+          margin-right: -3px;
+        }
       }
+
     }
 
     svg {
