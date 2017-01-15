@@ -4,7 +4,6 @@
     padding-bottom: 1.1em;
 
     @media #{$media-sm} {
-      //padding-top: 33vh;
       padding-top: 170px;
       padding-bottom: 65px;
     }
@@ -32,6 +31,11 @@
     padding-top: 75px/$desktop-home-ratio*100vw;
     font-size: 18px/$desktop-home-ratio*100vw;
     line-height: 1.55;
+
+    @media #{$media-tablet} {
+      padding-top: 75px/$tablet-ratio*100vw;
+      font-size: 18px/$tablet-ratio*100vw;
+    }
 
     @media #{$desktop-bad-ratio} {
       padding-top: 75px/$desktop-height-ratio * 100vh;
@@ -72,10 +76,19 @@
       clear: both;
       padding-top: 30px/$desktop-home-ratio*100vw;
 
+      @media #{$media-tablet} {
+        padding-top: 30px/$tablet-ratio*100vw;
+      }
+
       .link-icon {
         font-size: 0;
         width: 28px/$desktop-home-ratio*100vw;
         margin-right: 10px/$desktop-home-ratio*100vw;
+
+        @media #{$media-tablet} {
+          width: 28px/$tablet-ratio*100vw;
+          margin-right: 10px/$tablet-ratio*100vw;
+        }
 
         @media #{$media-sm} {
           width: 40px/$mobile-ratio*100vw;
@@ -90,6 +103,10 @@
 
       @media #{$desktop-bad-ratio} {
         margin-top: 30px/$desktop-height-ratio * 100vh;
+      }
+
+      @media #{$media-tablet} {
+        margin-tio: 30px/$tablet-ratio*100vw;
       }
 
       @media #{$media-sm} {
@@ -110,6 +127,10 @@
     img {
       width: 28px/$desktop-home-ratio*100vw;
       margin-right: 10px;
+
+      @media #{$media-tablet} {
+        width: 28px/$tablet-ratio*100vw;
+      }
 
       @media #{$media-sm} {
         width: 40px/$mobile-ratio*100vw;

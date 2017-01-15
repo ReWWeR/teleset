@@ -12,6 +12,10 @@
     flex-wrap: wrap;
     margin: 0 (-5px/$desktop-home-ratio*100vw);
 
+    @media #{$media-tablet} {
+      margin: 0 (-5px/$mobile-ratio*100vw)
+    }
+    
     @media #{$media-sm} {
       margin: 0 (-10px/$mobile-ratio * 100vw);
     }
@@ -25,7 +29,6 @@
     background: $purple;
     border-radius: 44px/$desktop-home-ratio*100vw;
     flex: 0 1 220px/$desktop-home-ratio*100vw;
-    //width: 220px/$desktop-home-ratio*100vw;
     height: 220px/$desktop-home-ratio*100vw;
     margin: 5px/$desktop-home-ratio*100vw;
     padding: (20px/$desktop-home-ratio*100vw) (10px/$desktop-home-ratio*100vw) (34px/$desktop-home-ratio*100vw);
@@ -43,6 +46,15 @@
       padding: (20px/$desktop-height-ratio*100vh) (10px/$desktop-height-ratio*100vh) (34px/$desktop-height-ratio*100vh);
       border-radius: 44px/$desktop-height-ratio * 100vh;
       margin: 5px/$desktop-height-ratio * 100vh;
+    }
+
+    @media #{$media-tablet} {
+      border-radius: 44px/$tablet-ratio*100vw;
+      flex: 0 1 220px/$tablet-ratio*100vw;
+      height: 220px/$tablet-ratio*100vw;
+      margin: 5px/$tablet-ratio*100vw;
+      padding: (20px/$tablet-ratio*100vw) (10px/$tablet-ratio*100vw) (34px/$tablet-ratio*100vw);
+      font-size: (20px/$tablet-ratio*100vw);
     }
 
     @media #{$media-sm} {
@@ -74,6 +86,11 @@
         margin: 0 auto 16px/$desktop-height-ratio*100vh;
       }
 
+      @media #{$media-tablet} {
+        margin: 0 auto 16px/$tablet-ratio*100vw;
+        height: 100px/$tablet-ratio*100vw;
+      }
+      
       @media #{$media-sm} {
         height: 100px/$mobile-ratio*100vw;
         margin-bottom: 30px/$mobile-ratio*100vw;
@@ -95,6 +112,10 @@
           width: 48px/$desktop-height-ratio*100vh
         }
 
+        @media #{$media-tablet} {
+          width: 48px/$tablet-ratio*100vw;
+        }
+
         @media #{$media-sm} {
           width: 48px/$mobile-ratio*100vw;
         }
@@ -109,6 +130,10 @@
 
         @media #{$desktop-bad-ratio} {
           width: 93px/$desktop-height-ratio*100vh
+        }
+
+        @media #{$media-tablet} {
+          width: 93px/$tablet-ratio*100vw;
         }
 
         @media #{$media-sm} {
@@ -127,6 +152,10 @@
           width: 82px/$desktop-height-ratio*100vh
         }
 
+        @media #{$media-tablet} {
+          width: 82px/$tablet-ratio*100vw;
+        }
+
         @media #{$media-sm} {
           width: 82px/$mobile-ratio*100vw;
         }
@@ -141,6 +170,10 @@
 
         @media #{$desktop-bad-ratio} {
           width: 78px/$desktop-height-ratio*100vh
+        }
+
+        @media #{$media-tablet} {
+          width: 78px/$tablet-ratio*100vw;
         }
 
         @media #{$media-sm} {
@@ -159,6 +192,10 @@
           width: 84px/$desktop-height-ratio*100vh
         }
 
+        @media #{$media-tablet} {
+          width: 84px/$tablet-ratio*100vw;
+        }
+
         @media #{$media-sm} {
           width: 84px/$mobile-ratio*100vw;
         }
@@ -175,6 +212,10 @@
           width: 84px/$desktop-height-ratio*100vh
         }
 
+        @media #{$media-tablet} {
+          width: 84px/$tablet-ratio*100vw;
+        }
+
         @media #{$media-sm} {
           width: 84px/$mobile-ratio*100vw;
         }
@@ -188,6 +229,11 @@
         font-size: 20px/$desktop-height-ratio * 100vh;
         flex-basis: 180px/$desktop-height-ratio * 100vh;
         //width: 100px/$desktop-height-ratio * 100vh;
+      }
+
+      @media #{$media-tablet} {
+        font-size: 20px/$tablet-ratio*100vw;
+        flex-basis: 180px/$tablet-ratio*100vw;
       }
 
       @media #{$media-sm} {
@@ -210,6 +256,10 @@
 
       @media #{$desktop-bad-ratio} {
         font-size: 20px/$desktop-height-ratio * 100vh;
+      }
+
+      @media #{$media-tablet} {
+        font-size: 20px/$tablet-ratio*100vw;
       }
 
       @media #{$media-sm} {

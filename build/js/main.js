@@ -12997,7 +12997,9 @@ $(document).ready(function(){
     $shopPageWrap = $('.shop-page');
 
     $loadmoreBtn.on('click', function() {
-            $shopCol.find('.shop-item.hidden').removeClass('hidden');
+       var $hiddenItems =  $shopCol.find('.shop-item.hidden')
+        $hiddenItems.removeClass('hidden');
+            setTimeout(function(){$hiddenItems.addClass('items-loaded')}, 1000);
             $(this).remove();
     });
 

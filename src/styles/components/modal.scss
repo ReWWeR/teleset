@@ -31,6 +31,13 @@
       height: 480px/$desktop-height-ratio*100vh;
     }
 
+    @media #{$media-tablet} {
+      border-radius: 36px/$tablet-ratio*100vw;
+      padding: 40px/$tablet-ratio*100vw;
+      width: 800px/$tablet-ratio*100vw;
+      height: 480px/$tablet-ratio*100vw;
+    }
+
     @media #{$media-sm} {
       width: 550px/$mobile-ratio*100vw;
       height: 700px/$mobile-ratio*100vw;
@@ -58,6 +65,10 @@
         font-size: 36px/$desktop-height-ratio*100vh;
       }
 
+      @media #{$media-tablet} {
+        font-size: 36px/$tablet-ratio*100vw;
+      }
+
       @media #{$media-sm} {
         font-size: 36px/$mobile-ratio*100vw;
       }
@@ -70,6 +81,11 @@
       @media #{$desktop-bad-ratio} {
         width: 30px/$desktop-height-ratio*100vh;
         height: 30px/$desktop-height-ratio*100vh;
+      }
+
+      @media #{$media-tablet} {
+        width: 30px/$tablet-ratio*100vw;
+        height: 30px/$tablet-ratio*100vw;
       }
 
       @media #{$media-sm} {
@@ -91,6 +107,10 @@
         min-height: 53px/$desktop-height-ratio*100vh;
       }
 
+      @media #{$media-tablet} {
+        min-height: 53px/$tablet-ratio*100vw;
+      }
+
       @media #{$media-sm} {
         min-height: 20px;
       }
@@ -108,7 +128,7 @@
     .modal {
       width: 45vw;
 
-      @media #{$media-sm} {
+      @media #{$media-tablet} {
         width: 90vw;
       }
     }

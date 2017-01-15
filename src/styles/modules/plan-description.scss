@@ -1,6 +1,10 @@
 .plan-description {
   width: 400px/$desktop-home-ratio * 100vw;
 
+  @media #{$media-tablet} {
+    width: calc(100% - 13vw);
+  }
+
   @media #{$media-sm} {
     width: calc(100% - 13vw);
   }
@@ -36,6 +40,10 @@
       font-size: 90px/$desktop-height-ratio*100vh;
     }
 
+    @media #{$media-tablet} {
+      font-size: 90px/$tablet-ratio * 100vw;
+    }
+
     @media #{$media-sm} {
       font-size: 108px/$mobile-ratio * 100vw;
     }
@@ -56,6 +64,10 @@
       font-size: 36px/$desktop-height-ratio*100vh;
     }
 
+    @media #{$media-tablet} {
+      font-size: 36px/$tablet-ratio * 100vw;
+    }
+
     @media #{$media-sm} {
       font-size: 36px/$mobile-ratio * 100vw;
       width: 60vw;
@@ -73,6 +85,10 @@
 
     @media #{$desktop-bad-ratio} {
       font-size: 20px/$desktop-height-ratio*100vh;
+    }
+
+    @media #{$media-tablet} {
+      font-size: 20px/$tablet-ratio * 100vw;
     }
 
     @media #{$media-sm} {

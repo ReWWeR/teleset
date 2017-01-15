@@ -45,6 +45,12 @@
         padding: 0 50px/$desktop-height-ratio*100vh;
       }
 
+      @media #{$media-tablet} {
+        padding: 0 50px/$tablet-ratio*100vw;
+        width: 100%;
+        font-size: 18px/$tablet-ratio*100vw;
+      }
+      
       .robot-animation {
         display: inline-block;
         margin-top: 15px/$desktop-home-ratio*100vw;
@@ -56,6 +62,12 @@
           margin-top: 15px/$desktop-height-ratio*100vh;
           width: 36px/$desktop-height-ratio*100vh;
           min-width: 36px/$desktop-height-ratio*100vh;
+        }
+        
+        @media #{$media-tablet} {
+          margin-top: 15px/$tablet-ratio*100vw;
+          width: 36px/$tablet-ratio*100vw;
+          min-width: 36px/$tablet-ratio*100vw;
         }
 
         @media #{$media-sm} {
@@ -73,6 +85,10 @@
 
     .input-wrap {
       margin-bottom: 24px/$desktop-home-ratio*100vw;
+
+      @media #{$media-tablet} {
+        margin-bottom: 24px/$tablet-ratio*100vw;
+      }
 
       @media #{$media-sm} {
         margin-bottom: 24px/$mobile-ratio*100vw;
@@ -122,6 +138,11 @@
       margin-bottom: 46px/$desktop-height-ratio*100vh;
     }
 
+    @media #{$media-tablet} {
+      font-size: 36px/$tablet-ratio*100vw;
+      margin-bottom: 46px/$tablet-ratio*100vw;
+    }
+
     @media #{$media-sm} {
       font-size: 36px/$mobile-ratio*100vw;
       margin-bottom: 46px/$mobile-ratio*100vw;
@@ -165,6 +186,10 @@
       input {
         width: 540px/$desktop-home-ratio*100vw;
 
+        @media #{$media-tablet} {
+          width: 540px/$tablet-ratio*100vw;
+        }
+
         @media #{$media-sm} {
           width: 100%;
         }
@@ -177,6 +202,10 @@
   .center-block {
     justify-content: flex-start;
     padding: 0 60px/$desktop-home-ratio*100vw;
+
+    @media #{$media-tablet} {
+      padding: 0 60px/$tablet-ratio*100vw;
+    }
 
     @media #{$media-sm} {
       padding: 0 60px/$mobile-ratio*100vw;
@@ -193,6 +222,10 @@
 
     @media #{$desktop-bad-ratio} {
       width: 540px/$desktop-height-ratio*100vh;
+    }
+
+    @media #{$media-tablet} {
+      width: 540px/$tablet-ratio*100vw;
     }
 
     @media #{$media-sm} {
@@ -214,6 +247,10 @@
       .robot-animation {
         margin-right: 20px/$desktop-home-ratio*100vw;
         margin-top: 0;
+
+        @media #{$media-tablet} {
+          margin-right: 20px/$tablet-ratio*100vw;
+        }
 
         @media #{$media-sm} {
           margin-right: 20px/$mobile-ratio*100vw;

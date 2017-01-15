@@ -1,7 +1,5 @@
 .faq-section {
   .faq-accordion-title-main {
-    max-height: 450px;
-    transition: height .5s;
 
     > span {
       font-family: $font-ultima-name;
@@ -10,6 +8,11 @@
       align-items: center;
       margin-bottom: 27px/$desktop-home-ratio*100vw;
       cursor: pointer;
+
+      @media #{$media-tablet} {
+        font-size: 36px/$tablet-ratio*100vw;
+        margin-bottom: 27px/$tablet-ratio*100vw;
+      }
 
       @media #{$media-sm} {
         font-size: 36px/$mobile-ratio*100vw;
@@ -21,6 +24,11 @@
         width: 28px/$desktop-home-ratio*100vw;
         margin-right: 30px/$desktop-home-ratio*100vw;
         will-change: transform;
+
+        @media #{$media-tablet} {
+          width: 28px/$tablet-ratio*100vw;
+          margin-right: 30px/$tablet-ratio*100vw;
+        }
 
         @media #{$media-sm} {
           width: 28px/$mobile-ratio*100vw;
@@ -51,6 +59,10 @@
           & > .faq-accordion-content {
             margin-top: 15px/$desktop-home-ratio*100vw;
 
+            @media #{$media-tablet} {
+              margin-top: 15px/$tablet-ratio*100vw;
+            }
+            
             @media #{$media-sm} {
               margin-top: 15px/$mobile-ratio*100vw;
             }
@@ -70,6 +82,10 @@
       display: block;
       margin-bottom: 42px/$desktop-home-ratio*100vw;
 
+      @media #{$media-tablet} {
+        margin-bottom: 42px/$tablet-ratio*100vw;
+      }
+
       @media #{$media-sm} {
         margin-bottom: 42px/$mobile-ratio*100vw;
       }
@@ -80,6 +96,10 @@
     //height: 0;
     overflow: hidden;
     margin-bottom: 10px/$desktop-home-ratio*100vw;
+
+    @media #{$media-tablet} {
+      margin-bottom: 10px/$tablet-ratio*100vw;
+    }
 
     @media #{$media-sm} {
       margin-bottom: 10px/$mobile-ratio*100vw;
@@ -100,6 +120,10 @@
       align-items: center;
       cursor: pointer;
 
+      @media #{$media-tablet} {
+        font-size: 24px/$tablet-ratio*100vw;
+      }
+
       @media #{$media-sm} {
         font-size: 24px/$mobile-ratio*100vw;
       }
@@ -119,6 +143,13 @@
         height: 28px/$desktop-home-ratio*100vw;
         margin-right: 30px/$desktop-home-ratio*100vw;
         opacity: .2;
+
+        @media #{$media-tablet} {
+          font-size: 36px/$tablet-ratio*100vw;
+          width: 28px/$tablet-ratio*100vw;
+          height: 28px/$tablet-ratio*100vw;
+          margin-right: 30px/$tablet-ratio*100vw;
+        }
 
         @media #{$media-sm} {
           width: 28px/$mobile-ratio*100vw;
@@ -147,6 +178,10 @@
         display: block;
         margin-top: 10px/$desktop-home-ratio*100vw;
 
+        @media #{$media-tablet} {
+          margin-top: 10px/$tablet-ratio*100vw;
+        }
+
         @media #{$media-sm} {
           margin-top: 10px/$mobile-ratio*100vw;
         }
@@ -157,9 +192,18 @@
         display: block;
         margin-bottom: 45px/$desktop-home-ratio*100vw;
 
+        @media #{$media-tablet} {
+          margin-bottom: 45px/$tablet-ratio*100vw;
+        }
+
         @media #{$media-sm} {
           margin-bottom: 45px/$mobile-ratio*100vw;
         }
+      }
+
+      @media #{$media-tablet} {
+        font-size: 18px/$tablet-ratio*100vw;
+        padding-left: 60px/$tablet-ratio*100vw;
       }
 
       @media #{$media-sm} {

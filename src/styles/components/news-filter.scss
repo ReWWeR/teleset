@@ -3,6 +3,11 @@
   top: 48px;
   right: 60px;
 
+  @media #{$media-tablet} {
+    top: 150px/$tablet-ratio*100vw;
+    right: 60px/$tablet-ratio*100vw;
+  }
+  
   @media #{$media-sm} {
     top: 150px/$mobile-ratio*100vw;
     right: 60px/$mobile-ratio*100vw;
@@ -23,6 +28,10 @@
       display: block;
       width: 42px;
 
+      @media #{$media-tablet} {
+        width: 42px/$tablet-ratio*100vw;
+      }
+      
       @media #{$media-sm} {
         width: 42px/$mobile-ratio*100vw;
       }
@@ -72,6 +81,10 @@
       line-height: 1.3333;
       padding-bottom: .8em;
 
+      @media #{$media-tablet} {
+        font-size: 28px/$tablet-ratio*100vw;
+      }
+      
       @media #{$media-sm} {
         font-size: 28px/$mobile-ratio*100vw;
       }
@@ -92,9 +105,18 @@
         padding: (15px/$desktop-home-ratio*100vw) (16px/$desktop-home-ratio*100vw) (15px/$desktop-home-ratio*100vw) (30px/$desktop-home-ratio*100vw);
         margin-right: 10px;
 
+        @media #{$media-tablet} {
+          padding: (15px/$tablet-ratio*100vw) (16px/$tablet-ratio*100vw) (15px/$tablet-ratio*100vw) (30px/$tablet-ratio*100vw);
+        }
+        
         span {
           font-size: (22px/$desktop-home-ratio*100vw);
           margin-right: 20px;
+
+          @media #{$media-tablet} {
+            font-size: 22px/$tablet-ratio*100vw;
+            margin-right: 20px/$tablet-ratio*100vw;
+          }
 
           @media #{$media-sm} {
             font-size: 22px/$mobile-ratio*100vw;
@@ -120,12 +142,18 @@
 
   .modal-close {
     position: absolute;
-    bottom: 50px;
-    left: 60px;
+    bottom: 50px/$desktop-home-ratio*100vw;
+    left: 60px/$desktop-home-ratio*100vw;
     display: flex;
     align-items: center;
     font-size: 18px/$desktop-home-ratio*100vw;
 
+    @media #{$media-tablet} {
+      bottom: 50px/$tablet-ratio*100vw;
+      left: 60px/$tablet-ratio*100vw;
+      font-size: 18px/$tablet-ratio*100vw;
+    }
+    
     @media #{$media-sm} {
       bottom: 50px/$mobile-ratio*100vw;
       left: 60px/$mobile-ratio*100vw;
@@ -140,8 +168,13 @@
 
     svg {
       width: 30px/$desktop-home-ratio*100vw;
-      margin-right: 20px;
+      margin-right: 20px/$desktop-home-ratio*100vw;
 
+      @media #{$media-tablet} {
+        width: 30px/$tablet-ratio*100vw;
+        margin-right: 20px/$tablet-ratio*100vw;
+      }
+      
       @media #{$media-sm} {
         width: 30px/$mobile-ratio*100vw;
         margin-right: 20px/$mobile-ratio*100vw;
@@ -177,6 +210,14 @@
       border-radius: 10px/$desktop-home-ratio*100vw;
       cursor: pointer;
 
+      @media #{$media-tablet} {
+        width: 46px/$tablet-ratio*100vw;
+        height: 46px/$tablet-ratio*100vw;
+        right: 5px/$tablet-ratio*100vw;
+        top: 3px/$tablet-ratio*100vw;
+        border-radius: 10px/$tablet-ratio*100vw;
+      }
+      
       @media #{$desktop-bad-ratio} {
         width: 46px/$desktop-height-ratio*100vh;
         height: 46px/$desktop-height-ratio*100vh;
@@ -203,6 +244,10 @@
 
       svg {
         height: 20px/$desktop-home-ratio*100vw;
+
+        @media #{$media-tablet} {
+          height: 20px/$tablet-ratio*100vw;
+        }
 
         @media #{$desktop-bad-ratio} {
           height: 20px/$desktop-height-ratio*100vh;

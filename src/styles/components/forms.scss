@@ -23,6 +23,13 @@ input[type=text], input[type=number], input[type=email], input[type=tel], input[
     }
   }
 
+  @media #{$media-tablet} {
+    height: 54px/$tablet-ratio*100vw;
+    border-radius: 10px/$tablet-ratio*100vw;
+    font-size: 22px/$tablet-ratio*100vw;
+    padding: 0 (40px/$tablet-ratio*100vw) 0 (20px/$tablet-ratio*100vw);
+  }
+
   @media #{$media-sm} {
     background: #fff;
     color: #000;
@@ -55,6 +62,10 @@ input[type=text], input[type=number], input[type=email], input[type=tel], input[
 
     @media #{$desktop-bad-ratio} {
       font-size: 16px/$desktop-height-ratio*100vh;
+    }
+
+    @media #{$media-tablet} {
+      font-size: 16px/$tablet-ratio*100vw;
     }
 
     @media #{$media-sm} {
@@ -122,6 +133,17 @@ input[type=text], input[type=number], input[type=email], input[type=tel], input[
       }
     }
 
+    @media #{$media-tablet} {
+      height: 90px/$tablet-ratio*100vw;
+      font-size: 36px/$tablet-ratio*100vw;
+      border-radius: 18px/$tablet-ratio*100vw;
+      padding-right: 60px/$tablet-ratio*100vw;
+
+      &::-webkit-input-placeholder {
+        font-size: 36px/$tablet-ratio * 100vw;
+      }
+    }
+
     @media #{$media-sm} {
       height: 90px/$mobile-ratio*100vw;
       font-size: 36px/$mobile-ratio*100vw;
@@ -138,7 +160,6 @@ input[type=text], input[type=number], input[type=email], input[type=tel], input[
       font-size: 36px/$mobile-ratio-height*100vh;
       border-radius: 18px/$mobile-ratio-height*100vh;
       padding-right: 50px/$mobile-ratio-height*100vh;
-
 
       &::-webkit-input-placeholder {
         font-size: 36px/$mobile-ratio-height*100vh;
@@ -172,6 +193,10 @@ input[type=text], input[type=number], input[type=email], input[type=tel], input[
           border-radius: 10px/$desktop-height-ratio*100vh;
         }
 
+        @media #{$media-tablet} {
+          border-radius: 10px/$tablet-ratio*100vw;
+        }
+
         @media #{$media-sm} {
           border-radius: 20px/$mobile-ratio*100vw;
         }
@@ -189,7 +214,6 @@ input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-
 
 .input-wrap {
   position: relative;
@@ -214,6 +238,12 @@ input[type=number]::-webkit-outer-spin-button {
         right: 24px/$desktop-height-ratio*100vh;
       }
 
+      @media #{$media-tablet} {
+        width: 20px/$tablet-ratio*100vw;
+        height: 14px/$tablet-ratio*100vw;
+        right: 24px/$tablet-ratio*100vw;
+      }
+
       @media #{$media-sm} {
         width: 20px/$mobile-ratio*100vw;
         height: 14px/$mobile-ratio*100vw;
@@ -230,15 +260,20 @@ input[type=number]::-webkit-outer-spin-button {
     &.input-big-wrap {
 
       &:after {
-      width: 30px/$desktop-home-ratio*100vw;
-      height: 21px/$desktop-home-ratio*100vw;
+        width: 30px/$desktop-home-ratio*100vw;
+        height: 21px/$desktop-home-ratio*100vw;
         right: 30px/$desktop-home-ratio*100vw;
-
 
         @media #{$desktop-bad-ratio} {
           width: 30px/$desktop-height-ratio*100vh;
           height: 21px/$desktop-height-ratio*100vh;
           right: 30px/$desktop-height-ratio*100vh;
+        }
+
+        @media #{$media-tablet} {
+          width: 30px/$tablet-ratio*100vw;
+          height: 21px/$tablet-ratio*100vw;
+          right: 30px/$tablet-ratio*100vw;
         }
 
         @media #{$media-sm} {
@@ -278,6 +313,11 @@ input[type=number]::-webkit-outer-spin-button {
         right: 24px/$desktop-height-ratio*100vh;
       }
 
+      @media #{$media-tablet} {
+        width: 19px/$tablet-ratio*100vw;
+        height: 19px/$tablet-ratio*100vw;
+      }
+
       @media #{$media-sm} {
         width: 19px/$mobile-ratio*100vw;
         height: 19px/$mobile-ratio*100vw;
@@ -304,6 +344,10 @@ input[type=number]::-webkit-outer-spin-button {
     border-top-left-radius: 0;
     flex-grow: 1;
     padding-left: 10px/$desktop-home-ratio*100vw;
+
+    @media #{$media-tablet} {
+      padding-left: 10px/$tablet-ratio*100vw;
+    }
 
     @media #{$media-sm} {
       background: $purple;
@@ -333,6 +377,13 @@ input[type=number]::-webkit-outer-spin-button {
       border-top-left-radius: 10px/$desktop-height-ratio*100vh;
       padding-left: 20px/$desktop-height-ratio*100vh;
 
+    }
+
+    @media #{$media-tablet} {
+      font-size: 16px/$tablet-ratio*100vw;
+      border-bottom-left-radius: 10px/$tablet-ratio*100vw;
+      border-top-left-radius: 10px/$tablet-ratio*100vw;
+      padding-left: 20px/$tablet-ratio*100vw;
     }
 
     @media #{$media-sm} {

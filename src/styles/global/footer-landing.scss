@@ -9,7 +9,7 @@
     z-index: 3;
   }
 
-  @media #{$media-sm} {
+  @media #{$media-tablet} {
     .hamburger-menu, .social-icons, .author-logo {
       display: none !important;
     }
@@ -385,6 +385,13 @@
     svg {
       opacity: .6;
     }
+  }
+
+  @media #{$media-tablet} {
+    min-width: 42px/$tablet-ratio*100vw;
+    left: 60px/$tablet-ratio*100vw;
+    transform: none;
+    position: static;
   }
 
   @media #{$media-sm} {

@@ -2,14 +2,11 @@
   .hero {
     position: absolute;
     left: 170px/$desktop-home-ratio*100vw;
-    bottom: 0;
+    top: 37px/$desktop-home-ratio*100vw;
     z-index: 1;
-    //width: $hero-width/$desktop-home-ratio*100vw;
-    //max-width: $hero-width;
-    height: $hero-height/$desktop-height-ratio*100vh;
+    width: $hero-width/$desktop-home-ratio*100vw;
 
     @media #{$media-sm} {
-      //height: $hero-height/$mobile-ratio-height*100vh;
       right: -300px/$mobile-ratio-height*100vh;
       left: initial;
       bottom: 0;
@@ -29,6 +26,11 @@
 
     p {
       margin-bottom: inherit;
+    }
+
+    @media #{$media-tablet} {
+      margin-left: 0;
+      padding: 0 60px/$tablet-ratio*100vw;
     }
 
     @media #{$media-sm} {

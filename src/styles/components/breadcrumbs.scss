@@ -17,6 +17,10 @@
     padding-top: 115px/$desktop-height-ratio * 100vh;
   }
 
+  @media #{$media-tablet} {
+    padding-top: 160px/$tablet-ratio*100vw;
+  }
+
   @media #{$media-sm} {
     padding-top: 115px/$mobile-ratio*100vw;
   }
@@ -34,6 +38,10 @@
         font-size: 18px/$desktop-height-ratio*100vh;
       }
 
+      @media #{$media-tablet} {
+        font-size: 18px/$tablet-ratio*100vw;
+      }
+
       @media #{$media-sm} {
         font-size: 9px/$mobile-ratio*100vw;
       }
@@ -47,6 +55,10 @@
 
         @media #{$desktop-bad-ratio} {
           margin-right: 25px/$desktop-height-ratio * 100vh;
+        }
+
+        @media #{$media-tablet} {
+          margin-right: 25px/$tablet-ratio*100vw;
         }
 
         @media #{$media-sm} {

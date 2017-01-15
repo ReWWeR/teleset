@@ -6,6 +6,10 @@
     padding: 0 (60px/$desktop-height-ratio*100vh);
   }
 
+  @media #{$media-tablet} {
+    padding: 0 (60px/$tablet-ratio*100vw);
+  }
+
   @media #{$media-sm} {
     padding: 0 (60px/$mobile-ratio*100vw);
   }
@@ -30,6 +34,10 @@
 
   @media #{$desktop-bad-ratio} {
     padding-top: 120px/$desktop-height-ratio*100vh;
+  }
+
+  @media #{$media-tablet} {
+    padding-top: 120px/$tablet-ratio*100vw;
   }
 
   @media #{$media-sm} {
@@ -71,6 +79,10 @@
     padding: (75px/$desktop-height-ratio*100vh) 0 (106px/$desktop-height-ratio*100vh);
   }
 
+  @media #{$media-tablet} {
+    padding: (75px/$tablet-ratio*100vw) 0 (106px/$tablet-ratio*100vw);
+  }
+
   @media #{$media-sm} {
     padding: (65px/$mobile-ratio*100vw) 0 (104px/$mobile-ratio*100vw);
     display: flex;
@@ -94,6 +106,10 @@
       font-size: 28px/$desktop-height-ratio * 100vh;
     }
 
+    @media #{$media-tablet} {
+      font-size: 28px/$tablet-ratio*100vw;
+    }
+
     @media #{$media-sm} {
       font-size: 28px/$mobile-ratio * 100vw;
       margin-right: 39px/$mobile-ratio * 100vw;
@@ -112,6 +128,10 @@
     sup {
       font-size: 18px/$desktop-home-ratio*100vw;
       font-weight: 700;
+
+      @media #{$media-tablet} {
+        font-size: 28px/$tablet-ratio*100vw;
+      }
 
       @media #{$desktop-bad-ratio} {
         font-size: 18px/$desktop-height-ratio * 100vh;
@@ -139,6 +159,11 @@
       padding: (22px/$desktop-height-ratio*100vh) (38px/$desktop-height-ratio*100vh);
     }
 
+
+    @media #{$media-tablet} {
+      font-size: 36px/$tablet-ratio*100vw;
+      padding: (22px/$tablet-ratio*100vw) (38px/$tablet-ratio*100vw);
+    }
 
     @media #{$media-sm} {
       margin-left: auto;

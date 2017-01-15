@@ -44,7 +44,7 @@ body.loaded.initial-animation {
       transform: initial;
     }
   }
-  .shop-item-animate {
-    //animation-name: none;
+  .shop-item-animate.items-loaded {
+    animation-name: none;
   }
 }
