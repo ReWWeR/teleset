@@ -33,9 +33,15 @@
     position: absolute;
     right: 255px/$desktop-home-ratio*100vw;
     z-index: 1;
-    top: 43px/$desktop-height-ratio*100vh;
-    height: $hero-5-height/$desktop-height-ratio*100vh;
+    top: 50%;
     opacity: 0;
+
+    width: $hero-5-width/$desktop-home-ratio*100vw;
+
+    @media #{$desktop-bad-ratio} {
+      height: $hero-5-height/$desktop-height-ratio*100vh;
+      width: auto;
+    }
 
     @media #{$media-sm} {
       right: 20px/$mobile-ratio*100vw;

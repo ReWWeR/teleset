@@ -642,17 +642,27 @@
     .hero {
       position: absolute;
       left: 50%;
-      transform: translateX(-50%);
-      bottom: 0;
+      transform: translateX(-40%) translateY(-34.5%);
       z-index: 1;
-      height: $hero-height/$desktop-height-ratio*100vh;
+      width: $hero-width/$desktop-home-ratio*100vw;
+      top: 50%;
+
+      @media #{$desktop-bad-ratio} {
+        height: $hero-height/$desktop-height-ratio*100vh;
+        width: auto;
+      }
+
+      @media #{$media-tablet} {
+        width: $hero-width/$tablet-ratio*100vw;
+      }
 
       @media #{$media-sm} {
-        height: $hero-height/$mobile-ratio-height*100vh;
+        width: $hero-width/$mobile-ratio*100vw;
       }
 
       @media #{$media-sm-with-ratio} {
         height: $hero-height/$mobile-ratio-height*100vh;
+        width: auto;
       }
     }
 

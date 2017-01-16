@@ -22,7 +22,8 @@
     flex-direction: column;
     text-align: center;
     left: 50%;
-    transform: translateX(-50%);
+    top: 50%;
+    transform: translateX(-50%) translateY(-45%);
     bottom: auto;
 
     h1 {

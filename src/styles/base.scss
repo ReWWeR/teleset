@@ -152,6 +152,12 @@ sup {
 
 .yellow-bg {
   background: $yellow!important;
+
+  .about-plan & {
+    @media #{$media-sm} {
+      background: $purple-dark!important;
+    }
+  }
 }
 
 .purple-bg {

@@ -2,21 +2,36 @@
   .hero {
     position: fixed;
     right: 1001px/$desktop-home-ratio*100vw;
-    height: $hero-4-height/$desktop-height-ratio*100vh;
+    top: 50%;
     bottom: 0;
     opacity: 0;
+    width: $hero-4-width/$desktop-home-ratio*100vw;
 
     @media #{$desktop-bad-ratio} {
-      right: 1001px/$desktop-home-ratio*100vw;
+      height: $hero-4-height/$desktop-height-ratio*100vh;
+      width: auto;
+      right: 830px/$desktop-home-ratio*100vw;
+    }
+
+    @media #{$media-tablet} {
+      width: $hero-4-width/$tablet-ratio*100vw;
+      right: -70px/$tablet-ratio*100vw;
+    }
+
+    @media #{$desktop-bad-ratio} {
+      right: 1001px/$desktop-height-ratio*100vh;
     }
 
     @media #{$media-sm} {
-      height: $hero-4-height/$mobile-ratio-height*100vh;
-      right: -150px/$mobile-ratio*100vw;
+      width: $hero-4-width/$mobile-ratio*100vw;
+      height: auto;
+      left: 70px/$mobile-ratio*100vw;
     }
 
     @media #{$media-sm-with-ratio} {
-      right: -150px/$mobile-ratio-height*100vh;
+      width: auto;
+      height: $hero-4-height/$mobile-ratio-height*100vh;
+      left: 500px/$mobile-ratio-height*100vh;
     }
   }
 
@@ -197,8 +212,39 @@
     }
   }
 }
+.slide-menu .main-menu-item.support-page .header-inner-page {
+  .hero.hero-4 {
+    left: 50%;
+    transform: translateX(0%) translateY(-34.5%);
+    width: $hero-4-width/$desktop-home-ratio*100vw;
+    top: 50%;
+    right: -70px/$desktop-home-ratio*100vw;
 
-.support-page {
+    @media #{$desktop-bad-ratio} {
+      height: $hero-4-height/$desktop-height-ratio*100vh;
+      width: auto;
+    }
+
+    @media #{$media-tablet} {
+      width: $hero-4-width/$tablet-ratio*100vw;
+      right: -70px/$tablet-ratio*100vw;
+    }
+
+    @media #{$media-sm} {
+      width: $hero-4-width/$mobile-ratio*100vw;
+      height: auto;
+      //right: -70px/$mobile-ratio*100vw;
+      left: 70px/$mobile-ratio*100vw;
+    }
+
+    @media #{$media-sm-with-ratio} {
+      width: auto;
+      height: $hero-4-height/$mobile-ratio-height*100vh;
+      //right: -70px/$mobile-ratio-height*100vh;
+      left: 500px/$mobile-ratio-height*100vh;
+    }
+  }
+
   .center-block {
     justify-content: flex-start;
     padding: 0 60px/$desktop-home-ratio*100vw;

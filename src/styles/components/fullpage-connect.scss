@@ -1,15 +1,27 @@
-.fullpage-content {
+.connect-fullpage {
   .plan-description {
     position: fixed;
     right: 1000px/$desktop-home-ratio*100vw;
-    bottom: 270px/$desktop-home-ratio*100vw;
+    //bottom: 270px/$desktop-home-ratio*100vw;
+    top: 50%;
+    transform: translateY(-50%);
     z-index: 0;
     width: 320px/$desktop-home-ratio*100vw;
 
     @media #{$desktop-bad-ratio} {
-      bottom: 270px/$desktop-height-ratio*100vh;
       width: 320px/$desktop-height-ratio*100vh;
       right: calc(50% + 13.25vh);
+    }
+    @media #{$media-tablet} {
+      position: absolute;
+      z-index: 1;
+      width: calc(100% - 13vw);
+      right: auto;
+    }
+
+    @media #{$media-sm} {
+      top: 50%;
+      transform: translateY(-50%);
     }
 
     h1 {
@@ -25,11 +37,16 @@
     position: fixed;
     bottom: 0;
     left: 806px/$desktop-home-ratio*100vw;
-    height: $hero-2-height/$desktop-height-ratio*100vh;
-    //width: $hero-2-width/$desktop-home-ratio*100vw;
     z-index: 1;
-    //transition: transform .75s, opacity .5s;
     opacity: 0;
+    top: 50%;
+    transform: translateY(-34.5%);
+    width: $hero-2-width/$desktop-home-ratio*100vw;
+
+    @media #{$desktop-bad-ratio} {
+      height: $hero-2-height/$desktop-height-ratio*100vh;
+      width: auto;
+    }
 
     body.loaded.initial-animation.show-connect-form &,
     body.loaded.initial-animation.show-connect-step-success & {
@@ -37,11 +54,11 @@
     }
 
     body.loaded.initial-animation.show-connect-form & {
-      transform: translateX(-680px/$desktop-home-ratio*100vw);
+      transform: translateX(-680px/$desktop-home-ratio*100vw) translateY(-34.5%);
       z-index: 2;
 
       @media #{$desktop-bad-ratio} {
-        transform: translateX(-560px/$desktop-height-ratio*100vh);
+        transform: translateX(-680px/$desktop-height-ratio*100vh) translateY(-34.5%);
         left: 50%;
       }
     }
@@ -64,13 +81,14 @@
     }
 
     .show-connect-form & {
-      transform: translateX(calc(-100% - 3.7vw))!important;
+      transform: translateX(calc(-100% - 3.7vw)) translateY(-50%) !important;
       transition: transform .75s;
     }
 
     &.fig-square-big {
       left: 860px/$desktop-home-ratio*100vw;
-      bottom: 150px/$desktop-home-ratio*100vw;
+      top: 50%;
+      transform: translateY(-50%) scale(0);
       background: $yellow;
       border-radius: 90px/$desktop-home-ratio*100vw;
       //transition: transform 1s, border-radius 1s, opacity .5s;
@@ -81,7 +99,6 @@
       }
 
       @media #{$desktop-bad-ratio} {
-        bottom: 150px/$desktop-height-ratio*100vh;
         border-radius: 90px/$desktop-height-ratio*100vh;
       }
 
@@ -156,4 +173,29 @@
 
 body.connect-fullpage-overflow {
   overflow: hidden;
+}
+
+.connect-fullpage {
+  .hero {
+    &.hero-2 {
+      @media #{$media-tablet} {
+        left: auto;
+        width: $hero-2-width/$tablet-ratio*100vw;
+        right: -110px/$tablet-ratio*100vw;
+      }
+
+      @media #{$media-sm} {
+        left: auto;
+        width: $hero-2-width/$mobile-ratio*100vw;
+        right: -110px/$mobile-ratio*100vw;
+      }
+
+      @media #{$media-sm-with-ratio} {
+        width: auto;
+        left: auto;
+        height: $hero-2-height/$mobile-ratio-height*100vh;
+        right: -110px/$mobile-ratio-height*100vh;
+      }
+    }
+  }
 }

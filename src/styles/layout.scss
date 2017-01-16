@@ -31,6 +31,8 @@
 
 .inner-main-content {
   padding-top: 120px/$desktop-home-ratio*100vw;
+  position: relative;
+  z-index: 1;
 
   @media #{$desktop-bad-ratio} {
     padding-top: 120px/$desktop-height-ratio*100vh;

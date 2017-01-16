@@ -19,6 +19,13 @@ $delay-200: 2s;
   animation-fill-mode: forwards;
 }
 
+%figures-scale-center-mobile {
+  animation-name: figures-scale-center-mobile;
+  animation-duration: .33s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
 @keyframes figures-scale {
   from {
     transform: scale(0);
@@ -34,6 +41,15 @@ $delay-200: 2s;
   }
   to {
     transform: scale(1) translateY(-50%);
+  }
+}
+
+@keyframes figures-scale-center-mobile {
+  from {
+    transform: scale(0) translateY(-50%) translateX(-50%);
+  }
+  to {
+    transform: scale(1) translateY(-50%) translateX(-50%);
   }
 }
 
@@ -71,6 +87,13 @@ $delay-200: 2s;
   animation-fill-mode: forwards;
 }
 
+%hero-5-animation {
+  animation-name: hero-5-animation;
+  animation-duration: .5s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
 %hero-2-animation {
   animation-name: hero-2-animation;
   animation-duration: .5s;
@@ -81,11 +104,11 @@ $delay-200: 2s;
 @keyframes hero-animation {
   0% {
     opacity: 0;
-    transform: translateY(20%);
+    transform: translateY(20% - 34.5%);
   }
 
   25% {
-    transform: translateY(10%);
+    transform: translateY(10% - 34.5%);
   }
 
   50% {
@@ -94,18 +117,18 @@ $delay-200: 2s;
 
   100% {
     opacity: 1;
-    transform: translateY(0%);
+    transform: translateY(-34.5%);
   }
 }
 
 @keyframes hero-animation-mobile {
   0% {
     opacity: 0;
-    transform: translateY(20%);
+    transform: translateY(20% - 34.5%);
   }
 
   25% {
-    transform: translateY(10%);
+    transform: translateY(10% - 34.5%);
   }
 
   50% {
@@ -114,18 +137,18 @@ $delay-200: 2s;
 
   100% {
     opacity: 1;
-    transform: translateY(0%);
+    transform: translateY(0% - 34.5%);
   }
 }
 
 @keyframes hero-animation-center {
   0% {
     opacity: 0;
-    transform: translateY(20%) scaleX(1);
+    transform: translateY(20% - 34.5%) scaleX(1);
   }
 
   25% {
-    transform: translateY(10%) scaleX(1);
+    transform: translateY(10% - 34.5%) scaleX(1);
   }
 
   50% {
@@ -134,18 +157,38 @@ $delay-200: 2s;
 
   100% {
     opacity: 1;
-    transform: translateY(0%) scaleX(1);
+    transform: translateY(0% - 34.5%) scaleX(1);
+  }
+}
+
+@keyframes hero-5-animation {
+  0% {
+    opacity: 0;
+    transform: translateY(-41%) scaleX(1);
+  }
+
+  25% {
+    transform: translateY(-51%) scaleX(1);
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(-61%) scaleX(1);
   }
 }
 
 @keyframes hero-2-animation {
   0% {
     opacity: 0;
-    transform: translateY(20%) scaleX(1);
+    transform: translateY(20% - 34.5%) scaleX(1);
   }
 
   25% {
-    transform: translateY(20%) scaleX(1);
+    transform: translateY(20% - 34.5%) scaleX(1);
   }
 
   50% {
@@ -154,7 +197,7 @@ $delay-200: 2s;
 
   100% {
     opacity: 1;
-    transform: translateY(0) scaleX(1);
+    transform: translateY(0 - 34.5%) scaleX(1);
   }
 }
 
@@ -242,10 +285,23 @@ body.loaded {
   }
 }
 
+body.loaded .homepage .fig-cross-1 {
+  @extend %figures-scale-center;
+  transform-origin: top;
+
+  @media #{$media-sm} {
+    animation-name: figures-scale-center-mobile;
+  }
+}
+
 body.loaded .homepage, body.loaded .payment-fullpage, body.loaded .payment-page, body.loaded .connect-fullpage, body.loaded .support-fullpage, body.loaded .support-page, body.loaded .fortyfour-fullpage {
 
-  .fig-cross-1, .fig-cross-4, .fig-circle-3, .fig-cross-5, .fig-square-big {
+  .fig-cross-4, .fig-circle-3, .fig-cross-5 {
     @extend %figures-scale;
+  }
+
+  .fig-square-big {
+    @extend %figures-scale-center;
   }
 
   .fig-cross-2, .fig-cross-3, .fig-circle-1, .fig-circle-2, .fig-square-1, .fig-square-2, .fig-square-3, .fig-cross-fade-1, .fig-cross-fade-2 {
@@ -260,6 +316,11 @@ body.loaded .homepage, body.loaded .payment-fullpage, body.loaded .payment-page,
 
   .hero-2 {
     @extend %hero-2-animation;
+    animation-delay: $delay-80;
+  }
+
+  .hero-5 {
+    @extend %hero-5-animation;
     animation-delay: $delay-80;
   }
 
@@ -292,34 +353,34 @@ body.loaded .homepage, body.loaded .payment-fullpage, body.loaded .payment-page,
   .support-form {
     h1 {
       @extend %plan-animation;
-      animation-delay: $delay-133;
+      animation-delay: $delay-80;
     }
 
     .flex-form-wrap, p.show-on-success {
       @extend %plan-animation;
-      animation-delay: $delay-133 + $delay-11;
+      animation-delay: $delay-80 + $delay-11;
     }
 
     p, .btn {
       @extend %plan-animation;
-      animation-delay: $delay-133 + ($delay-11 * 2);
+      animation-delay: $delay-80 + ($delay-11 * 2);
     }
   }
 
   .payment-form {
     h1 {
       @extend %plan-animation;
-      animation-delay: $delay-133;
+      animation-delay: $delay-80;
     }
 
     .flex-form-wrap, p {
       @extend %plan-animation;
-      animation-delay: $delay-133 + $delay-11;
+      animation-delay: $delay-80 + $delay-11;
     }
 
     .btn {
       @extend %plan-animation;
-      animation-delay: $delay-133 + ($delay-11 * 2);
+      animation-delay: $delay-80 + ($delay-11 * 2);
     }
   }
 }
@@ -339,26 +400,34 @@ body.loaded {
     .plan-description {
       h1 {
         @extend %plan-animation;
-        animation-delay: $delay-133;
+        animation-delay: $delay-80;
       }
 
       p {
         @extend %plan-animation;
-        animation-delay: $delay-133 + $delay-11;
+        animation-delay: $delay-80 + $delay-11;
       }
 
       a {
         @extend %plan-animation;
-        animation-delay: $delay-133 + ($delay-11 * 2);
+        animation-delay: $delay-80 + ($delay-11 * 2);
       }
     }
 
     .fig-cross-1 {
       @extend %figures-scale-center;
+
+      @media #{$media-sm} {
+        animation-name: figures-scale-center-mobile;
+      }
     }
 
-    .fig-cross-4, .fig-circle-3, .fig-cross-5, .fig-square-big {
+    .fig-cross-4, .fig-circle-3, .fig-cross-5 {
       @extend %figures-scale;
+    }
+
+    .fig-square-big {
+      @extend %figures-scale-center;
     }
 
     .fig-cross-2, .fig-cross-3, .fig-circle-1, .fig-circle-2, .fig-square-1, .fig-square-2, .fig-square-3 {

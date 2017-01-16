@@ -3,7 +3,7 @@ body.loaded.initial-animation {
     .hero {
       animation: none;
       opacity: 1;
-      transform: translateY(0);
+      transform: translateY(-34.5%);
     }
 
     .plan-description {
@@ -17,6 +17,14 @@ body.loaded.initial-animation {
     .fig {
       animation: none;
       transform: initial;
+
+      &.fig-cross-1 {
+        transform: translateY(-50%) scale(1);
+
+        @media #{$media-sm} {
+          transform: translateX(-50%) translateY(-50%) scale(1);
+        }
+      }
     }
 
     .payment-form {
@@ -28,8 +36,13 @@ body.loaded.initial-animation {
   .header-inner-page {
     .hero {
       animation: none;
-      transform: translateY(0%);
+      transform: translateY(-34.5%);
       opacity: 1;
+    }
+
+    .fig-square-big {
+      animation-name: none;
+      transform: translateY(-50%) scale(1);
     }
   }
 
@@ -43,8 +56,21 @@ body.loaded.initial-animation {
       animation-name: none!important;
       transform: initial;
     }
+
+    .fig-square-big {
+      animation-name: none;
+      transform: translateY(-50%) scale(1);
+    }
   }
   .shop-item-animate.items-loaded {
     animation-name: none;
+  }
+
+  .fortyfour-fullpage {
+    .hero {
+      animation: none;
+      transform: translateY(-61%);
+      opacity: 1;
+    }
   }
 }

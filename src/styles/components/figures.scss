@@ -273,6 +273,10 @@
       width: 600px/$desktop-height-ratio*100vh;
     }
 
+    @media #{$media-tablet} {
+      width: 600px/$tablet-ratio*100vw;
+    }
+
     @media #{$media-sm} {
       width: 600px/$mobile-ratio*100vw;
     }

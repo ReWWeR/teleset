@@ -301,10 +301,6 @@ header.mobile-header {
     align-items: center;
   }
 
-  @media #{$media-sm-with-ratio} {
-    padding-top: 44px/$mobile-ratio-height*100vh;
-  }
-
   @media #{$media-tablet} {
     padding-top: 44px/$tablet-ratio*100vw;
     display: block;
@@ -316,19 +312,31 @@ header.mobile-header {
     }
   }
 
+  @media #{$media-sm} {
+    padding-top: 44px/$mobile-ratio*100vw;
+  }
+
+  @media #{$media-sm-with-ratio} {
+    padding-top: 44px/$mobile-ratio-height*100vh;
+  }
+
   .logo {
     margin-right: auto;
     font-size: 0;
 
     svg {
+      @media #{$media-tablet} {
+        width: 138px/$tablet-ratio * 100vw;
+      }
+
       width: 138px/$mobile-ratio * 100vw;
+
+      @media #{$media-sm} {
+        width: 138px/$mobile-ratio * 100vw;
+      }
 
       @media #{$media-sm-with-ratio} {
         width: 138px/$mobile-ratio-height * 100vh;
-      }
-
-      @media #{$media-tablet} {
-        width: 138px/$tablet-ratio * 100vw;
       }
 
       line, circle, rect {
@@ -403,6 +411,11 @@ header.mobile-header {
     z-index: 9999;
     float: right;
 
+    @media #{$media-sm} {
+      width: 42px/$mobile-ratio*100vw;
+      height: 42px/$mobile-ratio*100vw;
+    }
+
     @media #{$media-sm-with-ratio} {
       width: 42px/$mobile-ratio-height*100vh;
       height: 42px/$mobile-ratio-height*100vh;
@@ -452,14 +465,19 @@ header.mobile-header {
       width: 42px/$mobile-ratio*100vw;
       height: 42px/$mobile-ratio*100vw;
 
-      @media #{$media-sm-with-ratio} {
-        width: 42px/$mobile-ratio-height*100vh;
-        height: 42px/$mobile-ratio-height*100vh;
-      }
-
       @media #{$media-tablet} {
         width: 42px/$tablet-ratio*100vw;
         height: 42px/$tablet-ratio*100vw;
+      }
+
+      @media #{$media-sm} {
+        width: 42px/$mobile-ratio*100vw;
+        height: 42px/$mobile-ratio*100vw;
+      }
+
+      @media #{$media-sm-with-ratio} {
+        width: 42px/$mobile-ratio-height*100vh;
+        height: 42px/$mobile-ratio-height*100vh;
       }
 
       & {

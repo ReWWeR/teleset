@@ -15,6 +15,14 @@
     }
   }
 
+  @media #{$media-sm} {
+    padding-bottom: 50px/$mobile-ratio*100vw;
+  }
+
+  @media #{$media-sm-with-ratio} {
+    padding-bottom: 50px/$mobile-ratio-height*100vh;
+  }
+
   .author-logo, .make-call, .social-icons {
     transition: opacity .5s;
     will-change: opacity;

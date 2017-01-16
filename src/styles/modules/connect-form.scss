@@ -509,7 +509,7 @@
     }
 
     .show-connect-form & {
-      z-index: 1;
+      z-index: 2;
       opacity: 1;
       .connect-form-wrapper {
         overflow: visible;
@@ -539,15 +539,10 @@
     }
 
     .connect-form-step {
-      bottom: 150px/$desktop-home-ratio*100vw;
-      top: auto;
+      top: 50%;
       left: 800px/$desktop-home-ratio*100vw;
-      transform: none;
+      transform: translateY(-50%);
       position: fixed;
-
-      @media #{$desktop-bad-ratio} {
-        bottom: 150px/$desktop-height-ratio*100vh;
-      }
 
       &.connect-form-step-view {
         opacity: 0;
@@ -575,7 +570,7 @@
         }
 
         &.connect-form-step-view-map {
-          transform: translateX(-100%) translateY(0%);
+          transform: translateX(-100%) translateY(-50%);
 
           .header-map-notification, .form-bottom-group {
             display: none;

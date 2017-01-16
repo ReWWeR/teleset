@@ -2,23 +2,31 @@
   .hero {
     position: fixed;
     left: 235px/$desktop-home-ratio*100vw;
-    bottom: 0;
     z-index: 1;
-    height: $hero-3-height/$desktop-height-ratio*100vh;
+    top: 50%;
+    width: $hero-3-width/$desktop-home-ratio*100vw!important;
 
     @media #{$desktop-bad-ratio} {
-      //max-height: $hero-height;
+      height: $hero-3-height/$desktop-height-ratio*100vh;
+      width: auto!important;
       left: auto;
       right: 830px/$desktop-home-ratio*100vw;
-      width: auto;
+    }
+
+    @media #{$media-tablet} {
+      width: $hero-3-width/$tablet-ratio*100vw!important;
+      right: 830px/$tablet-ratio*100vw;
     }
 
     @media #{$media-sm} {
-      height: $hero-3-height/$mobile-ratio-height*100vh;
+      width: $hero-3-width/$mobile-ratio*100vw!important;
+      right: 830px/$mobile-ratio*100vw;
     }
 
     @media #{$media-sm-with-ratio} {
-
+      width: auto!important;
+      height: $hero-3-height/$mobile-ratio-height*100vh;
+      right: 830px/$mobile-ratio-height*100vh;
     }
   }
 
@@ -185,6 +193,19 @@
 .payment-page {
   .hero {
     left: 235px/$desktop-home-ratio*100vw!important;
+
+    @media #{$media-tablet} {
+      left: 235px/$tablet-ratio*100vw!important;
+      top: 100px/$tablet-ratio*100vw;
+    }
+
+    @media #{$media-sm} {
+      left: 205px/$mobile-ratio*100vw!important;
+    }
+
+    @media #{$media-sm-with-ratio} {
+      left: 205px/$mobile-ratio-height*100vh!important;
+    }
   }
 
   .payment-form {

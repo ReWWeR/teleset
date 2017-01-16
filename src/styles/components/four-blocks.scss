@@ -87,11 +87,11 @@
         }
 
         .hero {
-          transform: scale(1.1) translateX(-50%);
+          transform: scale(1.1) translateX(-50%) translateY(-34.5%);
         }
 
         .hero-2 {
-        transform: translateX(-50%) scaleX(-1.1) scaleY(1.1);
+        transform: translateX(-50%) translateY(-34.5%) scaleX(-1.1) scaleY(1.1);
         }
 
         .fig-cross-1, .fig-square-big {
@@ -105,8 +105,9 @@
       .hero {
         position: absolute;
         left: 50%;
+        top: 50%;
         bottom: 0;
-        transform: translateX(-50%);
+        transform: translateX(-50%) translateY(-34.5%);
         height: $hero-height/$desktop-height-ratio/2*100vh;
         z-index: 1;
       }
@@ -243,8 +244,9 @@
       .hero-2 {
         position: absolute;
         left: 50%;
+        top: 50%;
         bottom: 0;
-        transform: translateX(-50%) scaleX(-1);
+        transform: translateX(-50%) translateY(-34.5%) scaleX(-1);
         height: $hero-2-height/$desktop-height-ratio/2*100vh;
         z-index: 1;
       }
