@@ -5,6 +5,16 @@
   color: #fff;
   opacity: 0;
 
+  .inner-page & {
+    opacity: 1;
+    animation-name: none!important;
+  }
+
+  .payment-page &, .support-page &, .connect-page &, .about-plan & {
+    opacity: 0;
+    animation-name: opacity-fade!important;
+  }
+
   @media #{$media-sm} {
     display: none;
   }
@@ -14,7 +24,7 @@
   }
 
   @media #{$desktop-bad-ratio} {
-    padding-top: 115px/$desktop-height-ratio * 100vh;
+    padding-top: 110px/$desktop-height-ratio * 100vh;
   }
 
   @media #{$media-tablet} {

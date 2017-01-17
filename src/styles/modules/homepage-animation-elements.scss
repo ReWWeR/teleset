@@ -49,9 +49,7 @@
     @media #{$media-sm} {
       margin-left: 0;
       padding: 0 60px/$mobile-ratio*100vw;
-      top: 27%;
       bottom: auto;
-      transform: none;
     }
 
     @media #{$media-sm-with-ratio} {
@@ -61,10 +59,14 @@
 
   .fig {
     position: absolute;
+    transition: opacity .5s;
+
+    .hide-decorations & {
+      opacity: 0;
+    }
 
     &.fig-cross-1 {
       height: 600px/$desktop-home-ratio*100vw;
-      max-height: 600px;
       top: 50%;
       right: 860px/$desktop-home-ratio*100%;
 

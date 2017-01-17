@@ -9,6 +9,7 @@
       margin-bottom: 27px/$desktop-home-ratio*100vw;
       cursor: pointer;
 
+
       @media #{$media-tablet} {
         font-size: 36px/$tablet-ratio*100vw;
         margin-bottom: 27px/$tablet-ratio*100vw;
@@ -24,15 +25,26 @@
         width: 28px/$desktop-home-ratio*100vw;
         margin-right: 30px/$desktop-home-ratio*100vw;
         will-change: transform;
+        margin-bottom: 4px/$desktop-home-ratio*100vw;
+
+        @media #{$desktop-bad-ratio} {
+          margin-bottom: 4px/$desktop-height-ratio*100vh;
+        }
 
         @media #{$media-tablet} {
           width: 28px/$tablet-ratio*100vw;
           margin-right: 30px/$tablet-ratio*100vw;
+          margin-bottom: 4px/$tablet-ratio*100vw;
         }
 
         @media #{$media-sm} {
           width: 28px/$mobile-ratio*100vw;
           margin-right: 30px/$mobile-ratio*100vw;
+          margin-bottom: 4px/$mobile-ratio*100vw;
+        }
+
+        @media #{$media-sm-with-ratio} {
+          margin-bottom: -4px/$mobile-ratio-height*100vh;
         }
 
         path {

@@ -27,6 +27,16 @@
     }
 
     a {
+
+      &.title {
+        transition: opacity .2s;
+        display: inline-block;
+
+        &:hover {
+          opacity: .8;
+        }
+      }
+
       h4 {
         color: $main-black;
       }
@@ -141,6 +151,16 @@
           background: linear-gradient(to right, #fff 0%, #fff 50%, transparent 50%);
           will-change: transform;
 
+          .c-share-link {
+            transition: fill .2s;
+          }
+
+          &:hover {
+            .c-share-link {
+              fill: $purple-hover;
+            }
+          }
+
           &:before {
             content: '';
             width: 5px;
@@ -177,6 +197,11 @@
               justify-content: center;
               width: 28px/$desktop-home-ratio*100vw;
               height: 28px/$desktop-home-ratio*100vw;
+              transition: background-color .2s;
+
+              &:hover {
+                background-color: rgba(0, 0, 0, .3);
+              }
 
               @media #{$media-tablet} {
                 width: 28px/$tablet-ratio*100vw;

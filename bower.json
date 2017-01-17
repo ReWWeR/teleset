@@ -19,6 +19,9 @@
   ],
   "dependencies": {
     "jquery": "^3.1.1",
-    "jquery-validation": "^1.15.1"
+    "jquery-validation": "^1.15.1",
+    "slick-carousel": "^1.6.0",
+    "hammerjs": "^2.0.8",
+    "headroom.js": "https://unpkg.com/headroom.js/bower.zip"
   }
 }

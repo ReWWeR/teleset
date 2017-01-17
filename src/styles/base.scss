@@ -1,6 +1,7 @@
 html {
   font: $font-body;
   color: $main-black;
+  -webkit-overflow-scrolling: touch;
 }
 
 a {
@@ -173,7 +174,7 @@ sup {
 }
 
 .dark-grey-bg {
-  background: $dark-grey!important;
+  background: $dark-grey-2!important;
 }
 
 .green-bg {

@@ -289,12 +289,69 @@
 }
 
 header.mobile-header {
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100%;
   z-index: 4;
   padding-top: 44px/$mobile-ratio*100vw;
+  padding-bottom: 22px/$mobile-ratio*100vw;
+  transition: transform .5s, padding .5s, background .5s;
   display: none;
+
+  .yellow-bg & {
+    background: $yellow;
+  }
+
+  .purple-bg & {
+    background: $purple;
+  }
+
+  .grey-bg  & {
+    background: $light-grey;
+  }
+
+  .dark-grey-bg-2 & {
+    background: $grey-bg;
+  }
+
+  .dark-grey-bg & {
+    background: $dark-grey-2;
+  }
+
+  .green-bg & {
+    background: $green;
+  }
+
+  .black-bg & {
+    background: #000;
+  }
+
+  .white-bg & {
+    background: #fff;
+  }
+
+  &.headroom {
+    &--pinned {
+      transform: translateY(0);
+
+      .show-hamburger & {
+        background: transparent;
+      }
+    }
+
+    &--unpinned {
+      transform: translateY(-120%);
+    }
+
+    &--top {
+      padding-top: 44px/$mobile-ratio*100vw;
+      background: transparent;
+    }
+
+    &--not-top {
+      padding-top: 22px/$mobile-ratio*100vw;
+    }
+  }
 
   .wrapper {
     display: flex;
@@ -303,8 +360,8 @@ header.mobile-header {
 
   @media #{$media-tablet} {
     padding-top: 44px/$tablet-ratio*100vw;
+    padding-bottom: 22px/$tablet-ratio*100vw;
     display: block;
-    transition: transform .5s;
     transform: translateY(0);
 
     .hide-mobile-header & {
@@ -314,10 +371,12 @@ header.mobile-header {
 
   @media #{$media-sm} {
     padding-top: 44px/$mobile-ratio*100vw;
+    padding-bottom: 22px/$mobile-ratio*100vw;
   }
 
   @media #{$media-sm-with-ratio} {
     padding-top: 44px/$mobile-ratio-height*100vh;
+    padding-bottom: 22px/$mobile-ratio-height*100vh;
   }
 
   .logo {
@@ -411,6 +470,11 @@ header.mobile-header {
     z-index: 9999;
     float: right;
 
+    @media #{$media-tablet} {
+      width: 42px/$tablet-ratio*100vw;
+      height: 42px/$tablet-ratio*100vw;
+    }
+
     @media #{$media-sm} {
       width: 42px/$mobile-ratio*100vw;
       height: 42px/$mobile-ratio*100vw;
@@ -421,10 +485,6 @@ header.mobile-header {
       height: 42px/$mobile-ratio-height*100vh;
     }
 
-    @media #{$media-tablet} {
-      width: 42px/$tablet-ratio*100vw;
-      height: 42px/$tablet-ratio*100vw;
-    }
 
     svg.close-menu-icon {
       transition: opacity .5s;

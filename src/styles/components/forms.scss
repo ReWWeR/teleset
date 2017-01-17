@@ -36,7 +36,7 @@ input[type=text], input[type=number], input[type=email], input[type=tel], input[
     height: 84px/$mobile-ratio*100vw;
     padding: 0 (40px/$mobile-ratio*100vw) 0 (15px/$mobile-ratio*100vw);
     font-size: 44px/$mobile-ratio*100vw;
-    border-radius: 20px/$mobile-ratio*100vw;
+    border-radius: 10px/$mobile-ratio*100vw;
 
     .cabinet-personal-info & {
       padding: 0 (15px/$mobile-ratio*100vw);
@@ -47,7 +47,7 @@ input[type=text], input[type=number], input[type=email], input[type=tel], input[
     height: 84px/$mobile-ratio-height*100vh;
     padding: 0 (40px/$mobile-ratio-height*100vh) 0 (15px/$mobile-ratio-height*100vh);
     font-size: 44px/$mobile-ratio-height*100vh;
-    border-radius: 20px/$mobile-ratio-height*100vh;
+    border-radius: 10px/$mobile-ratio-height*100vh;
 
     .cabinet-personal-info & {
       padding: 0 (15px/$mobile-ratio-height*100vh);

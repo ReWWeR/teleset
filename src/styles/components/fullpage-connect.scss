@@ -54,11 +54,11 @@
     }
 
     body.loaded.initial-animation.show-connect-form & {
-      transform: translateX(-680px/$desktop-home-ratio*100vw) translateY(-34.5%);
+      transform: translateX(-663px/$desktop-home-ratio*100vw) translateY(-34.5%);
       z-index: 2;
 
       @media #{$desktop-bad-ratio} {
-        transform: translateX(-680px/$desktop-height-ratio*100vh) translateY(-34.5%);
+        transform: translateX(-663px/$desktop-height-ratio*100vh) translateY(-34.5%);
         left: 50%;
       }
     }
@@ -81,8 +81,28 @@
     }
 
     .show-connect-form & {
-      transform: translateX(calc(-100% - 3.7vw)) translateY(-50%) !important;
+      transform: translateX(calc(-100% - 42.5vw)) translateY(0%) !important;
       transition: transform .75s;
+
+      &.fig-circle-1 {
+        transform: translateX(calc(-100% - 37.5vw)) translateY(0%) !important;
+      }
+
+      &.fig-circle-2 {
+        transform: translateX(calc(-100% - 33vw)) translateY(0%) !important;
+      }
+
+      &.fig-cross-2 {
+        transform: translateX(calc(-100% - 72.5vw)) translateY(0%) !important;
+      }
+
+      &.fig-cross-5 {
+        transform: translateX(calc(-100% - 36.5vw)) translateY(0%) !important;
+      }
+
+      &.fig-square-big {
+        transform: translateX(calc(-100% - 3.7vw)) translateY(-50%) !important;
+      }
     }
 
     &.fig-square-big {

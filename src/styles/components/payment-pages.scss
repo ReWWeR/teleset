@@ -66,11 +66,11 @@
     .form-line-wrap {
       display: flex;
       justify-content: center;
-      margin-bottom: 24px/$desktop-home-ratio*100vw;
+      //margin-bottom: 24px/$desktop-home-ratio*100vw;
       margin: 0 -10px;
 
       @media #{$desktop-bad-ratio} {
-        margin-bottom: 24px/$desktop-height-ratio*100vh;
+        //margin-bottom: 24px/$desktop-height-ratio*100vh;
       }
 
       @media #{$media-sm} {
@@ -176,6 +176,7 @@
   }
 
   .show-payment-success & {
+
     h1, .flex-form-wrap, .form-info, #payment-button {
       display: none;
     }

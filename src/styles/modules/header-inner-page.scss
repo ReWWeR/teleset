@@ -16,15 +16,15 @@
       }
 
       @media #{$media-tablet} {
-        right: -334px/$tablet-ratio*100vw;
+        right: -280px/$tablet-ratio*100vw;
       }
 
       @media #{$media-sm} {
-        right: -334px/$mobile-ratio*100vw;
+        right: -280px/$mobile-ratio*100vw;
       }
 
       @media #{$media-sm-with-ratio} {
-        right: -334px/$mobile-ratio-height*100vh;
+        right: -280px/$mobile-ratio-height*100vh;
       }
 
       &.hero-2 {
@@ -319,94 +319,117 @@
       }
     }
   }
+}
 
-  .arrows-scroll-down {
-    position: absolute;
-    bottom: 30px;
-    left: 60px/$desktop-home-ratio*100vw;
+.arrows-scroll-down {
+  position: absolute;
+  bottom: 30px/$desktop-home-ratio*100vw;
+  left: 60px/$desktop-home-ratio*100vw;
 
+
+  @media #{$desktop-bad-ratio} {
+    left: 60px/$desktop-height-ratio*100vh;
+    bottom: 30px/$desktop-height-ratio*100vh;
+  }
+
+  @media #{$media-tablet} {
+    left: 60px/$tablet-ratio*100vw;
+    bottom: 30px/$tablet-ratio*100vw;
+  }
+
+  @media #{$media-sm} {
+    left: 60px/$mobile-ratio*100vw;
+    bottom: 60px/$mobile-ratio*100vw;
+  }
+
+  @media #{$media-sm-with-ratio} {
+    left: 60px/$mobile-ratio-height*100vh;
+    bottom: 30px/$mobile-ratio-height*100vh;
+  }
+
+  &.to-right {
+    //transform: rotate(-90deg);
+    flex-direction: row;
+    width: auto;
+    bottom: 48px/$desktop-home-ratio*100vw;
 
     @media #{$desktop-bad-ratio} {
-      left: 60px/$desktop-height-ratio*100vh;
+      bottom: 48px/$desktop-height-ratio*100vh;
     }
 
     @media #{$media-tablet} {
-      left: 60px/$tablet-ratio*100vw;
       bottom: 30px/$tablet-ratio*100vw;
     }
 
     @media #{$media-sm} {
-      left: 60px/$mobile-ratio*100vw;
       bottom: 60px/$mobile-ratio*100vw;
     }
 
     @media #{$media-sm-with-ratio} {
-      left: 60px/$mobile-ratio-height*100vh;
       bottom: 30px/$mobile-ratio-height*100vh;
-
     }
 
-    &.to-right {
-      //transform: rotate(-90deg);
-      flex-direction: row;
-      width: auto;
-      bottom: 50px;
+    svg {
+      transform: rotate(0deg);
+      margin-right: 6px/$desktop-home-ratio*100vw;
 
       @media #{$media-tablet} {
+        margin-right: 6px/$tablet-ratio*100vw;
         bottom: 30px/$tablet-ratio;
       }
 
       @media #{$media-sm} {
+        margin-right: -3px/$mobile-ratio*100vw;
         bottom: 60px/$mobile-ratio*100vw;
       }
 
       @media #{$media-sm-with-ratio} {
+        margin-right: -3px/$mobile-ratio-height*100vh;
         bottom: 30px/$mobile-ratio-height*100vh;
       }
+    }
+
+  }
+
+  svg {
+    height: 24px/$desktop-home-ratio*100vw;
+    margin-top: -6px/$desktop-home-ratio*100vw;
+
+    @media #{$media-tablet} {
+      height: 24px/$tablet-ratio*100vw;
+      margin-top: -6px/$tablet-ratio*100vw;
+    }
+
+    @media #{$media-sm} {
+      margin-top: -3px/$mobile-ratio*100vw;
+      width: 22px/$mobile-ratio*100vw;
+      height: 22px/$mobile-ratio*100vw;
+    }
+
+    @media #{$media-sm-with-ratio} {
+      margin-top: -3px/$mobile-ratio-height*100vh;
+      width: 22px/$mobile-ratio-height*100vh;
+      height: 22px/$mobile-ratio-height*100vh;
+    }
+  }
+
+  .connect-fullpage + .footer-landing &, .payment-fullpage + .footer-landing &,
+  .support-fullpage + .footer-landing &, .fortyfour-fullpage + .footer-landing &{
+    display: none;
+  }
+
+  .homepage-body & {
+    display: none;
+
+    @media #{$media-sm} {
+      display: flex;
+    }
 
       svg {
-        transform: rotate(0deg);
-        margin-right: 6px/$desktop-home-ratio*100vw;
-
-        @media #{$media-tablet} {
-          margin-right: 6px/$tablet-ratio*100vw;
-          bottom: 30px/$tablet-ratio;
-        }
-
-        @media #{$media-sm} {
-          margin-right: -3px/$mobile-ratio*100vw;
-          bottom: 60px/$mobile-ratio*100vw;
-        }
-
-        @media #{$media-sm-with-ratio} {
-          margin-right: -3px/$mobile-ratio-height*100vh;
-          bottom: 30px/$mobile-ratio-height*100vh;
+        line {
+          stroke: $blue;
         }
       }
-
-    }
-
-    svg {
-      height: 24px/$desktop-home-ratio*100vw;
-      margin-top: -6px/$desktop-home-ratio*100vw;
-
-      @media #{$media-tablet} {
-        height: 24px/$tablet-ratio*100vw;
-        margin-top: -6px/$tablet-ratio*100vw;
-      }
-
-      @media #{$media-sm} {
-        margin-top: -3px/$mobile-ratio*100vw;
-        width: 22px/$mobile-ratio*100vw;
-        height: 22px/$mobile-ratio*100vw;
-      }
-
-      @media #{$media-sm-with-ratio} {
-        margin-top: -3px/$mobile-ratio-height*100vh;
-        width: 22px/$mobile-ratio-height*100vh;
-        height: 22px/$mobile-ratio-height*100vh;
-      }
-    }
   }
 }
 

@@ -15,7 +15,7 @@ $(document).ready(function () {
 
     var $newsFilterBtn = $('.news-filter-btn');
     var $newsSubBtn = $('.news-sub-btn');
-    var $modalCloseBtn = $('.news-filter-popup-filter .modal-close, .news-filter-popup-sub .modal-close');
+    var $modalCloseBtn = $('.news-filter-popup-filter .modal-close, .news-filter-popup-sub .modal-close, .unsubscribe');
 
 
     $newsFilterBtn.click(function() {

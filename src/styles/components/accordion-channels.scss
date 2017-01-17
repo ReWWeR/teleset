@@ -59,6 +59,12 @@
       flex-wrap: wrap;
       position: relative;
 
+      &:nth-child(2n+2) {
+        .accordion-title {
+          background: $super-light-grey-3;
+        }
+      }
+
       .accordion-title {
         background: #fff;
         border-radius: 20px/$desktop-home-ratio*100vw;
@@ -126,10 +132,34 @@
           @media #{$media-sm-with-ratio} {
             font-size: 28px/$mobile-ratio-height*100vh;
           }
+
         }
 
         .channel-number, .channel-mhz {
           color: $black-60
+        }
+
+        .channel-name, .channel-number, .channel-mhz {
+
+          span {
+            margin-bottom: -4px/$desktop-home-ratio*100vw;
+
+            @media #{$desktop-bad-ratio} {
+              margin-bottom: -4px/$desktop-height-ratio*100vh;
+            }
+
+            @media #{$media-tablet} {
+              margin-bottom: -4px/$tablet-ratio*100vw;
+            }
+
+            @media #{$media-sm} {
+              margin-bottom: -4px/$mobile-ratio*100vw;
+            }
+
+            @media #{$media-sm-with-ratio} {
+              margin-bottom: -4px/$mobile-ratio-height*100vh;
+            }
+          }
         }
 
         .channel-more {
@@ -230,6 +260,10 @@
           transform: translate(-50%, -50%);
           transition: opacity .5s;
 
+          &:hover {
+            opacity: .6;
+          }
+
           img {
             transition: opacity .5s;
           }
@@ -293,6 +327,11 @@
 
         .video-url {
           left: 30px/$desktop-home-ratio*100vw;
+          transition: opacity .2s;
+
+          &:hover {
+            opacity: .6;
+          }
 
           @media #{$media-tablet} {
             left: 30px/$tablet-ratio*100vw;
@@ -351,12 +390,16 @@
           &:hover {
             &:before {
               opacity: 1;
-              background-color: rgba(0,0,0, .6);
+              background-color: rgba(0, 0, 0, .6);
             }
 
             .play-video-icon, .play-video-icon .pause-img {
               opacity: 1;
               pointer-events: auto;
+
+              &:hover {
+                opacity: .6;
+              }
             }
           }
         }

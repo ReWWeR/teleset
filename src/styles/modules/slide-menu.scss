@@ -334,6 +334,12 @@
       font-size: 18px/$desktop-home-ratio*100vw;
       position: absolute;
       bottom: 55px/$desktop-home-ratio*100vw;
+      padding-bottom: 55px/$desktop-home-ratio*100vw;
+      padding-right: 11.7vw;
+      padding-left: 3.75vw;
+      margin-left: -3.75vw;
+      padding-top: 100vh;
+      margin-bottom: -55px/$desktop-home-ratio*100vw;
       z-index: 2;
       opacity: 0;
       pointer-events: none;
@@ -342,6 +348,8 @@
       @media #{$desktop-bad-ratio} {
         font-size: 18px/$desktop-height-ratio*100vh;
         bottom: 55px/$desktop-height-ratio*100vh;
+        margin-bottom: -55px/$desktop-height-ratio*100vh;
+        padding-bottom: 55px/$desktop-height-ratio*100vh;
       }
 
       @media #{$desktop-1600} {
@@ -352,6 +360,11 @@
       @media #{$media-tablet} {
         font-size: 18px/$tablet-ratio*100vw;
         bottom: 55px/$tablet-ratio*100vw;
+        margin-bottom: -55px/$tablet-ratio*100vw;
+        padding-bottom: 55px/$tablet-ratio*100vw;
+        padding-left: 7.5vw;
+        padding-right: 23.7vw;
+        margin-left: -7.5vw;
       }
       
       @media #{$media-sm} {
@@ -470,10 +483,15 @@
       position: absolute;
       bottom: 0;
       padding-bottom: 40px/$desktop-home-ratio*100vw;
-      width: calc(100% - 120px);
+      width: calc(100% - 7.5vw);
 
       @media #{$desktop-1600} {
         padding-bottom: 40px;
+        width: calc(100% - 120px);
+      }
+
+      @media #{$desktop-bad-ratio} {
+        width: calc(100% - 13.33334vh);
       }
 
       @media #{$media-tablet} {
@@ -644,24 +662,24 @@
       left: 50%;
       transform: translateX(-40%) translateY(-34.5%);
       z-index: 1;
-      width: $hero-width/$desktop-home-ratio*100vw;
+      width: $hero-3-width/$desktop-home-ratio*100vw;
       top: 50%;
 
       @media #{$desktop-bad-ratio} {
-        height: $hero-height/$desktop-height-ratio*100vh;
+        height: $hero-3-height/$desktop-height-ratio*100vh;
         width: auto;
       }
 
       @media #{$media-tablet} {
-        width: $hero-width/$tablet-ratio*100vw;
+        width: $hero-3-width/$tablet-ratio*100vw;
       }
 
       @media #{$media-sm} {
-        width: $hero-width/$mobile-ratio*100vw;
+        width: $hero-3-width/$mobile-ratio*100vw;
       }
 
       @media #{$media-sm-with-ratio} {
-        height: $hero-height/$mobile-ratio-height*100vh;
+        height: $hero-3-height/$mobile-ratio-height*100vh;
         width: auto;
       }
     }
@@ -721,6 +739,7 @@
     .inner-page & {
       overflow-y: scroll;
       overflow-x: hidden;
+      -webkit-overflow-scrolling: touch;
     }
 
     .show-filter-options &, .show-sub-options & {

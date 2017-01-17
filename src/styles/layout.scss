@@ -222,6 +222,10 @@
   }
   .homepage-inner {
     opacity: 0;
+
+    @media #{$media-tablet} {
+      overflow: hidden;
+    }
   }
 }
 
@@ -234,5 +238,32 @@
 .mobileBP {
   .menu-container {
     display: none;
+  }
+}
+
+.change-size-modal {
+  opacity: 0;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $purple-dark;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9999;
+  transition: opacity .5s;
+
+  img {
+    height: 70vh;
+  }
+}
+
+@media screen and (min-width: 1023px) and (max-height: 700px) {
+  .change-size-modal {
+    opacity: 1;
+    pointer-events: auto;
   }
 }

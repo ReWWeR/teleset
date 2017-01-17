@@ -485,6 +485,7 @@
     left: 50%;
     transform: translateX(-50%);
     transition: opacity .5s;
+    will-change: opacity;
     opacity: 0;
     pointer-events: none;
 
@@ -517,6 +518,19 @@
         height: 33px;
         transform: translateX(-50%) translateY(-17px);
       }
+    }
+  }
+
+  .homepage-body & {
+    @media #{$media-sm} {
+      left: 50%;
+      transform: translateX(-50%) translateY(30%);
+      position: absolute;
+      bottom: 60px/$mobile-ratio*100vw;
+    }
+
+    @media #{$media-sm-with-ratio} {
+      bottom: 30px/$mobile-ratio-height*100vh;
     }
   }
 }
