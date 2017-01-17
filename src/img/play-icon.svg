@@ -1,1 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 140 140"><defs><style>.a,.e{fill:none;}.b{clip-path:url(#a);}.c{opacity:0.3;}.d{fill:#fff;fill-rule:evenodd;}.e{stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:4px;}</style><clipPath id="a" transform="translate(0 0)"><rect class="a" width="140" height="140"/></clipPath></defs><title>play-icon</title><g class="b"><g class="b"><g class="c"><g class="b"><path class="d" d="M42,0H98a42.12,42.12,0,0,1,42,42V98a42.12,42.12,0,0,1-42,42H42A42.12,42.12,0,0,1,0,98V42A42.12,42.12,0,0,1,42,0" transform="translate(0 0)"/></g></g></g><polygon class="e" points="49 42 91 70 49 98 49 42"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 140 140">
+    <defs>
+        <style>
+            .a,.e{fill:none;}.b{clip-path:url(#a);}.c{opacity:0.3;}.d{fill:#fff;fill-rule:evenodd;}.e{stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:4px;}
+        </style>
+        <clipPath id="a" transform="translate(0 0)">
+            <rect class="a" width="140" height="140"/>
+        </clipPath>
+    </defs>
+    <title>play-icon</title>
+    <g class="b">
+        <g class="b">
+            <g class="c">
+                <g class="b">
+                    <path class="d"
+                          d="M42,0H98a42.12,42.12,0,0,1,42,42V98a42.12,42.12,0,0,1-42,42H42A42.12,42.12,0,0,1,0,98V42A42.12,42.12,0,0,1,42,0"
+                          transform="translate(0 0)"/>
+                </g>
+            </g>
+        </g>
+        <polygon class="e" points="49 42 91 70 49 98 49 42"/>
+    </g>
+</svg>

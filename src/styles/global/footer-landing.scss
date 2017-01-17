@@ -58,7 +58,7 @@
 
     @media #{$desktop-bad-ratio} {
       font-size: 18px/$desktop-height-ratio*100vh;
-      left: -110px/$desktop-home-ratio*100vw;
+      left: -110px/$desktop-height-ratio*100vh;
     }
 
     @media #{$desktop-1600} {

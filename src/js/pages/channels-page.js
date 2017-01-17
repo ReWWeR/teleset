@@ -7,12 +7,12 @@ $(document).ready(function(){
 
     $('.play-video-icon').on('click', function(){
         var video = $(this).next();
-        if ($(this).closest('.accordion-content').hasClass('playing-video')) {
+        if ($(this).closest('.accordion-content, .video-content').hasClass('playing-video')) {
             $(video).get(0).pause();
         } else {
             $(video).get(0).play();
         }
-        $(this).closest('.accordion-content').toggleClass('playing-video');
+        $(this).closest('.accordion-content, .video-content').toggleClass('playing-video');
     })
 
     $(window).on('resize', function(){

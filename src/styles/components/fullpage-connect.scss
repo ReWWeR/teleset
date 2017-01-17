@@ -10,7 +10,7 @@
 
     @media #{$desktop-bad-ratio} {
       width: 320px/$desktop-height-ratio*100vh;
-      right: calc(50% + 13.25vh);
+      right: calc(50% + 22.15vh);
     }
     @media #{$media-tablet} {
       position: absolute;
@@ -44,8 +44,7 @@
     width: $hero-2-width/$desktop-home-ratio*100vw;
 
     @media #{$desktop-bad-ratio} {
-      height: $hero-2-height/$desktop-height-ratio*100vh;
-      width: auto;
+      width: $hero-2-height/$desktop-height-ratio*100vh;
     }
 
     body.loaded.initial-animation.show-connect-form &,

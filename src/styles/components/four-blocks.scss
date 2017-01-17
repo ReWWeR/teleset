@@ -160,8 +160,13 @@
           text-align: center;
           padding: 10px 30px;
 
+          .robot-animation {
+            width: 84px/$desktop-home-ratio*100vw;
+            height: 84px/$desktop-home-ratio*100vw;
+            margin-bottom: 30px/$desktop-home-ratio*100vw;
+          }
+
           svg {
-            margin-bottom: 30px;
           }
         }
 
@@ -256,6 +261,8 @@
 
       .fig-square-big {
         height: 270px/$desktop-home-ratio*100vw;
+        width: 270px/$desktop-home-ratio*100vw;
+        position: relative;
       }
 
       .fig-square-1 {
